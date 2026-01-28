@@ -1,12 +1,12 @@
 .accordion {
     font-family: Arial, sans-serif;
     max-width: 1300px;
-    margin: auto;
-    padding-top: 100px;
+    margin: 40px auto 50px;
+    padding: 0;
   }
   
   .accordion-item {
-    margin-bottom: 25px; /* menos espaço entre os cards */
+    margin-bottom: 18px; /* menos espaço entre os cards */
     position: relative;
     transition: transform 420ms cubic-bezier(.22,1,.36,1);
     border: none !important;
@@ -43,15 +43,24 @@
     transition: transform 200ms ease;
   }
   
-  /* Conteúdo */
+  /* Conteúdo (escondido por padrão, abre com a classe .active) */
   .accordion-content {
     background: transparent;
-    transition: all 0.4s ease;
+    padding: 0 25px;
+    box-sizing: border-box;
+    max-height: 0;
     opacity: 0;
     overflow: hidden;
-    padding: 0 20px;
-    box-sizing: border-box;
     transform: translateY(-6px);
+    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .accordion-item.active .accordion-content {
+    padding: 15px 25px 20px;
+    max-height: 500px;
+    opacity: 1;
+    overflow: visible;
+    transform: translateY(0);
   }
   
   

@@ -12,7 +12,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f2f5; /* Um cinza claro de fundo */
+            background-color: #ffffff; /* Um cinza claro de fundo */
         }
    
         .navbar {
@@ -206,38 +206,17 @@
             <img src="assents/img/logo.png" width="150px" height="30px">
         </span>
         <ul class="navbar-links">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="sistemas.html">Sistemas</a></li>
             <li><a href="#">Customer</a></li>
-                   
-                </ul>
+        </ul>
         <div class="navbar-buttons">
-            <a href="https://amendola.flowdocs.com.br:2053/public/home"></a>
-            <button class="btn btn-login">FlowDocs
-            
-                <style>
-                    .btn-login {
-                        background-color:#FD7A02;
-                        color: #fff;
-                        border: none;
-                        border-radius: 30px;
-                        padding: 10px 20px;
-                        font-size: 16px;
-                        font-weight: bold;
-                        cursor: pointer;
-                        transition: background-color #ff7b00 ;
-                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-                        text-decoration: none;
-                        display: inline-block;
-                        margin-right: 10px;
-                        margin-left: 10px;
-                        margin-top: 10px;
-                        margin-bottom: 10px;
-                    }
-                    </style>
-            
-            
-            </button>
+            <a href="https://amendola.flowdocs.com.br:2053/public/home"
+               class="btn btn-login"
+               target="_blank"
+               rel="noopener noreferrer">
+                FlowDocs
+            </a>
         </div>
     </nav>
 
@@ -434,12 +413,42 @@
       </div>
     
       </section>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const items = document.querySelectorAll('.accordion-item');
+
+          items.forEach((item) => {
+            const header = item.querySelector('.accordion-header');
+            const icon = header.querySelector('.icon');
+
+            header.addEventListener('click', () => {
+              const isActive = item.classList.contains('active');
+
+              // Fecha todos
+              items.forEach((other) => {
+                other.classList.remove('active');
+                const otherIcon = other.querySelector('.icon');
+                if (otherIcon) otherIcon.textContent = '+';
+              });
+
+              // Se o que clicou não estava ativo, abre ele
+              if (!isActive) {
+                item.classList.add('active');
+                if (icon) icon.textContent = '−';
+              }
+            });
+          });
+        });
+      </script>
     
-         <!-- Botão flutuante do WhatsApp -->
+        <!-- Botão flutuante do WhatsApp -->
       <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank" aria-label="Converse no WhatsApp">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
       </a>
     
       <main class="main">
-    
-             
+      </main>
+
+</body>
+</html>
