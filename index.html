@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
             justify-content: space-between; /* Espaça os itens ao máximo */
             align-items: center; /* Centraliza verticalmente */
             background-color: #fff; /* Fundo branco */
-            padding: 10px 20px;
+            padding: 5px 20px;
             margin: 20px auto; /* Centraliza a navbar e dá um espaço */
             width: 90%; /* Largura da navbar */
             max-width: 1200px; /* Largura máxima */
@@ -46,7 +46,7 @@
         }
    
         .navbar-links li a:hover {
-            color: #4b0082; /* Cor ao passar o mouse - ajustado para o novo design */
+            color: #ff7300; /* Cor ao passar o mouse - ajustado para o novo design */
         }
    
         .navbar-buttons {
@@ -71,7 +71,7 @@
         }
  
         .btn-login:hover {
-            background-color: #f0f0f0;
+            background-color: #FF7300;
         }
  
         /* Estilos para a seção de herói */
@@ -144,7 +144,7 @@
         }
  
         .btn-hero-primary {
-            background: linear-gradient(90deg, #8A2BE2 0%, #4B0082 100%);
+            background: linear-gradient(90deg, #ff7300 0%, #ff7300 100%);
             color: #fff;
             padding: 15px 30px;
             font-size: 18px;
@@ -155,7 +155,8 @@
         }
  
         .btn-hero-primary:hover {
-            opacity: 0.9;
+            background: linear-gradient(90deg, #ff7300 0%, #ff7300 100%);
+            color: #fff;
         }
  
         .btn-hero-secondary {
@@ -198,40 +199,56 @@
 <body>
     <nav class="navbar">
         <span class="navbar-logo">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="4" width="6" height="6" rx="1" fill="#8A2BE2"/>
-                <rect x="14" y="4" width="6" height="6" rx="1" fill="#4B0082"/>
-                <rect x="4" y="14" width="6" height="6" rx="1" fill="#4B0082"/>
-                <rect x="14" y="14" width="6" height="6" rx="1" fill="#8A2BE2"/>
-            </svg>
-            Amendola
+            <img src="assents/img/logo.png" width="150px" height="30px">
         </span>
         <ul class="navbar-links">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Features</a></li>
+            <li><a href="#">Sistemas</a></li>
             <li><a href="#">Customer</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Blog</a></li>
+           
+           
         </ul>
         <div class="navbar-buttons">
-            <button class="btn btn-login">Login</button>
+            <a href="https://amendola.flowdocs.com.br:2053/public/home"></a>
+            <button class="btn btn-login">FlowDocs
+            
+                <style>
+                    .btn-login {
+                        background-color:#FD7A02;
+                        color: #fff;
+                        border: none;
+                        border-radius: 30px;
+                        padding: 10px 20px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        transition: background-color #ff7b00 ;
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                        text-decoration: none;
+                        display: inline-block;
+                        margin-right: 10px;
+                        margin-left: 10px;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                    }
+                    </style>
+            
+            
+            </button>
         </div>
     </nav>
  
     <section class="hero-section">
-        <h1>Discover of Project<br><span>Efficiency</span> with Ofspace</h1>
+        <h1>Amendola & Amendola Software</h1>
         <div class="hero-users">
-            <img src="https://i.pravatar.cc/40?img=1" alt="User 1">
-            <img src="https://i.pravatar.cc/40?img=2" alt="User 2">
-            <img src="https://i.pravatar.cc/40?img=3" alt="User 3">
-            <img src="https://i.pravatar.cc/40?img=4" alt="User 4">
-            <span>359K+ Success people are join with us</span>
+    
         </div>
-        <p>Empower your team, simplify complexities, and achieve exceptional outcomes using
-        our user-friendly project management platform.</p>
+        <p>Fornecendo soluções para órgãos públicos</p>
+            
+          
         <div class="hero-buttons">
-            <button class="btn btn-hero-primary">+ Join with us</button>
-            <button class="btn btn-hero-secondary">Preview Growth</button>
+            <button class="btn btn-hero-primary">Começar</button>
+           
         </div>
     </section>
  
