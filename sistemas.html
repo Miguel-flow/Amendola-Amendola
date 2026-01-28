@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Main CSS File -->
+   <link href="assents/css/Sistemas-global.css" rel="stylesheet">
+   <link href="assents/css/main.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amendola & Amendola</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5; /* Um cinza claro de fundo */
+        }
+   
+        .navbar {
+            display: flex; /* Para alinhar os itens lado a lado */
+            justify-content: space-between; /* Espaça os itens ao máximo */
+            align-items: center; /* Centraliza verticalmente */
+            background-color: #fff; /* Fundo branco */
+            padding: 5px 20px;
+            margin: 20px auto; /* Centraliza a navbar e dá um espaço */
+            width: 90%; /* Largura da navbar */
+            max-width: 1200px; /* Largura máxima */
+            border-radius: 50px; /* Bordas bem arredondadas */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+   
+        .navbar-logo {
+            font-weight: bold;
+            font-size: 24px;
+            color: #4b0082; /* Cor do logo - ajustado para o novo design */
+        }
+   
+        .navbar-links {
+            list-style: none; /* Remove os marcadores da lista */
+            margin: 0;
+            padding: 0;
+            display: flex; /* Para alinhar os links lado a lado */
+            gap: 30px; /* Espaço entre os links */
+        }
+   
+        .navbar-links li a {
+            text-decoration: none; /* Remove sublinhado */
+            color: #333; /* Cor dos links */
+            font-size: 18px;
+            transition: color 0.3s ease; /* Transição suave de cor */
+        }
+   
+        .navbar-links li a:hover {
+            color: #ff7300; /* Cor ao passar o mouse - ajustado para o novo design */
+        }
+   
+        .navbar-buttons {
+            display: flex;
+            gap: 10px; /* Espaço entre os botões */
+        }
+   
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px; /* Bordas arredondadas */
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+   
+        .btn-login { /* Novo estilo para o botão de Login */
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+ 
+        .btn-login:hover {
+            background-color: #FF7300;
+        }
+ 
+        /* Estilos para a seção de herói */
+        .hero-section {
+            background: linear-gradient(180deg, rgba(239, 233, 252, 0.4) 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+            color: #333;
+            text-align: center;
+            padding: 80px 20px;
+            border-radius: 20px;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 1200px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+ 
+        .hero-section h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #1a1a1a;
+        }
+ 
+        .hero-section h1 span {
+            color: #8A2BE2;
+        }
+ 
+        .hero-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            color: #555;
+        }
+ 
+        .hero-users {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            margin-top: -20px;
+        }
+ 
+        .hero-users img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            margin-left: -10px;
+            object-fit: cover;
+        }
+ 
+        .hero-users img:first-child {
+            margin-left: 0;
+        }
+ 
+        .hero-users span {
+            font-size: 16px;
+            color: #555;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+ 
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+ 
+        .btn-hero-primary {
+            background: linear-gradient(90deg, #ff7300 0%, #ff7300 100%);
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            border: none;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+        }
+ 
+        .btn-hero-primary:hover {
+            background: linear-gradient(90deg, #ff7300 0%, #ff7300 100%);
+            color: #fff;
+        }
+ 
+        .btn-hero-secondary {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ddd;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+ 
+        .btn-hero-secondary:hover {
+            background-color: #f0f0f0;
+        }
+ 
+        .dashboard-preview {
+            text-align: center;
+            margin-top: -100px;
+            position: relative;
+            z-index: 1;
+        }
+ 
+        .dashboard-preview img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            transform: perspective(1000px) rotateX(10deg);
+            transition: transform 0.3s ease;
+        }
+ 
+        .dashboard-preview img:hover {
+            transform: perspective(1000px) rotateX(0deg);
+        }
+ 
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <span class="navbar-logo">
+            <img src="assents/img/logo.png" width="150px" height="30px">
+        </span>
+        <ul class="navbar-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="sistemas.html">Sistemas</a></li>
+            <li><a href="#">Customer</a></li>
+                   
+                </ul>
+        <div class="navbar-buttons">
+            <a href="https://amendola.flowdocs.com.br:2053/public/home"></a>
+            <button class="btn btn-login">FlowDocs
+            
+                <style>
+                    .btn-login {
+                        background-color:#FD7A02;
+                        color: #fff;
+                        border: none;
+                        border-radius: 30px;
+                        padding: 10px 20px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        transition: background-color #ff7b00 ;
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                        text-decoration: none;
+                        display: inline-block;
+                        margin-right: 10px;
+                        margin-left: 10px;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                    }
+                    </style>
+            
+            
+            </button>
+        </div>
+    </nav>
+
+<section id="sistemas">
+
+
+    <div class="accordion">
+      <div class="accordion-item active">
+        <div class="accordion-header">
+          Flowdocs – Sistema de Controle de Fluxo de Documentos
+          <span class="icon">−</span>
+        </div>
+        <div class="accordion-content">
+          <div class="texto">
+            <p>
+              O FlowDocs nasceu para transformar a forma como órgãos públicos e empresas lidam com documentos. De processos físicos demorados a fluxos digitais totalmente integrados, o sistema evoluiu para garantir mais segurança, praticidade e eficiência no gerenciamento da informação. De pequenas secretarias municipais a grandes autarquias, milhares de usuários já simplificaram sua rotina com o FlowDocs, comprovando seu excelente custo-benefício e a confiabilidade da solução.
+            </p>
+          </div>
+          <a href="FLOWDOCS.html" class="details-btn">VEJA DETALHES DO SISTEMA</a>
+        </div>
+      </div>
+    
+      <!-- Item 2 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          SCPI – Sistema de Contabilidade Pública Integrado
+          <span class="icon">−</span>
+        </div>
+        <div class="accordion-content">
+          <div class="texto">
+            <p>
+              A evolução de três usuários iniciais em 1997 para mais de dois mil cento e trinta e sete em 2018, indiscutivelmente, é o maior certificado de qualidade e do custo/benefício
+              deste sistema desenvolvido pela Fiorilli Software. Da finalidade inicial de atendimento às normas legais, orçamento, contabilidade e balanços, o sistema transformou-se, também, em um útil
+              e prático instrumento de gestão da Administração Pública Municipal.
+            </p>
+          </div>
+          <a href="SCPI.html" class="details-btn">VEJA DETALHES DO SISTEMA</a>
+        </div>
+      </div>
+    
+      <!-- Item 3 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          SIP – Sistema Integrado de Pessoal
+          <span class="icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="texto">
+            <p>
+              O Sistema Integrado de Pessoal-SIP é um software completo para o gerenciamento da Folha de Pagamentos e do setor de RH.
+              Tem como principais características ser multi-empresa, multitarefa e multiusuário, com controle de permissões por tela e senha de acesso ao sistema criptografada.
+              Todos os relatórios podem ser alterados pelo usuário, além de serem armazenados mais de um layout para cada relatório criado pelo sistema.
+            </p>
+          </div>
+          <a href="SIP.html" class="details-btn">VEJA DETALHES DO SISTEMA</a>
+        </div>
+      </div>
+    
+      <!-- Item 4 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          SIA – Sistema Integrado de Arrecadação
+          <span class="icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="texto">
+          <p>O Sistema Integrado de Arrecadação foi desenvolvido para garantir à Administração Municipal o controle de todo o processo de arrecadação de receitas municipais de forma detalhada e segura.
+             Trata-se de um sistema cujas funcionalidades podem ser adaptadas às regras de qualquer Código Tributário Municipal, a fim de calcular e controlar todos os tributos e preços públicos previstos em lei municipal.</p>         
+          </div>
+          <a href="SIA.html" class="details-btn">VEJA DETALHES DO SISTEMA</a>
+        </div>
+      </div>
+    
+      <!-- Item 5 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          SIS – Sistema Integrado de Saúde
+          <span class="icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="texto">
+          <p>O SIS tem por finalidade controlar todo o atendimento ambulatorial de unidades e postos de saúde. Atende todas as normas e exigências do SUS, de acordo com a NOB-96 e as portarias que regulamentaram a tabela de procedimentos
+             e suas definições, bem como as separações entre os procedimentos PAB e FAE. O controle pode ser feito através de várias UPS (unidades prestadora de serviço) interligadas a uma central. A integração com o CADSUS (Cartão Único de Saúde)
+              permite que sejam importados todos os pacientes cadastrados no sistema do DATASUS.</p>
+              </div>
+          <a href="SIS.html" class="details-btn">VEJA DETALHES DO SISTEMA</a>
+        </div>
+      </div>
+    
+      <!-- Item 6 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          SAS – Sistema de Assistência Social
+          <span class="icon">+</span>
+        </div>
+        
+        <div class="accordion-content">
+          <div class="texto">
+          <p>O Sistema de Assistência Social-SAS tem por finalidade gerenciar e simplificar os serviços oferecidos pela Assistência Social dos Municípios, combinando controle eficiente à simplicidade de sua organização. De fácil manuseio, possui telas
+             autoexplicativas, cadastros simples e visualização completa. Tem como funcionalidades, coordenação de projetos e programas sociais, requerimento e concessão de benefícios, visitas domiciliares, atendimentos e possíveis encaminhamentos, contratos
+              e subvenções entre outros, oferecendo um sistema de consulta simples e objetivo, tornando rápido e preciso a obtenção das informações e gerenciamento dos processos.</p>
+        </div>
+              <a href="SAS.html" class="details-btn">VEJA DETALHES DO SISTEMA</a>
+        </div>
+          </div>
+    
+        <!-- Item 7 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          SSE – Sistema Secretaria
+          <span class="icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="texto">
+          <p>O Sistema Integrado de Secretaria tem por finalidade controlar e gerenciar os processos, protocolos e documentação em geral da instituição. O Sistema controla os protocolos e seus tramites, com pareceres e endereçamento de arquivos, possui um editor
+             próprio que possibilita o gerenciamento de todos os documentos (decretos, ofícios, etc), possui agenda de compromisso e um sistema de consulta fácil e rápido permitindo um acompanhamento detalhado dos processos, protocolo, documentos e seus autores.</p>
+             </div>
+          <a href="SSE.html" class="details-btn">VEJA DETALHES DO SISTEMA</a>
+        </div>
+      </div>
+    
+       <!-- Item 8 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          SIE – Sistema Integrado de Ensino
+          <span class="icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="texto">
+          <p>O SIE – Sistema Integrado de Ensino é uma solução da Fiorilli Software desenvolvido com a finalidade de gerenciar de forma simples, organizada e unificada todas as instituições de ensino do município.
+              Gerencia a parte acadêmica das escolas, controlando desde notas e faltas dos alunos até falta de professores, atribuição de aulas e formulação do horário destas em um banco de dados único, simplificando consultas e permitindo um gerenciamento global.</p>
+          </div>
+          <a href="SIE.html" class="details-btn">VEJA DETALHES DO SISTEMA</a>
+        </div>
+      </div>
+    
+      <!-- Item 9 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          SBB – Sistema de Bliblioteca
+          <span class="icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="texto">
+          <p>O Sistema de Biblioteca foi desenvolvido com a finalidade de possibilitar ao cliente maior rapidez, organização e controle de cadastros de todo acervo bibliográfico, permitindo a gestão dos empréstimos e controles inerentes à Biblioteca Pública ou Escolar.</p>
+          </div>
+          <a href="SBB.html" class="details-btn">VEJA DETALHES DO SISTEMA</a>
+        </div>
+      </div>
+    
+      <!-- Item 10 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          SOP – Sistema de Ouvidoria
+          <span class="icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="texto">
+          <p>O Sistema de Ouvidoria Pública cadastra e possibilita o acompanhamento dos trâmites e providências aos atendimentos prestados aos cidadãos, seja pessoalmente, através da Internet, correio, caixas coletoras ou telefone. Desenvolvido como ferramenta auxiliar do
+             trabalho do Ouvidor para solução e resposta ao Cidadão, acompanhamento de resultados e subsídios para planejamento.</p>
+          </div>
+          <a href="SOP.html" class="details-btn">VEJA DETALHES DO SISTEMA</a>
+        </div>
+      </div>
+    
+      <!-- Item 11 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          SCIM – Sistema de Controle Interno Municipal
+          <span class="icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="texto">
+          <p>O Sistema de Controle Interno Municipal é um programa de apoio destinado a produzir os relatórios exigidos pelos Tribunais de Contas Estaduais e auxiliar as atividades de fiscalização e orientação da Controladoria Municipal. O SCIM, juntamente com o controle
+             externo exercido pelos Tribunais de Contas podem auxiliar a respectiva Câmara Municipal na fiscalização do cumprimento das normas legais, especialmente as da Lei Complementar nº 101/00, a LRF.</p>
+          </div>
+          <a href="SCIM.html" class="details-btn">VEJA DETALHES DO SISTEMA</a>
+        </div>
+      </div>
+    
+      <!-- Item 12 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          Aplicativo E-municipio
+          <span class="icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="texto">
+          <p>O aplicativo “e-Município” é uma solução desenvolvida pela Fiorilli Software, voltada para a administração pública municipal. Seu objetivo é integrar diversos serviços — tanto para cidadãos quanto para servidores públicos — em um ambiente digital móvel ou web.</p>
+          </div>
+          <a href="emunicipio.html" class="details-btn">VEJA DETALHES DO SISTEMA</a>
+        </div>
+      </div>
+      </div>
+    
+      </section>
+    
+         <!-- Botão flutuante do WhatsApp -->
+      <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank" aria-label="Converse no WhatsApp">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
+      </a>
+    
+      <main class="main">
+    
+             
