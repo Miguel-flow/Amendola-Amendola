@@ -12,6 +12,9 @@
         }
    
         .navbar {
+          position: sticky;
+          top: 0;
+          z-index: 9999;
             display: flex; /* Para alinhar os itens lado a lado */
             justify-content: space-between; /* Espaça os itens ao máximo */
             align-items: center; /* Centraliza verticalmente */
@@ -469,201 +472,200 @@
 
 
     <!--Sobre o E-municipioa-->  
- <div>
-    
-    <section class="servicos-amendola">
-        <style>
-          .servicos-amendola {
-            max-width: 1200px;
-            margin: 80px auto;
-            padding: 40px 20px;
-            font-family: 'Poppins', Arial, sans-serif;
-          }
-      
-          .servicos-grid {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            gap: 40px;
-            align-items: center;
-          }
-      
-          .col {
-            display: flex;
-            flex-direction: column;
-            gap: 60px;
-          }
-      
-          .item {
-            display: flex;
-            gap: 16px;
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.7s ease;
-          }
-      
-          .item.show {
-            opacity: 1;
-            transform: translateY(0);
-          }
-      
-          .icon {
-            min-width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            background: #fff1e6;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            color: #ff7a00;
-          }
-      
-          .item h4 {
-            margin: 0 0 6px;
-            font-size: 18px;
-            color: #111;
-            font-weight: 600;
-          }
-      
-          .item p {
-            margin: 0;
-            font-size: 16px;
-            color: #555;
-            line-height: 1.7;
-          }
-      
-          .phone {
-            text-align: center;
-          }
-      
-          .phone img {
-            max-width: 280px;
-            width: 100%;
-          }
-      
-          @media (max-width: 900px) {
+    <div>
+      <section class="servicos-amendola">
+          <style>
+            .servicos-amendola {
+              max-width: 1200px;
+              margin: -60px auto 80px auto; 
+              padding: 40px 0px;
+              font-family: 'Poppins', Arial, sans-serif;
+            }
+        
             .servicos-grid {
-              grid-template-columns: 1fr;
+              display: grid;
+              grid-template-columns: 1fr auto 1fr;
+              gap: 40px;
+              align-items: center;
             }
-      
+        
+            .col {
+              display: flex;
+              flex-direction: column;
+              gap: 60px;
+            }
+        
+            .item {
+              display: flex;
+              gap: 16px;
+              opacity: 0;
+              transform: translateY(40px);
+              transition: all 0.7s ease;
+            }
+        
+            .item.show {
+              opacity: 1;
+              transform: translateY(0);
+            }
+        
+            .icon {
+              min-width: 46px;
+              height: 46px;
+              border-radius: 50%;
+              background: #fff1e6;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 20px;
+              color: #ff7a00;
+            }
+        
+            .item h4 {
+              margin: 0 0 6px;
+              font-size: 18px;
+              color: #111;
+              font-weight: 600;
+            }
+        
+            .item p {
+              margin: 0;
+              font-size: 16px;
+              color: #555;
+              line-height: 1.7;
+            }
+        
             .phone {
-              order: -1;
-              margin-bottom: 40px;
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
             }
-          }
-        </style>
-       <div class="secao-titulo-principal">
-        <h2>Aplicativo E-Município</h2>
-    </div>
-        <div class="servicos-grid">
-      
-          <!-- COLUNA ESQUERDA -->
-          <div class="col">
-            <div class="item fade">
-              <div class="icon">🎓</div>
-              <div>
-                <h4>Ensino</h4>
-                <p>
-                  Voltado à educação municipal: alunos, pais e professores.
-                  Consulta de notas, faltas, histórico escolar, comunicados
-                  e integração com o sistema da prefeitura.
-                </p>
-              </div>
-            </div>
-      
-            <div class="item fade">
-              <div class="icon">🩺</div>
-              <div>
-                <h4>Saúde</h4>
-                <p>
-                  Agendamento de consultas, acesso à carteira de vacinação,
-                  resultados de exames, prontuário integrado e visitas
-                  de agentes de saúde.
-                </p>
-              </div>
-            </div>
-      
-            <div class="item fade">
-              <div class="icon">👷</div>
-              <div>
-                <h4>Trabalhador</h4>
-                <p>
-                  Informações para trabalhadores municipais e prestadores
-                  de serviço sobre vínculos, serviços e interações com o município.
-                </p>
-              </div>
-            </div>
-          </div>
-      
-          <!-- IMAGEM CENTRAL -->
-          <div class="phone">
-            <!-- Troque pela imagem real do seu celular -->
-            <img src="assents/img/imagem e-municipio.png" alt="Aplicativo Amêndola & Amêndola">
-          </div>
-      
-          <!-- COLUNA DIREITA -->
-          <div class="col">
-            <div class="item fade">
-              <div class="icon">🧾</div>
-              <div>
-                <h4>Portal de Serviços</h4>
-                <p>
-                  Emissão de guias, certidões, informações cadastrais,
-                  pagamentos de tributos e solicitações online,
-                  sem necessidade de atendimento presencial.
-                </p>
-              </div>
-            </div>
-      
-            <div class="item fade">
-              <div class="icon">🏢</div>
-              <div>
-                <h4>Fornecedor</h4>
-                <p>
-                  Consulta de contratos, situações, emissão de notas
-                  e comunicação direta entre fornecedores e o município.
-                </p>
-              </div>
-            </div>
-      
-            <div class="item fade">
-              <div class="icon">💬</div>
-              <div>
-                <h4>Fale Conosco</h4>
-                <p>
-                  Canal direto para dúvidas, reclamações, solicitações
-                  e sugestões, facilitando a comunicação com a administração pública.
-                </p>
-              </div>
-            </div>
-          </div>
-      
-        </div>
-      
-        <script>
-          const items = document.querySelectorAll('.servicos-amendola .item');
-      
-          const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('show');
+        
+            .phone img {
+              max-width: 280px;
+              width: 100%;
+              margin-bottom: 80px; 
+              display: block;
+            }
+  
+            .icones-download {
+              display: flex;
+              gap: 15px;
+              justify-content: center;
+              align-items: center;
+            }
+  
+            .icones-download img {
+              width: 140px; /* Ajuste para os badges oficiais */
+              height: auto;
+              margin-bottom: 0 !important;
+              cursor: pointer;
+              transition: transform 0.2s;
+            }
+  
+            .icones-download img:hover {
+              transform: scale(1.08);
+            }
+        
+            @media (max-width: 900px) {
+              .servicos-grid {
+                grid-template-columns: 1fr;
               }
-            });
-          }, {
-            threshold: 0.2
-          });
-      
-          items.forEach(item => observer.observe(item));
-        </script>
+        
+              .phone {
+                order: -1;
+                margin-bottom: 40px;
+              }
+            }
+          </style>
+  
+          <div class="secao-titulo-principal">
+              <h2>Aplicativo E-Município</h2>
+          </div>
+  
+          <div class="servicos-grid">
+        
+            <div class="col">
+              <div class="item fade">
+                <div class="icon">🎓</div>
+                <div>
+                  <h4>Ensino</h4>
+                  <p>Voltado à educação municipal: alunos, pais e professores. Consulta de notas, faltas, histórico escolar e integração com o sistema.</p>
+                </div>
+              </div>
+        
+              <div class="item fade">
+                <div class="icon">🩺</div>
+                <div>
+                  <h4>Saúde</h4>
+                  <p>Agendamento de consultas, acesso à carteira de vacinação, resultados de exames e prontuário integrado.</p>
+                </div>
+              </div>
+        
+              <div class="item fade">
+                <div class="icon">👷</div>
+                <div>
+                  <h4>Trabalhador</h4>
+                  <p>Informações para trabalhadores municipais e prestadores de serviço sobre vínculos e serviços do município.</p>
+                </div>
+              </div>
+            </div>
+        
+            <div class="phone">
+              <img src="assents/img/imagem e-municipio.png" alt="Aplicativo E-Município">
+              
+              <div class="icones-download">
+                  <a href="https://play.google.com/store/apps/details?id=br.com.fiorilli.emunicipio" target="_blank">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Disponível no Google Play">
+                  </a>
+                  
+                  <a href="https://apps.apple.com/br/app/e-munic%C3%ADpio/id1575362446" target="_blank">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Disponível na App Store">
+                  </a>
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="item fade">
+                <div class="icon">🧾</div>
+                <div>
+                  <h4>Portal de Serviços</h4>
+                  <p>Emissão de guias, certidões, pagamentos de tributos e solicitações online sem filas.</p>
+                </div>
+              </div>
+        
+              <div class="item fade">
+                <div class="icon">🏢</div>
+                <div>
+                  <h4>Fornecedor</h4>
+                  <p>Consulta de contratos, situações, emissão de notas e comunicação direta com o município.</p>
+                </div>
+              </div>
+        
+              <div class="item fade">
+                <div class="icon">💬</div>
+                <div>
+                  <h4>Fale Conosco</h4>
+                  <p>Canal direto para dúvidas, reclamações e sugestões, facilitando a comunicação pública.</p>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+        
+          <script>
+            const items = document.querySelectorAll('.servicos-amendola .item');
+            const observer = new IntersectionObserver(entries => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('show');
+                }
+              });
+            }, { threshold: 0.2 });
+            items.forEach(item => observer.observe(item));
+          </script>
       </section>
-      
-
-
- </div>
-    <section class="dashboard-preview">
-       
-    </section>
-
+  </div>
 
 <!--Contate nos -->
 <section id="contact" class="contact-section">
