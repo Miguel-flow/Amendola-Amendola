@@ -856,86 +856,172 @@
         
         <!--End bar-->
         <div>
-<style>
-    .tf-custom-footer {
-        background-color: #1a1a1b; /* Tom exato da imagem */
-        color: #ffffff;
-        padding: 20px 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        font-size: 13px;
-        border-top: 1px solid #333; /* Divisão sutil */
-    }
-
-    .tf-footer-left {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        user-select: none;
-    }
-
-    .tf-footer-left .tf-globe {
-        margin-right: 8px;
-        font-size: 15px;
-    }
-
-    .tf-footer-center {
-        display: flex;
-        gap: 20px;
-    }
-
-    .tf-footer-center a {
-        color: #ffffff;
-        text-decoration: underline;
-        text-underline-offset: 2px;
-        transition: opacity 0.2s ease;
-    }
-
-    .tf-footer-center a:hover {
-        opacity: 0.7;
-    }
-
-    .tf-footer-right {
-        font-weight: 400;
-        opacity: 0.9;
-    }
-
-    /* Ajuste para Mobile */
-    @media (max-width: 800px) {
-        .tf-custom-footer {
-            flex-direction: column;
-            gap: 20px;
-            text-align: center;
-            padding: 30px 10px;
-        }
-        .tf-footer-center {
-            flex-direction: column;
-            gap: 12px;
-        }
-    }
-</style>
-
-<footer class="tf-custom-footer">
-    <div class="tf-footer-left">
-        <span class="tf-globe">🌐</span>
-        <span>English</span>
-        <span style="margin-left: 5px; font-size: 10px;">∨</span>
-    </div>
-
-    <div class="tf-footer-center">
-        <a href="#">Cookie settings</a>
-        <a href="#">Check our cookies policy to delete cookies</a>
-        <a href="#">Report abuse</a>
-    </div>
-
-    <div class="tf-footer-right">
-        © Typeform
-    </div>
-</footer>
-        </div>
- 
+          <style>
+              /* Estilos do Footer */
+              .tf-custom-footer {
+                  background-color: #1a1a1b;
+                  color: #ffffff;
+                  padding: 20px 40px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                  font-size: 13px;
+                  border-top: 1px solid #333;
+              }
+          
+              /* MENU DE IDIOMAS */
+              .tf-footer-left {
+                  position: relative;
+                  display: inline-block;
+              }
+          
+              .lang-trigger {
+                  display: flex;
+                  align-items: center;
+                  cursor: pointer;
+                  user-select: none;
+                  background: none;
+                  border: none;
+                  color: white;
+                  font-size: 13px;
+                  padding: 5px 0;
+              }
+          
+              .tf-globe {
+                  margin-right: 8px;
+                  font-size: 15px;
+              }
+          
+              /* Container das opções (escondido por padrão) */
+              .lang-menu {
+                  display: none;
+                  position: absolute;
+                  bottom: 100%; /* Abre para cima */
+                  left: 0;
+                  background-color: #2a2a2b;
+                  min-width: 140px;
+                  box-shadow: 0px -4px 12px rgba(0,0,0,0.3);
+                  border-radius: 4px;
+                  z-index: 1000;
+                  margin-bottom: 10px;
+                  overflow: hidden;
+              }
+          
+              .lang-menu a {
+                  color: white;
+                  padding: 10px 15px;
+                  text-decoration: none;
+                  display: block;
+                  transition: background 0.2s;
+              }
+          
+              .lang-menu a:hover {
+                  background-color: #FD7A02; /* Laranja da sua marca */
+              }
+          
+              /* Mostrar menu no hover */
+              .tf-footer-left:hover .lang-menu {
+                  display: block;
+              }
+          
+              /* ESCONDER O BOTÃO PADRÃO DO GOOGLE (Para ficar bonito) */
+              .goog-te-banner-frame.skiptranslate, .goog-te-gadget {
+                  display: none !important;
+              }
+              body {
+                  top: 0px !important;
+              }
+          
+              .tf-footer-center {
+                  display: flex;
+                  gap: 20px;
+              }
+          
+              .tf-footer-center a {
+                  color: #ffffff;
+                  text-decoration: underline;
+                  text-underline-offset: 2px;
+                  transition: opacity 0.2s ease;
+              }
+          
+              .tf-footer-center a:hover {
+                  opacity: 0.7;
+              }
+          
+              .tf-footer-right {
+                  font-weight: 400;
+                  opacity: 0.9;
+              }
+          
+              @media (max-width: 800px) {
+                  .tf-custom-footer {
+                      flex-direction: column;
+                      gap: 20px;
+                      text-align: center;
+                      padding: 30px 10px;
+                  }
+                  .tf-footer-center {
+                      flex-direction: column;
+                      gap: 12px;
+                  }
+                  .lang-menu {
+                      left: 50%;
+                      transform: translateX(-50%);
+                  }
+              }
+          </style>
+          
+          <footer class="tf-custom-footer">
+              <div class="tf-footer-left">
+                  <button class="lang-trigger">
+                      <span class="tf-globe">🌐</span>
+                      <span id="current-lang">Português</span>
+                      <span style="margin-left: 5px; font-size: 10px;">∨</span>
+                  </button>
+                  <div class="lang-menu">
+                      <a href="javascript:void(0)" onclick="translatePage('pt')">Português</a>
+                      <a href="javascript:void(0)" onclick="translatePage('en')">English</a>
+                      <a href="javascript:void(0)" onclick="translatePage('es')">Español</a>
+                  </div>
+              </div>
+          
+              <div class="tf-footer-center">
+                  <a href="#">Cookie settings</a>
+                  <a href="#">Check our cookies policy to delete cookies</a>
+                  <a href="#">Report abuse</a>
+              </div>
+          
+              <div class="tf-footer-right">
+                  Developed by Flavio Izique & Miguel Amêndola
+              </div>
+          </footer>
+          
+          <div id="google_translate_element" style="display:none;"></div>
+          <script type="text/javascript">
+              function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({
+                      pageLanguage: 'pt',
+                      includedLanguages: 'en,pt,es',
+                      autoDisplay: false
+                  }, 'google_translate_element');
+              }
+          
+              function translatePage(lang) {
+                  var selectField = document.querySelector("select.goog-te-combo");
+                  if (selectField) {
+                      selectField.value = lang;
+                      selectField.dispatchEvent(new Event('change'));
+                      
+                      // Atualiza o texto do botão
+                      const langMap = {'pt': 'Português', 'en': 'English', 'es': 'Español'};
+                      document.getElementById('current-lang').innerText = langMap[lang];
+                  }
+              }
+          </script>
+          <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+          
+          </div>
 </body>
 </html>
  
