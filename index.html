@@ -196,6 +196,10 @@
         .dashboard-preview img:hover {
             transform: perspective(1000px) rotateX(0deg);
         }
+        button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
  
     </style>
 </head>
@@ -207,7 +211,7 @@
         <ul class="navbar-links">
             <li><a href="#">Home</a></li>
             <li><a href="sistemas.html">Sistemas</a></li>
-            <li><a href="#">Contate-nos</a></li>
+            <li><a href="#contato">Contate-nos</a></li>
 
         </ul>
 
@@ -216,20 +220,20 @@
 
         <div class="navbar-buttons">
             
-            <button onclick="window.location.href='https://amendola.flowdocs.com.br:2053/credentials/login'" style="
-            background-color:#FD7A02;
-            color:#fff;
-            border:none;
-            border-radius:30px;
-            padding:10px 20px;
-            font-size:16px;
-            font-weight:bold;
-            cursor:pointer;
-            margin:10px;
-            box-shadow:0 4px 10px rgba(0,0,0,0.1);
-          ">
-            FlowDocs
-          </button>
+          <button onclick="window.open('https://amendola.flowdocs.com.br:2053/credentials/login', '_blank')" style="
+          background-color:#FD7A02;
+          color:#fff;
+          border:none;
+          border-radius:30px;
+          padding:10px 20px;
+          font-size:16px;
+          font-weight:bold;
+          cursor:pointer;
+          margin:10px;
+          box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      ">
+          FlowDocs
+      </button>
           
         </div>
     </nav>
@@ -365,6 +369,8 @@
           
           <section class="cta-suporte">
               <style>
+
+                
                   .cta-suporte {
                       max-width: 1200px;
                       margin: 0 auto;
@@ -800,11 +806,11 @@
           }
       }
   </style>
-
+<section id="contato" class="sua-classe-de-contato"> 
   <div class="secao-titulo-principal">
       <h2>Contate-nos</h2>
   </div>
-
+</section>
   <div class="contact-wrapper">
       <div class="contact-card">
           <h3>Informações</h3>
