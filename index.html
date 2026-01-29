@@ -426,7 +426,7 @@
               }
           
               .cta-suporte a:hover {
-                background: #fff;
+                background: #794444;
                 color: #ff9800;
                 transform: translateY(-3px);
               }
@@ -460,7 +460,7 @@
 
 
 
-      
+    <!--Sobre o E-municipioa-->  
  <div>
     
     <section class="servicos-amendola">
@@ -544,7 +544,9 @@
             }
           }
         </style>
-      
+       <div class="secao-titulo-principal">
+        <h2>E-Município</h2>
+    </div>
         <div class="servicos-grid">
       
           <!-- COLUNA ESQUERDA -->
@@ -647,27 +649,58 @@
         </script>
       </section>
       
+
+
  </div>
     <section class="dashboard-preview">
        
     </section>
 
+
+<!--Contate nos -->
     <section id="contact" class="contact-section">
-        <style>
-            .contact-section {
+      <style>
+          .contact-section {
               padding: 40px 0;
               background: #f8f9fa;
-            }
-         
-            .contact-wrapper {
+              font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+          }
+  
+          /* --- ESTILO DO NOVO TÍTULO --- */
+          .secao-titulo-principal {
+              text-align: center;
+              margin-bottom: 40px;
+          }
+  
+          .secao-titulo-principal h2 {
+              color: #2d3436;
+              font-size: 32px;
+              font-weight: 600;
+              margin-bottom: 10px;
+              position: relative;
+              display: inline-block;
+          }
+  
+          .secao-titulo-principal h2::after {
+              content: "";
+              display: block;
+              width: 45px;
+              height: 3px;
+              background-color: #ff9800; /* Cor laranja combinando com seu card */
+              margin: 8px auto 0 auto;
+              border-radius: 2px;
+          }
+          /* ---------------------------- */
+  
+          .contact-wrapper {
               display: flex;
               gap: 20px;
               max-width: 1100px;
               margin: 0 auto;
-            }
-         
-            /* CARD */
-            .contact-card {
+          }
+  
+          /* CARD */
+          .contact-card {
               background: #ff9800;
               color: #fff;
               border-radius: 14px;
@@ -675,10 +708,10 @@
               height: 360px;
               box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
               display: flex;
-            }
-         
-            /* COLUNA DE ÍCONES */
-            .icon-column {
+          }
+  
+          /* COLUNA DE ÍCONES */
+          .icon-column {
               width: 90px;
               background: rgba(255, 255, 255, 0.08);
               border-radius: 14px 0 0 14px;
@@ -687,9 +720,9 @@
               align-items: center;
               justify-content: center;
               gap: 25px;
-            }
-         
-            .icon-circle {
+          }
+  
+          .icon-circle {
               width: 56px;
               height: 56px;
               background: rgba(255, 255, 255, 0.25);
@@ -698,118 +731,203 @@
               align-items: center;
               justify-content: center;
               font-size: 22px;
-            }
-         
-            /* CONTEÚDO */
-            .contact-content {
+          }
+  
+          /* CONTEÚDO */
+          .contact-content {
               padding: 28px 22px;
               flex: 1;
               display: flex;
               flex-direction: column;
               justify-content: center;
-            }
-         
-            .contact-content h3 {
+          }
+  
+          .contact-content h3 {
               font-size: 22px;
               margin-bottom: 20px;
               font-weight: 700;
-            }
-         
-            .info-item {
+          }
+  
+          .info-item {
               margin-bottom: 16px;
-            }
-         
-            .info-item h4 {
+          }
+  
+          .info-item h4 {
               font-size: 15px;
               font-weight: 600;
               margin-bottom: 4px;
-            }
-         
-            .info-item p {
+          }
+  
+          .info-item p {
               font-size: 13px;
               margin: 0;
               line-height: 1.4;
-            }
-         
-            /* MAPA */
-            .map-box {
+          }
+  
+          /* MAPA */
+          .map-box {
               width: 58%;
               height: 360px;
               border-radius: 14px;
               overflow: hidden;
               box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-            }
-         
-            .map-box iframe {
+          }
+  
+          .map-box iframe {
               width: 100%;
               height: 100%;
               border: 0;
-            }
-         
-            /* RESPONSIVO */
-            @media (max-width: 992px) {
+          }
+  
+          /* RESPONSIVO */
+          @media (max-width: 992px) {
               .contact-wrapper {
-                flex-direction: column;
+                  flex-direction: column;
+                  padding: 0 20px;
               }
-         
+  
               .contact-card,
               .map-box {
-                width: 100%;
-                height: 320px;
+                  width: 100%;
+                  height: auto;
+                  min-height: 320px;
               }
-         
+  
               .icon-column {
-                flex-direction: row;
-                width: 100%;
-                height: 80px;
-                border-radius: 14px 14px 0 0;
+                  flex-direction: row;
+                  width: 100%;
+                  height: 80px;
+                  border-radius: 14px 14px 0 0;
               }
-            }
-        </style>
-         
-          <div class="contact-wrapper">
-        <!-- CARD -->
-        <div class="contact-card">
-        <!-- ÍCONES -->
-        <div class="icon-column">
-        <div class="icon-circle">📍<i class="bi bi-geo-alt"></i></div>
-        <div class="icon-circle">📞<i class="bi bi-telephone"></i></div>
-        <div class="icon-circle">📧<i class="bi bi-envelope"></i></div>
-        </div>
-         
-              <!-- TEXTO -->
-        <div class="contact-content">
-        <h3>Contate-nos</h3>
-         
-                <div class="info-item">
-        <h4>Localização</h4>
-        <p>Rua J. Carlos Mendes de Campos, 190</p>
-        <p>Sales, Cristo Redentor CEP: 14980 622</p>
-        </div>
-         
-                <div class="info-item">
-        <h4>Número de telefone</h4>
-        <p>+55 (17) 2137-2200</p>
-        <p>+55 (17) 3557-9090</p>
-        </div>
-         
-                <div class="info-item">
-        <h4>Email</h4>
-        <p>contato@amendolaeamendola.com.br</p>
-        </div>
-        </div>
-        </div>
-         
-            <!-- MAPA -->
+          }
+      </style>
+  
+      <div class="secao-titulo-principal">
+          <h2>Contate-nos</h2>
+      </div>
+  
+      <div class="contact-wrapper">
+          <div class="contact-card">
+              <div class="icon-column">
+                  <div class="icon-circle">📍</div>
+                  <div class="icon-circle">📞</div>
+                  <div class="icon-circle">📧</div>
+              </div>
+  
+              <div class="contact-content">
+                  <h3>Informações</h3> <div class="info-item">
+                      <h4>Localização</h4>
+                      <p>Rua J. Carlos Mendes de Campos, 190</p>
+                      <p>Sales, Cristo Redentor CEP: 14980 622</p>
+                  </div>
+  
+                  <div class="info-item">
+                      <h4>Número de telefone</h4>
+                      <p>+55 (17) 2137-2200</p>
+                      <p>+55 (17) 3557-9090</p>
+                  </div>
+  
+                  <div class="info-item">
+                      <h4>Email</h4>
+                      <p>contato@amendolaeamendola.com.br</p>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- MAPA -->
         <div class="map-box">
-        <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1858.135713352941!2d-49.49752262320958!3d-21.339786485462337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be7867b6fa1d17%3A0x42c5472c9c2ed4c8!2sAMENDOLA%20%26%20AMENDOLA%20SOFTWARE%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1761132974636!5m2!1spt-BR!2sbr%22
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+          <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1858.135713352941!2d-49.49752262320958!3d-21.339786485462337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be7867b6fa1d17%3A0x42c5472c9c2ed4c8!2sAMENDOLA%20%26%20AMENDOLA%20SOFTWARE%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1761132974636!5m2!1spt-BR!2sbr%22
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          </div>
+          </div>
+          </section>
+        
+        
+        
+        <!--End bar-->
+        <div>
+<style>
+    .tf-custom-footer {
+        background-color: #1a1a1b; /* Tom exato da imagem */
+        color: #ffffff;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        border-top: 1px solid #333; /* Divisão sutil */
+    }
+
+    .tf-footer-left {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .tf-footer-left .tf-globe {
+        margin-right: 8px;
+        font-size: 15px;
+    }
+
+    .tf-footer-center {
+        display: flex;
+        gap: 20px;
+    }
+
+    .tf-footer-center a {
+        color: #ffffff;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        transition: opacity 0.2s ease;
+    }
+
+    .tf-footer-center a:hover {
+        opacity: 0.7;
+    }
+
+    .tf-footer-right {
+        font-weight: 400;
+        opacity: 0.9;
+    }
+
+    /* Ajuste para Mobile */
+    @media (max-width: 800px) {
+        .tf-custom-footer {
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+            padding: 30px 10px;
+        }
+        .tf-footer-center {
+            flex-direction: column;
+            gap: 12px;
+        }
+    }
+</style>
+
+<footer class="tf-custom-footer">
+    <div class="tf-footer-left">
+        <span class="tf-globe">🌐</span>
+        <span>English</span>
+        <span style="margin-left: 5px; font-size: 10px;">∨</span>
+    </div>
+
+    <div class="tf-footer-center">
+        <a href="#">Cookie settings</a>
+        <a href="#">Check our cookies policy to delete cookies</a>
+        <a href="#">Report abuse</a>
+    </div>
+
+    <div class="tf-footer-right">
+        © Typeform
+    </div>
+</footer>
         </div>
-        </div>
-        </section>
  
 </body>
 </html>
