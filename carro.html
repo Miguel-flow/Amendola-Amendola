@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela de Veículos - Amendola & Amendola</title>
+  <style>
+    /* ======= RESET E GERAL ======= */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      margin-top: 70px;
+      background-color: #f9f9f9;
+      font-family: "Nunito", Arial, sans-serif;
+    }
+
+    /* ======= HEADER ======= */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo img {
+      max-height: 40px;
+    }
+
+    .navmenu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 25px;
+    }
+
+    .navmenu a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .navmenu a:hover {
+      color: #fd950d;
+    }
+
+    .btn-getstarted {
+      background-color: #fd950d;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: opacity 0.3s ease;
+    }
+
+    .btn-getstarted:hover {
+      opacity: 0.9;
+    }
+
+    .mobile-nav-toggle {
+      display: none;
+    }
+
+    /* ======= CONTEÚDO ======= */
+    main {
+      margin-top: 100px;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mb-4 {
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      color: #333;
+      font-size: 28px;
+    }
+
+    /* ======= ESTILO DA TABELA ======= */
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      width: 100%;
+      margin: 0 auto 70px;
+      text-align: center;
+      background-color: #ffffff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 14px 16px;
+      border: 1px solid #e0e0e0;
+    }
+
+    thead {
+      background-color: #fd950d;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    thead th {
+      border-color: #e89a3a;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+
+    tbody tr:hover {
+      background-color: #fff8f0;
+    }
+
+    @media (max-width: 768px) {
+      .navmenu ul {
+        gap: 15px;
+      }
+
+      .navmenu a {
+        font-size: 14px;
+      }
+
+      table {
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 10px 8px;
+      }
+    }
+  </style>
+</head>
+<body class="index-page">
+  <!-- ======= HEADER ======= -->
+  <header id="header" class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <img src="assents/img/logo.png" alt="Amendola & Amendola">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="sistemas.html">Sistemas</a></li>
+          <li><a href="#contact">Contate-nos</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn-getstarted" href="https://amendola.flowdocs.com.br:2053/public/home" target="_blank" rel="noopener noreferrer">Chamados</a>
+    </div>
+  </header>
+
+  <!-- ======= CONTEÚDO PRINCIPAL ======= -->
+  <main>
+    <section id="tabela-veiculos">
+      <div class="container text-center">
+        <h2 class="mb-4">Tabela de Veículos</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Número</th>
+              <th>Modelo</th>
+              <th>Placa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>01</td><td>Yaris</td><td>SWH-9I21</td></tr>
+            <tr><td>02</td><td>Voyage</td><td>EOD-6252</td></tr>
+            <tr><td>03</td><td>Voyage</td><td>BWW-2953</td></tr>
+            <tr><td>04</td><td>Voyage</td><td>FHY-9894</td></tr>
+            <tr><td>05</td><td>Gol</td><td>GCH-3945</td></tr>
+            <tr><td>06</td><td>Voyage</td><td>FXZ-4656</td></tr>
+            <tr><td>07</td><td>Voyage</td><td>GHI-0F27</td></tr>
+            <tr><td>08</td><td>Gol</td><td>FWR-9928</td></tr>
+            <tr><td>09</td><td>Gol</td><td>FCH-3939</td></tr>
+            <tr><td>—</td><td>Polo</td><td>FVV-6065</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
