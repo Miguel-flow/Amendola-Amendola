@@ -11,26 +11,25 @@ body {
 }
 
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    display: flex; /* Para alinhar os itens lado a lado */
-    justify-content: space-between; /* Espaça os itens ao máximo */
-    align-items: center; /* Centraliza verticalmente */
-    background-color: #fff; /* Fundo branco */
-    padding: 5px 20px;
-    margin: 20px auto; /* Centraliza a navbar e dá um espaço */
-    width: 90%; /* Largura da navbar */
-    max-width: 1200px; /* Largura máxima */
-    border-radius: 50px; /* Bordas bem arredondadas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    animation: slideInDown 0.8s ease-out;
+    position: relative; /* fluxo normal da página */
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #fff;
+    padding: 10px 24px;
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 20px auto 0 auto; /* REMOVE espaço embaixo */
+
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes slideInDown {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
 
 .navbar-logo {
     font-weight: bold;
@@ -583,10 +582,10 @@ button:active {
 }
 
 .info-item {
-display: flex;
-align-items: center; 
-gap: 12px;
-margin-bottom: 15px; /* Reduzi um pouco para não estourar a altura */
+    display: flex;
+    align-items: center; 
+    gap: 12px;
+    margin-bottom: 15px; /* Reduzi um pouco para não estourar a altura */
 }
 
 .contact-icon-circle {
@@ -750,4 +749,3 @@ left: 50%;
 transform: translateX(-50%);
 }
 }
-
