@@ -1,416 +1,247 @@
-/* TÍTULO DA PÁGINA */
-.sistema-titulo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Estilos específicos para a página de sistemas - Prefixados com .page-sistema para evitar conflitos */
+.page-sistema {
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Animações globais */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Sistema-titulo */
+.page-sistema .sistema-titulo {
+    background: linear-gradient(135deg, #ff7300, #ff9800);
+    color: #fff;
+    padding: 80px 20px;
     text-align: center;
-    padding-top: 170px;
-    background-color: #F8F8F8; 
-    padding-bottom: 80px;
-    
-  }
-  
-  .banner-text h1 {
-    font-size: 50px;
-    color: #FD7A02;
-    font-weight: 900;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 6px rgba(133, 93, 93, 0.5);
-  }
-  
-  .banner-text h2 {
-    font-size: 32px;
+    animation: fadeIn 1s ease-out;
+}
+
+.page-sistema .sistema-titulo .banner-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.page-sistema .sistema-titulo .banner-text h2 {
+    font-size: 1.5rem;
     margin-bottom: 20px;
     font-weight: 500;
-    color: #333;
-  }
-  
-  .banner-text p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    font-weight: 400;
-    color: #666;
-    line-height: 1.6;
-    text-align: center;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  /* LINHA HORIZONTAL */
-  .sistema-banner hr {
-    width: 60px;
-    border: 2px solid #FD7A02;
+}
+
+.page-sistema .sistema-titulo hr {
+    border: 1px solid #fff;
+    width: 50%;
     margin: 20px auto;
-  }
-  
-  /* CONTEÚDO PRINCIPAL */
-  .sistema-conteudo {
-    max-width: 1250px;
-    margin: 40px auto;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    padding: 40px 30px;
-  }
-  
-  /* ÍCONES BENEFÍCIOS */
-  
-  #BENEFICIOS {
-  display: flex;
-   justify-content: space-between;
-    padding: 5px
-  }
-  
-  .icons-container {
+}
+
+.page-sistema .sistema-titulo p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* BENEFÍCIOS */
+.page-sistema .icons-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px;
+    background: #f9f9f9;
+    flex-wrap: wrap;
+    animation: slideInUp 1s ease-out 0.2s both;
+}
+
+.page-sistema .icon-wrapper {
+    text-align: center;
+    max-width: 300px;
+    margin: 20px;
+}
+
+.page-sistema .icon-circle {
+    width: 80px;
+    height: 80px;
+    background: #ff7300;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: #fff;
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.page-sistema .icon-circle:hover {
+    transform: scale(1.1);
+}
+
+.page-sistema .icon-wrapper p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff7300;
+}
+
+.page-sistema .icon-wrapper span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* SEÇÃO DETALHADA DO FLOWDOCS */
+.page-sistema .features {
     display: flex;
     justify-content: space-between;
-    padding: 50px 10%;
-    background-color: #ffffff;
-    gap: 60px; 
-  }
-  
-  
-  .icon-wrapper {
-    width: 30%;
+    padding: 60px 20px;
+    background: #fff;
+    flex-wrap: wrap;
+    animation: slideInUp 1s ease-out 0.4s both;
+}
+
+.page-sistema .features .column {
+    max-width: 45%;
+    margin: 20px;
+    min-width: 300px;
+}
+
+.page-sistema .features h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.page-sistema .features p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* INTEGRAÇÕES */
+.page-sistema .integracoes {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    animation: slideInUp 1s ease-out 0.6s both;
+}
+
+.page-sistema .integracoes .bloco h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.page-sistema .integracoes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.page-sistema .integracoes li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.page-sistema .integracoes li i {
+    color: #ff7300;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.page-sistema .integracoes .laranja {
+    color: #ff7300;
+}
+
+.page-sistema .integracoes span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* FUNCIONALIDADES */
+.page-sistema .functionalities {
+    padding: 60px 20px;
+    background: #fff;
     text-align: center;
-    padding: 10px;
+    animation: slideInUp 1s ease-out 0.8s both;
+}
+
+.page-sistema .functionalities h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.page-sistema .functionalities-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.page-sistema .functionality {
+    background: #f9f9f9;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-    transition: all 0.7s ease-in-out;
-  }
-  
-  @media (max-width: 768px) {
-    .icons-container {
-      flex-direction: column; 
-      gap: 60px; 
-      padding: 40px 5%;
-    }
-     .icon-wrapper {
-      width: 90%; 
-      text-align: center;
-      margin: 0 auto;
-    }
-  
-    .features {
-      flex-direction: column;
-      padding: 40px 5%;
-    }
-  
-    .integracoes {
-      flex-direction: column;
-      padding: 30px 5%;
-    }
-  
-    .integracoes .bloco {
-      width: 80%;
-      margin: 0 auto;
-    }
-  }
-  
-  .icon-wrapper:hover {
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1);
-    transition: all 1s ease-in-out; 
-  }
-  
-  .icon-circle {
-    background-color: #FD7A02;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.page-sistema .functionality:hover {
+    transform: translateY(-5px);
+}
+
+.page-sistema .functionality h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ff7300;
+}
+
+.page-sistema .functionality p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* BOTÃO VOLTAR */
+.page-sistema .back-button {
+    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 36px;
-    margin: 0 auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-      transition: all 0.5s ease-in-out; 
-  }
-  
-  .icon-circle:hover {
-    background-color: #e46e00; 
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5); 
-    transform: scale(1.1); 
-  }
-  
-  .icon-wrapper p {
-    font-size: 18px; 
-    line-height: 1.6; 
-    font-weight: 400; 
-    color: #555; 
-    margin-top: 10px; 
-    text-align: center; 
-  }
-  
-  .benefit p {
+    animation: fadeIn 1s ease-out 1s both;
+}
+
+.page-sistema .btn-back {
+    background-color: #ff8c00;
+    color: #ffffff;
+    border: none;
+    padding: 20px 70px;
+    border-radius: 999px;
     font-size: 14px;
-    color: #777;
-  }
-  
-  /* SEÇÃO FEATURES */
-  .features {
-    display: flex;
-    justify-content: space-between;
-    padding: 60px 2%;
-    background-color: #f9f9f9;
-    gap: 100px;
-  }
-  
-  .features .column {
-    width: auto;
-  }
-  
-  .features h3 {
-    color: #FD7A02;
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  
-  .features p {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.5;
-  }
-  
-  /* FUNCIONALIDADES */
-  .functionalities {
-    background-color: #ffffff;
-    padding: 40px 10%;
-  }
-  
-  .functionalities h2 {
-    margin-bottom: 30px;
-    color: #444;
-    border-left: 4px solid #FD7A02;
-    padding-left: 10px;
-    font-size: 26px;
     font-weight: bold;
-    text-align: center;
-  }
-  
-  .functionalities-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-  }
-  
-  .functionality {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .functionality h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #FD7A02;
-    margin-bottom: 15px;
-  }
-  
-  .functionality p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.6;
-  }
-  
-  /* Responsividade: ajustando para telas menores */
-  @media (max-width: 768px) {
-    .functionalities-container {
-      grid-template-columns: 1fr;
-      padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #2c1800;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .page-sistema .sistema-titulo h1 {
+        font-size: 2rem;
     }
-  
-    .functionality {
-      margin-bottom: 20px;
+    .page-sistema .icons-container {
+        flex-direction: column;
+        align-items: center;
     }
-  
-    .functionalities h2 {
-      font-size: 22px;
+    .page-sistema .features {
+        flex-direction: column;
     }
-  }
-  
-  /* INTEGRAÇÕES */
-  .integracoes {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 10%;
-    background-color: #f9f9f9;
-    gap: 30px;
-  }
-  
-  .integracoes .bloco {
-    width: 48%; 
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .integracoes h3 {
-    font-size: 22px;
-    font-weight: 600;
-    color: #FD7A02;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-left: 4px solid #FD7A02;
-    padding-left: 10px;
-  }
-  
-  .integracoes ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .integracoes li {
-    margin-bottom: 15px;
-    font-size: 16px;
-    color: #555;
-    position: relative;
-    padding-left: 24px;
-  }
-  
-  .integracoes li i {
-    color: #FD7A02;
-    position: absolute;
-    left: 0;
-    top: 2px;
-  }
-  
-  .integracoes li strong {
-    font-weight: 600;
-    color: #333;
-  }
-  
-  .integracoes li .laranja {
-    color: #FD7A02;
-  }
-  
-  .integracoes li span {
-    display: block;
-    margin-top: 4px;
-    color: #666;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  
-  /* RESPONSIVO */
-  @media (max-width: 768px) {
-    .icons-container {
-      flex-direction: column;
-      gap: 20px;
-      padding: 40px 5%;
+    .page-sistema .functionalities-container {
+        grid-template-columns: 1fr;
     }
-  
-    .features {
-      flex-direction: column;
-      padding: 40px 5%;
-    }
-  
-    .integracoes {
-      flex-direction: column;
-      padding: 30px 5%;
-    }
-  
-    .integracoes .bloco {
-      width: 100%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .icons-container {
-      flex-direction: column; /* Alinha os itens verticalmente */
-      gap: 20px;
-      padding: 40px 5%; /* Ajuste do padding */
-    }
-  
-    .features {
-      flex-direction: row;
-      padding: 4px 2%;
-      margin: 0 auto auto auto;
-      width: 100%;
-    }
-  
-    .integracoes {
-      flex-direction: column;
-      padding: 30px 5%;
-    }
-  
-    .integracoes .bloco {
-      width: 100%;
-    }
-  
-    /* Ajustando os itens do header para ficarem melhor alinhados no celular */
-    .main-nav ul {
-      flex-direction: column;
-      padding: 0;
-    }
-  }
-  
-  /* Para telas menores que 768px */
-  @media (max-width: 768px) {
-    .integracoes .bloco > div {
-      flex: 1 1 45%;
-      max-width: 45%;
-    }
-  }
-  
-  /*celulares menores que 480px */
-  @media (max-width: 480px) {
-    #why-us .counters > div {
-      flex: 1 1 100%;
-      max-width: 100%;
-    }
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  .btn-voltar {
-   display: flex;
-   height: 4em;
-   width: 100%;
-   align-items: center;
-   justify-content: center;
-   background-color: #eeeeee4b;
-   border-radius: 3px;
-   letter-spacing: 1px;
-   transition: all 0.2s linear;
-   cursor: pointer;
-   border: none;
-   background: #fff;
-   margin-bottom: 3rem;
-  }
-  .btn-voltar > span {
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: 900;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
-   Arial, sans-serif;
-  }
-  
-  .btn-voltar > svg {
-   margin-right: 5px;
-   margin-left: 5px;
-   font-size: 20px;
-   transition: all 0.4s ease-in;
-  
-  }
-  
-  .btn-voltar:hover > svg {
-   font-size: 5.2em;
-   transform: translateX(-5px);
-  }
-  
-  .btn-voltar:hover {
-   box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
-   transform: translateY(-2px);
-  }
+}
