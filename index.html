@@ -919,7 +919,7 @@
               }
           
               .lang-menu a:hover {
-                  background-color: #FD7A02; /* Laranja da sua marca */
+                  background-color: #FD7A02; /* Laranja da sua ma rca */
               }
           
               /* Mostrar menu no hover */
@@ -955,6 +955,27 @@
                   font-weight: 400;
                   opacity: 0.9;
               }
+
+              /* Link do carro / veículos */
+              .tf-footer-car-link {
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 44px;
+                  height: 44px;
+                  background-color: #1A1A1B;
+                  color: #fff;
+                  border-radius: 50%;
+                  text-decoration: none;
+                  font-size: 22px;
+                  transition: transform 0.2s ease, box-shadow 0.2s ease;
+                  box-shadow: 0 4px 12px #1A1A1B
+              }
+              .tf-footer-car-link:hover {
+                  transform: scale(1.08);
+                  box-shadow: 0 6px 16px #1a1a1b
+                  color: #fff;
+              }
           
               @media (max-width: 800px) {
                   .tf-custom-footer {
@@ -987,7 +1008,9 @@
                       <a href="javascript:void(0)" onclick="translatePage('es')">Español</a>
                   </div>
               </div>
-          
+
+              <a href="carro.html" class="tf-footer-car-link" title="Tabela de Veículos" aria-label="Ver tabela de veículos">🚗</a>
+
               <div class="tf-footer-center">
                   <a href="#">Cookie settings</a>
                   <a href="#">Check our cookies policy to delete cookies</a>
