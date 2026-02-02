@@ -762,11 +762,19 @@ opacity: 0.9;
 
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
 .btn-footer-carro-icon i {
-    font-size: 18px;
-    color: #fff;
+    font-size: 22px; /* tenta 24px se quiser maior */
 }
+
+.btn-footer-carro-icon {
+    color: #fff !important;
+}
+
+.btn-footer-carro-icon .fas,
+.btn-footer-carro-icon .fas::before {
+    color: #fff !important;
+}
+
 
 .btn-footer-carro-icon:hover {
     background-color: #e66a00;
@@ -793,3 +801,33 @@ left: 50%;
 transform: translateX(-50%);
 }
 }
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;  
+    left: 20px;         
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  
+  
+  .whatsapp-float img {
+    width: 35px;
+    height: 35px;
+    filter: brightness(0) invert(1);
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
