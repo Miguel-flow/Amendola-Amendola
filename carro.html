@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tabela de Veículos - Amendola & Amendola</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40JuKakMqk0dmrRjH2uWfEK7L8r/y0E45J8O4I+6rT5g5k5s2f6qj5w5Q5S5k5S5k5Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="assents/css/style.css" rel="stylesheet">
   <link href="assents/css/main.css" rel="stylesheet">
   <style>
-   
     /* ======= CONTEÚDO ======= */
     main {
       margin-top: 100px;
@@ -89,33 +88,29 @@
         padding: 10px 8px;
       }
     }
-  
+    
     .btn-footer-carro-icon i {
-    color: #fff;
-}
+      color: #fff;
+    }
   </style>
 </head>
 <body class="index-page">
   <!-- ======= HEADER ======= -->
-<nav class="navbar">
-        <span class="navbar-logo">
-            <img src="assents/img/logo.png" width="150px" height="30px">
-        </span>
-        <ul class="navbar-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sistemas.html">Sistemas</a></li>
-            <li><a href="#contato">Contate-nos</a></li>
-        </ul>   
-        <div class="navbar-buttons">
-            <button onclick="window.open('https://amendola.flowdocs.com.br:2053/credentials/login', '_blank')" class="btn-flowdocs">
-                FlowDocs
-            </button>
-        </div>
-    </nav>
-
-      <a class="btn-getstarted" href="https://amendola.flowdocs.com.br:2053/public/home" target="_blank" rel="noopener noreferrer">FlowDocs</a>
-    </div>
-  </header>
+  <nav class="navbar">
+      <span class="navbar-logo">
+          <img src="assents/img/logo.png" width="150px" height="30px">
+      </span>
+      <ul class="navbar-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sistemas.html">Sistemas</a></li>
+          <li><a href="#contato">Contate-nos</a></li>
+      </ul>  
+      <div class="navbar-buttons">
+          <button onclick="window.open('https://amendola.flowdocs.com.br:2053/credentials/login', '_blank')" class="btn-flowdocs">
+              FlowDocs
+          </button>
+      </div>
+  </nav>
 
   <!-- ======= CONTEÚDO PRINCIPAL ======= -->
   <main>
@@ -148,51 +143,61 @@
     </section>
   </main>
   
-<!--End bar-->
-<footer class="tf-custom-footer">
-  <div class="tf-footer-left">
-      <div class="lang-selector">
-          <button class="lang-trigger">
-              <span class="tf-globe">🌐</span>
-              <span id="current-lang">Português</span>
-              <span style="margin-left: 5px; font-size: 10px;"></span>
-          </button>
-          <div class="lang-menu">
-              <a href="javascript:void(0)" onclick="translatePage('pt')">Português</a>
-              <a href="javascript:void(0)" onclick="translatePage('en')">English</a>
-              <a href="javascript:void(0)" onclick="translatePage('es')">Español</a>
-          </div>
-      </div>
-      <a href="carro.html" class="btn-footer-carro-icon" title="Tabela de Veículos">
+  <!-- Footer -->
+  <footer class="tf-custom-footer">
+    <div class="tf-footer-left">
+        <div class="lang-selector">
+            <button class="lang-trigger">
+                <span class="tf-globe" aria-hidden="true">🌐</span>
+                <span id="current-lang">Português</span>
+                <span style="margin-left: 5px; font-size: 10px;">∨</span>
+            </button>
+            <div class="lang-menu">
+                <a href="javascript:void(0)" onclick="translatePage('pt')">Português</a>
+                <a href="javascript:void(0)" onclick="translatePage('en')">English</a>
+                <a href="javascript:void(0)" onclick="translatePage('es')">Español</a>
+            </div>
+        </div>
+        <a href="carro.html" class="btn-footer-carro-icon" title="Tabela de Veículos">
           <i class="fas fa-car"></i>
-      </a>
-      
-  </div>
-  <div class="tf-footer-center">
-  </div>
-  <div class="tf-footer-right">
-      Developed by Equipe Flowdocs
-  </div>
-</footer>
-<div id="google_translate_element" style="display:none;"></div>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-          pageLanguage: 'pt',
-          includedLanguages: 'en,pt,es',
-          autoDisplay: false
-      }, 'google_translate_element');
-  }
-  function translatePage(lang) {
-      var selectField = document.querySelector("select.goog-te-combo");
-      if (selectField) {
-          selectField.value = lang;
-          selectField.dispatchEvent(new Event('change'));
-          const langMap = {'pt': 'Português', 'en': 'English', 'es': 'Español'};
-          document.getElementById('current-lang').innerText = langMap[lang];
+        </a>
+    </div>
+    <div class="tf-footer-center">
+        <a href="#">Cookie settings</a>
+        <a href="#">Check our cookies policy to delete cookies</a>
+        <a href="#">Report abuse</a>
+    </div>
+    <div class="tf-footer-right">
+        Developed by Equipe Flowdocs
+    </div>
+  </footer>
+
+  <div id="google_translate_element" style="display:none;"></div>
+  <script type="text/javascript">
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'pt',
+              includedLanguages: 'en,pt,es',
+              autoDisplay: false
+          }, 'google_translate_element');
       }
-  }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      function translatePage(lang) {
+          var selectField = document.querySelector("select.goog-te-combo");
+          if (selectField) {
+              selectField.value = lang;
+              selectField.dispatchEvent(new Event('change'));
+              const langMap = {'pt': 'Português', 'en': 'English', 'es': 'Español'};
+              document.getElementById('current-lang').innerText = langMap[lang];
+          }
+      }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank" aria-label="Converse no WhatsApp">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
+  </a>
+  <link rel="stylesheet" href="assents/css/main.css"> 
+  <script src="assents/js/main.js"></script>
 </body>
 </html>

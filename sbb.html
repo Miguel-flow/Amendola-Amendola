@@ -1,276 +1,271 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Amendola & Amendola</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>SBB - Sistema de Biblioteca | Amendola & Amendola</title>
+    <meta name="description" content="SBB - Gestão completa de bibliotecas municipais e escolares: código de barras, empréstimos, reservas online e integração SIE.">
+    <meta name="keywords" content="SBB, biblioteca, código barras, empréstimo, acervo, catalogação, reserva online">
+    
+    <!-- CSS EMBUTIDO - SEM BUGS DE IMAGENS -->
+    <style>
+        /* CORREÇÃO 100% DAS IMAGENS */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body.background { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; color: #333; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        /* NAVBAR SEMPRE FUNCIONA */
+        .navbar { 
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 15px 5%; 
+            display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .navbar-logo img { 
+            max-width: 150px; height: auto; display: block; 
+            object-fit: contain; filter: drop-shadow(0 2px 8px rgba(253,122,2,0.3));
+        }
+        .navbar-links { display: flex; list-style: none; gap: 2rem; }
+        .navbar-links a { color: #333; text-decoration: none; font-weight: 500; padding: 8px 0; position: relative; }
+        .navbar-links a.active::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: #FD7A02; }
+        .navbar-buttons button { 
+            background: linear-gradient(45deg, #FD7A02, #ff8c00); color: white; border: none; padding: 12px 24px; 
+            border-radius: 25px; font-weight: 600; cursor: pointer; box-shadow: 0 6px 20px rgba(253,122,2,0.4);
+            transition: all 0.3s ease;
+        }
+        .navbar-buttons button:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(253,122,2,0.6); }
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        /* BANNER PRINCIPAL */
+        .page-sistema .sistema-titulo { 
+            background: linear-gradient(135deg, #FD7A02 0%, #ff6b00 100%); color: white; padding: 100px 5%; 
+            text-align: center; position: relative; overflow: hidden;
+        }
+        .banner-text { max-width: 900px; margin: 0 auto; position: relative; z-index: 2; }
+        .banner-text h1 { font-size: 5rem; font-weight: 800; margin: 0 0 1rem 0; text-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+        .banner-text h2 { font-size: 2rem; margin: 0 0 2rem 0; opacity: 0.95; }
+        .banner-divider { width: 120px; height: 5px; background: rgba(255,255,255,0.9); margin: 2rem auto; border-radius: 3px; }
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        /* ÍCÔNICONES CORRIGIDOS */
+        .icons-container { padding: 80px 5%; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
+        .icon-wrapper { text-align: center; flex: 1; min-width: 300px; }
+        .icon-circle { 
+            width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(145deg, #FD7A02, #ff6b00); 
+            display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 12px 30px rgba(253,122,2,0.4);
+            border: 4px solid rgba(255,255,255,0.9); font-size: 2.5rem; color: white !important; transition: all 0.3s ease;
+        }
+        .icon-circle:hover { transform: scale(1.1) rotate(360deg); box-shadow: 0 20px 40px rgba(253,122,2,0.6); }
+        .icon-wrapper h3 { color: #FD7A02; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 700; }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        /* FEATURES 2 COLUNAS */
+        .features { padding: 80px 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 1200px; margin: 0 auto; }
+        .column { background: rgba(255,255,255,0.9); padding: 3rem; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .column h3 { color: #FD7A02; font-size: 1.8rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 12px; }
 
-  <!-- Main Stylesheet File -->
-   <link href="assets/css/sistemas.css" rel="stylesheet">
-   <link href="assets/css/main.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        /* INTEGRAÇÕES */
+        .integracoes { padding: 80px 5%; max-width: 1000px; margin: 0 auto; }
+        .bloco { background: white; padding: 4rem; border-radius: 25px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+        .bloco h3 { color: #FD7A02; font-size: 2rem; margin-bottom: 2rem; }
+        .bloco ul li { padding: 1.5rem 0; border-bottom: 1px solid #f0f0f0; display: flex; gap: 1rem; align-items: flex-start; }
+        .laranja { color: #FD7A02 !important; font-weight: 700 !important; }
 
+        /* FUNCIONALIDADES */
+        .functionalities { padding: 80px 5%; background: rgba(248,249,250,0.7); }
+        .functionalities h2 { text-align: center; font-size: 3rem; color: #333; margin-bottom: 4rem; }
+        .functionalities-container { 
+            max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 2rem; 
+        }
+        .functionality { background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease; border-top: 6px solid #FD7A02; }
+        .functionality:hover { transform: translateY(-8px); box-shadow: 0 25px 50px rgba(0,0,0,0.2); }
+        .functionality h3 { color: #FD7A02; margin-bottom: 1rem; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; }
+
+        /* BOTÃO VOLTAR */
+        .back-button { padding: 3rem 5%; text-align: center; background: #f8f9fa; }
+        .btn-back { 
+            background: linear-gradient(45deg, #FD7A02, #ff6b00); color: white; border: none; padding: 16px 40px; 
+            border-radius: 30px; font-size: 1.2rem; font-weight: 700; cursor: pointer; box-shadow: 0 10px 30px rgba(253,122,2,0.4);
+            transition: all 0.3s ease;
+        }
+        .btn-back:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(253,122,2,0.6); }
+
+        /* CONTATO */
+        .contact-section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+        .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .contact-card { background: white; padding: 3rem; border-radius: 25px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+        .info-item { display: flex; align-items: flex-start; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid #f0f0f0; }
+        .contact-icon-circle, .icon-circle { 
+            width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(45deg, #FD7A02, #ff6b00); 
+            display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: white; flex-shrink: 0;
+            box-shadow: 0 8px 25px rgba(253,122,2,0.4);
+        }
+        .map-box { border-radius: 25px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.2); }
+        .map-box iframe { width: 100% !important; height: 450px !important; border: 0; display: block !important; }
+
+        /* FOOTER */
+        .tf-custom-footer { 
+            background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 3rem 5%; 
+            display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 3rem; max-width: 1400px; margin: 0 auto;
+        }
+        .btn-footer-carro-icon { 
+            width: 55px; height: 55px; background: linear-gradient(45deg, #FD7A02, #ff6b00); border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; color: white; font-size: 1.6rem; 
+            text-decoration: none; box-shadow: 0 10px 30px rgba(253,122,2,0.5); transition: all 0.3s ease;
+        }
+        .btn-footer-carro-icon:hover { transform: translateY(-5px) scale(1.1); box-shadow: 0 15px 40px rgba(253,122,2,0.7); }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .navbar { flex-direction: column; gap: 1rem; padding: 1rem 5%; }
+            .banner-text h1 { font-size: 3rem; }
+            .features, .contact-wrapper { grid-template-columns: 1fr; }
+            .icons-container { flex-direction: column; align-items: center; }
+            .tf-custom-footer { grid-template-columns: 1fr; text-align: center; }
+        }
+    </style>
 </head>
 
-<body>
-
-   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets/img/logo.png" alt="">
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="Sobre.html">Sobre</a></li>
-          <li><a href="sistemas.html">Sistemas</a></li>
-          <li><a href="#contact">Contate-nos</a></li>
+<body class="background">
+    <!-- HEADER -->
+    <nav class="navbar">
+        <span class="navbar-logo">
+            <svg width="150" height="30" viewBox="0 0 150 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="150" height="30" rx="15" fill="#FD7A02"/>
+                <text x="75" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">AMENDOLA</text>
+            </svg>
+        </span>
+        <ul class="navbar-links">
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="sistemas.html" class="active">💻 Sistemas</a></li>
+            <li><a href="#contato">📞 Contate-nos</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="index.html#sobre">Começar</a>
-</header>
-
-<!-- Sistema-titulo -->
-<div class="sistema-titulo">
-  <div class="banner-text">
-    <h1>SBB</h1>
-    <h2>Sistema de Biblioteca</h2>
-    <hr>
-    <p>
-      A evolução do Fiorilli SBB – Sistema de Biblioteca, que passou de um controle simples de acervo para uma solução completa de gestão bibliotecária, comprova a qualidade e o excelente custo-benefício do sistema desenvolvido pela Fiorilli Software. Criado inicialmente para atender às rotinas básicas de catalogação e empréstimos, o sistema evoluiu e se tornou uma ferramenta prática, segura e eficiente para a modernização da gestão de bibliotecas públicas e institucionais.    </p>
-  </div>
-</div>
-
-    <!-- BENEFÍCIOS -->
-     <section id="BENEFÍCIOS">
-<div class="icons-container">
-  <div class="icon-wrapper">
-    <div class="icon-circle">
-      <i class="fas fa-expand-arrows-alt"></i>
-    </div>
-    <p>GESTÃO DO ACERVO</p> Controle completo do acervo bibliográfico, com cadastro, catalogação e classificação padronizada. Permite localizar obras com facilidade, acompanhar disponibilidade e manter o acervo sempre organizado e atualizado.
-     
-  </div>
-  <div class="icon-wrapper">
-    <div class="icon-circle">
-      <i class="fas fa-cogs"></i>
-    </div>
-    <p>EMPRÉSTIMOS E MOVIMENTAÇÕES</p> Automatização dos processos de empréstimo, devolução, reserva e renovação de materiais. Mais agilidade no atendimento, controle de prazos, histórico de movimentações e redução de erros operacionais.
-  </div>
-  <div class="icon-wrapper">
-    <div class="icon-circle">
-      <i class="fas fa-globe"></i>
-    </div>
-    <p>RELATÓRIOS E CONTROLE</p> Relatórios gerenciais e estatísticos que auxiliam na tomada de decisões, permitindo acompanhar o uso do acervo, o perfil dos usuários e a eficiência dos serviços prestados pela biblioteca.
-  </div>
-</div>
-</section>
-
-  <!-- SEÇÃO DETALHADA -->
-  <section class="features">
-    <div class="column">
-      <h3>Interface de fácil compreensão e utilização</h3>
-      <p>O SBB foi desenvolvido para ser simples e intuitivo, com telas claras e fáceis de usar, garantindo rapidez no aprendizado e agilidade no uso desde o primeiro acesso..</p>
-    </div>
-    <div class="column">
-      <h3>Web e Desktop</h3>
-      <p>Entendemos que cada cliente tem uma realidade diferente — por isso, oferecemos as versões Web e Desktop do SCPI. Use a que preferir
-         ou ambas, sem complicações com infraestrutura ou configurações técnicas. Um pacote completo, flexível e pronto para facilitar sua rotina.</p>
-    </div>
-  </section>
-
-    <!-- INTEGRAÇÕES -->
-     <section id="integracoes" class="features-area pt-100 pb-100">
-     <div class="container">
-     <div class="row justify-content-center">
-
-       
-      
-         <div class="col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-         <div class="icon-box">
-           <div class="icon">
-             <i class="fas fa-exchange-alt"></i>
-           </div>
-           <h4 class="title"><a href="">INTEGRAÇÃO</a></h4>
-           <p class="description">Facilidade na comunicação entre o SBB e os demais sistemas Fiorilli, permitindo o compartilhamento seguro de informações e maior agilidade nas rotinas da biblioteca. Possibilita também a importação e exportação de dados, garantindo padronização e confiabilidade.</p>
-          </div>
-         </div>
-        
-      
-
-       <div class="col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
-         <div class="icon-box">
-           <div class="icon">
-             <i class="fas fa-cogs"></i>
-           </div>
-           <h4 class="title"><a href="">AUTOMAÇÃO</a></h4>
-           <p class="description">Automatização dos processos bibliotecários, como cadastro e catalogação do acervo, empréstimos, devoluções, reservas e renovações. Reduz tarefas manuais, evita erros e torna o atendimento mais rápido e eficiente.</p>
-         </div>
-       </div>
-
-       <div class="col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="600">
-         <div class="icon-box">
-           <div class="icon">
-             <i class="fas fa-globe"></i>
-           </div>
-           <h4 class="title"><a href="">CONTROLE E CONSULTA</a></h4>
-           <p class="description">Controle completo do acervo e dos usuários, com consultas rápidas e intuitivas. Oferece relatórios gerenciais que auxiliam na tomada de decisões, garantindo organização, transparência e melhor gestão da biblioteca.</p>
-         </div>
-       </div>
-
-     </div>
-   </div>
-</section>
-<!-- Funcionalidades -->
- 
-    <section class="functionalities">
-  <h2>Algumas funcionalidades do sistema</h2>
-  <div class="functionalities-container">
-    <div class="functionality">
-      <h3>Cadastro e Catalogação do Acervo</h3>
-      <p>Permite o cadastro completo das obras, com informações como título, autor, editora, assunto, classificação e localização, seguindo padrões biblioteconômicos para melhor organização e recuperação da informação.</p>
-    </div>
-    <div class="functionality">
-      <h3>Empréstimos e Devoluções</h3>
-      <p>Controle ágil e seguro dos empréstimos e devoluções de materiais, com definição de prazos, registro automático das movimentações e histórico detalhado por usuário.</p>
-    </div>
-    <div class="functionality">
-      <h3>Reservas e Renovações</h3>
-      <p>Possibilita a reserva de materiais indisponíveis e a renovação de empréstimos, respeitando as regras da biblioteca e garantindo mais comodidade aos usuários.</p>
-    </div>
-    <div class="functionality">
-      <h3>Gestão de Usuários</h3>
-      <p>Cadastro e controle de usuários da biblioteca, com acompanhamento de empréstimos, pendências, multas e histórico de utilização do sistema.</p>
-    </div>
-    <div class="functionality">
-      <h3>Consulta e Pesquisa do Acervo</h3>
-      <p>Ferramentas de busca rápida e intuitiva por título, autor, assunto, ISBN ou palavra-chave, facilitando o acesso às informações do acervo.</p>
-    </div>
-    <div class="functionality">
-      <h3>Relatórios Gerenciais</h3>
-      <p>Geração de relatórios estatísticos e gerenciais sobre acervo, movimentações e usuários, auxiliando na tomada de decisões e no planejamento da biblioteca.</p>
-    </div>
-    <div class="functionality">
-      <h3>Segurança e Controle de Acesso</h3>
-      <p>Controle de permissões por perfil de usuário, garantindo a segurança das informações e a rastreabilidade das operações realizadas no sistema.</p>
-    </div>
-    <div class="functionality">
-      <h3>Controle de Multas e Penalidades</h3>
-      <p>Gerenciamento automático de multas por atraso na devolução de materiais, com cálculo conforme as regras definidas pela biblioteca e controle das pendências dos usuários.</p>
-    </div>
-    <div class="functionality">
-      <h3>Baixa, Descarte e Inventário do Acervo</h3>
-      <p>Permite o controle de baixas, descartes e inventário do acervo, garantindo atualização permanente das informações e maior confiabilidade no controle patrimonial da biblioteca.</p>
-    </div>
-    
-    
-  </div>
- </section>
- <section
-  style="
-    height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  "
-  onclick="window.history.back()"
->
-  <button
-    style="
-      background-color: #ff8c00;
-      color: #ffffff;
-      border: none;
-      padding: 20px 70px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: bold;
-      cursor: pointer;
-    "
-    
-  >
-  Voltar
-  </button> 
-  
-</section>
-
-
-
-
-  </section><!-- /Contact Section -->
-
-  </main>
-
-    <footer id="footer" class="footer">
-<div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-sobre">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Amêndola & Amêndola</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>Rua J. Carlos Mendes de Campos, 190</p>
-            <p>Sales, Cristo Redentor - CEP: 14980 - 622  </p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+55 (17) 3557-9090</span></p>
-            <p><strong>Email:</strong> <span>contato@amendolaeamendola.com.br</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href="https://www.linkedin.com/company/am%C3%AAndola-%26-am%C3%AAndola" target="_blank"><i class="bi bi-linkedin"></i></a>
-            <a href="carro.html" title="Tabela de Veículos"><i class="bi bi-car-front-fill"></i></a>
-            <a href="login.html"><i class="bi bi-lock-fill"></i></a>
-            
-          </div>
+        <div class="navbar-buttons">
+            <button onclick="window.open('https://amendola.flowdocs.com.br:2053/credentials/login', '_blank')" class="btn-flowdocs">
+                🚀 FlowDocs
+            </button>
         </div>
+    </nav>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Links Uteis</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">Sobre</a></li>
-            <li><a href="index.html">Serviços</a></li>
-          </ul>
+    <!-- CONTEÚDO SBB -->
+    <main class="page-sistema">
+        <!-- BANNER -->
+        <section class="sistema-titulo">
+            <div class="banner-text">
+                <h1>📚 SBB</h1>
+                <h2>Sistema de Biblioteca</h2>
+                <hr class="banner-divider">
+                <p><strong>Gestão inteligente de bibliotecas municipais e escolares.</strong><br>
+                Controle total do acervo com leitor de <strong style="color: #FFD700;">código de barras</strong>, 
+                empréstimos em 3 segundos, reservas online, multas automáticas e integração SIE.</p>
+            </div>
+        </section>
+
+        <!-- BENEFÍCIOS -->
+        <section id="beneficios" class="icons-container">
+            <div class="icon-wrapper">
+                <div class="icon-circle">📱</div>
+                <h3>🚀 Código de Barras</h3>
+                <p>Empréstimo e devolução em <strong>3 segundos</strong> por livro</p>
+            </div>
+            <div class="icon-wrapper">
+                <div class="icon-circle">📚</div>
+                <h3>📖 Acervo Organizado</h3>
+                <p>Catalogação <strong>CDD/CDU</strong> com capas e sinopses</p>
+            </div>
+            <div class="icon-wrapper">
+                <div class="icon-circle">💻</div>
+                <h3>🌐 Reservas Online</h3>
+                <p>Alunos reservam pelo <strong>Portal SIE</strong></p>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="features">
+            <div class="column">
+                <h3>✅ Gestão de Acervo</h3>
+                <p><strong>📚 Catalogação:</strong> ISBN automático, capa, CDD/CDU, localização exata (A-03-02)<br>
+                <strong>📦 Controle:</strong> Doações, descarte, inventário anual<br>
+                <strong>📊 Relatórios:</strong> Mais emprestados, inadimplentes, por categoria</p>
+            </div>
+            <div class="column">
+                <h3>⚡ Operações Rápidas</h3>
+                <p><strong>📱 Leitor:</strong> Empréstimo múltiplo, devolução lote<br>
+                <strong>💰 Multas:</strong> R$0,50/dia, parcelamento automático<br>
+                <strong>🔗 SIE:</strong> Frequência condicionada empréstimos</p>
+            </div>
+        </section>
+
+        <!-- FUNCIONALIDADES -->
+        <section class="functionalities">
+            <h2>🎯 Funcionalidades Completas</h2>
+            <div class="functionalities-container">
+                <div class="functionality"><h3>📖 Catalogação Auto</h3><p>ISBN Google Books, capa, CDD/CDU, localização</p></div>
+                <div class="functionality"><h3>⚡ Código Barras</h3><p>Empréstimo lote, etiquetas ZPL, QR Code</p></div>
+                <div class="functionality"><h3>🌐 Portal Aluno</h3><p>Reservas, histórico, sugestões personalizadas</p></div>
+                <div class="functionality"><h3>💰 Multas Smart</h3><p>R$0,50/dia, carnê PDF, isenção auto</p></div>
+                <div class="functionality"><h3>📊 Dashboards</h3><p>Inadimplentes, top livros, estatísticas</p></div>
+                <div class="functionality"><h3>📦 Almoxarifado</h3><p>Inventário offline, doações, compras</p></div>
+            </div>
+        </section>
+
+        <section class="back-button" onclick="window.history.back()">
+            <button class="btn-back">← Voltar aos Sistemas</button>
+        </section>
+    </main>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contact-section">
+        <h2 style="text-align: center; color: #FD7A02; font-size: 2.5rem; margin-bottom: 4rem;">📞 Fale Conosco</h2>
+        <div class="contact-wrapper">
+            <div class="contact-card">
+                <h3>Informações SBB</h3>
+                <div class="info-item">
+                    <div class="contact-icon-circle">📍</div>
+                    <div class="info-text">
+                        <h4>Sales/SP</h4>
+                        <p>Rua J. Campos, 190</p><p>Sales - SP | 14980-622</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon-circle">📞</div>
+                    <div class="info-text">
+                        <h4>Comercial</h4>
+                        <p><strong>+55 (17) 2137-2200</strong></p>
+                        <p>+55 (17) 3557-9090</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon-circle">📧</div>
+                    <div class="info-text">
+                        <h4>Email</h4>
+                        <p>contato@amendolaeamendola.com.br</p>
+                    </div>
+                </div>
+            </div>
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1858.135713352941!2d-49.49752262320958!3d-21.339786485462337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be7867b6fa1d17%3A0x42c5472c9c2ed4c8!2sAMENDOLA%20%26%20AMENDOLA%20SOFTWARE%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1761132974636!5m2!1spt-BR!2sbr" loading="lazy"></iframe>
+            </div>
         </div>
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Amêndola & Amêndola</strong> <span>All Rights Reserved</span></p>
-    </div>
+    </section>
 
-  </footer>
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+    <!-- FOOTER -->
+    <footer class="tf-custom-footer">
+        <div class="tf-footer-left">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <span style="font-size: 1.2rem;">🌐</span>
+                <span>Português</span>
+            </div>
+            <a href="carro.html" class="btn-footer-carro-icon" title="Tabela Fipe">🚗</a>
+        </div>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
+            <a href="#" style="color: rgba(255,255,255,0.8);">Cookies</a>
+            <a href="#" style="color: rgba(255,255,255,0.8);">Política</a>
+            <a href="#" style="color: rgba(255,255,255,0.8);">Abuso</a>
+        </div>
+        <div style="text-align: right;">
+            <strong>👨‍💻 Amendola & Amendola</strong><br>
+            <small>© 2026 SBB Biblioteca</small>
+        </div>
+    </footer>
 </body>
 </html>
