@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela de Veículos - Amendola & Amendola</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="assents/css/style.css" rel="stylesheet">
+  <link href="assents/css/main.css" rel="stylesheet">
+  <style>
+    /* ======= CONTEÚDO ======= */
+    main {
+      margin-top: 100px;
+      padding: 20px;
+      margin-bottom: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mb-4 {
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      color: #333;
+      font-size: 28px;
+    }
+
+    /* ======= ESTILO DA TABELA ======= */
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      width: 100%;
+      margin: 0 auto 70px;
+      text-align: center;
+      background-color: #ffffff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 14px 16px;
+      border: 1px solid #e0e0e0;
+    }
+
+    thead {
+      background-color: #fd950d;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    thead th {
+      border-color: #e89a3a;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+
+    tbody tr:hover {
+      background-color: #fff8f0;
+    }
+
+    @media (max-width: 768px) {
+      .navmenu ul {
+        gap: 15px;
+      }
+
+      .navmenu a {
+        font-size: 14px;
+      }
+
+      table {
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 10px 8px;
+      }
+    }
+    
+    .btn-footer-carro-icon i {
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="index-page">
+  <!-- ======= HEADER ======= -->
+  <nav class="navbar">
+      <span class="navbar-logo">
+          <img src="assents/img/logo.png" width="150px" height="30px">
+      </span>
+      <ul class="navbar-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sistemas.html">Sistemas</a></li>
+          <li><a href="#contato">Contate-nos</a></li>
+      </ul>  
+      <div class="navbar-buttons">
+          <button onclick="window.open('https://amendola.flowdocs.com.br:2053/credentials/login', '_blank')" class="btn-flowdocs">
+              FlowDocs
+          </button>
+      </div>
+  </nav>
+
+  <!-- ======= CONTEÚDO PRINCIPAL ======= -->
+  <main>
+    <section id="tabela-veiculos">
+      <div class="container text-center">
+        <h2 class="mb-4">Tabela de Veículos</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Número</th>
+              <th>Modelo</th>
+              <th>Placa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>01</td><td>Yaris</td><td>SWH-9I21</td></tr>
+            <tr><td>02</td><td>Voyage</td><td>EOD-6252</td></tr>
+            <tr><td>03</td><td>Voyage</td><td>BWW-2953</td></tr>
+            <tr><td>04</td><td>Voyage</td><td>FHY-9894</td></tr>
+            <tr><td>05</td><td>Gol</td><td>GCH-3945</td></tr>
+            <tr><td>06</td><td>Voyage</td><td>FXZ-4656</td></tr>
+            <tr><td>07</td><td>Voyage</td><td>GHI-0F27</td></tr>
+            <tr><td>08</td><td>Gol</td><td>FWR-9928</td></tr>
+            <tr><td>09</td><td>Gol</td><td>FCH-3939</td></tr>
+            <tr><td>—</td><td>Polo</td><td>FVV-6065</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="tf-custom-footer">
+    <div class="tf-footer-left">
+        <div class="lang-selector">
+            <button class="lang-trigger">
+                <span class="tf-globe" aria-hidden="true">🌐</span>
+                <span id="current-lang">Português</span>
+                <span style="margin-left: 5px; font-size: 10px;">∨</span>
+            </button>
+            <div class="lang-menu">
+                <a href="javascript:void(0)" onclick="translatePage('pt')">Português</a>
+                <a href="javascript:void(0)" onclick="translatePage('en')">English</a>
+                <a href="javascript:void(0)" onclick="translatePage('es')">Español</a>
+            </div>
+        </div>
+        <a href="carro.html" class="btn-footer-carro-icon" title="Tabela de Veículos">
+          <i class="fas fa-car"></i>
+        </a>
+    </div>
+    <div class="tf-footer-center">
+        <a href="#">Cookie settings</a>
+        <a href="#">Check our cookies policy to delete cookies</a>
+        <a href="#">Report abuse</a>
+    </div>
+    <div class="tf-footer-right">
+        Developed by Equipe Flowdocs
+    </div>
+  </footer>
+
+  <div id="google_translate_element" style="display:none;"></div>
+  <script type="text/javascript">
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'pt',
+              includedLanguages: 'en,pt,es',
+              autoDisplay: false
+          }, 'google_translate_element');
+      }
+      function translatePage(lang) {
+          var selectField = document.querySelector("select.goog-te-combo");
+          if (selectField) {
+              selectField.value = lang;
+              selectField.dispatchEvent(new Event('change'));
+              const langMap = {'pt': 'Português', 'en': 'English', 'es': 'Español'};
+              document.getElementById('current-lang').innerText = langMap[lang];
+          }
+      }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank" aria-label="Converse no WhatsApp">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
+  </a>
+  <link rel="stylesheet" href="assents/css/main.css"> 
+  <script src="assents/js/main.js"></script>
+</body>
+</html>
