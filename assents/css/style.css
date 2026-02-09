@@ -644,77 +644,64 @@ min-height: 340px;
 background-color: #1a1a1b;
 color: #ffffff;
 padding: 20px 40px;
-margin: 0;
 display: flex;
 justify-content: space-between;
 align-items: center;
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 font-size: 13px;
 border-top: 1px solid #333;
 }
           
 .tf-footer-left {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 20px; /* Espaçamento entre elementos */
-}
-
-/* Container do seletor de idioma */
-.lang-selector {
-  position: relative;
-  display: flex;
-  align-items: center;
+ position: relative;
+display: inline-block;
 }
           
 .lang-trigger {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 13px;
-  padding: 5px 0;
+display: flex;
+align-items: center;
+cursor: pointer;
+user-select: none;
+background: none;
+border: none;
+color: white;
+font-size: 13px;
+padding: 5px 0;
 }
           
 .tf-globe {
-  margin-right: 8px;
-  font-size: 15px;
+margin-right: 8px;
+font-size: 15px;
 }
           
 .lang-menu {
-  display: none;
-  position: absolute;
-  bottom: 100%; /* Abre para cima */
-  left: 0;
-  background-color: #2a2a2b;
-  min-width: 140px;
-  box-shadow: 0px -4px 12px rgba(0,0,0,0.3);
-  border-radius: 4px;
-  z-index: 1000;
-  margin-bottom: 10px;
-  overflow: hidden;
+display: none;
+position: absolute;
+bottom: 100%; /* Abre para cima */
+left: 0;
+background-color: #2a2a2b;
+min-width: 140px;
+box-shadow: 0px -4px 12px rgba(0,0,0,0.3);
+border-radius: 4px;
+z-index: 1000;
+margin-bottom: 10px;
+overflow: hidden;
 }
           
 .lang-menu a {
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
-  display: block;
-  transition: background 0.2s;
+color: white;
+padding: 10px 15px;
+text-decoration: none;
+display: block;
+transition: background 0.2s;
 }
           
 .lang-menu a:hover {
-  background-color: #FD7A02; /* Laranja da sua marca */
+background-color: #FD7A02; /* Laranja da sua marca */
 }
-
-/* Menu aparece apenas ao passar sobre o seletor de idioma */
-.lang-selector:hover .lang-menu,
-.tf-footer-left .lang-trigger:hover + .lang-menu,
-.tf-footer-left .lang-menu:hover {
-  display: block;
+          
+.tf-footer-left:hover .lang-menu {
+display: block;
 }
 
 .goog-te-banner-frame.skiptranslate, .goog-te-gadget {
@@ -745,45 +732,6 @@ opacity: 0.7;
 font-weight: 400;
 opacity: 0.9;
 }
-/* Botão do carro no rodapé */
-.btn-footer-carro-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 44px;
-    height: 44px;
-
-    background-color: #1A1A1B;
-    border-radius: 10px;
-
-    text-decoration: none;
-    box-shadow: 0 2px 6px #1A1A1B;
-
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.btn-footer-carro-icon i {
-    font-size: 22px; /* tenta 24px se quiser maior */
-}
-
-.btn-footer-carro-icon {
-    color: #fff !important;
-}
-
-.btn-footer-carro-icon .fas,
-.btn-footer-carro-icon .fas::before {
-    color: #fff !important;
-}
-
-
-.btn-footer-carro-icon:hover {
-    background-color: #e66a00;
-    transform: translateY(-2px);
-}
-
-
-
-
           
 @media (max-width: 800px) {
 .tf-custom-footer {
@@ -801,33 +749,3 @@ left: 50%;
 transform: translateX(-50%);
 }
 }
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;  
-    left: 20px;         
-    background-color: #25D366;
-    color: #fff;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-    z-index: 1000;
-    transition: all 0.3s ease;
-  }
-  
-  
-  
-  .whatsapp-float img {
-    width: 35px;
-    height: 35px;
-    filter: brightness(0) invert(1);
-  }
-  
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-  }

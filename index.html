@@ -8,12 +8,204 @@
         <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      crossorigin="anonymous">
-    <link href="assents/css/style.css" rel="stylesheet"> <!-- CSS do header/navbar -->
-    <link href="assents/css/main.css" rel="stylesheet"> <!-- CSS do header/navbar -->
-
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5; /* Um cinza claro de fundo */
+        }
+   
+        .navbar {
+          position: sticky;
+          top: 0;
+          z-index: 9999;
+            display: flex; /* Para alinhar os itens lado a lado */
+            justify-content: space-between; /* Espaça os itens ao máximo */
+            align-items: center; /* Centraliza verticalmente */
+            background-color: #fff; /* Fundo branco */
+            padding: 5px 20px;
+            margin: 20px auto; /* Centraliza a navbar e dá um espaço */
+            width: 90%; /* Largura da navbar */
+            max-width: 1200px; /* Largura máxima */
+            border-radius: 50px; /* Bordas bem arredondadas */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+   
+        .navbar-logo {
+            font-weight: bold;
+            font-size: 24px;
+            color: #4b0082; /* Cor do logo - ajustado para o novo design */
+        }
+   
+        .navbar-links {
+            list-style: none; /* Remove os marcadores da lista */
+            margin: 0;
+            padding: 0;
+            display: flex; /* Para alinhar os links lado a lado */
+            gap: 30px; /* Espaço entre os links */
+        }
+   
+        .navbar-links li a {
+            text-decoration: none; /* Remove sublinhado */
+            color: #333; /* Cor dos links */
+            font-size: 18px;
+            transition: color 0.3s ease; /* Transição suave de cor */
+        }
+   
+        .navbar-links li a:hover {
+            color: #ff7300; /* Cor ao passar o mouse - ajustado para o novo design */
+        }
+   
+        .navbar-buttons {
+            display: flex;
+            gap: 10px; /* Espaço entre os botões */
+        }
+   
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px; /* Bordas arredondadas */
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+   
+        .btn-login { /* Novo estilo para o botão de Login */
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+ 
+        .btn-login:hover {
+            background-color: #FF7300;
+        }
+ 
+        /* Estilos para a seção de herói */
+        .hero-section {
+            background: linear-gradient(180deg, rgba(239, 233, 252, 0.4) 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+            color: #333;
+            text-align: center;
+            padding: 80px 20px;
+            border-radius: 20px;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 1200px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+ 
+        .hero-section h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #1a1a1a;
+        }
+ 
+        .hero-section h1 span {
+            color: #8A2BE2;
+        }
+ 
+        .hero-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            color: #555;
+        }
+ 
+        .hero-users {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            margin-top: -20px;
+        }
+ 
+        .hero-users img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            margin-left: -10px;
+            object-fit: cover;
+        }
+ 
+        .hero-users img:first-child {
+            margin-left: 0;
+        }
+ 
+        .hero-users span {
+            font-size: 16px;
+            color: #555;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+ 
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+ 
+        .btn-hero-primary {
+            background: linear-gradient(90deg, #ff7300 0%, #ff7300 100%);
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            border: none;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+        }
+ 
+        .btn-hero-primary:hover {
+            background: linear-gradient(90deg, #ff7300 0%, #ff7300 100%);
+            color: #fff;
+        }
+ 
+        .btn-hero-secondary {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ddd;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+ 
+        .btn-hero-secondary:hover {
+            background-color: #f0f0f0;
+        }
+ 
+        .dashboard-preview {
+            text-align: center;
+            margin-top: -100px;
+            position: relative;
+            z-index: 1;
+        }
+ 
+        .dashboard-preview img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            transform: perspective(1000px) rotateX(10deg);
+            transition: transform 0.3s ease;
+        }
+ 
+        .dashboard-preview img:hover {
+            transform: perspective(1000px) rotateX(0deg);
+        }
+        button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+    </style>
+    <link href="assents/css/style.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -207,12 +399,12 @@
         
         
         
-    <!-- Footer -->
-    <footer class="tf-custom-footer">
-        <div class="tf-footer-left">
-            <div class="lang-selector">
+    <!--End bar-->
+    <div>
+        <footer class="tf-custom-footer">
+            <div class="tf-footer-left">
                 <button class="lang-trigger">
-                    <span class="tf-globe" aria-hidden="true">🌐</span>
+                    <span class="tf-globe">🌐</span>
                     <span id="current-lang">Português</span>
                     <span style="margin-left: 5px; font-size: 10px;">∨</span>
                 </button>
@@ -222,47 +414,36 @@
                     <a href="javascript:void(0)" onclick="translatePage('es')">Español</a>
                 </div>
             </div>
-            <a href="carro.html" class="btn-footer-carro-icon" title="Tabela de Veículos">
-                <i class="fas fa-car"></i>
-            </a>
+            <div class="tf-footer-center">
+                <a href="#">Cookie settings</a>
+                <a href="#">Check our cookies policy to delete cookies</a>
+                <a href="#">Report abuse</a>
             </div>
-        </div>
-        <div class="tf-footer-center">
-            <a href="#">Cookie settings</a>
-            <a href="#">Check our cookies policy to delete cookies</a>
-            <a href="#">Report abuse</a>
-        </div>
-        <div class="tf-footer-right">
-            Developed by Equipe Flowdocs
-        </div>
-    </footer>
-
-    <div id="google_translate_element" style="display:none;"></div>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'pt',
-                includedLanguages: 'en,pt,es',
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-        function translatePage(lang) {
-            var selectField = document.querySelector("select.goog-te-combo");
-            if (selectField) {
-                selectField.value = lang;
-                selectField.dispatchEvent(new Event('change'));
-                const langMap = {'pt': 'Português', 'en': 'English', 'es': 'Español'};
-                document.getElementById('current-lang').innerText = langMap[lang];
+            <div class="tf-footer-right">
+                Developed by Equipe Flowdocs
+            </div>
+        </footer>
+        <div id="google_translate_element" style="display:none;"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'pt',
+                    includedLanguages: 'en,pt,es',
+                    autoDisplay: false
+                }, 'google_translate_element');
             }
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <!-- Botão flutuante do WhatsApp -->
-    <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank" aria-label="Converse no WhatsApp">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
-      </a>
-    <link rel="stylesheet" href="assents/css/main.css"> 
-    <script src="assents/js/main.js"></script>
+            function translatePage(lang) {
+                var selectField = document.querySelector("select.goog-te-combo");
+                if (selectField) {
+                    selectField.value = lang;
+                    selectField.dispatchEvent(new Event('change'));
+                    // Atualiza o texto do botão
+                    const langMap = {'pt': 'Português', 'en': 'English', 'es': 'Español'};
+                    document.getElementById('current-lang').innerText = langMap[lang];
+                }
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
 </body>
 </html>

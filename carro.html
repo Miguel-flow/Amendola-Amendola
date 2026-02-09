@@ -8,11 +8,91 @@
   <link href="assents/css/style.css" rel="stylesheet">
   <link href="assents/css/main.css" rel="stylesheet">
   <style>
+    /* ======= RESET E GERAL ======= */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      margin-top: 70px;
+      background-color: #f9f9f9;
+      font-family: "Nunito", Arial, sans-serif;
+    }
+
+    /* ======= HEADER ======= */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo img {
+      max-height: 40px;
+    }
+
+    .navmenu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 25px;
+    }
+
+    .navmenu a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .navmenu a:hover {
+      color: #fd950d;
+    }
+
+    .btn-getstarted {
+      background-color: #fd950d;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: opacity 0.3s ease;
+    }
+
+    .btn-getstarted:hover {
+      opacity: 0.9;
+    }
+
+    .mobile-nav-toggle {
+      display: none;
+    }
+
     /* ======= CONTEÚDO ======= */
     main {
       margin-top: 100px;
       padding: 20px;
-      margin-bottom: 0;
     }
 
     .container {
@@ -88,29 +168,28 @@
         padding: 10px 8px;
       }
     }
-    
-    .btn-footer-carro-icon i {
-      color: #fff;
-    }
   </style>
 </head>
 <body class="index-page">
   <!-- ======= HEADER ======= -->
-  <nav class="navbar">
-      <span class="navbar-logo">
-          <img src="assents/img/logo.png" width="150px" height="30px">
-      </span>
-      <ul class="navbar-links">
+  <header id="header" class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <img src="assents/img/logo.png" alt="Amendola & Amendola">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
           <li><a href="index.html">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
           <li><a href="sistemas.html">Sistemas</a></li>
-          <li><a href="#contato">Contate-nos</a></li>
-      </ul>  
-      <div class="navbar-buttons">
-          <button onclick="window.open('https://amendola.flowdocs.com.br:2053/credentials/login', '_blank')" class="btn-flowdocs">
-              FlowDocs
-          </button>
-      </div>
-  </nav>
+          <li><a href="#contact">Contate-nos</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn-getstarted" href="https://amendola.flowdocs.com.br:2053/public/home" target="_blank" rel="noopener noreferrer">Chamados</a>
+    </div>
+  </header>
 
   <!-- ======= CONTEÚDO PRINCIPAL ======= -->
   <main>
@@ -142,62 +221,5 @@
       </div>
     </section>
   </main>
-  
-  <!-- Footer -->
-  <footer class="tf-custom-footer">
-    <div class="tf-footer-left">
-        <div class="lang-selector">
-            <button class="lang-trigger">
-                <span class="tf-globe" aria-hidden="true">🌐</span>
-                <span id="current-lang">Português</span>
-                <span style="margin-left: 5px; font-size: 10px;">∨</span>
-            </button>
-            <div class="lang-menu">
-                <a href="javascript:void(0)" onclick="translatePage('pt')">Português</a>
-                <a href="javascript:void(0)" onclick="translatePage('en')">English</a>
-                <a href="javascript:void(0)" onclick="translatePage('es')">Español</a>
-            </div>
-        </div>
-        <a href="carro.html" class="btn-footer-carro-icon" title="Tabela de Veículos">
-          <i class="fas fa-car"></i>
-        </a>
-    </div>
-    <div class="tf-footer-center">
-        <a href="#">Cookie settings</a>
-        <a href="#">Check our cookies policy to delete cookies</a>
-        <a href="#">Report abuse</a>
-    </div>
-    <div class="tf-footer-right">
-        Developed by Equipe Flowdocs
-    </div>
-  </footer>
-
-  <div id="google_translate_element" style="display:none;"></div>
-  <script type="text/javascript">
-      function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-              pageLanguage: 'pt',
-              includedLanguages: 'en,pt,es',
-              autoDisplay: false
-          }, 'google_translate_element');
-      }
-      function translatePage(lang) {
-          var selectField = document.querySelector("select.goog-te-combo");
-          if (selectField) {
-              selectField.value = lang;
-              selectField.dispatchEvent(new Event('change'));
-              const langMap = {'pt': 'Português', 'en': 'English', 'es': 'Español'};
-              document.getElementById('current-lang').innerText = langMap[lang];
-          }
-      }
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-  <!-- Botão flutuante do WhatsApp -->
-  <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank" aria-label="Converse no WhatsApp">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
-  </a>
-  <link rel="stylesheet" href="assents/css/main.css"> 
-  <script src="assents/js/main.js"></script>
 </body>
 </html>
