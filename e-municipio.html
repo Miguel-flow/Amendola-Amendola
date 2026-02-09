@@ -2,11 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Amêndola & Amêndola Softwarea</title>
+  <title>Amêndola & Amêndola Software</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Fonte moderna -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <style>
     * {
@@ -152,11 +153,31 @@
       text-align: center;
       padding: 40px 20px;
       margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
     }
 
     footer p {
       font-size: 14px;
       opacity: 0.8;
+    }
+
+    footer .footer-carro-link {
+      display: inline-flex;
+      align-items: center;
+      background-color: #333;
+      color: #ff7a00;
+      padding: 8px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    footer .footer-carro-link:hover {
+      background-color: #555;
     }
 
     /* ===== RESPONSIVO ===== */
@@ -290,6 +311,7 @@
   <!-- FOOTER -->
   <footer>
     <p>© 2026 Amêndola & Amêndola Software — Todos os direitos reservados</p>
+    <a href="carro.html" class="footer-carro-link" title="Tabela de Veículos"><i class="fas fa-car"></i></a>
   </footer>
 
   <!-- ANIMAÇÃO SCROLL -->

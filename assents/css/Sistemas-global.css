@@ -1,106 +1,79 @@
+/* Container */
 .accordion {
     font-family: Arial, sans-serif;
-    max-width: 1300px;
-    margin: 40px auto 50px;
-    padding: 0;
-  }
-  
-  .accordion-item {
-    margin-bottom: 18px; /* menos espaço entre os cards */
-    position: relative;
-    transition: transform 420ms cubic-bezier(.22,1,.36,1);
-    border: none !important;
-    box-shadow: none !important;
-  }
-  
-  /* item aberto: sobe levemente */
-  .accordion-item.open {
-    transform: translateY(-8px);
-  }
-  
-  /* item fechando: desce um pouco para cobrir */
-  .accordion-item.closing {
-    transform: translateY(5px);
-  }
-  
-  /* header */
-  .accordion-header {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    max-width: 1700px;
+    margin: 100px auto;
+}
+
+/* Item do accordion */
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+/* Header - MENOR e mais arredondado */
+.accordion-header {
     background-color: #FD7A02;
-    padding: 15px;
+    padding: 6px 12px; /* ✅ MENOR altura */
     cursor: pointer;
-    font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 50px; /* arredonda junto com o card */
-    color: #fff;
-  }
-  
-  /* ícone */
-  .icon {
-    font-size: 1.2em;
-    transition: transform 200ms ease;
-  }
-  
-  /* Conteúdo (escondido por padrão, abre com a classe .active) */
-  .accordion-content {
-    background: transparent;
-    padding: 0 25px;
-    box-sizing: border-box;
+    border-radius: 50px; /* ✅ MAIS arredondado */
+    color: white;
+    font-size: 14px; /* fonte menor */
+    font-weight: 600;
+    min-height: 36px; /* altura fixa compacta */
+}
+
+/* Flecha simples - menor também */
+.accordion-header .icon {
+    font-size: 16px; /* menor */
+    transition: transform 0.3s ease;
+    margin-left: 8px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion-item.active .accordion-header .icon {
+    transform: rotate(180deg);
+}
+
+.accordion-header .icon::before {
+    content: "▼";
+}
+
+/* Conteúdo */
+.accordion-content {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transform: translateY(-6px);
-    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
-  }
+    transition: all 0.3s ease;
+    padding: 0 15px;
+}
 
-  .accordion-item.active .accordion-content {
-    padding: 15px 25px 20px;
-    max-height: 500px;
+.accordion-item.active .accordion-content {
+    max-height: 300px;
     opacity: 1;
-    overflow: visible;
-    transform: translateY(0);
-  }
-  
-  
-  /* botão */
-  .details-btn {
-    margin-top: 1px;
-    padding: 7px 20px;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 0.85em;
-    display: inline-block;
-    border-radius: 20px;
-    text-align: center;
-    transition: background-color 0.75s ease;
-    margin-bottom: 20px;
-  }
-  .details-btn:hover {
-    background-color: #000000;
-  }
-  
-  .accordion-content .texto {
     padding: 15px;
-  }
-  
-  
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-      box-shadow: 0 0 0 0 rgba(0, 83, 82, 0.7);
-    }
-    70% {
-      transform: scale(1.05);
-      box-shadow: 0 0 0 10px rgba(0, 83, 82, 0);
-    }
-    100% {
-      transform: scale(1);
-      box-shadow: 0 0 0 0 rgba(0, 83, 82, 0);
-    }
-  }
-  
-  
+}
+
+/* Botões Laranja */
+.accordion-details-btn,
+.details-btn {
+    padding: 6px 15px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.accordion-details-btn:hover,
+.details-btn:hover {
+    background-color: #020202;
+}
