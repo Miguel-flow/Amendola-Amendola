@@ -3,251 +3,245 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Amendola & Amendola - Sistemas</title>
+    <title>Amendola & Amendolaa - Sistemas</title>
     <meta name="description" content="Conheça o SAS - Sistema de Assistência Social da Amendola & Amendola.">
     <meta name="keywords" content="SAS, Sistema de Assistência Social, SUAS, CRAS, CADÚNICO, Bolsa Família">
 
-    <!-- Main Stylesheet Files -->
-    <link href="assents/css/style.css" rel="stylesheet">
-    <link href="assents/css/sistemas.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
-<body class="background">
-    <nav class="navbar">
-        <span class="navbar-logo">
-            <img src="assents/img/logo.png" alt="Logo Amendola & Amendola" width="150" height="30">
-        </span>
-        <ul class="navbar-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sistemas.html">Sistemas</a></li>
-            <li><a href="#contato">Contate-nos</a></li>
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/logo.png" alt="">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Sobre.html">Sobre</a></li>
+          <li><a href="sistemas.html">Sistemas</a></li>
+          <li><a href="#contact">Contate-nos</a></li>
         </ul>
-        <div class="navbar-buttons">
-            <button onclick="window.open('https://amendola.flowdocs.com.br:2053/credentials/login', '_blank')" class="btn-flowdocs">
-                FlowDocs
-            </button>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="https://amendola.flowdocs.com.br:2053/public/home" target="_blank">Chamados</a>
+    </div>
+  </header>
+
+ <!-- Sistema-titulo -->
+  <div class="sistema-titulo">
+  <div class="banner-text">
+    <h1>SAS</h1>
+    <h2>Sistema Assistência Social</h2>
+    <hr>
+    <p>
+    O Sistema de Assistência Social (SAS) foi desenvolvido para otimizar e organizar os serviços prestados pelas Secretarias de Assistência Social dos municípios. Com uma interface intuitiva e de fácil navegação, o sistema oferece funcionalidades completas e acessíveis, facilitando o trabalho dos
+     profissionais da área. O SAS proporciona uma visão ampla e estruturada das ações sociais do município, com recursos de consulta ágeis e eficazes, que garantem maior precisão no acompanhamento dos atendimentos e agilidade na tomada de decisões.
+    </p>
+  </div>
+</div>
+
+ <!-- BENEFÍCIOS ADICIONAIS -->
+<section id="BENEFICIOS-ADICIONAIS">
+  <div class="icons-container">
+
+    <div class="icon-wrapper">
+      <div class="icon-circle">
+        <i class="fas fa-exchange-alt"></i>
+      </div>
+      <p>INTEGRAÇÃO CADÚNICO</p>
+      Importação automática de dados de pessoas, famílias e endereços, eliminando a necessidade de cadastros manuais na implantação inicial e permitindo atualizações constantes via arquivo.
+    </div>
+
+    <div class="icon-wrapper">
+      <div class="icon-circle">
+        <i class="fas fa-donate"></i>
+      </div>
+      <p>GERENCIAMENTO DE BENEFÍCIOS</p>
+      Permite o controle de três tipos de cotas: mensal, anual e por grupo de benefício, possibilitando o bloqueio automático por quantidade ou valor concedido.
+    </div>
+
+    <div class="icon-wrapper">
+      <div class="icon-circle">
+        <i class="fas fa-file-alt"></i>
+      </div>
+      <p>FORMULÁRIOS MENSAIS</p>
+      Geração automatizada dos três formulários mensais exigidos pelo SUAS: CRAS, CREAS e CENTRO POP, facilitando a prestação de contas e o cumprimento das exigências legais.
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- SEÇÃO COMPLEMENTAR DO SAS -->
+<section class="features">
+  <div class="column">
+    <h3>Alertas que Melhoram os Resultados</h3>
+    <p>
+      O SAS foi projetado para atender às necessidades dos usuários das entidades públicas, facilitando o dia a dia e otimizando os resultados. Com avisos e alertas exibidos na tela inicial, os usuários conseguem visualizar rapidamente atendimentos e visitas agendadas, encaminhamentos recebidos e participantes com data de encerramento próxima em projetos sociais.
+    </p>
+  </div>
+
+  <div class="column">
+    <h3>Unificação das Telas</h3>
+    <p>
+      Entendendo a rotina dos nossos clientes, o SAS oferece ambientes integrados que otimizam o uso do sistema e do tempo do profissional. A partir da tela de atendimentos é possível conceder benefícios, vincular a projetos, agendar novos atendimentos ou visitas, além de realizar encaminhamentos para outros profissionais ou unidades, tudo de forma prática e centralizada.
+    </p>
+  </div>
+</section>
+
+
+
+<section class="integracoes">
+  <div class="bloco">
+    <h3><i class="fas fa-plug"></i> Integrações com sistemas externos</h3>
+    <ul>
+      <li><i class="fas fa-check"></i> <strong>CadÚnico </strong> – Cadastro Único para Programas Sociais.</li>
+    </ul>
+  </div>
+</section>
+
+
+
+<!-- FUNCIONALIDADES - ASSISTÊNCIA SOCIAL -->
+<section class="functionalities">
+  <h2>Algumas funcionalidades do sistema</h2>
+  <div class="functionalities-container">
+
+    <div class="functionality">
+      <h3>Cadastros</h3>
+      <p>No SAS, os cadastros seguem o modelo do Cadastro Único para Programas Sociais do Governo Federal, oferecendo um diagnóstico socioeconômico completo das famílias. Isso possibilita uma análise precisa das principais necessidades da população cadastrada.</p>
+    </div>
+
+    <div class="functionality">
+      <h3>Projetos e Programas Sociais</h3>
+      <p>Gerencie de forma dinâmica os projetos e programas sociais da instituição. Controle vigência, valores, regras de participação (idade, exclusividade, parentesco), evitando duplicidade de benefícios. Consulte o histórico completo de participação da pessoa ou da família em ações sociais.</p>
+    </div>
+
+    <div class="functionality">
+      <h3>Concessão de Benefícios</h3>
+      <p>Gerencie requerimentos e concessões de forma eficaz. Visualize histórico de benefícios já recebidos, datas, valores, pareceres e profissionais envolvidos, evitando sobreposição e facilitando a análise completa antes de novas concessões.</p>
+    </div>
+
+    <div class="functionality">
+      <h3>Despesas</h3>
+      <p>Controle integrado das despesas familiares, acessível tanto no cadastro da família quanto nas visitas domiciliares. Esses dados ajudam na construção automática do perfil financeiro da família.</p>
+    </div>
+
+    <div class="functionality">
+      <h3>Visitas Domiciliares</h3>
+      <p>Gerencie todo o ciclo das visitas domiciliares: agendamentos, motivo da visita, composição familiar, parecer social, despesas, condição financeira, profissional responsável e muito mais. Tudo registrado de forma clara e integrada ao sistema.</p>
+    </div>
+
+    <div class="functionality">
+      <h3>Contratos e Subvenções</h3>
+      <p>Controle completo dos contratos firmados com entidades que recebem recursos da Assistência Social. Gerencie as concessões, valores, origens dos recursos, documentos fiscais e saldos contratuais de forma automatizada.</p>
+    </div>
+
+    <div class="functionality">
+      <h3>Atendimentos</h3>
+      <p>Realize atendimentos centralizados em uma única tela com acesso ao histórico da família, dados cadastrais, visitas, programas sociais, benefícios concedidos, e ações rápidas como agendamento, concessões, projetos e encaminhamentos.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section
+style="
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+"
+onclick="window.history.back()"
+>
+<button
+  style="
+    background-color: #ff8c00;
+    color: #ffffff;
+    border: none;
+    padding: 20px 70px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  "
+  
+>
+Voltar
+</button> 
+
+</section>
+
+
+  <footer id="footer" class="footer">
+<div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-sobre">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Amêndola & Amêndola</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Rua J. Carlos Mendes de Campos, 190</p>
+            <p>Sales, Cristo Redentor - CEP: 14980 - 622  </p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+55 (17) 3557-9090</span></p>
+            <p><strong>Email:</strong> <span>contato@amendolaeamendola.com.br</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="https://www.linkedin.com/company/am%C3%AAndola-%26-am%C3%AAndola" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="carros.html"><i class="bi-car-front-fill"></i></a>
+            <a href="login.html"><i class="bi bi-lock-fill"></i></a>
+            
+          </div>
         </div>
-    </nav>
 
-    <main class="page-sistema">
-        <!-- Sistema-titulo -->
-        <section class="sistema-titulo">
-            <div class="banner-text">
-                <h1>SAS</h1>
-                <h2>Sistema de Assistência Social</h2>
-                <hr>
-                <p>
-                    O SAS - Sistema de Assistência Social é a solução completa para gestão do SUAS nos municípios. 
-                    Gerencia CRAS, CREAS, CADÚNICO, Bolsa Família, benefícios eventuais e Proteção Social Básica e Especial. 
-                    Totalmente integrado com sistemas Fiorilli, oferece controle total de cadastros, benefícios e relatórios 
-                    obrigatórios para o MDS, simplificando a gestão social e garantindo conformidade legal.
-                </p>
-            </div>
-        </section>
-
-        <!-- BENEFÍCIOS -->
-        <section id="beneficios" class="icons-container">
-            <div class="icon-wrapper">
-                <div class="icon-circle">
-                    <i class="fas fa-users" aria-hidden="true"></i>
-                </div>
-                <p>Gestão Completa do SUAS</p>
-                <span>Proteção Social Básica e Especial integrada em uma única plataforma, atendendo CRAS, CREAS e serviços especializados.</span>
-            </div>
-            <div class="icon-wrapper">
-                <div class="icon-circle">
-                    <i class="fas fa-id-card" aria-hidden="true"></i>
-                </div>
-                <p>CADÚNICO Automatizado</p>
-                <span>Gestão completa do Cadastro Único com validação automática e integração com benefícios federais.</span>
-            </div>
-            <div class="icon-wrapper">
-                <div class="icon-circle">
-                    <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
-                </div>
-                <p>Proteção à Vulnerabilidade</p>
-                <span>Serviços, benefícios e programas para famílias em situação de risco social e violações de direitos.</span>
-            </div>
-        </section>
-
-        <!-- SEÇÃO DETALHADA DO SAS -->
-        <section class="features">
-            <div class="column">
-                <h3>Gestão Unificada do SUAS</h3>
-                <p>O SAS organiza toda a Política de Assistência Social do município, desde a Proteção Social Básica 
-                (prevenção de riscos) até a Proteção Especial de Média e Alta Complexidade, com controle total 
-                de serviços, benefícios e programas conforme a Tipificação Nacional.</p>
-            </div>
-            <div class="column">
-                <h3>CADÚNICO e Bolsa Família Integrados</h3>
-                <p>Gerenciamento completo do Cadastro Único, com importação automática do governo federal, 
-                seleção automática de famílias para Bolsa Família e emissão de relatórios CNEAS e MDS.</p>
-            </div>
-        </section>
-
-        <section class="integracoes">
-            <div class="bloco">
-                <h3><i class="fas fa-retweet" aria-hidden="true"></i> Integrações com outros sistemas Fiorilli</h3>
-                <ul>
-                    <li>
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                        <a href="sip.html"><strong class="laranja">Sistema Integrado de Pessoal</strong><br></a>
-                        <span>Folha de pagamento de assistentes sociais, psicólogos e equipes do SUAS integrada automaticamente.</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                        <a href="sia.html"><strong class="laranja">Sistema Integrado de Arrecadação</strong><br></a>
-                        <span>Controle de benefícios eventuais, auxílios e contrapartidas municipais com cobrança automatizada.</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                        <a href="scpi.html"><strong class="laranja">SCPI - Contabilidade Pública</strong><br></a>
-                        <span>Prestação de contas do SUAS/PASE para Tribunais de Contas com relatórios CNEAS validados.</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                        <a href="flowdocs.html"><strong class="laranja">FlowDocs</strong><br></a>
-                        <span>Tramitação digital de documentos sociais, requerimentos e processos do CRAS/CREAS.</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Funcionalidades SAS -->
-        <section class="functionalities">
-            <h2>Funcionalidades completas do SAS</h2>
-            <div class="functionalities-container">
-                <div class="functionality">
-                    <h3>CRAS/CREAS Integrados</h3>
-                    <p>Gestão completa de Centros de Referência de Assistência Social e Especializados de Alta Complexidade.</p>
-                </div>
-                <div class="functionality">
-                    <h3>CADÚNICO Completo</h3>
-                    <p>Inclusão, alteração, bloqueio e relatórios do Cadastro Único com integração MDS.</p>
-                </div>
-                <div class="functionality">
-                    <h3>Bolsa Família Municipal</h3>
-                    <p>Seleção automática de famílias, gestão de benefícios e relatórios CNEAS.</p>
-                </div>
-                <div class="functionality">
-                    <h3>Benefícios Eventuais</h3>
-                    <p>Auxílio funeral, natalidade, calamidade pública e outros benefícios previstos em lei.</p>
-                </div>
-                <div class="functionality">
-                    <h3>Serviço de Convivência</h3>
-                    <p>SCFV - Crianças, idosos, pessoas com deficiência com frequência e relatórios automáticos.</p>
-                </div>
-                <div class="functionality">
-                    <h3>Proteção Especial Média</h7>
-                    <p>Centro Dia, Centro POP, Casa da Mulher e outros serviços de média complexidade.</p>
-                </div>
-                <div class="functionality">
-                    <h3>Proteção Especial Alta</h3>
-                    <p>Acolhimento institucional, família acolhedora e repúblicas com controle de vagas.</p>
-                </div>
-                <div class="functionality">
-                    <h3>CNEAS e Relatórios</h3>
-                    <p>Relatórios obrigatórios para MDS, CNEAS, gestores e Tribunais de Contas.</p>
-                </div>
-                <div class="functionality">
-                    <h3>Vigilância Socioassistencial</h3>
-                    <p>Indicadores sociais, mapeamento territorial e avaliação de vulnerabilidades.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="back-button" onclick="window.history.back()">
-            <button class="btn-back">Voltar</button>
-        </section>
-    </main>
-
-    <!-- Contate-nos -->
-    <section id="contato" class="contact-section">
-        <div class="secao-titulo-principal">
-            <h2>Contate-nos</h2>
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Links Uteis</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Sobre</a></li>
+            <li><a href="index.html">Serviços</a></li>
+          </ul>
         </div>
-        <div class="contact-wrapper">
-            <div class="contact-card">
-                <h3>Informações</h3>
-                <div class="info-item">
-                    <div class="contact-icon-circle" aria-hidden="true">📍</div>
-                    <div class="info-text">
-                        <h4>Localização</h4>
-                        <p>Rua J. Carlos Mendes de Campos, 190</p>
-                        <p>Sales, Cristo Redentor CEP: 14980 622</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <div class="icon-circle" aria-hidden="true">📞</div>
-                    <div class="info-text">
-                        <h4>Número de telefone</h4>
-                        <p>+55 (17) 2137-2200</p>
-                        <p>+55 (17) 3557-9090</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <div class="icon-circle" aria-hidden="true">📧</div>
-                    <div class="info-text">
-                        <h4>Email</h4>
-                        <p>contato@amendolaeamendola.com.br</p>
-                    </div>
-                </div>
-            </div>
-            <div class="map-box">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1858.135713352941!2d-49.49752262320958!3d-21.339786485462337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be7867b6fa1d17%3A0x42c5472c9c2ed4c8!2sAMENDOLA%20%26%20AMENDOLA%20SOFTWARE%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1761132974636!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização da Amendola & Amendola"></iframe>
-            </div>
-        </div>
-    </section>
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Amêndola & Amêndola</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a>BootstrapMade</a>
+      </div>
+    </div>
 
-    <!-- Footer -->
-    <footer class="tf-custom-footer">
-        <div class="tf-footer-left">
-            <div class="lang-selector">
-                <button class="lang-trigger">
-                    <span class="tf-globe" aria-hidden="true">🌐</span>
-                    <span id="current-lang">Português</span>
-                    <span style="margin-left: 5px; font-size: 10px;">∨</span>
-                </button>
-                <div class="lang-menu">
-                    <a href="javascript:void(0)" onclick="translatePage('pt')">Português</a>
-                    <a href="javascript:void(0)" onclick="translatePage('en')">English</a>
-                    <a href="javascript:void(0)" onclick="translatePage('es')">Español</a>
-                </div>
-            </div>
-            <a href="carro.html" class="btn-footer-carro-icon" title="Tabela de Veículos">
-                <i class="fas fa-car"></i>
-            </a>
-        </div>
-        <div class="tf-footer-center">
-            <a href="#">Cookie settings</a>
-            <a href="#">Check our cookies policy to delete cookies</a>
-            <a href="#">Report abuse</a>
-        </div>
-        <div class="tf-footer-right">
-            Developed by Equipe Flowdocs
-        </div>
-    </footer>
+  </footer>
 
-    <div id="google_translate_element" style="display:none;"></div>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'pt',
-                includedLanguages: 'en,pt,es',
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-        function translatePage(lang) {
-            var selectField = document.querySelector("select.goog-te-combo");
-            if (selectField) {
-                selectField.value = lang;
-                selectField.dispatchEvent(new Event('change'));
-                const langMap = {'pt': 'Português', 'en': 'English', 'es': 'Español'};
-                document.getElementById('current-lang').innerText = langMap[lang];
-            }
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/mobile-nav/mobile-nav.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
 </body>
 </html>
+
+
+
+   
