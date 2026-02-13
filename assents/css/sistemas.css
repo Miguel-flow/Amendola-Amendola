@@ -145,15 +145,17 @@ a {
 .page-sistema .integracoes {
     padding: 80px 20px;
     background: #ffffff;
+
     display: flex;
     justify-content: center;
-    
+    gap: 40px; /* espaço entre os blocos */
+    flex-wrap: wrap; /* para responsivo */
 }
 
 /* Card principal */
 .page-sistema .integracoes .bloco {
     background: #ffffff;
-    max-width: 900px;
+    max-width: 600px; /* metade do container máximo de 900px */
     width: 100%;
     padding: 50px;
     border-radius: 18px;
