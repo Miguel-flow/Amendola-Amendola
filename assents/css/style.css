@@ -818,8 +818,6 @@ transform: translateX(-50%);
     transition: all 0.3s ease;
   }
   
-  
-  
   .whatsapp-float img {
     width: 35px;
     height: 35px;
@@ -831,5 +829,8 @@ transform: translateX(-50%);
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
   }
+  
+  
+  
 
   

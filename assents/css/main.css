@@ -1776,3 +1776,35 @@
   .service-box p {
     margin-bottom: 10px;
   }
+
+/* Cards normais (SEM blur, SEM sombra) */
+.about-amendola .cards{
+  overflow: visible;
+}
+
+.about-amendola .cards .card{
+  box-shadow: none !important;
+  transform: scale(1);
+  opacity: 1;
+  filter: none;
+  transition: transform 0.25s ease, opacity 0.25s ease, filter 0.25s ease;
+  will-change: transform;
+}
+
+/* Quando houver hover na área dos cards,
+   só os OUTROS cards ficam diferentes */
+.about-amendola .cards:hover .card{
+  opacity: 0.45;
+  filter: blur(2px);
+  transform: scale(0.98);
+}
+
+/* O card que está com mouse em cima fica em destaque */
+.about-amendola .cards:hover .card:hover{
+  opacity: 1;
+  filter: none;
+  transform: scale(1.15);
+  z-index: 5;
+}
+
+

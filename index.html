@@ -1,268 +1,792 @@
-    <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Amendola & Amendola</title>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amendola & Amendola</title>
 
-            <!-- Favicons -->
-        <link href="assets/img/favicon.png" rel="icon">
-        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-        <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        crossorigin="anonymous">
-        <link href="assents/css/style.css" rel="stylesheet"> <!-- CSS do header/navbar -->
-        <link href="assents/css/main.css" rel="stylesheet"> <!-- CSS do header/navbar -->
-
-    </head>
-    <body>
-        <nav class="navbar">
-            <span class="navbar-logo">
-                <img src="assents/img/logo.png" width="150px" height="30px">
-            </span>
-            <ul class="navbar-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sistemas.html">Sistemas</a></li>
-                <li><a href="#contato">Contate-nos</a></li>
-            </ul>   
-            <div class="navbar-buttons">
-                <button onclick="window.open('https://amendola.flowdocs.com.br:2053/credentials/login', '_blank')" class="btn-flowdocs">
-                    FlowDocs
-                </button>
-            </div>
-        </nav>
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    crossorigin="anonymous">
+    <link href="assents/css/style.css" rel="stylesheet">
+    <link href="assents/css/main.css" rel="stylesheet">
     
-        <section class="about-amendola">
-            <h2>Amêndola & Amêndola Software</h2>
-            <p class="subtitle">
-                A Amêndola & Amêndola Software desenvolve soluções tecnológicas focadas
-                em eficiência, segurança e inovação, ajudando empresas a otimizarem
-                processos e alcançarem melhores resultados.
-            </p>
-            <div class="cards">
-                <div class="card">
-                    <div class="icon">⚙️</div>
-                    <h3>Soluções Inteligentes</h3>
-                    <p style="font-size: 18px;">
-                        Desenvolvimento de sistemas personalizados que automatizam processos,
-                        aumentam a produtividade e reduzem custos operacionais.
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="icon">🤝</div>
-                    <h3>Parceria e Confiança</h3>
-                    <p style="font-size: 18px;">
-                        Atuamos lado a lado com nossos clientes, oferecendo suporte contínuo,
-                        transparência e compromisso em cada etapa do projeto.
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="icon">🚀</div>
-                    <h3>Inovação e Tecnologia</h3>
-                    <p style="font-size: 18px;">
-                        Utilizamos tecnologias modernas e boas práticas de mercado para
-                        entregar sistemas seguros, escaláveis e preparados para o futuro.
-                    </p>
-                </div>
-            </div>
-        </section>
+    <!-- CSS DO BANNER DE COOKIES (CORRIGIDO - SEM ESPAÇO BRANCO) -->
+    <style>
+        /* CORREÇÃO: Remove TODOS espaços em branco */
+        html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow-x: hidden;
+        }
         
-        <!--aqui é o banner de chamado-->
-        <div>
-            <section class="divisao-demo">
-                <section class="cta-suporte">
-                    <h2>Está com alguma dúvida ou<br>enfrentando um problema?</h2>
-                    <p>
-                        Abra um chamado diretamente na nossa plataforma de atendimento.
-                        Nossa equipe está pronta para ajudar você de forma rápida,
-                        eficiente e segura.
-                    </p>
-                    <a href="https://amendola.flowdocs.com.br:2053/credentials/login" target="_blank">Chamados</a>
-                </section>
-            </section>
-        </div>
-    
-        <!--Sobre o E-municipioa-->  
-        <div>
-            <section class="servicos-amendola">
-                <div class="secao-titulo-principal">
-                    <h2>Aplicativo E-Município</h2>
-                </div>
-                <div class="servicos-grid">
-                    <div class="col">
-                        <div class="item fade">
-                            <div class="icon">🎓</div>
-                            <div>
-                                <h4>Ensino</h4>
-                                <p>Voltado à educação municipal: alunos, pais e professores. Consulta de notas, faltas, histórico escolar e integração com o sistema.</p>
-                            </div>
-                        </div>
-                        <div class="item fade">
-                            <div class="icon">🩺</div>
-                            <div>
-                                <h4>Saúde</h4>
-                                <p>Agendamento de consultas, acesso à carteira de vacinação, resultados de exames e prontuário integrado.</p>
-                            </div>
-                        </div>
-                        <div class="item fade">
-                            <div class="icon">👷</div>
-                            <div>
-                                <h4>Trabalhador</h4>
-                                <p>Informações para trabalhadores municipais e prestadores de serviço sobre vínculos e serviços do município.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="phone">
-                        <img src="assents/img/imagem e-municipio.png" alt="Aplicativo E-Município">
-                        <div class="icones-download">
-                            <a href="https://play.google.com/store/apps/details?id=br.com.fiorilli.emunicipio" target="_blank">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Disponível no Google Play">
-                            </a>
-                            <a href="https://apps.apple.com/br/app/e-munic%C3%ADpio/id1575362446" target="_blank">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Disponível na App Store">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="item fade">
-                            <div class="icon">🧾</div>
-                            <div>
-                                <h4>Portal de Serviços</h4>
-                                <p>Emissão de guias, certidões, pagamentos de tributos e solicitações online sem filas.</p>
-                            </div>
-                        </div>
-                        <div class="item fade">
-                            <div class="icon">🏢</div>
-                            <div>
-                                <h4>Fornecedor</h4>
-                                <p>Consulta de contratos, situações, emissão de notas e comunicação direta com o município.</p>
-                            </div>
-                        </div>
-                        <div class="item fade">
-                            <div class="icon">💬</div>
-                            <div>
-                                <h4>Fale Conosco</h4>
-                                <p>Canal direto para dúvidas, reclamações e sugestões, facilitando a comunicação pública.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    const items = document.querySelectorAll('.servicos-amendola .item');
-                    const observer = new IntersectionObserver(entries => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add('show');
-                            }
-                        });
-                    }, { threshold: 0.2 });
-                    items.forEach(item => observer.observe(item));
-                </script>
-            </section>
-        </div>
+        * {
+            box-sizing: border-box;
+        }
 
-        <!--Contate nos -->
-        <section id="contact" class="contact-section">
-            <section id="contato" class="sua-classe-de-contato"> 
-                <div class="secao-titulo-principal">
-                    <h2>Contate-nos</h2>
-                </div>
-            </section>
-            <div class="contact-wrapper">
-                <div class="contact-card">
-                    <h3>Informações</h3>
-                    <div class="info-item">
-                        <div class="icon-circle">📍</div>
-                        <div class="info-text">
-                            <h4>Localização</h4>
-                            <p>Rua J. Carlos Mendes de Campos, 190</p>
-                            <p>Sales, Cristo Redentor CEP: 14980 622</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="icon-circle">📞</div>
-                        <div class="info-text">
-                            <h4>Número de telefone</h4>
-                            <p>+55 (17) 2137-2200</p>
-                            <p>+55 (17) 3557-9090</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="icon-circle">📧</div>
-                        <div class="info-text">
-                            <h4>Email</h4>
-                            <p>contato@amendolaeamendola.com.br</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="map-box">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1858.135713352941!2d-49.49752262320958!3d-21.339786485462337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be7867b6fa1d17%3A0x42c5472c9c2ed4c8!2sAMENDOLA%20%26%20AMENDOLA%20SOFTWARE%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1761132974636!5m2!1spt-BR!2sbr%22"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            background: #1A1A1B;
+            backdrop-filter: blur(10px);
+            color: #ffffff;
+            padding: 25px 40px;
+            text-align: left;
+            z-index: 9999;
+            display: none;
+            box-shadow: 0 -8px 40px rgba(0,0,0,0.5);
+            border-top: 1px solid #333;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        #cookie-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #FD7A02, transparent);
+        }
+
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .cookie-text {
+            flex: 1;
+            min-width: 300px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cookie-text strong {
+            color: #FD7A02;
+        }
+
+        .cookie-text a {
+            color: #FD7A02 !important;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .cookie-text a:hover {
+            color: #e66a00 !important;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cookie-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .btn-magenta {
+            background: linear-gradient(135deg, #C71585, #DB7093);
+            color: white;
+            box-shadow: 0 4px 15px rgba(199, 21, 133, 0.4);
+        }
+
+        .btn-magenta:hover {
+            background: linear-gradient(135deg, #B222A0, #C71585);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(199, 21, 133, 0.5);
+        }
+
+        .btn-laranja {
+            background: #FD7A02;
+            color: white;
+            box-shadow: 0 4px 15px rgba(253, 122, 2, 0.4);
+        }
+
+        .btn-laranja:hover {
+            background: #e66a00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(253, 122, 2, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            #cookie-banner {
+                padding: 20px 20px;
+                text-align: center;
+            }
+            .cookie-content {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            .cookie-text {
+                min-width: auto;
+                max-width: 100%;
+            }
+            .cookie-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+            .cookie-btn {
+                flex: 1;
+                min-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <span class="navbar-logo">
+            <img src="assents/img/logo.png" width="150px" height="30px">
+        </span>
+        <ul class="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sistemas.html">Sistemas</a></li>
+            <li><a href="#contato">Contate-nos</a></li>
+        </ul>    
+        <div class="navbar-buttons">
+            <button onclick="window.open('https://amendola.flowdocs.com.br:2053/credentials/login', '_blank')" class="btn-flowdocs">
+                FlowDocs
+            </button>
+        </div>
+    </nav>
+
+    <section class="about-amendola">
+        <h2>Amêndola & Amêndola Software</h2>
+        <p class="subtitle">
+            A Amêndola & Amêndola Software desenvolve soluções tecnológicas focadas
+            em eficiência, segurança e inovação, ajudando empresas a otimizarem
+            processos e alcançarem melhores resultados.
+        </p>
+        <div class="cards">
+            <div class="card">
+                <div class="icon">⚙️</div>
+                <h3>Soluções Inteligentes</h3>
+                <p style="font-size: 18px;">
+                    Desenvolvimento de sistemas personalizados que automatizam processos,
+                    aumentam a produtividade e reduzem custos operacionais.
+                </p>
             </div>
+            <div class="card">
+                <div class="icon">🤝</div>
+                <h3>Parceria e Confiança</h3>
+                <p style="font-size: 18px;">
+                    Atuamos lado a lado com nossos clientes, oferecendo suporte contínuo,
+                    transparência e compromisso em cada etapa do projeto.
+                </p>
+            </div>
+            <div class="card">
+                <div class="icon">🚀</div>
+                <h3>Inovação e Tecnologia</h3>
+                <p style="font-size: 18px;">
+                    Utilizamos tecnologias modernas e boas práticas de mercado para
+                    entregar sistemas seguros, escaláveis e preparados para o futuro.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner de chamado -->
+    <div>
+        <section class="divisao-demo">
+            <section class="cta-suporte">
+                <h2>Está com alguma dúvida ou<br>enfrentando um problema?</h2>
+                <p>
+                    Abra um chamado diretamente na nossa plataforma de atendimento.
+                    Nossa equipe está pronta para ajudar você de forma rápida,
+                    eficiente e segura.
+                </p>
+                <a href="https://amendola.flowdocs.com.br:2053/credentials/login" target="_blank">Chamados</a>
+            </section>
         </section>
-            
-            
-            
-        <!-- Footer -->
-        <footer class="tf-custom-footer">
-            <div class="tf-footer-left">
-                <div class="lang-selector">
-                    <button class="lang-trigger">
-                        <span class="tf-globe" aria-hidden="true">🌐</span>
-                        <span id="current-lang">Português</span>
-                        <span style="margin-left: 5px; font-size: 10px;">∨</span>
-                    </button>
-                    <div class="lang-menu">
-                        <a href="javascript:void(0)" onclick="translatePage('pt')">Português</a>
-                        <a href="javascript:void(0)" onclick="translatePage('en')">English</a>
-                        <a href="javascript:void(0)" onclick="translatePage('es')">Español</a>
+    </div>
+
+    <!-- Sobre o E-município -->
+    <div>
+        <section class="servicos-amendola">
+            <div class="secao-titulo-principal">
+                <h2>Aplicativo E-Município</h2>
+            </div>
+            <div class="servicos-grid">
+                <div class="col">
+                    <div class="item fade">
+                        <div class="icon">🎓</div>
+                        <div>
+                            <h4>Ensino</h4>
+                            <p>Voltado à educação municipal: alunos, pais e professores. Consulta de notas, faltas, histórico escolar e integração com o sistema.</p>
+                        </div>
+                    </div>
+                    <div class="item fade">
+                        <div class="icon">🩺</div>
+                        <div>
+                            <h4>Saúde</h4>
+                            <p>Agendamento de consultas, acesso à carteira de vacinação, resultados de exames e prontuário integrado.</p>
+                        </div>
+                    </div>
+                    <div class="item fade">
+                        <div class="icon">👷</div>
+                        <div>
+                            <h4>Trabalhador</h4>
+                            <p>Informações para trabalhadores municipais e prestadores de serviço sobre vínculos e serviços do município.</p>
+                        </div>
                     </div>
                 </div>
-                <a href="carro.html" class="btn-footer-carro-icon" title="Tabela de Veículos">
-                    <i class="fas fa-car"></i>
-                </a>
+                <div class="phone">
+                    <img src="assents/img/imagem e-municipio.png" alt="Aplicativo E-Município">
+                    <div class="icones-download">
+                        <a href="https://play.google.com/store/apps/details?id=br.com.fiorilli.emunicipio" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Disponível no Google Play">
+                        </a>
+                        <a href="https://apps.apple.com/br/app/e-munic%C3%ADpio/id1575362446" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Disponível na App Store">
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="item fade">
+                        <div class="icon">🧾</div>
+                        <div>
+                            <h4>Portal de Serviços</h4>
+                            <p>Emissão de guias, certidões, pagamentos de tributos e solicitações online sem filas.</p>
+                        </div>
+                    </div>
+                    <div class="item fade">
+                        <div class="icon">🏢</div>
+                        <div>
+                            <h4>Fornecedor</h4>
+                            <p>Consulta de contratos, situações, emissão de notas e comunicação direta com o município.</p>
+                        </div>
+                    </div>
+                    <div class="item fade">
+                        <div class="icon">💬</div>
+                        <div>
+                            <h4>Fale Conosco</h4>
+                            <p>Canal direto para dúvidas, reclamações e sugestões, facilitando a comunicação pública.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="tf-footer-center">
-                <a href="#">Cookie settings</a>
-                <a href="#">Check our cookies policy to delete cookies</a>
-                <a href="#">Report abuse</a>
-            </div>
-            <div class="tf-footer-right">
-                Developed by Equipe Flowdocs
-            </div>
-        </footer>
+            <script>
+                const items = document.querySelectorAll('.servicos-amendola .item');
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('show');
+                        }
+                    });
+                }, { threshold: 0.2 });
+                items.forEach(item => observer.observe(item));
+            </script>
+        </section>
+    </div>
 
-        <div id="google_translate_element" style="display:none;"></div>
-        <script type="text/javascript">
-            function googleTranslateElementInit() {
-                new google.translate.TranslateElement({
-                    pageLanguage: 'pt',
-                    includedLanguages: 'en,pt,es',
-                    autoDisplay: false
-                }, 'google_translate_element');
-            }
-            function translatePage(lang) {
-                var selectField = document.querySelector("select.goog-te-combo");
-                if (selectField) {
-                    selectField.value = lang;
-                    selectField.dispatchEvent(new Event('change'));
-                    const langMap = {'pt': 'Português', 'en': 'English', 'es': 'Español'};
-                    document.getElementById('current-lang').innerText = langMap[lang];
-                }
-            }
-        </script>
-        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- Contate-nos -->
+    <section id="contato" class="contact-section">
+        <div class="secao-titulo-principal">
+            <h2>Contate-nos</h2>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-card">
+                <h3>Informações</h3>
+                <div class="info-item">
+                    <div class="contact-icon-circle" aria-hidden="true">📍</div>
+                    <div class="info-text">
+                        <h4>Localização</h4>
+                        <p>Rua J. Carlos Mendes de Campos, 190</p>
+                        <p>Sales, Cristo Redentor CEP: 14980 622</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon-circle" aria-hidden="true">📞</div>
+                    <div class="info-text">
+                        <h4>Número de telefone</h4>
+                        <p>+55 (17) 2137-2200</p>
+                        <p>+55 (17) 3557-9090</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon-circle" aria-hidden="true">📧</div>
+                    <div class="info-text">
+                        <h4>Email</h4>
+                        <p>contato@amendolaeamendola.com.br</p>
+                    </div>
+                </div>
+            </div>
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1858.135713352941!2d-49.49752262320958!3d-21.339786485462337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be7867b6fa1d17%3A0x42c5472c9c2ed4c8!2sAMENDOLA%20%26%20AMENDOLA%20SOFTWARE%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1761132974636!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização da Amendola & Amendola"></iframe>
+            </div>
+        </div>
+    </section>
 
-        <!-- Botão flutuante do WhatsApp -->
-        <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank" aria-label="Converse no WhatsApp">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
-        </a>
-        <link rel="stylesheet" href="assents/css/main.css"> 
-        <script src="assents/js/main.js"></script>
-    </body>
-    </html>
+    <!-- Footer -->
+    <footer class="tf-custom-footer">
+        <div class="tf-footer-left">
+            <div class="lang-selector">
+                <button class="lang-trigger">
+                    <span class="tf-globe" aria-hidden="true">🌐</span>
+                    <span id="current-lang">Português</span>
+                    <span style="margin-left: 5px; font-size: 10px;">∨</span>
+                </button>
+                <div class="lang-menu">
+                    <a href="javascript:void(0)" onclick="translatePage('pt')">Português</a>
+                    <a href="javascript:void(0)" onclick="translatePage('en')">English</a>
+                    <a href="javascript:void(0)" onclick="translatePage('es')">Español</a>
+                </div>
+            </div>
+            <a href="carro.html" class="btn-footer-carro-icon" title="Tabela de Veículos">
+                <i class="fas fa-car"></i>
+            </a>
+        </div>
+        <div class="tf-footer-center">
+            <a href="politicadeprivacidade.html" target="_blank">Política de Privacidade</a>
+            <a href="#" onclick="configurarCookies()">Configurar Cookies</a>
+            <a href="politica-de-cookies.html" target="_blank">Política de Cookies</a>
+        </div>
+        <div class="tf-footer-right">
+            <a href="criadores.html" target="_blank"> Developed by Equipe FlowDocs</a>
+        </div>
+    </footer>
+
+    <!-- Google Translate -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'pt',
+        includedLanguages: 'pt,en,es',
+        autoDisplay: false
+    }, 'google_translate_element');
+}
+
+function translatePage(lang) {
+    const langMap = {
+        'pt': 'Português',
+        'en': 'English',
+        'es': 'Español'
+    };
+
+    const tryChange = () => {
+        const selectField = document.querySelector("select.goog-te-combo");
+        if (selectField) {
+            selectField.value = lang;
+            selectField.dispatchEvent(new Event('change'));
+            document.getElementById('current-lang').innerText = langMap[lang];
+            localStorage.setItem("site_lang", lang);
+        } else {
+            setTimeout(tryChange, 500); // espera o Google carregar
+        }
+    };
+
+    tryChange();
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+    const savedLang = localStorage.getItem("site_lang");
+    if(savedLang){
+        translatePage(savedLang);
+    }
+});
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank" aria-label="Converse no WhatsApp">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
+    </a>
+
+ <!-- ========================= -->
+<!-- BANNER DE COOKIES (LGPD)  -->
+<!-- ========================= -->
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+    <div class="cookie-content">
+      <p class="cookie-text">
+        <strong>Cookies & Privacidade</strong><br>
+        Utilizamos cookies para garantir o funcionamento do site (obrigatórios) e, com a sua autorização, para
+        melhorar a experiência, medir audiência e exibir conteúdos/serviços de terceiros (ex.: mapas).
+        Você pode <a href="#" onclick="configurarCookies(); return false;">gerenciar suas preferências</a> a qualquer momento.
+        <br><br>
+        <small>
+          Controlador: Amêndola & Amêndola Software •
+          <a href="politica-de-privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a> •
+          <a href="politica-de-privacidade.html#cookies" target="_blank" rel="noopener">Política de Cookies</a>
+        </small>
+      </p>
+  
+      <div class="cookie-buttons">
+        <button class="cookie-btn btn-magenta" onclick="configurarCookies()">PREFERÊNCIAS</button>
+        <button class="cookie-btn" style="background:#444;color:#fff;" onclick="rejeitarCookies()">REJEITAR</button>
+        <button class="cookie-btn btn-laranja" onclick="aceitarCookies()">EU ACEITO</button>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    /* (SEU CSS DO BANNER PODE FICAR — só garanta display:none inicial e position fixed) */
+    /* Aqui mantenho seu estilo base e só adiciono um mínimo pro botão "rejeitar" ficar alinhado */
+  </style>
+  
+  <!-- ========================= -->
+  <!-- MODAL DE COOKIES (LGPD)   -->
+  <!-- ========================= -->
+  <style>
+    #cookie-modal-overlay{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.75);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      z-index:99999;
+      padding: 16px;
+    }
+  
+    #cookie-modal{
+      background:#fff;
+      width:100%;
+      max-width:820px;
+      border-radius:10px;
+      padding:28px;
+      position:relative;
+      font-family:Arial, sans-serif;
+    }
+  
+    #cookie-modal h2{ margin:0 0 8px 0; }
+    #cookie-modal p{ margin:0 0 14px 0; line-height:1.45; color:#333; }
+  
+    .cookie-meta{
+      background:#f7f7f7;
+      border:1px solid #eee;
+      padding:12px;
+      border-radius:8px;
+      font-size:13px;
+      color:#444;
+      margin-bottom:16px;
+    }
+  
+    .cookie-option{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:14px 0;
+      border-bottom:1px solid #eee;
+      gap: 16px;
+    }
+  
+    .cookie-option small{ color:#555; display:block; margin-top:4px; line-height:1.35; }
+  
+    .switch{
+      position:relative;
+      display:inline-block;
+      width:50px;
+      height:24px;
+      flex-shrink: 0;
+    }
+    .switch input{ opacity:0; width:0; height:0; }
+    .slider{
+      position:absolute; inset:0;
+      background:#ccc;
+      border-radius:24px;
+      transition:.3s;
+    }
+    .slider:before{
+      content:"";
+      position:absolute;
+      height:18px; width:18px;
+      left:3px; bottom:3px;
+      background:white;
+      border-radius:50%;
+      transition:.3s;
+    }
+    input:checked + .slider{ background:#FD7A02; }
+    input:checked + .slider:before{ transform:translateX(26px); }
+  
+    .modal-footer{
+      display:flex;
+      gap:10px;
+      justify-content:flex-end;
+      margin-top:18px;
+      flex-wrap: wrap;
+    }
+  
+    .btn-save{
+      background:#FD7A02;
+      color:#fff;
+      border:none;
+      padding:10px 16px;
+      border-radius:6px;
+      cursor:pointer;
+      font-weight:700;
+    }
+  
+    .btn-policy{
+      background:#C71585;
+      color:#fff;
+      border:none;
+      padding:10px 16px;
+      border-radius:6px;
+      cursor:pointer;
+      font-weight:700;
+    }
+  
+    .btn-ghost{
+      background:#444;
+      color:#fff;
+      border:none;
+      padding:10px 16px;
+      border-radius:6px;
+      cursor:pointer;
+      font-weight:700;
+    }
+  
+    .close-modal{
+      position:absolute;
+      top:10px;
+      right:15px;
+      cursor:pointer;
+      font-size:18px;
+      color:#444;
+    }
+  </style>
+  
+  <div id="cookie-modal-overlay" role="dialog" aria-modal="true" aria-label="Preferências de Cookies">
+    <div id="cookie-modal">
+      <div class="close-modal" onclick="fecharModal()" aria-label="Fechar">✕</div>
+  
+      <h2>Preferências de Privacidade</h2>
+      <p>
+        Aqui você escolhe quais cookies autoriza. Você pode alterar ou revogar seu consentimento a qualquer momento
+        clicando em <strong>“Configurar Cookies”</strong> no rodapé.
+      </p>
+  
+      <div class="cookie-meta">
+        <strong>Informações LGPD</strong><br>
+        • Controlador: Amêndola & Amêndola Software<br>
+        • Finalidades: funcionamento do site, melhorias de navegação, métricas e recursos de terceiros (quando ativados)<br>
+        • Base legal: <em>legítimo interesse</em> para cookies estritamente necessários e <em>consentimento</em> para os demais<br>
+        • Compartilhamento (quando ativado): serviços de terceiros como Google/Meta/YouTube/Cloudflare, conforme política<br>
+        • Retenção: varia por fornecedor. Em geral, cookies de preferência e analíticos podem durar de sessão até 13 meses (dependendo do provedor)
+        <br>
+        <small>
+          Consulte detalhes na <a href="politica-de-privacidade.html#cookies" target="_blank" rel="noopener">Política de Cookies</a>.
+        </small>
+      </div>
+  
+      <div class="cookie-option">
+        <div>
+          <strong>Obrigatórios (necessários)</strong>
+          <small>
+            Essenciais para o site funcionar (segurança, navegação e preferências básicas). Sempre ativos e não podem ser desativados.
+          </small>
+        </div>
+        <label class="switch">
+          <input type="checkbox" checked disabled>
+          <span class="slider"></span>
+        </label>
+      </div>
+  
+      <div class="cookie-option">
+        <div>
+          <strong>Funcionais (recursos)</strong>
+          <small>
+            Permitem recursos como mapas incorporados e integrações de serviços. Sem eles, alguns componentes podem não carregar.
+          </small>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="functional">
+          <span class="slider"></span>
+        </label>
+      </div>
+  
+      <div class="cookie-option">
+        <div>
+          <strong>Analíticos (métricas)</strong>
+          <small>
+            Ajudam a entender como o site é usado (páginas mais acessadas, tempo de navegação), para melhorar a experiência.
+          </small>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="analytics">
+          <span class="slider"></span>
+        </label>
+      </div>
+  
+      <div class="cookie-option">
+        <div>
+          <strong>Marketing (publicidade)</strong>
+          <small>
+            Podem ser usados para personalização de conteúdo e medição de campanhas. Envolve terceiros e rastreamento.
+          </small>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="marketing">
+          <span class="slider"></span>
+        </label>
+      </div>
+  
+      <div class="modal-footer">
+        <button class="btn-ghost" onclick="rejeitarCookies()">Rejeitar não essenciais</button>
+        <button class="btn-policy" onclick="window.open('politica-de-privacidade.html','_blank')">Política</button>
+        <button class="btn-save" onclick="salvarCookies()">Salvar preferências</button>
+        <button class="btn-save" style="background:#0f7a2a;" onclick="aceitarCookies()">Aceitar tudo</button>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", function(){
+  
+    // Versão do consentimento (ajuda em auditoria/alterações futuras)
+    const KEY = "amendola_cookie_consent_v1";
+  
+    // ======= UTIL =======
+    function getConsent(){
+      try { return JSON.parse(localStorage.getItem(KEY)); }
+      catch(e){ return null; }
+    }
+  
+    function setConsent(consent){
+      localStorage.setItem(KEY, JSON.stringify(consent));
+    }
+  
+    function hasConsent(){
+      const c = getConsent();
+      return !!(c && c.aceito === true);
+    }
+  
+    function showBanner(){
+      const banner = document.getElementById("cookie-banner");
+      if(!banner) return;
+      if(!hasConsent()){
+        banner.style.display = "block";
+      } else {
+        banner.style.display = "none";
+      }
+    }
+  
+    // ======= BLOQUEIO/ATIVAÇÃO DE RECURSOS =======
+    // Exemplo: Google Maps (iframe). Só carrega se functional=true.
+    function applyConsent(){
+      const c = getConsent() || {};
+  
+      // 1) Google Maps embed (exemplo)
+      const mapIframe = document.querySelector(".map-box iframe");
+      if(mapIframe){
+        // guardamos a URL original no data-src (uma vez)
+        if(!mapIframe.dataset.src){
+          mapIframe.dataset.src = mapIframe.getAttribute("src") || "";
+          mapIframe.removeAttribute("src");
+        }
+  
+        if(c.functional){
+          mapIframe.setAttribute("src", mapIframe.dataset.src);
+        } else {
+          mapIframe.removeAttribute("src");
+        }
+      }
+  
+      // 2) Aqui você também bloquearia scripts de analytics/marketing:
+      // - Só inserir <script> do GA/Meta/YouTube API quando c.analytics / c.marketing for true.
+    }
+  
+    // ======= FUNÇÕES GLOBAIS (SEU RODAPÉ JÁ CHAMA) =======
+    window.configurarCookies = function(){
+      const c = getConsent();
+      document.getElementById("functional").checked = !!(c && c.functional);
+      document.getElementById("analytics").checked  = !!(c && c.analytics);
+      document.getElementById("marketing").checked  = !!(c && c.marketing);
+      document.getElementById("cookie-modal-overlay").style.display = "flex";
+    }
+  
+    window.fecharModal = function(){
+      document.getElementById("cookie-modal-overlay").style.display = "none";
+    }
+  
+    window.salvarCookies = function(){
+      const functional = document.getElementById("functional").checked;
+      const analytics  = document.getElementById("analytics").checked;
+      const marketing  = document.getElementById("marketing").checked;
+  
+      setConsent({
+        aceito: true,
+        functional,
+        analytics,
+        marketing,
+        // “prova” do consentimento
+        data: new Date().toISOString(),
+        versao: "v1"
+      });
+  
+      fecharModal();
+      showBanner();
+      applyConsent();
+    }
+  
+    window.aceitarCookies = function(){
+      setConsent({
+        aceito: true,
+        functional: true,
+        analytics: true,
+        marketing: true,
+        data: new Date().toISOString(),
+        versao: "v1"
+      });
+  
+      fecharModal();
+      showBanner();
+      applyConsent();
+    }
+  
+    window.rejeitarCookies = function(){
+      // Rejeita tudo que não é obrigatório
+      setConsent({
+        aceito: true,
+        functional: false,
+        analytics: false,
+        marketing: false,
+        data: new Date().toISOString(),
+        versao: "v1"
+      });
+  
+      fecharModal();
+      showBanner();
+      applyConsent();
+    }
+  
+    // Inicial
+    showBanner();
+    applyConsent();
+  });
+  </script>
+  
+</body>
+</html>
