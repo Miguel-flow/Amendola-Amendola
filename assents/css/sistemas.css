@@ -148,21 +148,31 @@ a {
 
     display: flex;
     justify-content: center;
-    gap: 40px; /* espaço entre os blocos */
-    flex-wrap: wrap; /* para responsivo */
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-/* Card principal */
-.page-sistema .integracoes .bloco {
-    background: #ffffff;
+/* Quando houver apenas 1 bloco */
+.page-sistema .integracoes.single-block .bloco {
+    max-width: 800px; /* bloco único maior */
+    width: 100%;
+}
+
+/* Quando houver dois blocos (ou mais) */
+.page-sistema .integracoes:not(.single-block) .bloco {
     max-width: 600px; /* metade do container máximo de 900px */
     width: 100%;
-    padding: 50px;
-    border-radius: 18px;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.08);
-    position: relative;
-    animation: slideInUp 0.9s ease-out both;
 }
+
+/* Responsivo: telas menores, cada bloco ocupa 100% */
+@media(max-width: 1199px) {
+    .page-sistema .integracoes .bloco {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
 
 /* Faixa laranja superior */
 .page-sistema .integracoes .bloco::before {

@@ -447,11 +447,8 @@ document.addEventListener("DOMContentLoaded", function(){
         }
       }
   
-      // 2) Aqui você também bloquearia scripts de analytics/marketing:
-      // - Só inserir <script> do GA/Meta/YouTube API quando c.analytics / c.marketing for true.
     }
   
-    // ======= FUNÇÕES GLOBAIS (SEU RODAPÉ JÁ CHAMA) =======
     window.configurarCookies = function(){
       const c = getConsent();
       document.getElementById("functional").checked = !!(c && c.functional);
@@ -474,7 +471,6 @@ document.addEventListener("DOMContentLoaded", function(){
         functional,
         analytics,
         marketing,
-        // “prova” do consentimento
         data: new Date().toISOString(),
         versao: "v1"
       });
@@ -500,7 +496,6 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   
     window.rejeitarCookies = function(){
-      // Rejeita tudo que não é obrigatório
       setConsent({
         aceito: true,
         functional: false,
@@ -514,8 +509,7 @@ document.addEventListener("DOMContentLoaded", function(){
       showBanner();
       applyConsent();
     }
-  
-    // Inicial
+
     showBanner();
     applyConsent();
   });
