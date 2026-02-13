@@ -44,10 +44,14 @@ body {
     display: flex; /* Para alinhar os links lado a lado */
     gap: 30px; /* Espaço entre os links */
 }
+a {
+    color: #ff7300;
+    text-decoration: none !important;
+}
 
 .navbar-links li a {
     text-decoration: none; /* Remove sublinhado */
-    color: #333; /* Cor dos links */
+    color: #e76800; /* Cor dos links */
     font-size: 18px;
     transition: color 0.3s ease; /* Transição suave de cor */
 }

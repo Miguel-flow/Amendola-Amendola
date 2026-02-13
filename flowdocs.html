@@ -11,8 +11,10 @@
     <!-- Main Stylesheet Files -->
     <link href="assents/css/style.css" rel="stylesheet"> <!-- CSS do header/navbar -->
     <link href="assents/css/sistemas.css" rel="stylesheet"> <!-- Novo CSS para esta página -->
+    <link href="assents/css/cookies.css" rel="stylesheet"> <!-- Novo CSS para esta página -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 
 <body class="background">
     <nav class="navbar">
@@ -302,125 +304,6 @@ document.addEventListener("DOMContentLoaded", function(){
 <!-- ========================= -->
 <!-- MODAL DE COOKIES (LGPD)   -->
 <!-- ========================= -->
-<style>
-  #cookie-modal-overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.75);
-    display:none;
-    align-items:center;
-    justify-content:center;
-    z-index:99999;
-    padding: 16px;
-  }
-
-  #cookie-modal{
-    background:#fff;
-    width:100%;
-    max-width:820px;
-    border-radius:10px;
-    padding:28px;
-    position:relative;
-    font-family:Arial, sans-serif;
-  }
-
-  #cookie-modal h2{ margin:0 0 8px 0; }
-  #cookie-modal p{ margin:0 0 14px 0; line-height:1.45; color:#333; }
-
-  .cookie-meta{
-    background:#f7f7f7;
-    border:1px solid #eee;
-    padding:12px;
-    border-radius:8px;
-    font-size:13px;
-    color:#444;
-    margin-bottom:16px;
-  }
-
-  .cookie-option{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:14px 0;
-    border-bottom:1px solid #eee;
-    gap: 16px;
-  }
-
-  .cookie-option small{ color:#555; display:block; margin-top:4px; line-height:1.35; }
-
-  .switch{
-    position:relative;
-    display:inline-block;
-    width:50px;
-    height:24px;
-    flex-shrink: 0;
-  }
-  .switch input{ opacity:0; width:0; height:0; }
-  .slider{
-    position:absolute; inset:0;
-    background:#ccc;
-    border-radius:24px;
-    transition:.3s;
-  }
-  .slider:before{
-    content:"";
-    position:absolute;
-    height:18px; width:18px;
-    left:3px; bottom:3px;
-    background:white;
-    border-radius:50%;
-    transition:.3s;
-  }
-  input:checked + .slider{ background:#FD7A02; }
-  input:checked + .slider:before{ transform:translateX(26px); }
-
-  .modal-footer{
-    display:flex;
-    gap:10px;
-    justify-content:flex-end;
-    margin-top:18px;
-    flex-wrap: wrap;
-  }
-
-  .btn-save{
-    background:#FD7A02;
-    color:#fff;
-    border:none;
-    padding:10px 16px;
-    border-radius:6px;
-    cursor:pointer;
-    font-weight:700;
-  }
-
-  .btn-policy{
-    background:#C71585;
-    color:#fff;
-    border:none;
-    padding:10px 16px;
-    border-radius:6px;
-    cursor:pointer;
-    font-weight:700;
-  }
-
-  .btn-ghost{
-    background:#444;
-    color:#fff;
-    border:none;
-    padding:10px 16px;
-    border-radius:6px;
-    cursor:pointer;
-    font-weight:700;
-  }
-
-  .close-modal{
-    position:absolute;
-    top:10px;
-    right:15px;
-    cursor:pointer;
-    font-size:18px;
-    color:#444;
-  }
-</style>
 
 <div id="cookie-modal-overlay" role="dialog" aria-modal="true" aria-label="Preferências de Cookies">
   <div id="cookie-modal">

@@ -15,6 +15,20 @@
     from { transform: translateY(50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+a {
+    color: #ff7300;
+    text-decoration: none !important;
+}
+.navbar-links li a {
+    text-decoration: none; /* Remove sublinhado */
+    color: #e76800; /* Cor dos links */
+    font-size: 18px;
+    transition: color 0.3s ease; /* Transição suave de cor */
+}
+
+.navbar-links li a:hover {
+    color: #ff7300; /* Cor ao passar o mouse - ajustado para o novo design */
+}
 .page-sistema .navbar {
     margin-bottom: 0;
 }
