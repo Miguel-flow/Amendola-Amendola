@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amendola & Amendola - LOUSADIGITAL</title>
+  <head>
+    <link href="assents/img/logo-amendola-2.png" rel="icon">
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <title>Amendola & Amendola - FlowDocs</title>
+      <meta name="description" content="Conheça o FlowDocs, sistema de fluxo de documentos da Amendola & Amendola.">
+      <meta name="keywords" content="FlowDocs, sistema, documentos, gestão">
+  
+     
+      <!-- Main Stylesheet Files -->
+      <link href="assents/css/style.css" rel="stylesheet"> <!-- CSS do header/navbar -->
+      <link href="assents/css/sistemas.css" rel="stylesheet"> <!-- Novo CSS para esta página -->
+      <link href="assents/css/cookies.css" rel="stylesheet"> <!-- Novo CSS para esta página -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  </head>
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
-  <link rel="icon" href="assents/img/logo-amendola-2.png" />
-
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    crossorigin="anonymous"
-  />
-
-  <!-- CSS do site -->
-  <link rel="stylesheet" href="assents/css/style.css" />
-  <link rel="stylesheet" href="assents/css/main.css" />
-  <link rel="stylesheet" href="assents/css/cookies.css" />
-
+  <div id="navbar"></div>
+  
   <style>
     body { margin: 0; padding: 0; }
 
@@ -53,30 +50,6 @@
       z-index: 1;
     }
   </style>
-</head>
-
-<body>
-  <nav class="navbar">
-    <span class="navbar-logo">
-      <img src="assents/img/logo.png" width="150" height="30" alt="Amendola & Amendola" />
-    </span>
-
-    <ul class="navbar-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="sistemas.html">Sistemas</a></li>
-      <li><a href="#contato">Contate-nos</a></li>
-    </ul>
-
-    <div class="navbar-buttons">
-      <button
-        type="button"
-        class="btn-flowdocs"
-        onclick="window.open('https://amendola.flowdocs.com.br:2053/credentials/login', '_blank')"
-      >
-        FlowDocs
-      </button>
-    </div>
-  </nav>
 
   <!-- Conteúdo principal -->
   <div class="calendar-container">
@@ -106,9 +79,7 @@
           <a href="javascript:void(0)" onclick="translatePage('es')">Español</a>
         </div>
       </div>
-      <a href="carro.html" class="btn-footer-carro-icon" title="Tabela de Veículos">
-        <i class="fas fa-car"></i>
-      </a>
+
     </div>
 
     <div class="tf-footer-center">
@@ -386,10 +357,12 @@
         applyConsent();
       };
 
-      // Inicial
-      showBanner();
-      applyConsent();
-    });
-  </script>
+       // Inicial
+  showBanner();
+  applyConsent();
+});
+</script>
+
+      <script src="assents/navbar.js" defer></script
 </body>
 </html>

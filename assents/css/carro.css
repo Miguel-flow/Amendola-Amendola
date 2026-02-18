@@ -1,0 +1,88 @@
+/* ======= CONTEÚDO ======= */
+main {
+    margin-top: 100px;
+    padding: 20px;
+    margin-bottom: 0;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem;
+  }
+  
+  h2 {
+    color: #333;
+    font-size: 28px;
+  }
+  
+  /* ======= ESTILO DA TABELA ======= */
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto 70px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  th,
+  td {
+    padding: 14px 16px;
+    border: 1px solid #e0e0e0;
+  }
+  
+  thead {
+    background-color: #fd950d;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  thead th {
+    border-color: #e89a3a;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  tbody tr:hover {
+    background-color: #fff8f0;
+  }
+  
+  @media (max-width: 768px) {
+    table {
+      font-size: 14px;
+    }
+  
+    th,
+    td {
+      padding: 10px 8px;
+    }
+  }
+  
+  /* Layout para não sobrar espaço embaixo */
+body.index-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;           /* ocupa o espaço disponível */
+  }
+  
+  .tf-custom-footer {
+    margin-top: auto;  /* footer vai pro final */
+  }
+  

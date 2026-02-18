@@ -8,111 +8,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="assents/css/style.css" rel="stylesheet">
   <link href="assents/css/main.css" rel="stylesheet">
-  <style>
-    /* ======= CONTEÚDO ======= */
-    main {
-      margin-top: 100px;
-      padding: 20px;
-      margin-bottom: 0;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .text-center {
-      text-align: center;
-    }
-
-    .mb-4 {
-      margin-bottom: 1.5rem;
-    }
-
-    h2 {
-      color: #333;
-      font-size: 28px;
-    }
-
-    /* ======= ESTILO DA TABELA ======= */
-    table {
-      border-collapse: separate;
-      border-spacing: 0;
-      width: 100%;
-      margin: 0 auto 70px;
-      text-align: center;
-      background-color: #ffffff;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    th,
-    td {
-      padding: 14px 16px;
-      border: 1px solid #e0e0e0;
-    }
-
-    thead {
-      background-color: #fd950d;
-      color: #fff;
-      font-weight: bold;
-    }
-
-    thead th {
-      border-color: #e89a3a;
-    }
-
-    tbody tr:nth-child(even) {
-      background-color: #fafafa;
-    }
-
-    tbody tr:hover {
-      background-color: #fff8f0;
-    }
-
-    @media (max-width: 768px) {
-      .navmenu ul {
-        gap: 15px;
-      }
-
-      .navmenu a {
-        font-size: 14px;
-      }
-
-      table {
-        font-size: 14px;
-      }
-
-      th,
-      td {
-        padding: 10px 8px;
-      }
-    }
-    
-    .btn-footer-carro-icon i {
-      color: #fff;
-    }
-  </style>
+ <link href="assents/css/carro.css" rel="stylesheet">
 </head>
 <body class="index-page">
-  <!-- ======= HEADER ======= -->
-  <nav class="navbar">
-      <span class="navbar-logo">
-          <img src="assents/img/logo.png" width="150px" height="30px">
-      </span>
-      <ul class="navbar-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="sistemas.html">Sistemas</a></li>
-          <li><a href="#contato">Contate-nos</a></li>
-      </ul>  
-      <div class="navbar-buttons">
-          <button onclick="window.open('https://amendola.flowdocs.com.br:2053/credentials/login', '_blank')" class="btn-flowdocs">
-              FlowDocs
-          </button>
-      </div>
-  </nav>
 
+  <div id="navbar"></div>
+ 
+   
   <!-- ======= CONTEÚDO PRINCIPAL ======= -->
   <main>
     <section id="tabela-veiculos">
@@ -580,9 +482,12 @@ window.rejeitarCookies = function(){
 
 // Inicial
 showBanner();
-applyConsent();
+  applyConsent();
 });
 </script>
+
+      <script src="assents/navbar.js" defer></script
+
 
 </body>
 </html>
