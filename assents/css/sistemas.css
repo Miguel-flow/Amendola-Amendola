@@ -271,6 +271,18 @@ a {
     }
 }
 
+.btn-toggle {
+    margin-top: 20px;
+    background: none;
+    border: none;
+    color: #f05a28;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+
 
 /* FUNCIONALIDADES */
 .page-sistema .functionalities {
