@@ -21,7 +21,7 @@ a {
 }
 .navbar-links li a {
     text-decoration: none; /* Remove sublinhado */
-    color: #e76800; /* Cor dos links */
+    color: #000000; /* Cor dos links */
     font-size: 18px;
     transition: color 0.3s ease; /* Transição suave de cor */
 }
@@ -369,4 +369,24 @@ a {
     .page-sistema .functionalities-container {
         grid-template-columns: 1fr;
     }
+}
+
+.lista-wrapper {
+    overflow: hidden;
+}
+
+#lista-integracoes {
+    margin: 0;
+    padding-left: 20px;
+    transition: max-height 0.5s ease;
+}
+
+.btn-toggle {
+    display: inline-block;
+    margin-top: 15px;
+    background: none;
+    border: none;
+    color: #007bff;
+    font-weight: 600;
+    cursor: pointer;
 }
