@@ -9,6 +9,7 @@
     
     <link href="assents/css/style.css" rel="stylesheet">
     <link href="assents/css/sistemas.css" rel="stylesheet">
+    <link href="assents/css/cookies.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body class="background">
@@ -77,37 +78,93 @@
 
         <section class="integracoes">
             <div class="bloco">
-                <h3><i class="fas fa-retweet"></i> Integrações Fiorilli</h3>
+                <h3><i class="fas fa-retweet" aria-hidden="true"></i> Integrações entre sistemas Fiorilli</h3>
                 <ul>
-                    <li><i class="fas fa-check"></i> <a href="flowdocs.html"><strong class="laranja">FlowDocs</strong></a> - Tramitação avançada de protocolos<br><span>Documentos do SSE fluem automaticamente para o FlowDocs.</span></li>
-                    <li><i class="fas fa-check"></i> <a href="scpi.html"><strong class="laranja">SCPI</strong></a> - Contabilidade<br><span>Protocolos geram empenhos e movimentações automáticas.</span></li>
-                    <li><i class="fas fa-check"></i> <a href="sip.html"><strong class="laranja">SIP</strong></a> - Pessoal<br><span>Portarias de nomeação e exoneração integradas à folha.</span></li>
-                </ul>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <a href="SIA.html"><strong class="laranja">Sistema Integrado de Arrecadação</strong><br></a>
+                        <span>Cadastro de Contribuinte totalmente integrado.</span>
+                    </li>
             </div>
         </section>
 
         <section class="functionalities">
             <h2>Funcionalidades Completas do SSE</h2>
             <div class="functionalities-container">
-                <div class="functionality"><h3>PROTOCOLO ENTRADA/SAÍDA</h3><p>Numeração sequencial anual com data, validade e remetente.</p></div>
-                <div class="functionality"><h3>TRAMITAÇÃO ENTRE SECRETARIAS</h3><p>Encaminhamento digital com histórico e controle de prazos.</p></div>
-                <div class="functionality"><h3>MODELOS OFICIAIS</h3><p>Ofícios, memorandos, portarias, convites e comunicados padronizados.</p></div>
-                <div class="functionality"><h3>ARQUIVO DIGITAL</h3><p>Digitalização em lote, OCR e busca por palavras-chave.</p></div>
-                <div class="functionality"><h3>AGENDAS SECRETARIAIS</h3><p>Compromissos, audiências e reuniões dos secretários.</p></div>
-                <div class="functionality"><h3>RELATÓRIOS EXECUTIVOS</h3><p>Estatísticas por secretaria, tipo de documento e período.</p></div>
-                <div class="functionality"><h3>ASSINATURA DIGITAL</h3><p>Integração com certificados ICP-Brasil para documentos oficiais.</p></div>
-                <div class="functionality"><h3>PESQUISA AVANÇADA</h3><p>Busca por protocolo, assunto, data, remetente ou palavras-chave.</p></div>
-                <div class="functionality"><h3>NOTIFICAÇÕES AUTOMÁTICAS</h3><p>Email/SMS para prazos, despachos pendentes e movimentações.</p></div>
-            </div>
+    <div class="functionality">
+        <h3>Cadastro de documentos</h3>
+        <p>Cadastro rápido e fácil de diversos tipos de documentos, como atas, ofícios, decretos e leis, definindo modelos e vinculando-os ao arquivo armazenado no banco de dados. Possui diversas opções de pesquisa.</p>
+    </div>
+    <div class="functionality">
+        <h3>Controle dos arquivamentos e endereçamentos</h3>
+        <p>Endereçamento físico e digital de protocolos, processos e documentos, permitindo localizar arquivos de forma rápida e precisa dentro da instituição.</p>
+    </div>
+    <div class="functionality">
+        <h3>Agenda de compromisso</h3>
+        <p>Controle da agenda de diversos usuários com acesso definido por senhas, permitindo organizar compromissos, reuniões e audiências.</p>
+    </div>
+    <div class="functionality">
+        <h3>Controle de protocolo e tramitações</h3>
+        <p>Envio de documentos aos setores responsáveis, registro de pareceres, arquivamento ou encaminhamento entre setores em tempo real, com histórico completo para consultas e relatórios. Cada documento possui controle de prazo.</p>
+    </div>
+    <div class="functionality">
+        <h3>Anexando documento ao protocolo</h3>
+        <p>Possibilidade de anexar documentos como RG, certidões e atestados a protocolos, especificando o tipo de documento.</p>
+    </div>
+    <div class="functionality">
+        <h3>Segurança</h3>
+        <p>Controle avançado de usuários com senhas e permissões definidas por tela e operação, garantindo proteção e confiabilidade das informações.</p>
+    </div>
+</div>
+
         </section>
 
-        <section class="back-button" onclick="window.history.back()">
-            <button class="btn-back">← Voltar</button>
-        </section>
+<section class="back-button">
+    <button class="btn-back" onclick="window.location.href='sistemas.html'">Voltar</button>
+</section>
+
     </main>
 
-      <!-- Footer -->
-      <footer class="tf-custom-footer">
+   <!-- Contate-nos -->
+    <section id="contato" class="contact-section">
+        <div class="secao-titulo-principal">
+            <h2>Contate-nos</h2>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-card">
+                <h3>Informações</h3>
+                <div class="info-item">
+                    <div class="contact-icon-circle" aria-hidden="true">📍</div>
+                    <div class="info-text">
+                        <h4>Localização</h4>
+                        <p>Rua J. Carlos Mendes de Campos, 190</p>
+                        <p>Sales, Cristo Redentor CEP: 14980 622</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon-circle" aria-hidden="true">📞</div>
+                    <div class="info-text">
+                        <h4>Número de telefone</h4>
+                        <p>+55 (17) 2137-2200</p>
+                        <p>+55 (17) 3557-9090</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon-circle" aria-hidden="true">📧</div>
+                    <div class="info-text">
+                        <h4>Email</h4>
+                        <p>contato@amendolaeamendola.com.br</p>
+                    </div>
+                </div>
+            </div>
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1858.135713352941!2d-49.49752262320958!3d-21.339786485462337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be7867b6fa1d17%3A0x42c5472c9c2ed4c8!2sAMENDOLA%20%26%20AMENDOLA%20SOFTWARE%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1761132974636!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização da Amendola & Amendola"></iframe>
+            </div>
+        </div>
+    </section>
+
+       <!-- Footer -->
+       <footer class="tf-custom-footer">
         <div class="tf-footer-left">
             <div class="lang-selector">
                 <button class="lang-trigger">
@@ -211,133 +268,10 @@ document.addEventListener("DOMContentLoaded", function(){
     </div>
   </div>
   
-  <style>
-    /* (SEU CSS DO BANNER PODE FICAR — só garanta display:none inicial e position fixed) */
-    /* Aqui mantenho seu estilo base e só adiciono um mínimo pro botão "rejeitar" ficar alinhado */
-  </style>
   
   <!-- ========================= -->
   <!-- MODAL DE COOKIES (LGPD)   -->
   <!-- ========================= -->
-  <style>
-    #cookie-modal-overlay{
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,0.75);
-      display:none;
-      align-items:center;
-      justify-content:center;
-      z-index:99999;
-      padding: 16px;
-    }
-  
-    #cookie-modal{
-      background:#fff;
-      width:100%;
-      max-width:820px;
-      border-radius:10px;
-      padding:28px;
-      position:relative;
-      font-family:Arial, sans-serif;
-    }
-  
-    #cookie-modal h2{ margin:0 0 8px 0; }
-    #cookie-modal p{ margin:0 0 14px 0; line-height:1.45; color:#333; }
-  
-    .cookie-meta{
-      background:#f7f7f7;
-      border:1px solid #eee;
-      padding:12px;
-      border-radius:8px;
-      font-size:13px;
-      color:#444;
-      margin-bottom:16px;
-    }
-  
-    .cookie-option{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:14px 0;
-      border-bottom:1px solid #eee;
-      gap: 16px;
-    }
-  
-    .cookie-option small{ color:#555; display:block; margin-top:4px; line-height:1.35; }
-  
-    .switch{
-      position:relative;
-      display:inline-block;
-      width:50px;
-      height:24px;
-      flex-shrink: 0;
-    }
-    .switch input{ opacity:0; width:0; height:0; }
-    .slider{
-      position:absolute; inset:0;
-      background:#ccc;
-      border-radius:24px;
-      transition:.3s;
-    }
-    .slider:before{
-      content:"";
-      position:absolute;
-      height:18px; width:18px;
-      left:3px; bottom:3px;
-      background:white;
-      border-radius:50%;
-      transition:.3s;
-    }
-    input:checked + .slider{ background:#FD7A02; }
-    input:checked + .slider:before{ transform:translateX(26px); }
-  
-    .modal-footer{
-      display:flex;
-      gap:10px;
-      justify-content:flex-end;
-      margin-top:18px;
-      flex-wrap: wrap;
-    }
-  
-    .btn-save{
-      background:#FD7A02;
-      color:#fff;
-      border:none;
-      padding:10px 16px;
-      border-radius:6px;
-      cursor:pointer;
-      font-weight:700;
-    }
-  
-    .btn-policy{
-      background:#C71585;
-      color:#fff;
-      border:none;
-      padding:10px 16px;
-      border-radius:6px;
-      cursor:pointer;
-      font-weight:700;
-    }
-  
-    .btn-ghost{
-      background:#444;
-      color:#fff;
-      border:none;
-      padding:10px 16px;
-      border-radius:6px;
-      cursor:pointer;
-      font-weight:700;
-    }
-  
-    .close-modal{
-      position:absolute;
-      top:10px;
-      right:15px;
-      cursor:pointer;
-      font-size:18px;
-      color:#444;
-    }
-  </style>
   
   <div id="cookie-modal-overlay" role="dialog" aria-modal="true" aria-label="Preferências de Cookies">
     <div id="cookie-modal">
@@ -475,11 +409,8 @@ document.addEventListener("DOMContentLoaded", function(){
         }
       }
   
-      // 2) Aqui você também bloquearia scripts de analytics/marketing:
-      // - Só inserir <script> do GA/Meta/YouTube API quando c.analytics / c.marketing for true.
     }
   
-    // ======= FUNÇÕES GLOBAIS (SEU RODAPÉ JÁ CHAMA) =======
     window.configurarCookies = function(){
       const c = getConsent();
       document.getElementById("functional").checked = !!(c && c.functional);
@@ -502,7 +433,6 @@ document.addEventListener("DOMContentLoaded", function(){
         functional,
         analytics,
         marketing,
-        // “prova” do consentimento
         data: new Date().toISOString(),
         versao: "v1"
       });
@@ -528,7 +458,6 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   
     window.rejeitarCookies = function(){
-      // Rejeita tudo que não é obrigatório
       setConsent({
         aceito: true,
         functional: false,
@@ -542,8 +471,7 @@ document.addEventListener("DOMContentLoaded", function(){
       showBanner();
       applyConsent();
     }
-  
-    // Inicial
+
     showBanner();
     applyConsent();
   });
