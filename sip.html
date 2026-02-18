@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const lista = document.getElementById("lista-integracoes");
     const itens = lista.querySelectorAll("li");
 
-    // Esconde todos após o 5º
     itens.forEach((item, index) => {
         if (index >= 5) {
             item.style.display = "none";
@@ -34,7 +33,7 @@ function toggleIntegracoes() {
     const itens = lista.querySelectorAll("li");
     const button = document.querySelector(".btn-toggle");
 
-    const expandido = button.innerText === "Mostrar menos";
+    const expandido = button.classList.contains("expandido");
 
     itens.forEach((item, index) => {
         if (index >= 5) {
@@ -42,9 +41,16 @@ function toggleIntegracoes() {
         }
     });
 
-    button.innerText = expandido ? "Mostrar mais" : "Mostrar menos";
+    if (expandido) {
+        button.innerText = "Mostrar mais";
+        button.classList.remove("expandido");
+    } else {
+        button.innerText = "Mostrar menos";
+        button.classList.add("expandido");
+    }
 }
 </script>
+
 
 
 <body class="background">
@@ -147,13 +153,13 @@ function toggleIntegracoes() {
                 <ul>
                        <li>
                         <i class="fas fa-check" aria-hidden="true"></i>
-                        <a href="scpi.html"><strong class="laranja">Sistema de Contabilidade Pública Integrada</strong><br></a>
+                        <a href="scpi.html"><strong class="laranja">Sistema de Contabilidade Pública Integrado</strong><br></a>
                         <span>Envia documentos contábeis, empenhos, notas fiscais e processos administrativos.</span>
                     </li>
                     <li>
                         <i class="fas fa-check" aria-hidden="true"></i>
-                        <a href="flowdocs.html"><strong class="laranja">flowdocs</strong><br></a>
-                        <span>Envia documentos e processos para o FlowDocs, garantindo integração, organização e tramitação digital dos registros administrativos.</span>
+                        <a href="flowdocs.html"><strong class="laranja">Flowdocs</strong><br></a>
+                        <span>Envia documentos, garantindo integração, organização e tramitação digital dos registros administrativos.</span>
                     </li>
                 </ul>
             </div>

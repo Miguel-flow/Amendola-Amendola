@@ -21,7 +21,7 @@ a {
 }
 .navbar-links li a {
     text-decoration: none; /* Remove sublinhado */
-    color: #e76800; /* Cor dos links */
+    color: #000000; /* Cor dos links */
     font-size: 18px;
     transition: color 0.3s ease; /* Transição suave de cor */
 }
