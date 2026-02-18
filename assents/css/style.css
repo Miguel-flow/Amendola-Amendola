@@ -47,7 +47,7 @@ body {
 a {
     color: #ff7300;
     text-decoration: none !important;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .navbar-links li a {
@@ -55,7 +55,7 @@ a {
     color: #000000; /* Cor dos links */
     font-size: 18px;
     transition: color 0.5s ease; /* Transição suave de cor */
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .navbar-links li a:hover {
@@ -787,10 +787,7 @@ opacity: 0.9;
     transform: translateY(-2px);
 }
 
-
-
-
-          
+   
 @media (max-width: 800px) {
 .tf-custom-footer {
 flex-direction: column;
@@ -835,6 +832,38 @@ transform: translateX(-50%);
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
   }
+
+  /* ====== FIX DO ESPAÇO DO e-MUNICÍPIO (cola no final) ====== */
+
+/* tira o “puxão” e reduz espaço geral da seção */
+.servicos-amendola{
+    margin: 20px auto 40px auto !important;
+    padding: 20px 0 !important;
+  }
+  
+  /* menos espaço entre colunas e itens */
+  .servicos-grid{
+    gap: 24px !important;
+  }
+  
+  .col{
+    gap: 22px !important;
+  }
+  
+  /* ISSO aqui era o maior culpado do espaço gigante */
+  .phone img{
+    margin-bottom: 16px !important;  /* era 80px */
+  }
+  
+  /* evita que título some com margens padrão */
+  .secao-titulo-principal{
+    margin-bottom: 24px !important;
+  }
+  
+  .secao-titulo-principal h2{
+    margin: 0 !important;
+  }
+  
   
   
   
