@@ -76,32 +76,6 @@ a {
 }
 
 
-.dashboard-preview {
-    text-align: center;
-    margin-top: -100px;
-    position: relative;
-    z-index: 1;
-    animation: slideInUp 1s ease-out 1.2s both;
-}
-
-.dashboard-preview img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-    transform: perspective(1000px) rotateX(10deg);
-    transition: transform 0.3s ease;
-}
-
-.dashboard-preview img:hover {
-    transform: perspective(1000px) rotateX(0deg);
-}
-
-button:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
 .about-amendola {
     max-width: 1100px;
     margin: 80px auto;
@@ -530,61 +504,70 @@ border-top: 1px solid #333;
   gap: 20px; /* Espaçamento entre elementos */
 }
 
-/* Container do seletor de idioma */
+/* ===== Padrão (celular) ===== */
 .lang-selector {
-  position: relative;
+  position: relative;       /* dentro do footer */
   display: flex;
-  align-items: center;
+  justify-content: center;  /* centraliza no footer */
 }
-          
-.lang-trigger {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
-  background: none;
-  border: none;
-  color: white;
+
+.lang-button {
+  background-color: #2a2a2b;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 8px 29px;
   font-size: 13px;
-  padding: 5px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.2s ease;
 }
-          
-.tf-globe {
-  margin-right: 8px;
-  font-size: 15px;
+
+.lang-button:hover {
+  background-color: #FD7A02;
+  border-color: #FD7A02;
 }
-          
+
 .lang-menu {
   display: none;
   position: absolute;
-  bottom: 100%; /* Abre para cima */
+  bottom: 120%;
   left: 0;
   background-color: #2a2a2b;
-  min-width: 140px;
-  box-shadow: 0px -4px 12px rgba(0,0,0,0.3);
-  border-radius: 4px;
-  z-index: 1000;
-  margin-bottom: 10px;
+  min-width: 160px;
+  border-radius: 6px;
   overflow: hidden;
-}
-          
-.lang-menu a {
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
-  display: block;
-  transition: background 0.2s;
-}
-          
-.lang-menu a:hover {
-  background-color: #FD7A02; /* Laranja da sua marca */
+  z-index: 999;
 }
 
-/* Menu aparece apenas ao passar sobre o seletor de idioma */
-.lang-selector:hover .lang-menu,
-.tf-footer-left .lang-trigger:hover + .lang-menu,
-.tf-footer-left .lang-menu:hover {
+.lang-menu a {
   display: block;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.lang-menu a:hover {
+  background-color: #FD7A02;
+}
+
+.lang-menu.active {
+  display: block;
+}
+
+/* ===== Desktop ===== */
+@media (min-width: 801px) {
+  .lang-selector {
+    justify-content: flex-start;   /* mais para o centro-esquerda */
+    margin-left: 50px;              /* ajusta posição central aproximada */
+    position: relative;            /* dentro do footer */
+  }
+
+  .lang-menu {
+    left: 0;                       /* alinha com o botão */
+  }
 }
 
 .goog-te-banner-frame.skiptranslate, .goog-te-gadget {
@@ -627,14 +610,10 @@ padding: 30px 10px;
 flex-direction: column;
 gap: 12px;
 }
-.lang-menu {
-left: 50%;
-transform: translateX(-50%);
-}
 }
 .whatsapp-float {
     position: fixed;
-    bottom: 20px;  
+    bottom: 9px;  
     left: 20px;         
     background-color: #25D366;
     color: #fff;
