@@ -864,6 +864,12 @@ transform: translateX(-50%);
     margin: 0 !important;
   }
   
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      scroll-behavior: auto !important;
+    }
+  }
   
   
   
