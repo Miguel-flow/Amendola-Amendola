@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <link href="assents/img/logo-amendola-2.png" rel="icon">    
+  <link href="assets/img/logo-amendola-2.png" rel="icon">    
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Amendola & Amendola - SCIM</title>
@@ -9,9 +9,9 @@
   <meta name="keywords" content="SCIM, controle interno, sistema, gestão pública">
   
   <!-- Main Stylesheet Files -->
-  <link href="assents/css/style.css" rel="stylesheet">
-  <link href="assents/css/sistemas.css" rel="stylesheet">
-  <link href="assents/css/cookies.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/sistemas.css" rel="stylesheet">
+  <link href="assets/css/cookies.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body class="background">
@@ -108,86 +108,29 @@
 
 </main>
 
-<!-- CONTATO -->
-<section id="contato" class="contact-section">
-  <div class="secao-titulo-principal">
-    <h2>Contate-nos</h2>
-  </div>
-  <div class="contact-wrapper">
-    <div class="contact-card">
-      <h3>Informações</h3>
-      <div class="info-item">
-        <div class="contact-icon-circle">📍</div>
-        <div class="info-text">
-          <h4>Localização</h4>
-          <p>Rua J. Carlos Mendes de Campos, 190</p>
-          <p>Sales, Cristo Redentor CEP: 14980-622</p>
-        </div>
-      </div>
-      <div class="info-item">
-        <div class="icon-circle">📞</div>
-        <div class="info-text">
-          <h4>Número de telefone</h4>
-          <p>+55 (17) 2137-2200</p>
-          <p>+55 (17) 3557-9090</p>
-        </div>
-      </div>
-      <div class="info-item">
-        <div class="icon-circle">📧</div>
-        <div class="info-text">
-          <h4>Email</h4>
-          <p>contato@amendolaeamendola.com.br</p>
-        </div>
-      </div>
-    </div>
-    <div class="map-box">
-      <iframe
-      data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1858.135713352941!2d-49.49752262320958!3d-21.339786485462337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be7867b6fa1d17%3A0x42c5472c9c2ed4c8!2sAMENDOLA%20%26%20AMENDOLA%20SOFTWARE%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1761132974636!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização da Amendola & Amendola"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-    </div>
-  </div>
-</section>
+<div id="contato-area"></div>
+<div id="footer-area"></div>
+<div id="cookies-area"></div>
 
-<!-- FOOTER -->
-<footer class="tf-custom-footer">
-  <div class="tf-footer-left">
-    <div class="lang-selector">
-      <button class="lang-trigger">
-        <span class="tf-globe" aria-hidden="true">🌐</span>
-        <span id="current-lang">Português</span>
-        <span style="margin-left: 5px; font-size: 10px;">∨</span>
-      </button>
-      <div class="lang-menu">
-        <a href="javascript:void(0)" onclick="translatePage('pt')">Português</a>
-        <a href="javascript:void(0)" onclick="translatePage('en')">English</a>
-        <a href="javascript:void(0)" onclick="translatePage('es')">Español</a>
-      </div>
-    </div>
-  </div>
-  <div class="tf-footer-center">
-    <a href="politicadeprivacidade.html" target="_blank">Política de Privacidade</a>
-    <a href="#" onclick="configurarCookies()">Configurar Cookies</a>
-    <a href="politica-de-cookies.html" target="_blank">Política de Cookies</a>
-  </div>
-  <div class="tf-footer-right">
-    <a href="criadores.html" target="_blank"> Developed by Equipe FlowDocs</a>
-  </div>
-</footer>
-
-<!-- Google Translate, WhatsApp e Cookies permanecem iguais -->
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank" aria-label="Converse no WhatsApp">
-  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
+<!-- WhatsApp -->
+<a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg">
 </a>
 
-<!-- Scripts de cookies e tradução permanecem iguais ao original -->
-<script>
-// Seu código de cookies e Google Translate já funciona aqui
-</script>
 
-      <script src="assents/navbar.js" defer></script>
+<!-- Loader de componentes -->
+<script src="assets/components/loader.js"></script>
+
+<!-- Navbar -->
+<script src="assets/navbar.js"></script>
+
+<!-- Tradução -->
+<script src="assets/js/translate.js"></script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Cookies (DEPOIS do loader) -->
+<script src="assets/js/cookies.js"></script>
+
 
 </body>
 </html>
