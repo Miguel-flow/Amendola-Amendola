@@ -32,22 +32,7 @@
 
 <body class="background">
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <span class="navbar-logo">
-        <img src="assents/img/logo.png" alt="Logo Amendola & Amendola" width="150" height="30">
-    </span>
-    <ul class="navbar-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sistemas.html">Sistemas</a></li>
-        <li><a href="#contato">Contate-nos</a></li>
-    </ul>
-    <div class="navbar-buttons">
-        <button onclick="window.open('https://amendola.flowdocs.com.br:2053/credentials/login', '_blank')" class="btn-flowdocs">
-            FlowDocs
-        </button>
-    </div>
-</nav>
+<div id="navbar"></div>
 
 <!-- CONTEÚDO PRINCIPAL -->
 <main class="page-sistema">
@@ -648,6 +633,8 @@ document.addEventListener("DOMContentLoaded", function(){
     applyConsent();
   });
   </script>
+
+      <script src="assents/navbar.js" defer></script>
   
 </body>
 </html>
