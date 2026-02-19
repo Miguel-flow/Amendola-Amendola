@@ -699,6 +699,71 @@ transform: translateX(-50%);
     }
   }
   
+  /* =========================
+   DARK MODE (CORRETO)
+   cole no FINAL do seu CSS
+   ========================= */
+
+/* Tema claro (padrão) */
+:root {
+    --bg: #ffffff;
+    --text: #111111;
+  
+    --surface: #ffffff;      /* caixas/cards */
+    --surface-text: #111111;
+  
+    --border: rgba(0, 0, 0, 0.10);
+  }
+  
+  /* Aplica no site todo */
+  body{
+    background: var(--bg);
+    color: var(--text);
+    transition: background-color .25s ease, color .25s ease;
+  }
+  
+  /* (IMPORTANTE) deixe textos herdarem do body, sem forçar branco em tudo */
+  h1,h2,h3,h4,h5,h6,p,span,a,li{ color: inherit; }
+  
+  /* MODO ESCURO */
+  body.dark-mode{
+    --bg: #0b0b0b;
+    --text: #f2f2f2;
+  
+    --surface: #141414;
+    --surface-text: #f2f2f2;
+  
+    --border: rgba(255, 255, 255, 0.12);
+  }
+  
+  /* ====== Agora: “caixas brancas” viram escuras ====== */
+  /* Cards do topo */
+  body.dark-mode .about-amendola .card{
+    background: var(--surface) !important;
+    color: var(--surface-text) !important;
+    border: 1px solid var(--border);
+  }
+  
+  /* Garante que tudo dentro do card fique visível */
+  body.dark-mode .about-amendola .card *{
+    color: inherit !important;
+  }
+  
+  /* Seção / blocos que costumam ter fundo branco */
+  body.dark-mode .about-amendola,
+  body.dark-mode .servicos-amendola,
+  body.dark-mode #contato-area,
+  body.dark-mode #footer-area{
+    background: transparent !important;
+    color: var(--text) !important;
+  }
+  
+  /* Links no dark */
+  body.dark-mode a{
+    color: var(--text) !important;
+  }
+  
+  
   
   
 
