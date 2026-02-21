@@ -594,9 +594,10 @@ transition: opacity 0.2s ease;
 opacity: 0.7;
 }
           
-.tf-footer-right {
-font-weight: 400;
-opacity: 0.9;
+.tf-footer-right{
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
    
 @media (max-width: 800px) {
@@ -965,71 +966,55 @@ body.dark-mode .details-btn:hover{
 }
 
 /* =========================
-   BOTÃO DARK MODE PREMIUM
+   BOTÃO TEMA LIMPO (FINAL)
    ========================= */
 
-   .theme-toggle{
-    position: relative;
-    width: 60px;
-    height: 30px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    background: #111;
+   .tf-footer-right{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 6px;
-    transition: background 0.4s ease;
+    gap: 12px;
   }
   
-  /* bolinha deslizante */
-  .theme-toggle::before{
-    content: "";
-    position: absolute;
-    width: 24px;
-    height: 24px;
+  .theme-toggle{
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    background: #fff;
-    left: 3px;
-    transition: transform 0.4s ease;
+    border: none;
+    background-color: #ff7a00;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    box-shadow: 0 8px 20px rgba(255,122,0,0.35);
+    transition: all 0.2s ease;
   }
   
-  /* ícones */
-  .theme-toggle span{
-    font-size: 14px;
-    z-index: 2;
+  /* REMOVE QUALQUER BOLINHA ANTIGA */
+  .theme-toggle::before,
+  .theme-toggle::after{
+    display: none !important;
+    content: none !important;
   }
   
-  /* MODO CLARO */
-  body:not(.dark-mode) .theme-toggle{
-    background: #111;
+  /* ícone */
+  .theme-toggle .theme-icon{
+    font-size: 18px;
+    line-height: 1;
   }
   
-  body:not(.dark-mode) .icon-sun{
-    opacity: 1;
+  /* hover */
+  .theme-toggle:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(255,122,0,0.45);
   }
   
-  body:not(.dark-mode) .icon-moon{
-    opacity: 0.4;
+  .theme-toggle:active{
+    transform: scale(0.96);
   }
-  
-  /* MODO ESCURO */
-  body.dark-mode .theme-toggle{
-    background: #ff9800;
-  }
-  
-  body.dark-mode .theme-toggle::before{
-    transform: translateX(30px);
-  }
-  
-  body.dark-mode .icon-sun{
-    opacity: 0.4;
-  }
-  
-  body.dark-mode .icon-moon{
-    opacity: 1;
-  }
+
+
   
   
   
