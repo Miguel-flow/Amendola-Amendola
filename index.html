@@ -8,76 +8,47 @@
     <!-- Favicons -->
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <link href="assets/img/logo-amendola-2.png" rel="icon">
+
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    crossorigin="anonymous">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          crossorigin="anonymous">
+
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/cookies.css" rel="stylesheet">
-    
 </head>
 
 <body>
 
-    <button id="themeBtn" class="theme-toggle">🌙</button>
+  
 
-    <script>
-        const btn = document.getElementById("themeBtn");
-      
-        function updateIcon() {
-          const isDark = document.body.classList.contains("dark-mode");
-          btn.textContent = isDark ? "☀️" : "🌙";
-        }
-      
-        function toggleDarkMode() {
-          document.body.classList.toggle("dark-mode");
-      
-          localStorage.setItem(
-            "theme",
-            document.body.classList.contains("dark-mode") ? "dark" : "light"
-          );
-      
-          updateIcon();
-        }
-      
-        // Aplicar tema salvo
-        window.onload = function () {
-          if (localStorage.getItem("theme") === "dark") {
-            document.body.classList.add("dark-mode");
-          }
-          updateIcon();
-        };
-      
-        btn.addEventListener("click", toggleDarkMode);
-      </script>
-      
-
-
-
-
-
-
-    <script>
-      function toggleDarkMode() {
-        document.body.classList.toggle("dark-mode");
-    
-        if (document.body.classList.contains("dark-mode")) {
-          localStorage.setItem("theme", "dark");
-        } else {
-          localStorage.setItem("theme", "light");
-        }
+  <script>
+    const toggle = document.getElementById("themeToggle");
+    const KEY = "theme"; // "dark" | "light"
+  
+    function apply(theme) {
+      document.body.classList.toggle("dark-mode", theme === "dark");
+      toggle.checked = theme === "dark";
+      localStorage.setItem(KEY, theme);
+    }
+  
+    window.addEventListener("load", () => {
+      const saved = localStorage.getItem(KEY);
+      if (saved === "dark" || saved === "light") {
+        apply(saved);
+      } else {
+        // opcional: seguir o sistema se não tiver salvo
+        const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        apply(prefersDark ? "dark" : "light");
       }
-    
-      window.onload = function() {
-        if (localStorage.getItem("theme") === "dark") {
-          document.body.classList.add("dark-mode");
-        }
-      }
-    </script>
-    
+    });
+  
+    toggle.addEventListener("change", () => {
+      apply(toggle.checked ? "dark" : "light");
+    });
+  </script>
 
-
-     <div id="navbar"></div>
+    <div id="navbar"></div>
 
     <section class="about-amendola">
         <h2>Amêndola & Amêndola Software</h2>
@@ -129,8 +100,7 @@
             </section>
         </section>
     </div>
-  <div>  
-  </div>
+
     <!-- Sobre o E-município -->
     <div>
         <section class="servicos-amendola">
@@ -208,7 +178,7 @@
                 items.forEach(item => observer.observe(item));
             </script>
         </section>
-        
+
 <div id="contato-area"></div>
 <div id="footer-area"></div>
 <div id="cookies-area"></div>
@@ -217,7 +187,6 @@
 <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank">
   <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg">
 </a>
-
 
 <!-- Loader de componentes -->
 <script src="assets/components/loader.js"></script>
@@ -229,9 +198,8 @@
 <script src="assets/js/translate.js"></script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<!-- Cookies (DEPOIS do loader) -->
+<!-- Cookies -->
 <script src="assets/js/cookies.js"></script>
-
 
 </body>
 </html>
