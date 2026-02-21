@@ -238,5 +238,15 @@
 
 <!-- Cookies (DEPOIS do loader) -->
 <script src="assets/js/cookies.js"></script>
+
+<script>
+  (function () {
+    const KEY = "theme";
+    const saved = localStorage.getItem(KEY);
+    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const theme = (saved === "dark" || saved === "light") ? saved : (prefersDark ? "dark" : "light");
+    document.body.classList.toggle("dark-mode", theme === "dark");
+  })();
+</script>
 </body>
 </html>

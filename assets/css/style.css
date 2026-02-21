@@ -741,6 +741,295 @@ gap: 12px;
   body.dark-mode a{
     color: var(--text) !important;
   }
+
+  /* =========================
+   FIX: textos no topo + box/cards no DARK MODE
+   cole no FINAL do CSS
+   ========================= */
+
+/* Use variáveis pra texto e superfícies */
+.about-amendola h2,
+.about-amendola .subtitle,
+.about-amendola .card h3,
+.about-amendola .card p,
+.about-amendola .item h4,
+.about-amendola .item p {
+  color: var(--text);
+}
+
+/* Cards: texto deve seguir a cor da superfície */
+.card {
+  background: var(--surface);
+  color: var(--surface-text);
+  border: 1px solid var(--border);
+}
+
+.card h3,
+.card p {
+  color: var(--surface-text);
+}
+
+/* Subtítulo (um pouco mais “suave”, mas ainda legível) */
+.about-amendola .subtitle {
+  opacity: 0.88;
+}
+
+/* NAVBAR no dark mode */
+.navbar {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.navbar-links li a {
+  color: var(--text);
+}
+
+body.dark-mode .navbar {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+}
+
+/* Links: mantém o laranja no tema claro, mas no dark deixa legível */
+a {
+  color: #ff7300;
+}
+
+body.dark-mode a {
+  color: var(--text);
+}
+
+/* CTA (box laranja) já está ok, mas garante que tudo dentro fique branco */
+.cta-suporte,
+.cta-suporte h2,
+.cta-suporte p,
+.cta-suporte a {
+  color: #fff;
+}
+
+/* =========================
+   CONTATO (Contate-nos) no DARK MODE
+   cole no FINAL do CSS
+   ========================= */
+
+   body.dark-mode .contact-section{
+    background: #0b0b0b !important;   /* fundo preto */
+    color: #ffffff !important;         /* texto branco */
+  }
+  
+  /* Título "Contate-nos" e textos do topo */
+  body.dark-mode .secao-titulo-principal h2{
+    color: #ffffff !important;
+  }
+  
+  /* Linha laranja embaixo do título (mantém o destaque) */
+  body.dark-mode .secao-titulo-principal h2::after{
+    background-color: #ff9800 !important;
+  }
+  
+  /* Card de informações: sai do laranja e vira “preto” também */
+  body.dark-mode .contact-card{
+    background: #141414 !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+  
+  /* Garante textos dentro do card brancos */
+  body.dark-mode .contact-card h3,
+  body.dark-mode .contact-card .info-text h4,
+  body.dark-mode .contact-card .info-text p{
+    color: #ffffff !important;
+  }
+  
+  /* Bolinha do ícone pode continuar laranja (destaque) */
+  body.dark-mode .contact-icon-circle{
+    background-color: #ff9800 !important;
+    color: #ffffff !important;
+  }
+  
+  /* Caixa do mapa com borda leve no dark */
+  body.dark-mode .map-box{
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  /* =========================
+   E-MUNICÍPIO no DARK
+   ========================= */
+
+body.dark-mode .servicos-amendola{
+  background: #0b0b0b !important;
+}
+
+/* Títulos (Ensino, Saúde etc) continuam normais */
+body.dark-mode .item h4{
+  color: #ffffff !important;
+}
+
+/* Textos brancos */
+body.dark-mode .item p{
+  color: #dddddd !important;
+}
+
+/* 🔥 Mantém os ícones laranja */
+body.dark-mode .item .icon{
+  background: #fff1e6 !important;
+  color: #ff7a00 !important;
+}
+
+/* =========================
+   CONTATO no DARK
+   ========================= */
+
+   body.dark-mode .contact-section{
+    background: #0b0b0b !important;
+  }
+  
+  /* Mantém o card laranja */
+  body.dark-mode .contact-card{
+    background: #ff9800 !important;
+    color: #ffffff !important;
+  }
+  
+  /* Garante textos brancos dentro */
+  body.dark-mode .contact-card h3,
+  body.dark-mode .contact-card .info-text h4,
+  body.dark-mode .contact-card .info-text p{
+    color: #ffffff !important;
+  }
+  
+  /* Ícone continua laranja mais forte */
+  body.dark-mode .contact-icon-circle{
+    background-color: #FD7A02 !important;
+    color: #ffffff !important;
+  }
+
+  /* =========================
+   SISTEMAS (ACCORDION) - DARK MODE
+   cole no FINAL do CSS
+   ========================= */
+
+body.dark-mode #sistemas{
+  background: #0b0b0b !important;
+}
+
+/* container */
+body.dark-mode .accordion{
+  color: #ffffff !important;
+}
+
+/* card do accordion */
+body.dark-mode .accordion-item{
+  background: #141414 !important;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45) !important;
+}
+
+/* header (barra de cima) */
+body.dark-mode .accordion-header{
+  background: #101010 !important;
+  color: #ffffff !important;
+}
+
+/* hover do header (mantém vibe laranja) */
+body.dark-mode .accordion-header:hover{
+  background: rgba(253,122,2,0.12) !important;
+}
+
+/* borda laranja quando ativo (já existe, só garante no dark) */
+body.dark-mode .accordion-item.active .accordion-header{
+  border-left: 5px solid #FD7A02 !important;
+}
+
+/* ícone +/− continua laranja */
+body.dark-mode .accordion-header .icon{
+  color: #FD7A02 !important;
+}
+
+/* conteúdo aberto */
+body.dark-mode .accordion-content{
+  background: #141414 !important;
+  color: #dddddd !important;
+}
+
+/* parágrafos dentro */
+body.dark-mode .accordion-content p{
+  color: #dddddd !important;
+}
+
+/* botão mantém gradiente e texto branco */
+body.dark-mode .details-btn{
+  color: #ffffff !important;
+}
+
+/* (opcional) melhora contraste do hover do botão */
+body.dark-mode .details-btn:hover{
+  box-shadow: 0 10px 22px rgba(253,122,2,0.35) !important;
+}
+
+/* =========================
+   BOTÃO DARK MODE PREMIUM
+   ========================= */
+
+   .theme-toggle{
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+    transition: background 0.4s ease;
+  }
+  
+  /* bolinha deslizante */
+  .theme-toggle::before{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #fff;
+    left: 3px;
+    transition: transform 0.4s ease;
+  }
+  
+  /* ícones */
+  .theme-toggle span{
+    font-size: 14px;
+    z-index: 2;
+  }
+  
+  /* MODO CLARO */
+  body:not(.dark-mode) .theme-toggle{
+    background: #111;
+  }
+  
+  body:not(.dark-mode) .icon-sun{
+    opacity: 1;
+  }
+  
+  body:not(.dark-mode) .icon-moon{
+    opacity: 0.4;
+  }
+  
+  /* MODO ESCURO */
+  body.dark-mode .theme-toggle{
+    background: #ff9800;
+  }
+  
+  body.dark-mode .theme-toggle::before{
+    transform: translateX(30px);
+  }
+  
+  body.dark-mode .icon-sun{
+    opacity: 0.4;
+  }
+  
+  body.dark-mode .icon-moon{
+    opacity: 1;
+  }
   
   
   
