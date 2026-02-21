@@ -22,31 +22,7 @@
 
   
 
-  <script>
-    const toggle = document.getElementById("themeToggle");
-    const KEY = "theme"; // "dark" | "light"
   
-    function apply(theme) {
-      document.body.classList.toggle("dark-mode", theme === "dark");
-      toggle.checked = theme === "dark";
-      localStorage.setItem(KEY, theme);
-    }
-  
-    window.addEventListener("load", () => {
-      const saved = localStorage.getItem(KEY);
-      if (saved === "dark" || saved === "light") {
-        apply(saved);
-      } else {
-        // opcional: seguir o sistema se não tiver salvo
-        const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-        apply(prefersDark ? "dark" : "light");
-      }
-    });
-  
-    toggle.addEventListener("change", () => {
-      apply(toggle.checked ? "dark" : "light");
-    });
-  </script>
 
     <div id="navbar"></div>
 
@@ -200,6 +176,64 @@
 
 <!-- Cookies -->
 <script src="assets/js/cookies.js"></script>
+
+<!-- Loader de componentes -->
+<script src="assets/components/loader.js"></script>
+
+<!-- Navbar -->
+<script src="assets/navbar.js"></script>
+
+<!-- Tradução -->
+<script src="assets/js/translate.js"></script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Cookies -->
+<script src="assets/js/cookies.js"></script>
+
+<!-- TEMA (funciona com footer injetado) -->
+<script>
+(function () {
+  const KEY = "theme";
+
+  function computeTheme() {
+    const saved = localStorage.getItem(KEY);
+    if (saved === "dark" || saved === "light") return saved;
+    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return prefersDark ? "dark" : "light";
+  }
+
+  function syncButton(theme) {
+    const btn = document.getElementById("themeToggle");
+    if (!btn) return;
+    const icon = btn.querySelector(".theme-icon");
+    if (icon) icon.textContent = theme === "dark" ? "🌙" : "☀️";
+    btn.setAttribute("aria-label", theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro");
+  }
+
+  function apply(theme) {
+    document.body.classList.toggle("dark-mode", theme === "dark");
+    localStorage.setItem(KEY, theme);
+    syncButton(theme);
+  }
+
+  // aplica tema já
+  apply(computeTheme());
+
+  // clique funciona mesmo com footer injetado
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest("#themeToggle");
+    if (!btn) return;
+    apply(document.body.classList.contains("dark-mode") ? "light" : "dark");
+  });
+
+  // quando o footer aparecer, atualiza o ícone 1x
+  const obs = new MutationObserver(() => {
+    syncButton(computeTheme());
+    if (document.getElementById("themeToggle")) obs.disconnect();
+  });
+  obs.observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
 
 </body>
 </html>

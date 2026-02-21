@@ -151,3 +151,74 @@
     opacity: 1;
   }
 
+  /* =========================
+   DARK MODE - SISTEMAS
+   ========================= */
+
+body.dark-mode #sistemas{
+  background: #0b0b0b;
+}
+
+body.dark-mode .accordion-item{
+  background: #141414;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+}
+
+body.dark-mode .accordion-header{
+  background: #101010;
+  color: #ffffff;
+}
+
+body.dark-mode .accordion-header:hover{
+  background: rgba(253,122,2,0.12);
+}
+
+body.dark-mode .accordion-content{
+  background: #141414;
+  color: #dddddd;
+}
+
+body.dark-mode .accordion-content p{
+  color: #dddddd;
+}
+
+body.dark-mode .accordion-header .icon{
+  color: #FD7A02;
+}
+
+/* =========================
+   DARK MODE - SISTEMAS
+   ========================= */
+
+   body.dark-mode #sistemas{
+    background: #0b0b0b;
+  }
+  
+  body.dark-mode .accordion-item{
+    background: #141414;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+  }
+  
+  body.dark-mode .accordion-header{
+    background: #101010;
+    color: #ffffff;
+  }
+  
+  body.dark-mode .accordion-header:hover{
+    background: rgba(253,122,2,0.12);
+  }
+  
+  body.dark-mode .accordion-content{
+    background: #141414;
+    color: #dddddd;
+  }
+  
+  body.dark-mode .accordion-content p{
+    color: #dddddd;
+  }
+  
+  body.dark-mode .accordion-header .icon{
+    color: #FD7A02;
+  }
