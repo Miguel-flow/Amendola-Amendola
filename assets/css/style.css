@@ -1,11 +1,11 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f2f5; /* Um cinza claro de fundo */
+    background-color: #f0f2f5;
 }
 
 .navbar {
-    position: relative; /* fluxo normal da página */
+    position: relative;
     z-index: 10;
     display: flex;
     justify-content: space-between;
@@ -14,7 +14,7 @@ body {
     padding: 10px 24px;
     width: 90%;
     max-width: 1200px;
-    margin: 20px auto 0 auto; /* REMOVE espaço embaixo */
+    margin: 20px auto 0 auto; 
     border-radius: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -86,11 +86,11 @@ a {
 }
 
 .about-amendola h2 {
-    font-size: 48px; /* Título aumentado */
-    font-weight: 800; /* Um pouco mais pesado para destacar */
+    font-size: 48px;
+    font-weight: 800;
     color: #111;
     margin-bottom: 12px;
-    letter-spacing: -1px; /* Melhora a estética em fontes grandes */
+    letter-spacing: -1px;
     animation: fadeIn 1.2s ease-out 1.6s both;
 }
 
@@ -153,7 +153,7 @@ a {
 
 @media (max-width: 768px) {
     .about-amendola h2 {
-        font-size: 32px; /* Ajuste proporcional para mobile */
+        font-size: 32px; 
     }
 }
 
@@ -334,7 +334,7 @@ a {
 }
 
 .icones-download img {
-    width: 140px; /* Ajuste para os badges oficiais */
+    width: 140px;
     height: auto;
     margin-bottom: 0 !important;
     cursor: pointer;
@@ -407,7 +407,7 @@ a {
     width: 35%;
     height: 340px;  
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-    padding: 30px 25px; /* Ajustei o padding para caber na altura */
+    padding: 30px 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -429,19 +429,7 @@ a {
     display: flex;
     align-items: center; 
     gap: 12px;
-    margin-bottom: 15px; /* Reduzi um pouco para não estourar a altura */
-}
-
-.contact-icon-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #FD7A02;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
+    margin-bottom: 15px; 
 }
 
 .info-text h4 {
@@ -469,7 +457,7 @@ box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 width: 100%;
 height: 100%;
 border: 0;
-display: block; /* Remove espaços brancos fantasmas de iframes */
+display: block;
 }
 
 @media (max-width: 992px) {
@@ -501,14 +489,14 @@ border-top: 1px solid #333;
   position: relative;
   display: flex;
   align-items: center;
-  gap: 20px; /* Espaçamento entre elementos */
+  gap: 20px; 
 }
 
 /* ===== Padrão (celular) ===== */
 .lang-selector {
-  position: relative;       /* dentro do footer */
+  position: relative;    
   display: flex;
-  justify-content: center;  /* centraliza no footer */
+  justify-content: center;  
 }
 
 .lang-button {
@@ -560,13 +548,13 @@ border-top: 1px solid #333;
 /* ===== Desktop ===== */
 @media (min-width: 801px) {
   .lang-selector {
-    justify-content: flex-start;   /* mais para o centro-esquerda */
-    margin-left: 50px;              /* ajusta posição central aproximada */
-    position: relative;            /* dentro do footer */
+    justify-content: flex-start;   
+    margin-left: 50px;             
+    position: relative;         
   }
 
   .lang-menu {
-    left: 0;                       /* alinha com o botão */
+    left: 0;           
   }
 }
 
@@ -641,15 +629,11 @@ gap: 12px;
     100% { transform: scale(1); }
   }
 
-  /* ====== FIX DO ESPAÇO DO e-MUNICÍPIO (cola no final) ====== */
-
-/* tira o “puxão” e reduz espaço geral da seção */
 .servicos-amendola{
     margin: 20px auto 40px auto !important;
     padding: 20px 0 !important;
   }
   
-  /* menos espaço entre colunas e itens */
   .servicos-grid{
     gap: 24px !important;
   }
@@ -658,12 +642,10 @@ gap: 12px;
     gap: 22px !important;
   }
   
-  /* ISSO aqui era o maior culpado do espaço gigante */
   .phone img{
-    margin-bottom: 16px !important;  /* era 80px */
+    margin-bottom: 16px !important;
   }
   
-  /* evita que título some com margens padrão */
   .secao-titulo-principal{
     margin-bottom: 24px !important;
   }
@@ -680,32 +662,27 @@ gap: 12px;
   }
   
   /* =========================
-   DARK MODE (CORRETO)
-   cole no FINAL do seu CSS
+   DARK MODE
    ========================= */
 
-/* Tema claro (padrão) */
 :root {
     --bg: #ffffff;
     --text: #111111;
   
-    --surface: #ffffff;      /* caixas/cards */
+    --surface: #ffffff;     
     --surface-text: #111111;
   
     --border: rgba(0, 0, 0, 0.10);
   }
   
-  /* Aplica no site todo */
   body{
     background: var(--bg);
     color: var(--text);
     transition: background-color .25s ease, color .25s ease;
   }
   
-  /* (IMPORTANTE) deixe textos herdarem do body, sem forçar branco em tudo */
   h1,h2,h3,h4,h5,h6,p,span,a,li{ color: inherit; }
-  
-  /* MODO ESCURO */
+
   body.dark-mode{
     --bg: #0b0b0b;
     --text: #f2f2f2;
@@ -715,21 +692,17 @@ gap: 12px;
   
     --border: rgba(255, 255, 255, 0.12);
   }
-  
-  /* ====== Agora: “caixas brancas” viram escuras ====== */
-  /* Cards do topo */
+
   body.dark-mode .about-amendola .card{
     background: var(--surface) !important;
     color: var(--surface-text) !important;
     border: 1px solid var(--border);
   }
   
-  /* Garante que tudo dentro do card fique visível */
   body.dark-mode .about-amendola .card *{
     color: inherit !important;
   }
   
-  /* Seção / blocos que costumam ter fundo branco */
   body.dark-mode .about-amendola,
   body.dark-mode .servicos-amendola,
   body.dark-mode #contato-area,
@@ -738,17 +711,10 @@ gap: 12px;
     color: var(--text) !important;
   }
   
-  /* Links no dark */
   body.dark-mode a{
     color: var(--text) !important;
   }
 
-  /* =========================
-   FIX: textos no topo + box/cards no DARK MODE
-   cole no FINAL do CSS
-   ========================= */
-
-/* Use variáveis pra texto e superfícies */
 .about-amendola h2,
 .about-amendola .subtitle,
 .about-amendola .card h3,
@@ -758,7 +724,6 @@ gap: 12px;
   color: var(--text);
 }
 
-/* Cards: texto deve seguir a cor da superfície */
 .card {
   background: var(--surface);
   color: var(--surface-text);
@@ -770,12 +735,10 @@ gap: 12px;
   color: var(--surface-text);
 }
 
-/* Subtítulo (um pouco mais “suave”, mas ainda legível) */
 .about-amendola .subtitle {
   opacity: 0.88;
 }
 
-/* NAVBAR no dark mode */
 .navbar {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -789,7 +752,6 @@ body.dark-mode .navbar {
   box-shadow: 0 4px 14px rgba(0,0,0,0.45);
 }
 
-/* Links: mantém o laranja no tema claro, mas no dark deixa legível */
 a {
   color: #ff7300;
 }
@@ -798,7 +760,6 @@ body.dark-mode a {
   color: var(--text);
 }
 
-/* CTA (box laranja) já está ok, mas garante que tudo dentro fique branco */
 .cta-suporte,
 .cta-suporte h2,
 .cta-suporte p,
@@ -807,46 +768,35 @@ body.dark-mode a {
 }
 
 /* =========================
-   CONTATO (Contate-nos) no DARK MODE
-   cole no FINAL do CSS
+   CONTATO no DARK MODE
    ========================= */
 
    body.dark-mode .contact-section{
-    background: #0b0b0b !important;   /* fundo preto */
-    color: #ffffff !important;         /* texto branco */
+    background: #0b0b0b !important;  
+    color: #ffffff !important;        
   }
   
-  /* Título "Contate-nos" e textos do topo */
   body.dark-mode .secao-titulo-principal h2{
     color: #ffffff !important;
   }
   
-  /* Linha laranja embaixo do título (mantém o destaque) */
   body.dark-mode .secao-titulo-principal h2::after{
     background-color: #ff9800 !important;
   }
   
-  /* Card de informações: sai do laranja e vira “preto” também */
   body.dark-mode .contact-card{
     background: #141414 !important;
     color: #ffffff !important;
     border: 1px solid rgba(255,255,255,0.12);
   }
   
-  /* Garante textos dentro do card brancos */
   body.dark-mode .contact-card h3,
   body.dark-mode .contact-card .info-text h4,
   body.dark-mode .contact-card .info-text p{
     color: #ffffff !important;
   }
   
-  /* Bolinha do ícone pode continuar laranja (destaque) */
-  body.dark-mode .contact-icon-circle{
-    background-color: #ff9800 !important;
-    color: #ffffff !important;
-  }
   
-  /* Caixa do mapa com borda leve no dark */
   body.dark-mode .map-box{
     border: 1px solid rgba(255,255,255,0.12);
   }
@@ -859,17 +809,14 @@ body.dark-mode .servicos-amendola{
   background: #0b0b0b !important;
 }
 
-/* Títulos (Ensino, Saúde etc) continuam normais */
 body.dark-mode .item h4{
   color: #ffffff !important;
 }
 
-/* Textos brancos */
 body.dark-mode .item p{
   color: #dddddd !important;
 }
 
-/* 🔥 Mantém os ícones laranja */
 body.dark-mode .item .icon{
   background: #fff1e6 !important;
   color: #ff7a00 !important;
@@ -878,29 +825,21 @@ body.dark-mode .item .icon{
 /* =========================
    CONTATO no DARK
    ========================= */
-
    body.dark-mode .contact-section{
     background: #0b0b0b !important;
   }
   
-  /* Mantém o card laranja */
   body.dark-mode .contact-card{
     background: #ff9800 !important;
     color: #ffffff !important;
   }
   
-  /* Garante textos brancos dentro */
   body.dark-mode .contact-card h3,
   body.dark-mode .contact-card .info-text h4,
   body.dark-mode .contact-card .info-text p{
     color: #ffffff !important;
   }
   
-  /* Ícone continua laranja mais forte */
-  body.dark-mode .contact-icon-circle{
-    background-color: #FD7A02 !important;
-    color: #ffffff !important;
-  }
 
   /* =========================
    SISTEMAS (ACCORDION) - DARK MODE
@@ -911,63 +850,49 @@ body.dark-mode #sistemas{
   background: #0b0b0b !important;
 }
 
-/* container */
 body.dark-mode .accordion{
   color: #ffffff !important;
 }
 
-/* card do accordion */
 body.dark-mode .accordion-item{
   background: #141414 !important;
   border: 1px solid rgba(255,255,255,0.12);
   box-shadow: 0 10px 28px rgba(0,0,0,0.45) !important;
 }
 
-/* header (barra de cima) */
 body.dark-mode .accordion-header{
   background: #101010 !important;
   color: #ffffff !important;
 }
 
-/* hover do header (mantém vibe laranja) */
 body.dark-mode .accordion-header:hover{
   background: rgba(253,122,2,0.12) !important;
 }
 
-/* borda laranja quando ativo (já existe, só garante no dark) */
 body.dark-mode .accordion-item.active .accordion-header{
   border-left: 5px solid #FD7A02 !important;
 }
 
-/* ícone +/− continua laranja */
 body.dark-mode .accordion-header .icon{
   color: #FD7A02 !important;
 }
 
-/* conteúdo aberto */
 body.dark-mode .accordion-content{
   background: #141414 !important;
   color: #dddddd !important;
 }
 
-/* parágrafos dentro */
 body.dark-mode .accordion-content p{
   color: #dddddd !important;
 }
 
-/* botão mantém gradiente e texto branco */
 body.dark-mode .details-btn{
   color: #ffffff !important;
 }
 
-/* (opcional) melhora contraste do hover do botão */
 body.dark-mode .details-btn:hover{
   box-shadow: 0 10px 22px rgba(253,122,2,0.35) !important;
 }
-
-/* =========================
-   BOTÃO TEMA LIMPO (FINAL)
-   ========================= */
 
    .tf-footer-right{
     display: flex;
@@ -991,20 +916,17 @@ body.dark-mode .details-btn:hover{
     transition: all 0.2s ease;
   }
   
-  /* REMOVE QUALQUER BOLINHA ANTIGA */
   .theme-toggle::before,
   .theme-toggle::after{
     display: none !important;
     content: none !important;
   }
   
-  /* ícone */
   .theme-toggle .theme-icon{
     font-size: 18px;
     line-height: 1;
   }
   
-  /* hover */
   .theme-toggle:hover{
     transform: translateY(-2px);
     box-shadow: 0 12px 24px rgba(255,122,0,0.45);
@@ -1014,10 +936,3 @@ body.dark-mode .details-btn:hover{
     transform: scale(0.96);
   }
 
-
-  
-  
-  
-  
-
-  

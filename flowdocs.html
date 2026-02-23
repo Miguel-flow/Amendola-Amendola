@@ -152,7 +152,6 @@
   <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg">
 </a>
 
-
 <!-- Loader de componentes -->
 <script src="assets/components/loader.js"></script>
 
@@ -173,60 +172,6 @@
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script src="assets/js/cookies.js"></script>
-
-<!-- Loader de componentes -->
-<script src="assets/components/loader.js"></script>
-
-<!-- Navbar -->
-<script src="assets/navbar.js"></script>
-
-<!-- Tradução -->
-<script src="assets/js/translate.js"></script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<!-- Cookies -->
-<script src="assets/js/cookies.js"></script>
-
-<!-- TEMA -->
-<script>
-(function () {
-  const KEY = "theme";
-
-  function computeTheme() {
-    const saved = localStorage.getItem(KEY);
-    if (saved === "dark" || saved === "light") return saved;
-    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return prefersDark ? "dark" : "light";
-  }
-
-  function syncButton(theme) {
-    const btn = document.getElementById("themeToggle");
-    if (!btn) return;
-    const icon = btn.querySelector(".theme-icon");
-    if (icon) icon.textContent = theme === "dark" ? "🌙" : "☀️";
-  }
-
-  function apply(theme) {
-    document.body.classList.toggle("dark-mode", theme === "dark");
-    localStorage.setItem(KEY, theme);
-    syncButton(theme);
-  }
-
-  apply(computeTheme());
-
-  document.addEventListener("click", (e) => {
-    const btn = e.target.closest("#themeToggle");
-    if (!btn) return;
-    apply(document.body.classList.contains("dark-mode") ? "light" : "dark");
-  });
-
-  const obs = new MutationObserver(() => {
-    syncButton(computeTheme());
-    if (document.getElementById("themeToggle")) obs.disconnect();
-  });
-  obs.observe(document.documentElement, { childList: true, subtree: true });
-})();
-</script>
 
 </body>
 </html>
