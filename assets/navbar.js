@@ -9,3 +9,4 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(err => console.error("Erro navbar:", err));
 });
+
