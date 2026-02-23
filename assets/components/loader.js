@@ -6,12 +6,13 @@ async function loadComponent(id, file) {
     const res = await fetch(file);
     if (!res.ok) throw new Error(`Erro ao carregar: ${file}`);
     el.innerHTML = await res.text();
+    console.log(`Componente carregado: ${id}`);
   } catch (err) {
     console.error(err);
   }
 }
 
-// Inicializa o menu de idiomas no footer
+// Inicializa menu do footer
 function initFooter() {
   const button = document.getElementById("langButton");
   const menu = document.getElementById("langMenu");
@@ -19,24 +20,19 @@ function initFooter() {
   const langLinks = document.querySelectorAll("#langMenu a");
 
   if (!button || !menu || !selector) {
-    console.warn("Footer não inicializado: elementos não encontrados");
+    console.warn("Elementos do footer não encontrados!");
     return;
   }
 
-  // Abrir / fechar menu
   button.addEventListener("click", (e) => {
     e.stopPropagation();
     menu.classList.toggle("active");
   });
 
-  // Fechar menu ao clicar fora
   document.addEventListener("click", (e) => {
-    if (!selector.contains(e.target)) {
-      menu.classList.remove("active");
-    }
+    if (!selector.contains(e.target)) menu.classList.remove("active");
   });
 
-  // Trocar idioma ao clicar
   langLinks.forEach(link => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
@@ -51,38 +47,57 @@ function initFooter() {
 
 // Inicializa botão de dark mode
 function initDarkMode() {
-  const darkButton = document.getElementById("darkModeToggle"); // ajuste se usar outro ID
+  const darkButton = document.getElementById("darkModeToggle");
   if (!darkButton) {
     console.warn("Botão de dark mode não encontrado!");
     return;
   }
 
   const body = document.body;
+
+  // Restaurar estado salvo
+  const saved = localStorage.getItem('darkMode') === 'true';
+  if (saved) body.classList.add('dark-mode');
+
   darkButton.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
-    darkButton.textContent = body.classList.contains('dark-mode')
-      ? 'Desativar Modo Escuro'
-      : 'Ativar Modo Escuro';
-    console.log("Clique no botão de dark mode detectado ✅");
+    localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+    console.log("Modo escuro:", body.classList.contains("dark-mode"));
   });
+
+  console.log("Dark mode inicializado ✅");
 }
 
-// Função principal que carrega todos os componentes
+// Função para observar quando um elemento é adicionado ao DOM
+function onElementReady(selector, callback) {
+  const el = document.querySelector(selector);
+  if (el) {
+    callback(el);
+    return;
+  }
+
+  const observer = new MutationObserver((mutations, obs) => {
+    const el = document.querySelector(selector);
+    if (el) {
+      callback(el);
+      obs.disconnect();
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+}
+
+// Função principal
 async function loadPage() {
   await loadComponent("contato-area", "assets/components/contato.html");
   await loadComponent("footer-area", "assets/components/footer.html");
-
-  // Footer já existe, inicializa
-  if (typeof window.initFooter === "function") {
-    window.initFooter();
-  } else {
-    console.warn("initFooter não definido!");
-  }
-
-  // Inicializa dark mode
-  initDarkMode();
-
   await loadComponent("cookies-area", "assets/components/cookies.html");
+
+  // Espera o footer existir antes de inicializar
+  onElementReady("#footer-area", () => {
+    initFooter();
+    initDarkMode();
+  });
 }
 
 document.addEventListener("DOMContentLoaded", loadPage);

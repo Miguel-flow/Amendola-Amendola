@@ -57,15 +57,4 @@ setTimeout(() => {
   }
 }, 50);
 
-document.body.addEventListener('click', (e) => {
-  const target = e.target.closest('#darkModeToggle'); // substitua pelo ID real
-  if (!target) return;
 
-  document.body.classList.toggle('dark-mode');
-
-  target.textContent = document.body.classList.contains('dark-mode')
-    ? 'Desativar Modo Escuro'
-    : 'Ativar Modo Escuro';
-
-  console.log('Clique no botão detectado ✅');
-});
