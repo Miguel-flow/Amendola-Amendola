@@ -1,3 +1,8 @@
+:root {
+  --orange: #ff9800; 
+}
+
+
 .accordion {
     font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
     max-width: 1100px;
@@ -37,13 +42,13 @@
 }
 
 .accordion-item.active .accordion-header {
-    border-left: 5px solid #FD7A02;
+    border-left: 5px solid var(--orange);
     padding-left: 19px;
 }
 
 .accordion-header .icon {
     font-size: 18px;
-    color: #FD7A02;
+    color: var(--orange);
     transition: transform 0.3s ease;
 }
 

@@ -1,4 +1,7 @@
-/* Estilos específicos para a página de sistemas - Prefixados com .page-sistema para evitar conflitos */
+:root {
+  --orange: #ff9800; 
+}
+
 .page-sistema {
     font-family: 'Nunito', sans-serif;
     color: #333;
@@ -16,7 +19,7 @@
     to { transform: translateY(0); opacity: 1; }
 }
 a {
-    color: #ff7300;
+    color: var(--orange);
     text-decoration: none !important;
 }
 .navbar-links li a {
@@ -27,7 +30,7 @@ a {
 }
 
 .navbar-links li a:hover {
-    color: #ff7300; /* Cor ao passar o mouse - ajustado para o novo design */
+    color: var(--orange);
 }
 .page-sistema .navbar {
     margin-bottom: 0;
@@ -86,7 +89,7 @@ a {
 .page-sistema .icon-circle {
     width: 80px;
     height: 80px;
-    background: #ff7300;
+    background: var(--orange);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -104,7 +107,7 @@ a {
 .page-sistema .icon-wrapper p {
     font-weight: bold;
     margin-bottom: 10px;
-    color: #ff7300;
+    color: var(--orange);
 }
 
 .page-sistema .icon-wrapper span {
@@ -227,7 +230,7 @@ a {
 
 /* Ícone */
 .page-sistema .integracoes li i {
-    color: #ff7300;
+    color: var(--orange);
     font-size: 18px;
     margin-top: 4px;
     flex-shrink: 0;
@@ -242,7 +245,7 @@ a {
 
 /* Destaque */
 .page-sistema .integracoes .laranja {
-    color: #ff7300;
+    color: var(--orange);
     font-weight: 600;
 }
 
@@ -275,7 +278,7 @@ a {
     margin-top: 20px;
     background: none;
     border: none;
-    color: #f05a28;
+    color: var(--orange);
     font-weight: 600;
     cursor: pointer;
     font-size: 15px;
@@ -319,7 +322,7 @@ a {
 .page-sistema .functionality h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #ff7300;
+    color: var(--orange);
 }
 
 .page-sistema .functionality p {
@@ -338,7 +341,7 @@ a {
 }
 
 .page-sistema .btn-back {
-    background-color: #ff8c00;
+    background-color: var(--orange);
     color: #ffffff;
     border: none;
     padding: 20px 150px;
@@ -350,7 +353,7 @@ a {
 }
 
 .btn-back:hover {
-    background-color: #e67e00;
+    background-color: var(--orange);
     transform: scale(1.05);
 }
 
