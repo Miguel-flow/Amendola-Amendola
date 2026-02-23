@@ -1014,7 +1014,23 @@ body.dark-mode .details-btn:hover{
     transform: scale(0.96);
   }
 
+  
+/* FORÇA total: navbar e pseudo-elementos */
+body.dark-mode nav.navbar,
+body.dark-mode .navbar,
+body.dark-mode .navbar::before,
+body.dark-mode .navbar::after{
+  background-color: #0f0f0f !important;
+  background: #0f0f0f !important;
+  border: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
 
+/* Se tiver algum overlay escurecendo */
+body.dark-mode .navbar *{
+  background-color: transparent;
+}
   
   
   
