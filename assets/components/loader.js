@@ -2,38 +2,41 @@ async function loadComponent(id, file) {
   const el = document.getElementById(id);
   if (!el) return;
 
-  const res = await fetch(file);
-  if (!res.ok) {
-    console.error("Erro ao carregar:", file);
-    return;
+  try {
+    const res = await fetch(file);
+    if (!res.ok) throw new Error(`Erro ao carregar: ${file}`);
+    el.innerHTML = await res.text();
+  } catch (err) {
+    console.error(err);
   }
-
-  el.innerHTML = await res.text();
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
-  await loadComponent("contato-area", "assets/components/contato.html");
-
-await loadComponent("footer-area", "assets/components/footer.html");
-
-// espera um pequeno delay para garantir que o DOM está pronto
-setTimeout(() => {
+// Inicializa o menu de idiomas no footer
+function initFooter() {
   const button = document.getElementById("langButton");
   const menu = document.getElementById("langMenu");
   const selector = document.getElementById("langSelector");
+  const langLinks = document.querySelectorAll("#langMenu a");
 
   if (!button || !menu || !selector) {
-    console.error("Elementos do footer não encontrados!");
+    console.warn("Footer não inicializado: elementos não encontrados");
     return;
   }
 
-  // adicionar listeners
-  button.addEventListener("click", () => menu.classList.toggle("active"));
-  document.addEventListener("click", (e) => {
-    if (!selector.contains(e.target)) menu.classList.remove("active");
+  // Abrir / fechar menu
+  button.addEventListener("click", (e) => {
+    e.stopPropagation();
+    menu.classList.toggle("active");
   });
 
-  const langLinks = document.querySelectorAll("#langMenu a");
+  // Fechar menu ao clicar fora
+  document.addEventListener("click", (e) => {
+    if (!selector.contains(e.target)) {
+      menu.classList.remove("active");
+    }
+  });
+
+  // Trocar idioma ao clicar
   langLinks.forEach(link => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
@@ -44,9 +47,42 @@ setTimeout(() => {
   });
 
   console.log("Footer inicializado ✅");
+}
 
-}, 50); // 50ms é suficiente para o DOM renderizar
+// Inicializa botão de dark mode
+function initDarkMode() {
+  const darkButton = document.getElementById("darkModeToggle"); // ajuste se usar outro ID
+  if (!darkButton) {
+    console.warn("Botão de dark mode não encontrado!");
+    return;
+  }
 
+  const body = document.body;
+  darkButton.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    darkButton.textContent = body.classList.contains('dark-mode')
+      ? 'Desativar Modo Escuro'
+      : 'Ativar Modo Escuro';
+    console.log("Clique no botão de dark mode detectado ✅");
+  });
+}
+
+// Função principal que carrega todos os componentes
+async function loadPage() {
+  await loadComponent("contato-area", "assets/components/contato.html");
+  await loadComponent("footer-area", "assets/components/footer.html");
+
+  // Footer já existe, inicializa
+  if (typeof window.initFooter === "function") {
+    window.initFooter();
+  } else {
+    console.warn("initFooter não definido!");
+  }
+
+  // Inicializa dark mode
+  initDarkMode();
 
   await loadComponent("cookies-area", "assets/components/cookies.html");
-});
+}
+
+document.addEventListener("DOMContentLoaded", loadPage);
