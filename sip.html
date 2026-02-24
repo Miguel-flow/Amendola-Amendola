@@ -17,219 +17,204 @@
 
 
 <body class="background">
-    <div id="loader" class="loader">
-        <div class="dot-spinner">
-            <div class="dot-spinner__dot"></div>
-            <div class="dot-spinner__dot"></div>
-            <div class="dot-spinner__dot"></div>
-            <div class="dot-spinner__dot"></div>
-            <div class="dot-spinner__dot"></div>
-            <div class="dot-spinner__dot"></div>
-            <div class="dot-spinner__dot"></div>
-            <div class="dot-spinner__dot"></div>
-        </div>
-        <p class="loading-text">Carregando...</p>
-    </div>
 
-    <div id="main-content" style="display:none;">
+    <div id="navbar"></div>
 
-        <div id="navbar"></div>
+    <main class="page-sistema">
 
-        <main class="page-sistema">
+        <section class="sistema-titulo">
+            <div class="banner-text">
+                <h1>SIP</h1>
+                <h2>Sistema Integrado de Pessoal</h2>
+                <hr>
+                <p>
+                    O Sistema Integrado de Pessoal (SIP) é multiempresa, multitarefa e multiusuário, com controle de
+                    permissões por tela e acesso protegido por criptografia.
+                    Permite personalização completa dos relatórios, incluindo a criação e o armazenamento de
+                    múltiplos layouts conforme as necessidades do usuário.
+                </p>
+            </div>
+        </section>
 
-            <section class="sistema-titulo">
-                <div class="banner-text">
-                    <h1>SIP</h1>
-                    <h2>Sistema Integrado de Pessoal</h2>
-                    <hr>
-                    <p>
-                        O Sistema Integrado de Pessoal (SIP) é multiempresa, multitarefa e multiusuário, com controle de
-                        permissões por tela e acesso protegido por criptografia.
-                        Permite personalização completa dos relatórios, incluindo a criação e o armazenamento de
-                        múltiplos layouts conforme as necessidades do usuário.
-                    </p>
+        <section id="beneficios" class="icons-container">
+            <div class="icon-wrapper">
+                <div class="icon-circle">
+                    <i class="fas fa-user-friends" aria-hidden="true"></i>
                 </div>
-            </section>
-
-            <section id="beneficios" class="icons-container">
-                <div class="icon-wrapper">
-                    <div class="icon-circle">
-                        <i class="fas fa-user-friends" aria-hidden="true"></i>
-                    </div>
-                    <p>GESTÃO DE PESSOAL</p>
-                    <span>Centralize dados de colaboradores, servidores e históricos funcionais, garantindo informações
-                        precisas e acessíveis.</span>
+                <p>GESTÃO DE PESSOAL</p>
+                <span>Centralize dados de colaboradores, servidores e históricos funcionais, garantindo informações
+                    precisas e acessíveis.</span>
+            </div>
+            <div class="icon-wrapper">
+                <div class="icon-circle">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i>
                 </div>
-                <div class="icon-wrapper">
-                    <div class="icon-circle">
-                        <i class="fas fa-file-alt" aria-hidden="true"></i>
-                    </div>
-                    <p>ESOCIAL</p>
-                    <span>Suporte completo ao eSocial, conforme o Decreto nº 8.373/2014, que institui o Sistema de
-                        Escrituração Digital das Obrigações Fiscais, Previdenciárias e Trabalhistas
+                <p>ESOCIAL</p>
+                <span>Suporte completo ao eSocial, conforme o Decreto nº 8.373/2014, que institui o Sistema de
+                    Escrituração Digital das Obrigações Fiscais, Previdenciárias e Trabalhistas
+            </div>
+            <div class="icon-wrapper">
+                <div class="icon-circle">
+                    <i class="fas fa-clock" aria-hidden="true"></i>
                 </div>
-                <div class="icon-wrapper">
-                    <div class="icon-circle">
-                        <i class="fas fa-clock" aria-hidden="true"></i>
-                    </div>
-                    <p>EFICIÊNCIA</p>
-                    <span>Reduza o tempo gasto em tarefas manuais com automações de aprovações, encaminhamentos e
-                        relatórios.</span>
+                <p>EFICIÊNCIA</p>
+                <span>Reduza o tempo gasto em tarefas manuais com automações de aprovações, encaminhamentos e
+                    relatórios.</span>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="column">
+                <h3>Centralização de dados de pessoal</h3>
+                <p>O SIP permite acompanhar todas as informações de colaboradores em um único sistema, desde
+                    cadastros iniciais, histórico de cargos e salários, até documentação obrigatória.</p>
+            </div>
+            <div class="column">
+                <h3>Lançamentos web</h3>
+                <p>Os módulos web permitem lançamentos rápidos e seguros pelas unidades externas, descentralizando o
+                    processo e facilitando a extração de documentos de forma ágil e econômica.</p>
+            </div>
+        </section>
+
+        <section class="integracoes ">
+
+            <div class="bloco">
+                <h3><i class="fas fa-plug"></i> Integrações com sistemas externos</h3>
+                <ul id="lista-integracoes">
+                    <li><i class="fas fa-check"></i> <strong>SEFIP</strong> - Sistema Empresa de Recolhimento do
+                        FGTS;</li>
+                    <li><i class="fas fa-check"></i> <strong>CAGED</strong> - Cadastro Geral de Empregados;</li>
+                    <li><i class="fas fa-check"></i> <strong>DIRF</strong> - Declaração do IR Retido;</li>
+                    <li><i class="fas fa-check"></i> <strong>RAIS</strong> - Relação Anual de Informação Social;
+                    </li>
+                    <li><i class="fas fa-check"></i> <strong>CRÉDITO BANCÁRIO</strong> - Todos os bancos;</li>
+                    <li><i class="fas fa-check"></i> <strong>SISOBI</strong> - Controle de Óbitos;</li>
+                    <li><i class="fas fa-check"></i> <strong>MANAD</strong> - Fiscalização Receita Previdenciária;
+                    </li>
+                    <li><i class="fas fa-check"></i> <strong>ATUÁRIOS</strong> - MPS, CEF e BB;</li>
+                    <li><i class="fas fa-check"></i> <strong>PREVIDÊNCIAS MUNICIPAIS</strong>;</li>
+                    <li><i class="fas fa-check"></i> <strong>TRIBUNAL DE CONTAS</strong>;</li>
+                    <li><i class="fas fa-check"></i> <strong>ESOCIAL</strong>;</li>
+                    <li><i class="fas fa-check"></i> <strong>CONSIGNADOS</strong>;</li>
+                    <li><i class="fas fa-check"></i> <strong>BENEFÍCIOS</strong> - Ticket e Vale Transporte;</li>
+                </ul>
+
+                <button class="btn-toggle" onclick="toggleIntegracoes()">Mostrar mais</button>
+            </div>
+
+            <div class="bloco">
+                <h3><i class="fas fa-retweet" aria-hidden="true"></i> Integrações entre sistemas Fiorilli</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <a href="scpi.html"><strong class="laranja">Sistema de Contabilidade Pública
+                                Integrado</strong><br></a>
+                        <span>Envia documentos contábeis, empenhos, notas fiscais e processos
+                            administrativos.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <a href="flowdocs.html"><strong class="laranja">Flowdocs</strong><br></a>
+                        <span>Envia documentos, garantindo integração, organização e tramitação digital dos
+                            registros administrativos.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="functionalities">
+            <h2>Funcionalidades completas do SIP</h2>
+            <div class="functionalities-container">
+                <div class="functionality">
+                    <h3>CADASTRO DE SERVIDORES</h3>
+                    <p>Registro completo de informações pessoais, contratuais e funcionais dos servidores e
+                        colaboradores.</p>
                 </div>
-            </section>
-
-            <section class="features">
-                <div class="column">
-                    <h3>Centralização de dados de pessoal</h3>
-                    <p>O SIP permite acompanhar todas as informações de colaboradores em um único sistema, desde
-                        cadastros iniciais, histórico de cargos e salários, até documentação obrigatória.</p>
+                <div class="functionality">
+                    <h3>FOLHA DE PAGAMENTO</h3>
+                    <p>Controle total de salários, descontos, benefícios e encargos sociais, com geração de
+                        relatórios detalhados.</p>
                 </div>
-                <div class="column">
-                    <h3>Lançamentos web</h3>
-                    <p>Os módulos web permitem lançamentos rápidos e seguros pelas unidades externas, descentralizando o
-                        processo e facilitando a extração de documentos de forma ágil e econômica.</p>
+                <div class="functionality">
+                    <h3>HISTÓRICO FUNCIONAL</h3>
+                    <p>Monitoramento de progressão de cargos, promoções, férias, licenças e outros eventos
+                        funcionais.</p>
                 </div>
-            </section>
-
-            <section class="integracoes ">
-
-                <div class="bloco">
-                    <h3><i class="fas fa-plug"></i> Integrações com sistemas externos</h3>
-                    <ul id="lista-integracoes">
-                        <li><i class="fas fa-check"></i> <strong>SEFIP</strong> - Sistema Empresa de Recolhimento do
-                            FGTS;</li>
-                        <li><i class="fas fa-check"></i> <strong>CAGED</strong> - Cadastro Geral de Empregados;</li>
-                        <li><i class="fas fa-check"></i> <strong>DIRF</strong> - Declaração do IR Retido;</li>
-                        <li><i class="fas fa-check"></i> <strong>RAIS</strong> - Relação Anual de Informação Social;
-                        </li>
-                        <li><i class="fas fa-check"></i> <strong>CRÉDITO BANCÁRIO</strong> - Todos os bancos;</li>
-                        <li><i class="fas fa-check"></i> <strong>SISOBI</strong> - Controle de Óbitos;</li>
-                        <li><i class="fas fa-check"></i> <strong>MANAD</strong> - Fiscalização Receita Previdenciária;
-                        </li>
-                        <li><i class="fas fa-check"></i> <strong>ATUÁRIOS</strong> - MPS, CEF e BB;</li>
-                        <li><i class="fas fa-check"></i> <strong>PREVIDÊNCIAS MUNICIPAIS</strong>;</li>
-                        <li><i class="fas fa-check"></i> <strong>TRIBUNAL DE CONTAS</strong>;</li>
-                        <li><i class="fas fa-check"></i> <strong>ESOCIAL</strong>;</li>
-                        <li><i class="fas fa-check"></i> <strong>CONSIGNADOS</strong>;</li>
-                        <li><i class="fas fa-check"></i> <strong>BENEFÍCIOS</strong> - Ticket e Vale Transporte;</li>
-                    </ul>
-
-                    <button class="btn-toggle" onclick="toggleIntegracoes()">Mostrar mais</button>
+                <div class="functionality">
+                    <h3>INTEGRAÇÃO COM FLOWDOCS</h3>
+                    <p>Automatiza tramitação de documentos, protocolos de solicitações e aprovações internas,
+                        mantendo o histórico completo.</p>
                 </div>
-
-                <div class="bloco">
-                    <h3><i class="fas fa-retweet" aria-hidden="true"></i> Integrações entre sistemas Fiorilli</h3>
-                    <ul>
-                        <li>
-                            <i class="fas fa-check" aria-hidden="true"></i>
-                            <a href="scpi.html"><strong class="laranja">Sistema de Contabilidade Pública
-                                    Integrado</strong><br></a>
-                            <span>Envia documentos contábeis, empenhos, notas fiscais e processos
-                                administrativos.</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check" aria-hidden="true"></i>
-                            <a href="flowdocs.html"><strong class="laranja">Flowdocs</strong><br></a>
-                            <span>Envia documentos, garantindo integração, organização e tramitação digital dos
-                                registros administrativos.</span>
-                        </li>
-                    </ul>
+                <div class="functionality">
+                    <h3>RELATÓRIOS E ANÁLISES</h3>
+                    <p>Geração de relatórios gerenciais, acompanhamento de prazos e indicadores de desempenho da
+                        equipe.</p>
                 </div>
-            </section>
-
-            <section class="functionalities">
-                <h2>Funcionalidades completas do SIP</h2>
-                <div class="functionalities-container">
-                    <div class="functionality">
-                        <h3>CADASTRO DE SERVIDORES</h3>
-                        <p>Registro completo de informações pessoais, contratuais e funcionais dos servidores e
-                            colaboradores.</p>
-                    </div>
-                    <div class="functionality">
-                        <h3>FOLHA DE PAGAMENTO</h3>
-                        <p>Controle total de salários, descontos, benefícios e encargos sociais, com geração de
-                            relatórios detalhados.</p>
-                    </div>
-                    <div class="functionality">
-                        <h3>HISTÓRICO FUNCIONAL</h3>
-                        <p>Monitoramento de progressão de cargos, promoções, férias, licenças e outros eventos
-                            funcionais.</p>
-                    </div>
-                    <div class="functionality">
-                        <h3>INTEGRAÇÃO COM FLOWDOCS</h3>
-                        <p>Automatiza tramitação de documentos, protocolos de solicitações e aprovações internas,
-                            mantendo o histórico completo.</p>
-                    </div>
-                    <div class="functionality">
-                        <h3>RELATÓRIOS E ANÁLISES</h3>
-                        <p>Geração de relatórios gerenciais, acompanhamento de prazos e indicadores de desempenho da
-                            equipe.</p>
-                    </div>
-                    <div class="functionality">
-                        <h3>ACESSO REMOTO</h3>
-                        <p>Permite acesso seguro para servidores autorizados, de qualquer dispositivo conectado à
-                            internet.</p>
-                    </div>
+                <div class="functionality">
+                    <h3>ACESSO REMOTO</h3>
+                    <p>Permite acesso seguro para servidores autorizados, de qualquer dispositivo conectado à
+                        internet.</p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="back-button">
-                <button class="btn-back" onclick="window.location.href='sistemas.html'">Voltar</button>
-            </section>
+        <section class="back-button">
+            <button class="btn-back" onclick="window.location.href='sistemas.html'">Voltar</button>
+        </section>
 
-        </main>
+    </main>
 
-        <div id="contato-area"></div>
-        <div id="footer-area"></div>
-        <div id="cookies-area"></div>
+    <div id="contato-area"></div>
+    <div id="footer-area"></div>
+    <div id="cookies-area"></div>
 
-        <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg">
-        </a>
+    <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg">
+    </a>
 
-        <script src="assets/components/loader.js"></script>
+    <script src="assets/components/loader.js"></script>
 
-        <script src="assets/navbar.js"></script>
+    <script src="assets/navbar.js"></script>
 
-        <script src="assets/js/cookies.js"></script>
+    <script src="assets/js/cookies.js"></script>
 
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
 
-                const lista = document.getElementById("lista-integracoes");
-                const itens = lista.querySelectorAll("li");
+            const lista = document.getElementById("lista-integracoes");
+            const itens = lista.querySelectorAll("li");
 
-                itens.forEach((item, index) => {
-                    if (index >= 5) {
-                        item.style.display = "none";
-                    }
-                });
+            itens.forEach((item, index) => {
+                if (index >= 5) {
+                    item.style.display = "none";
+                }
+            });
+        });
+
+        function toggleIntegracoes() {
+
+            const lista = document.getElementById("lista-integracoes");
+            const itens = lista.querySelectorAll("li");
+            const button = document.querySelector(".btn-toggle");
+
+            const expandido = button.classList.contains("expandido");
+
+            itens.forEach((item, index) => {
+                if (index >= 5) {
+                    item.style.display = expandido ? "none" : "list-item";
+                }
             });
 
-            function toggleIntegracoes() {
-
-                const lista = document.getElementById("lista-integracoes");
-                const itens = lista.querySelectorAll("li");
-                const button = document.querySelector(".btn-toggle");
-
-                const expandido = button.classList.contains("expandido");
-
-                itens.forEach((item, index) => {
-                    if (index >= 5) {
-                        item.style.display = expandido ? "none" : "list-item";
-                    }
-                });
-
-                if (expandido) {
-                    button.innerText = "Mostrar mais";
-                    button.classList.remove("expandido");
-                } else {
-                    button.innerText = "Mostrar menos";
-                    button.classList.add("expandido");
-                }
+            if (expandido) {
+                button.innerText = "Mostrar mais";
+                button.classList.remove("expandido");
+            } else {
+                button.innerText = "Mostrar menos";
+                button.classList.add("expandido");
             }
-        </script>
+        }
+    </script>
     </div>
 </body>
 
