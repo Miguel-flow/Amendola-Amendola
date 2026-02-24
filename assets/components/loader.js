@@ -50,19 +50,29 @@ function initFooter() {
 
 
 // =============================
-// 🌙 4. DARK MODE (à prova de async)
+// 🌙 DARK MODE (corrigido)
 // =============================
-document.addEventListener("click", function (e) {
-  const btn = e.target.closest("#darkModeToggle");
-  if (!btn) return;
+function initDarkMode() {
 
-  document.documentElement.classList.toggle("dark-mode");
+  const toggle = document.getElementById("darkModeToggle");
 
-  const isDark = document.documentElement.classList.contains("dark-mode");
-  localStorage.setItem("darkMode", isDark);
+  const isSavedDark = localStorage.getItem("darkMode") === "true";
 
-  console.log("Modo escuro:", isDark);
-});
+  if (isSavedDark) {
+    document.documentElement.classList.add("dark-mode");
+  }
+
+  if (!toggle) return;
+
+  toggle.addEventListener("click", function () {
+
+    const isDark = document.documentElement.classList.toggle("dark-mode");
+
+    localStorage.setItem("darkMode", isDark);
+
+    console.log("Modo escuro:", isDark);
+  });
+}
 
 
 // =============================
@@ -76,6 +86,7 @@ async function initPage() {
   ]);
 
   initFooter();
+  initDarkMode(); // ← IMPORTANTE
 }
 
 document.addEventListener("DOMContentLoaded", initPage);
