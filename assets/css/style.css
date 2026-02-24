@@ -792,28 +792,27 @@ body.dark-mode {
   }
 }
 
-/* Botão toggle base */
-#darkModeToggle.toggle {
+/* Reset completo e estilos isolados */
+#darkModeToggle {
+  all: unset;
+  box-sizing: border-box;
   width: 50px;
   height: 26px;
   border-radius: 50px;
   background: #ddd;
-  border: none;
   cursor: pointer;
   position: relative;
   padding: 0;
-  outline: none;
-  transition: background 0.4s ease;
-  box-shadow: inset 0 0 8px #ccc;
   display: flex;
   align-items: center;
+  box-shadow: inset 0 0 8px #ccc;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  user-select: none;
 }
 
-/* Círculo que desliza */
 #darkModeToggle .toggle-circle {
   width: 22px;
   height: 22px;
-  background: white;
   border-radius: 50%;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   position: relative;
@@ -822,46 +821,41 @@ body.dark-mode {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #f39c12; /* cor do sol por padrão */
+  color: #f39c12;
+  pointer-events: none;
 }
 
-/* Ícones dentro do círculo */
 #darkModeToggle .icon {
+  all: unset;
   position: absolute;
   font-size: 14px;
-  user-select: none;
-  pointer-events: none;
   transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
-/* Sol visível por padrão */
 #darkModeToggle .icon.sun {
   opacity: 1;
 }
 
-/* Lua escondida por padrão */
 #darkModeToggle .icon.moon {
   opacity: 0;
 }
 
-/* Dark mode ativado */
-body.dark-mode #darkModeToggle.toggle {
+/* Dark mode ativo */
+body.dark-mode #darkModeToggle {
   background: #333;
   box-shadow: inset 0 0 10px #444;
 }
 
-/* Círculo desliza para direita no dark mode */
-body.dark-mode #darkModeToggle.toggle .toggle-circle {
+body.dark-mode #darkModeToggle .toggle-circle {
   transform: translateX(24px);
-  color: #f1c40f; /* cor do ícone lua */
+  color: #f1c40f;
 }
 
-/* Ícone sol desaparece no dark mode */
-body.dark-mode #darkModeToggle.toggle .icon.sun {
+body.dark-mode #darkModeToggle .icon.sun {
   opacity: 0;
 }
 
-/* Ícone lua aparece no dark mode */
-body.dark-mode #darkModeToggle.toggle .icon.moon {
+body.dark-mode #darkModeToggle .icon.moon {
   opacity: 1;
 }
