@@ -1,136 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <link href="assets/img/logo-amendola-2.png" rel="icon">    
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Amendola & Amendola - SCIM</title>
-  <meta name="description" content="Conheça o SCIM, Sistema de Controle Interno Municipal da Amendola & Amendola.">
-  <meta name="keywords" content="SCIM, controle interno, sistema, gestão pública">
-  
-  <!-- Main Stylesheet Files -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/sistemas.css" rel="stylesheet">
-  <link href="assets/css/cookies.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="assets/img/logo-amendola-2.png" rel="icon">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Amendola & Amendola - SCIM</title>
+    <meta name="description" content="Conheça o SCIM, Sistema de Controle Interno Municipal da Amendola & Amendola.">
+    <meta name="keywords" content="SCIM, controle interno, sistema, gestão pública">
+
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/sistemas.css" rel="stylesheet">
+    <link href="assets/css/cookies.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body class="background">
-
-<div id="navbar"></div>
-
-<main class="page-sistema">
-
-  <!-- SISTEMA TITULO -->
-  <section class="sistema-titulo">
-    <div class="banner-text">
-      <h1>SCIM</h1>
-      <h2>Sistema de Controle Interno Municipal</h2>
-      <hr>
-      <p>O Sistema de Controle Interno Municipal (SCIM) é uma ferramenta de apoio projetada para gerar os
-         relatórios exigidos pelos Tribunais de Contas Estaduais e dar suporte às atividades de fiscalização
-          e orientação da Controladoria Municipal. Integrado ao controle externo dos Tribunais de Contas, o 
-          SCIM auxilia a Câmara Municipal no acompanhamento do cumprimento das normas legais, especialmente
-           as previstas na Lei Complementar nº 101/2000 (Lei de Responsabilidade Fiscal – LRF).</p>
-    </div>
-  </section>
-
-<!-- BENEFÍCIOS -->
-<section id="beneficios" class="icons-container">
-    <div class="icon-wrapper">
-        <div class="icon-circle"><i class="fas fa-building"></i></div>
-        <p>LEVANTAMENTO SETORIAL</p>
-        <span>Realiza levantamentos detalhados do funcionamento de diversos setores da administração, permitindo análise completa das operações municipais.</span>
-    </div>
-    <div class="icon-wrapper">
-        <div class="icon-circle"><i class="fas fa-chart-bar"></i></div>
-        <p>LEVANTAMENTO ESTATÍSTICO</p>
-        <span>Coleta e organiza dados econômicos e financeiros, desde a arrecadação municipal até a elaboração de balanços e demonstrativos contábeis.</span>
-    </div>
-    <div class="icon-wrapper">
-        <div class="icon-circle"><i class="fas fa-search-dollar"></i></div>
-        <p>AUDITORIA E AVALIAÇÃO</p>
-        <span>Realiza avaliação e auditoria dos demonstrativos de execução contábil e balanços, garantindo conformidade com normas legais e precisão das informações.</span>
-    </div>
-</section>
-
-
- <!-- FEATURES -->
-<section class="features">
-    <div class="column">
-        <h3>Dados</h3>
-        <p>Realiza levantamento das quantificações disponíveis, constituindo a base para o conhecimento da realidade nos sistemas de contabilidade, arrecadação e pessoal, compatíveis com a estrutura da empresa.</p>
-    </div>
-    <div class="column">
-        <h3>Auditoria</h3>
-        <p>Permite manutenção de itens, programação de serviços e emissão de relatórios detalhados, garantindo controle, precisão e confiabilidade das informações.</p>
-    </div>
-</section>
-
-
-  <!-- FUNCIONALIDADES -->
-<section class="functionalities">
-    <h2>Funcionalidades completas do SCIM</h2>
-    <div class="functionalities-container">
-
-        <div class="functionality">
-            <h3>PARÂMETROS</h3>
-            <p>Permite cadastrar usuários e definir funcionalidades do sistema, atribuindo permissões conforme as unidades responsáveis, garantindo que cada usuário tenha acesso adequado ao seu nível de atuação.</p>
+    <div id="loader" class="loader">
+        <div class="dot-spinner">
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
         </div>
+        <p class="loading-text">Carregando...</p>
+    </div>
 
-        <div class="functionality">
-            <h3>CADASTROS BÁSICOS</h3>
-            <p>Mantém cadastros de assuntos, unidades responsáveis e níveis de informação, permitindo organizar e estruturar dados essenciais para avaliação e auditoria.</p>
-        </div>
+    <div id="main-content" style="display:none;">
 
-        <div class="functionality">
-            <h3>AVALIAÇÃO</h3>
-            <p>Inclui, altera e exclui quesitos de avaliação, programações de serviços e geração de relatórios, possibilitando acompanhamento detalhado por assuntos, unidades e níveis.</p>
-        </div>
+        <div id="navbar"></div>
 
-        <div class="functionality">
-            <h3>AUDITORIA</h3>
-            <p>Permite inclusão, alteração e exclusão de itens a serem examinados nas verificações, possibilitando relatórios filtrados por nível, assunto, unidade ou apenas irregularidades constatadas com recomendações.</p>
-        </div>
+        <main class="page-sistema">
 
-        <div class="functionality">
-            <h3>NÍVEIS DE AVALIAÇÃO</h3>
-            <p>Cadastro de níveis para auditorias e avaliações, facilitando a geração de relatórios específicos por assunto, unidade responsável e tipo de ocorrência, garantindo análise detalhada e objetiva.</p>
-        </div>
+            <section class="sistema-titulo">
+                <div class="banner-text">
+                    <h1>SCIM</h1>
+                    <h2>Sistema de Controle Interno Municipal</h2>
+                    <hr>
+                    <p>O Sistema de Controle Interno Municipal (SCIM) é uma ferramenta de apoio projetada para gerar os
+                        relatórios exigidos pelos Tribunais de Contas Estaduais e dar suporte às atividades de
+                        fiscalização
+                        e orientação da Controladoria Municipal. Integrado ao controle externo dos Tribunais de Contas,
+                        o
+                        SCIM auxilia a Câmara Municipal no acompanhamento do cumprimento das normas legais,
+                        especialmente
+                        as previstas na Lei Complementar nº 101/2000 (Lei de Responsabilidade Fiscal – LRF).</p>
+                </div>
+            </section>
+
+            <section id="beneficios" class="icons-container">
+                <div class="icon-wrapper">
+                    <div class="icon-circle"><i class="fas fa-building"></i></div>
+                    <p>LEVANTAMENTO SETORIAL</p>
+                    <span>Realiza levantamentos detalhados do funcionamento de diversos setores da administração,
+                        permitindo análise completa das operações municipais.</span>
+                </div>
+                <div class="icon-wrapper">
+                    <div class="icon-circle"><i class="fas fa-chart-bar"></i></div>
+                    <p>LEVANTAMENTO ESTATÍSTICO</p>
+                    <span>Coleta e organiza dados econômicos e financeiros, desde a arrecadação municipal até a
+                        elaboração de balanços e demonstrativos contábeis.</span>
+                </div>
+                <div class="icon-wrapper">
+                    <div class="icon-circle"><i class="fas fa-search-dollar"></i></div>
+                    <p>AUDITORIA E AVALIAÇÃO</p>
+                    <span>Realiza avaliação e auditoria dos demonstrativos de execução contábil e balanços, garantindo
+                        conformidade com normas legais e precisão das informações.</span>
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="column">
+                    <h3>Dados</h3>
+                    <p>Realiza levantamento das quantificações disponíveis, constituindo a base para o conhecimento da
+                        realidade nos sistemas de contabilidade, arrecadação e pessoal, compatíveis com a estrutura da
+                        empresa.</p>
+                </div>
+                <div class="column">
+                    <h3>Auditoria</h3>
+                    <p>Permite manutenção de itens, programação de serviços e emissão de relatórios detalhados,
+                        garantindo controle, precisão e confiabilidade das informações.</p>
+                </div>
+            </section>
+
+            <section class="functionalities">
+                <h2>Funcionalidades completas do SCIM</h2>
+                <div class="functionalities-container">
+
+                    <div class="functionality">
+                        <h3>PARÂMETROS</h3>
+                        <p>Permite cadastrar usuários e definir funcionalidades do sistema, atribuindo permissões
+                            conforme as unidades responsáveis, garantindo que cada usuário tenha acesso adequado ao seu
+                            nível de atuação.</p>
+                    </div>
+
+                    <div class="functionality">
+                        <h3>CADASTROS BÁSICOS</h3>
+                        <p>Mantém cadastros de assuntos, unidades responsáveis e níveis de informação, permitindo
+                            organizar e estruturar dados essenciais para avaliação e auditoria.</p>
+                    </div>
+
+                    <div class="functionality">
+                        <h3>AVALIAÇÃO</h3>
+                        <p>Inclui, altera e exclui quesitos de avaliação, programações de serviços e geração de
+                            relatórios, possibilitando acompanhamento detalhado por assuntos, unidades e níveis.</p>
+                    </div>
+
+                    <div class="functionality">
+                        <h3>AUDITORIA</h3>
+                        <p>Permite inclusão, alteração e exclusão de itens a serem examinados nas verificações,
+                            possibilitando relatórios filtrados por nível, assunto, unidade ou apenas irregularidades
+                            constatadas com recomendações.</p>
+                    </div>
+
+                    <div class="functionality">
+                        <h3>NÍVEIS DE AVALIAÇÃO</h3>
+                        <p>Cadastro de níveis para auditorias e avaliações, facilitando a geração de relatórios
+                            específicos por assunto, unidade responsável e tipo de ocorrência, garantindo análise
+                            detalhada e objetiva.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="back-button">
+                <button class="btn-back" onclick="window.location.href='sistemas.html'">Voltar</button>
+            </section>
+
+        </main>
+
+        <div id="contato-area"></div>
+        <div id="footer-area"></div>
+        <div id="cookies-area"></div>
+
+        <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg">
+        </a>
+
+        <script src="assets/components/loader.js"></script>
+
+        <script src="assets/navbar.js"></script>
+
+        <script src="assets/js/translate.js"></script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <script src="assets/js/cookies.js"></script>
 
     </div>
-</section>
-
-
-<section class="back-button">
-    <button class="btn-back" onclick="window.location.href='sistemas.html'">Voltar</button>
-</section>
-
-
-</main>
-
-<div id="contato-area"></div>
-<div id="footer-area"></div>
-<div id="cookies-area"></div>
-
-<!-- WhatsApp -->
-<a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank">
-  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg">
-</a>
-
-
-<!-- Loader de componentes -->
-<script src="assets/components/loader.js"></script>
-
-<!-- Navbar -->
-<script src="assets/navbar.js"></script>
-
-<!-- Tradução -->
-<script src="assets/js/translate.js"></script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<!-- Cookies (DEPOIS do loader) -->
-<script src="assets/js/cookies.js"></script>
-
-
 </body>
+
 </html>

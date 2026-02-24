@@ -48,24 +48,19 @@ function initFooter() {
 // Inicializa botão de dark mode
 function initDarkMode() {
   const darkButton = document.getElementById("darkModeToggle");
-  if (!darkButton) {
-    console.warn("Botão de dark mode não encontrado!");
-    return;
-  }
-
   const body = document.body;
 
   // Restaurar estado salvo
   const saved = localStorage.getItem('darkMode') === 'true';
   if (saved) body.classList.add('dark-mode');
 
+  // Remove preload para mostrar página
+  body.classList.remove('preload');
+
   darkButton.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
     localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
-    console.log("Modo escuro:", body.classList.contains("dark-mode"));
   });
-
-  console.log("Dark mode inicializado ✅");
 }
 
 // Função para observar quando um elemento é adicionado ao DOM
@@ -87,16 +82,24 @@ function onElementReady(selector, callback) {
   observer.observe(document.body, { childList: true, subtree: true });
 }
 
-// Função principal
 async function loadPage() {
-  await loadComponent("contato-area", "assets/components/contato.html");
-  await loadComponent("footer-area", "assets/components/footer.html");
-  await loadComponent("cookies-area", "assets/components/cookies.html");
+  await loadComponent("contato-area","assets/components/contato.html");
+  await loadComponent("footer-area","assets/components/footer.html");
+  await loadComponent("cookies-area","assets/components/cookies.html");
 
-  // Espera o footer existir antes de inicializar
-  onElementReady("#footer-area", () => {
+  onElementReady("#footer-area",()=>{
     initFooter();
     initDarkMode();
+
+    // Remove loader
+    const loader = document.getElementById("loader");
+    loader.style.transition = "opacity 0.5s ease";
+    loader.style.opacity = 0;
+
+    setTimeout(() => {
+      loader.remove();
+      document.getElementById("main-content").style.display = "block";
+    }, 500);
   });
 }
 

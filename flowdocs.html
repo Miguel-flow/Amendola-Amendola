@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <link href="assets/img/logo-amendola-2.png" rel="icon">
   <meta charset="utf-8">
@@ -9,7 +10,6 @@
   <meta name="description" content="Conheça o FlowDocs, sistema de fluxo de documentos da Amendola & Amendola.">
   <meta name="keywords" content="FlowDocs, sistema, documentos, gestão">
 
-  <!-- Main Stylesheet Files -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/sistemas.css" rel="stylesheet">
   <link href="assets/css/cookies.css" rel="stylesheet">
@@ -18,164 +18,198 @@
 </head>
 
 <body class="background">
+  <div id="loader" class="loader">
+    <div class="dot-spinner">
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+    </div>
+    <p class="loading-text">Carregando...</p>
+  </div>
 
-  <div id="navbar"></div>
+  <div id="main-content" style="display:none;">
 
-  <main class="page-sistema">
+    <div id="navbar"></div>
 
-    <section class="sistema-titulo">
-      <div class="banner-text">
-        <h1>FLOWDOCS</h1>
-        <h2>Sistema de Fluxo de Documentos</h2>
-        <hr>
-        <p>
-          O que começou como um módulo complementar de protocolo eletrônico, hoje é um instrumento completo de gestão documental,
-          permitindo maior agilidade, rastreabilidade e segurança nos processos internos. Com milhares de usuários em todo o país,
-          o Flowdocs comprova sua eficácia ao otimizar rotinas, reduzir o uso de papel e garantir conformidade com as exigências legais
-          de transparência e controle.
-        </p>
-      </div>
-    </section>
+    <main class="page-sistema">
 
-    <section id="beneficios" class="icons-container">
-      <div class="icon-wrapper">
-        <div class="icon-circle">
-          <i class="fas fa-random" aria-hidden="true"></i>
+      <section class="sistema-titulo">
+        <div class="banner-text">
+          <h1>FLOWDOCS</h1>
+          <h2>Sistema de Fluxo de Documentos</h2>
+          <hr>
+          <p>
+            O que começou como um módulo complementar de protocolo eletrônico, hoje é um instrumento completo de gestão
+            documental,
+            permitindo maior agilidade, rastreabilidade e segurança nos processos internos. Com milhares de usuários em
+            todo o país,
+            o Flowdocs comprova sua eficácia ao otimizar rotinas, reduzir o uso de papel e garantir conformidade com as
+            exigências legais
+            de transparência e controle.
+          </p>
         </div>
-        <p>TRAMITAÇÃO DIGITAL</p>
-        <span>Elimine o papel e agilize o envio e recebimento de documentos entre setores. Com o Flowdocs, os processos fluem com mais organização, rastreabilidade e segurança.</span>
-      </div>
+      </section>
 
-      <div class="icon-wrapper">
-        <div class="icon-circle">
-          <i class="fas fa-clock" aria-hidden="true"></i>
-        </div>
-        <p>EFICIÊNCIA</p>
-        <span>Automatize o controle de prazos, aprovações e encaminhamentos, reduzindo o tempo gasto com tarefas manuais e aumentando a produtividade da equipe.</span>
-      </div>
-
-      <div class="icon-wrapper">
-        <div class="icon-circle">
-          <i class="fas fa-shield-alt" aria-hidden="true"></i>
-        </div>
-        <p>SEGURANÇA E CONFORMIDADE</p>
-        <span>Garanta integridade, autenticação e histórico completo dos documentos, atendendo às normas legais com facilidade e transparência.</span>
-      </div>
-    </section>
-
-    <!-- SEÇÃO DETALHADA DO FLOWDOCS -->
-    <section class="features">
-      <div class="column">
-        <h3>Gestão documental simplificada</h3>
-        <p>O Flowdocs foi projetado para tornar o controle de documentos e processos administrativos mais organizado, rápido e seguro. Com uma interface intuitiva, qualquer usuário pode acompanhar, tramitar e arquivar documentos com facilidade e agilidade.</p>
-      </div>
-
-      <div class="column">
-        <h3>Atendimento ao cidadão, direto de casa</h3>
-        <p>Com o Flowdocs, o cidadão pode abrir protocolos, acompanhar solicitações e enviar documentos pela internet, sem precisar ir até a prefeitura. Uma gestão moderna que respeita o tempo do contribuinte e valoriza a transparência nos atendimentos públicos.</p>
-      </div>
-    </section>
-
-    <section class="integracoes single-block">
-      <div class="bloco">
-        <h3><i class="fas fa-retweet" aria-hidden="true"></i> Integrações entre sistemas Fiorilli</h3>
-        <ul>
-          <li>
-            <i class="fas fa-check" aria-hidden="true"></i>
-            <a href="sip.html"><strong class="laranja">Sistema Integrado de Pessoal</strong><br></a>
-            <span>Incorpora automaticamente documentos e protocolos relacionados à folha de pagamento facilitando a gestão de processos internos.</span>
-          </li>
-          <li>
-            <i class="fas fa-check" aria-hidden="true"></i>
-            <a href="sia.html"><strong class="laranja">Sistema Integrado de Arrecadação</strong><br></a>
-            <span>Gera guias na abertura de protocolo feito pelo Flowdocs e realiza baixas automáticas nos sistemas assim que o pagamento é confirmado.</span>
-          </li>
-          <li>
-            <i class="fas fa-check" aria-hidden="true"></i>
-            <a href="scpi.html"><strong class="laranja">Sistema de Contabilidade Pública Integrado</strong><br></a>
-            <span>Envia automaticamente documentos contábeis, empenhos, notas fiscais e processos administrativos.</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Funcionalidades Flowdocs -->
-    <section class="functionalities">
-      <h2>Funcionalidades completas do FLOWDOCS</h2>
-
-      <div class="functionalities-container">
-        <div class="functionality">
-          <h3>TRAMITAÇÃO ELETRÔNICA</h3>
-          <p>Permite o fluxo rápido e seguro de documentos entre setores e usuários, eliminando papéis e facilitando o acompanhamento em tempo real.</p>
+      <section id="beneficios" class="icons-container">
+        <div class="icon-wrapper">
+          <div class="icon-circle">
+            <i class="fas fa-random" aria-hidden="true"></i>
+          </div>
+          <p>TRAMITAÇÃO DIGITAL</p>
+          <span>Elimine o papel e agilize o envio e recebimento de documentos entre setores. Com o Flowdocs, os
+            processos fluem com mais organização, rastreabilidade e segurança.</span>
         </div>
 
-        <div class="functionality">
-          <h3>PROTOCOLOS ONLINE</h3>
-          <p>Receba e gerencie solicitações feitas pelo cidadão diretamente pela plataforma, com emissão automática de protocolos e acompanhamento simplificado.</p>
+        <div class="icon-wrapper">
+          <div class="icon-circle">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+          </div>
+          <p>EFICIÊNCIA</p>
+          <span>Automatize o controle de prazos, aprovações e encaminhamentos, reduzindo o tempo gasto com tarefas
+            manuais e aumentando a produtividade da equipe.</span>
         </div>
 
-        <div class="functionality">
-          <h3>ASSINATURA DIGITAL</h3>
-          <p>Integração com certificados digitais para validação segura de documentos, garantindo autenticidade e validade jurídica.</p>
+        <div class="icon-wrapper">
+          <div class="icon-circle">
+            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+          </div>
+          <p>SEGURANÇA E CONFORMIDADE</p>
+          <span>Garanta integridade, autenticação e histórico completo dos documentos, atendendo às normas legais com
+            facilidade e transparência.</span>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="column">
+          <h3>Gestão documental simplificada</h3>
+          <p>O Flowdocs foi projetado para tornar o controle de documentos e processos administrativos mais organizado,
+            rápido e seguro. Com uma interface intuitiva, qualquer usuário pode acompanhar, tramitar e arquivar
+            documentos com facilidade e agilidade.</p>
         </div>
 
-        <div class="functionality">
-          <h3>ARMAZENAMENTO SEGURO</h3>
-          <p>Organização centralizada e protegida dos documentos eletrônicos, com controle de acesso por usuário e níveis de permissão.</p>
+        <div class="column">
+          <h3>Atendimento ao cidadão, direto de casa</h3>
+          <p>Com o Flowdocs, o cidadão pode abrir protocolos, acompanhar solicitações e enviar documentos pela internet,
+            sem precisar ir até a prefeitura. Uma gestão moderna que respeita o tempo do contribuinte e valoriza a
+            transparência nos atendimentos públicos.</p>
         </div>
+      </section>
 
-        <div class="functionality">
-          <h3>INTEGRAÇÃO COM OUTROS SISTEMAS</h3>
-          <p>Conecta-se facilmente com sistemas da Fiorilli, permitindo troca automática de informações e documentos.</p>
+      <section class="integracoes single-block">
+        <div class="bloco">
+          <h3><i class="fas fa-retweet" aria-hidden="true"></i> Integrações entre sistemas Fiorilli</h3>
+          <ul>
+            <li>
+              <i class="fas fa-check" aria-hidden="true"></i>
+              <a href="sip.html"><strong class="laranja">Sistema Integrado de Pessoal</strong><br></a>
+              <span>Incorpora automaticamente documentos e protocolos relacionados à folha de pagamento facilitando a
+                gestão de processos internos.</span>
+            </li>
+            <li>
+              <i class="fas fa-check" aria-hidden="true"></i>
+              <a href="sia.html"><strong class="laranja">Sistema Integrado de Arrecadação</strong><br></a>
+              <span>Gera guias na abertura de protocolo feito pelo Flowdocs e realiza baixas automáticas nos sistemas
+                assim que o pagamento é confirmado.</span>
+            </li>
+            <li>
+              <i class="fas fa-check" aria-hidden="true"></i>
+              <a href="scpi.html"><strong class="laranja">Sistema de Contabilidade Pública Integrado</strong><br></a>
+              <span>Envia automaticamente documentos contábeis, empenhos, notas fiscais e processos
+                administrativos.</span>
+            </li>
+          </ul>
         </div>
+      </section>
 
-        <div class="functionality">
-          <h3>RELATÓRIOS E MONITORAMENTO</h3>
-          <p>Gera relatórios completos sobre o andamento dos processos, prazos e responsáveis, facilitando a gestão e auditoria dos fluxos.</p>
+      <section class="functionalities">
+        <h2>Funcionalidades completas do FLOWDOCS</h2>
+
+        <div class="functionalities-container">
+          <div class="functionality">
+            <h3>TRAMITAÇÃO ELETRÔNICA</h3>
+            <p>Permite o fluxo rápido e seguro de documentos entre setores e usuários, eliminando papéis e facilitando o
+              acompanhamento em tempo real.</p>
+          </div>
+
+          <div class="functionality">
+            <h3>PROTOCOLOS ONLINE</h3>
+            <p>Receba e gerencie solicitações feitas pelo cidadão diretamente pela plataforma, com emissão automática de
+              protocolos e acompanhamento simplificado.</p>
+          </div>
+
+          <div class="functionality">
+            <h3>ASSINATURA DIGITAL</h3>
+            <p>Integração com certificados digitais para validação segura de documentos, garantindo autenticidade e
+              validade jurídica.</p>
+          </div>
+
+          <div class="functionality">
+            <h3>ARMAZENAMENTO SEGURO</h3>
+            <p>Organização centralizada e protegida dos documentos eletrônicos, com controle de acesso por usuário e
+              níveis de permissão.</p>
+          </div>
+
+          <div class="functionality">
+            <h3>INTEGRAÇÃO COM OUTROS SISTEMAS</h3>
+            <p>Conecta-se facilmente com sistemas da Fiorilli, permitindo troca automática de informações e documentos.
+            </p>
+          </div>
+
+          <div class="functionality">
+            <h3>RELATÓRIOS E MONITORAMENTO</h3>
+            <p>Gera relatórios completos sobre o andamento dos processos, prazos e responsáveis, facilitando a gestão e
+              auditoria dos fluxos.</p>
+          </div>
+
+          <div class="functionality">
+            <h3>ACESSO REMOTO</h3>
+            <p>Permite que servidores e cidadãos acompanhem e realizem solicitações de qualquer lugar, usando
+              dispositivos web, com segurança e praticidade.</p>
+          </div>
+
+          <div class="functionality">
+            <h3>REDUÇÃO DE BUROCRACIA</h3>
+            <p>Automatiza etapas manuais e elimina documentos em papel, aumentando a eficiência e reduzindo custos
+              operacionais.</p>
+          </div>
+
+          <div class="functionality">
+            <h3>CIDADÃO</h3>
+            <p>Facilita o acesso do cidadão aos serviços públicos por meio de uma interface intuitiva, promovendo
+              transparência, agilidade e comunicação direta com os órgãos responsáveis. Incentiva a participação social
+              e oferece suporte para acompanhamento em tempo real das solicitações.</p>
+          </div>
         </div>
+      </section>
 
-        <div class="functionality">
-          <h3>ACESSO REMOTO</h3>
-          <p>Permite que servidores e cidadãos acompanhem e realizem solicitações de qualquer lugar, usando dispositivos web, com segurança e praticidade.</p>
-        </div>
+      <section class="back-button">
+        <button class="btn-back" onclick="window.location.href='sistemas.html'">Voltar</button>
+      </section>
+    </main>
 
-        <div class="functionality">
-          <h3>REDUÇÃO DE BUROCRACIA</h3>
-          <p>Automatiza etapas manuais e elimina documentos em papel, aumentando a eficiência e reduzindo custos operacionais.</p>
-        </div>
+    <div id="contato-area"></div>
+    <div id="footer-area"></div>
+    <div id="cookies-area"></div>
 
-        <div class="functionality">
-          <h3>CIDADÃO</h3>
-          <p>Facilita o acesso do cidadão aos serviços públicos por meio de uma interface intuitiva, promovendo transparência, agilidade e comunicação direta com os órgãos responsáveis. Incentiva a participação social e oferece suporte para acompanhamento em tempo real das solicitações.</p>
-        </div>
-      </div>
-    </section>
+    <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank" rel="noopener">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+    </a>
 
-    <section class="back-button">
-      <button class="btn-back" onclick="window.location.href='sistemas.html'">Voltar</button>
-    </section>
-  </main>
+    <script src="assets/components/loader.js" defer></script>
 
-  <div id="contato-area"></div>
-  <div id="footer-area"></div>
-  <div id="cookies-area"></div>
+    <script src="assets/navbar.js" defer></script>
 
-  <!-- WhatsApp -->
-  <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank" rel="noopener">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
-  </a>
+    <script src="assets/js/cookies.js" defer></script>
 
+    <script src="assets/js/translate.js" defer></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 
-  <script src="assets/components/loader.js" defer></script>
-
-   <script src="assets/navbar.js" defer></script>
-
-
-  <script src="assets/js/cookies.js" defer></script>
-
-  <script src="assets/js/translate.js" defer></script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
-
-
+  </div>
 </body>
+
 </html>
