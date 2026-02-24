@@ -56,5 +56,3 @@ setTimeout(() => {
     console.log("button ou menu não encontrados ainda!");
   }
 }, 50);
-
-
