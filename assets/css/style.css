@@ -1,6 +1,7 @@
 :root {
   /* Cores principais */
   --bg: #f0f2f5;
+  --bg-light: #ffffff;
   --text: #111111;
   --text-light: #ffffff;
   --icon: #ffe4e48c;
@@ -15,12 +16,13 @@
   --orange: #ff9800;
 
   /* Sombras */
-  --shadow-light: rgba(0,0,0,0.5);
+  --shadow-light: rgba(0,0,0,0.1);
   --shadow-medium: rgba(0,0,0,0.15);
 }
 
 body.dark-mode {
   --bg: #121212;
+  --bg-light: #121212;
   --bg-section: #181818;
   --bg-card: #1e1e1e;
   --bg-footer: #000000;
@@ -31,6 +33,7 @@ body.dark-mode {
   --icon-bg: #2a2a2a;
 
   --shadow-light: rgba(0,0,0,1.5);
+   --shadow-medium: rgba(0,0,0,1);
 }
 
 body {
