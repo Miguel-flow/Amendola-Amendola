@@ -1,175 +1,196 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <link href="assets/img/logo-amendola-2.png" rel="icon">
+    <link href="assets/img/logo-amendola-2.png" rel="icon">
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Amendola & Amendola - SIE</title>
-    <meta name="description" content="Conheça o SCPI, Sistema de Contabilidade Pública Integrada da Amendola & Amendola.">
+    <meta name="description"
+        content="Conheça o SCPI, Sistema de Contabilidade Pública Integrada da Amendola & Amendola.">
     <meta name="keywords" content="SCPI, contabilidade pública, sistema, gestão pública">
 
-    <!-- Main Stylesheet Files -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/sistemas.css" rel="stylesheet">
-    <link href="assets/css/cookies.css" rel="stylesheet"> <!-- Novo CSS para esta página -->
+    <link href="assets/css/cookies.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 
 <body class="background">
-
-<div id="navbar"></div>
-
-<!-- CONTEÚDO PRINCIPAL -->
-<main class="page-sistema">
-
-    <!-- TÍTULO -->
-    <section class="sistema-titulo">
-        <div class="banner-text">
-            <h1>SIE</h1>
-            <h2>Sistema Integrado de Ensino</h2>
-            <hr>
-            <p>
-                O SIE – Sistema Integrado de Ensino, desenvolvido pela Fiorilli Software, é uma solução
-                que visa gerenciar de forma simples, organizada e unificada todas as instituições de ensino
-                do município. O sistema administra a parte acadêmica das escolas, controlando notas e faltas
-                dos alunos, faltas de professores, atribuição de aulas e elaboração de horários em um banco
-                de dados único, facilitando consultas e permitindo um gerenciamento completo e centralizado.
-            </p>
+    <div id="loader" class="loader">
+        <div class="dot-spinner">
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
         </div>
-    </section>
-
-    <!-- BENEFÍCIOS -->
-    <section id="BENEFÍCIOS">
-        <div class="icons-container">
-            <div class="icon-wrapper">
-                <div class="icon-circle">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <p>INTEGRAÇÃO EDUCACIONAL</p>
-                Totalmente compatível com a nova versão do sistema do Governo Federal,
-                permitindo importar e exportar dados de forma rápida e segura.
-            </div>
-
-            <div class="icon-wrapper">
-                <div class="icon-circle">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <p>GERENCIAMENTO DE TURMAS</p>
-               Em uma única tela, é possível organizar turmas, realizar conferências e preparar
-               a documentação escolar para impressão.
-            </div>
-
-            <div class="icon-wrapper">
-                <div class="icon-circle">
-                    <i class="fas fa-laptop"></i>
-                </div>
-                <p>PLATAFORMA WEB DOCENTE</p>
-                O módulo exclusivo para professores permite lançar notas, faltas, conteúdos ministrados,
-                planejamentos e registrar ocorrências diretamente online.
-            </div>
-        </div>
-    </section>
-
-   <section class="features">
-    <div class="column">
-        <h3>Acompanhamento escolar integrado</h3>
-        <p>Pais e responsáveis podem acompanhar de forma simples e centralizada toda a vida escolar do aluno, incluindo notas, faltas e ocorrências. O aluno também tem acesso a arquivos disponibilizados pelos professores para download.</p>
+        <p class="loading-text">Carregando...</p>
     </div>
-    <div class="column">
-        <h3>Integração com alunos e matrículas</h3>
-        <p>O cadastro de alunos é unificado e completo, garantindo estatísticas precisas e integridade do histórico do estudante no município, mesmo em redes com várias escolas interligadas.
-          O sistema oferece controle total das matrículas, desde o registro inicial até o encerramento do ano letivo ou em casos de evasão, registrando também os motivos, como desistência ou transferência.</p>
-    </div>
-</section>
 
+    <div id="main-content" style="display:none;">
 
-    <!-- INTEGRAÇÕES -->
-     <section class="integracoes">
-            <div class="bloco">
-                <h3><i class="fas fa-retweet" aria-hidden="true"></i> Integrações entre sistemas Fiorilli</h3>
-                <ul>
-                    <li>
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                        <a href="scpi.html"><strong class="laranja">Sistema de Contabilidade Pública Integrado</strong><br></a>
-                        <span>o almoxarifado é integrado, permitindo importar requisições e cadastrar produtos no SIE.</span>
-                    </li>
-            </div>
-        </section>
+        <div id="navbar"></div>
 
-    <!-- FUNCIONALIDADES -->
-  <section class="functionalities">
-    <h2>Algumas funcionalidades do SIE</h2>
-    <div class="functionalities-container">
+        <main class="page-sistema">
 
-        <div class="functionality">
-            <h3>Lançamento de Aulas</h3>
-            <p>Permite registrar aulas nos horários de cada turma, alertando caso haja conflito de horários para o mesmo professor, garantindo dinamismo e integridade dos horários.</p>
-        </div>
+            <section class="sistema-titulo">
+                <div class="banner-text">
+                    <h1>SIE</h1>
+                    <h2>Sistema Integrado de Ensino</h2>
+                    <hr>
+                    <p>
+                        O SIE – Sistema Integrado de Ensino, desenvolvido pela Fiorilli Software, é uma solução
+                        que visa gerenciar de forma simples, organizada e unificada todas as instituições de ensino
+                        do município. O sistema administra a parte acadêmica das escolas, controlando notas e faltas
+                        dos alunos, faltas de professores, atribuição de aulas e elaboração de horários em um banco
+                        de dados único, facilitando consultas e permitindo um gerenciamento completo e centralizado.
+                    </p>
+                </div>
+            </section>
 
-        <div class="functionality">
-            <h3>Faltas e Notas</h3>
-            <p>Gerencia faltas e notas de forma completa, configurável para diferentes tipos de avaliação e conceitos, calculando automaticamente a média final e a situação do aluno.</p>
-        </div>
+            <section id="BENEFÍCIOS">
+                <div class="icons-container">
+                    <div class="icon-wrapper">
+                        <div class="icon-circle">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <p>INTEGRAÇÃO EDUCACIONAL</p>
+                        Totalmente compatível com a nova versão do sistema do Governo Federal,
+                        permitindo importar e exportar dados de forma rápida e segura.
+                    </div>
 
-        <div class="functionality">
-            <h3>Gestão de Turmas</h3>
-            <p>Permite lançar notas, faltas, causas e intervenções, ausências compensadas, conteúdo ministrado, planejamento de aula, sondagem de escrita e ocorrências. Também permite consultar horários de aulas, disciplinas padrão, matrículas e cadastro dos alunos.</p>
-        </div>
+                    <div class="icon-wrapper">
+                        <div class="icon-circle">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <p>GERENCIAMENTO DE TURMAS</p>
+                        Em uma única tela, é possível organizar turmas, realizar conferências e preparar
+                        a documentação escolar para impressão.
+                    </div>
 
-        <div class="functionality">
-            <h3>Passe Escolar</h3>
-            <p>Controla a distribuição de passe escolar para alunos beneficiários, evitando sobreposição e informando as últimas retiradas.</p>
-        </div>
+                    <div class="icon-wrapper">
+                        <div class="icon-circle">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <p>PLATAFORMA WEB DOCENTE</p>
+                        O módulo exclusivo para professores permite lançar notas, faltas, conteúdos ministrados,
+                        planejamentos e registrar ocorrências diretamente online.
+                    </div>
+                </div>
+            </section>
 
-        <div class="functionality">
-            <h3>Controle Estatístico</h3>
-            <p>Oferece relatórios gerenciais e estatísticos com opções de visualização, impressão e exportação.</p>
-        </div>
+            <section class="features">
+                <div class="column">
+                    <h3>Acompanhamento escolar integrado</h3>
+                    <p>Pais e responsáveis podem acompanhar de forma simples e centralizada toda a vida escolar do
+                        aluno, incluindo notas, faltas e ocorrências. O aluno também tem acesso a arquivos
+                        disponibilizados pelos professores para download.</p>
+                </div>
+                <div class="column">
+                    <h3>Integração com alunos e matrículas</h3>
+                    <p>O cadastro de alunos é unificado e completo, garantindo estatísticas precisas e integridade do
+                        histórico do estudante no município, mesmo em redes com várias escolas interligadas.
+                        O sistema oferece controle total das matrículas, desde o registro inicial até o encerramento do
+                        ano letivo ou em casos de evasão, registrando também os motivos, como desistência ou
+                        transferência.</p>
+                </div>
+            </section>
 
-        <div class="functionality">
-            <h3>Almoxarifado</h3>
-            <p>Gerencia estoques da unidade central ou de cada escola, permitindo concessão de itens a alunos ou professores e elaboração de pedidos entre unidades.</p>
-        </div>
+            <section class="integracoes">
+                <div class="bloco">
+                    <h3><i class="fas fa-retweet" aria-hidden="true"></i> Integrações entre sistemas Fiorilli</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-check" aria-hidden="true"></i>
+                            <a href="scpi.html"><strong class="laranja">Sistema de Contabilidade Pública
+                                    Integrado</strong><br></a>
+                            <span>o almoxarifado é integrado, permitindo importar requisições e cadastrar produtos no
+                                SIE.</span>
+                        </li>
+                </div>
+            </section>
 
-        <div class="functionality">
-            <h3>Segurança e Integridade</h3>
-            <p>Controle avançado de usuários com permissões por função e local de operação, garantindo proteção e confiabilidade das informações.</p>
-        </div>
+            <section class="functionalities">
+                <h2>Algumas funcionalidades do SIE</h2>
+                <div class="functionalities-container">
 
-    </div>
-</section>
-<section class="back-button">
-    <button class="btn-back" onclick="window.location.href='sistemas.html'">Voltar</button>
-</section>
+                    <div class="functionality">
+                        <h3>Lançamento de Aulas</h3>
+                        <p>Permite registrar aulas nos horários de cada turma, alertando caso haja conflito de horários
+                            para o mesmo professor, garantindo dinamismo e integridade dos horários.</p>
+                    </div>
 
-</main>
- <div id="contato-area"></div>
-<div id="footer-area"></div>
-<div id="cookies-area"></div>
+                    <div class="functionality">
+                        <h3>Faltas e Notas</h3>
+                        <p>Gerencia faltas e notas de forma completa, configurável para diferentes tipos de avaliação e
+                            conceitos, calculando automaticamente a média final e a situação do aluno.</p>
+                    </div>
 
-<!-- WhatsApp -->
-<a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank">
-  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg">
-</a>
+                    <div class="functionality">
+                        <h3>Gestão de Turmas</h3>
+                        <p>Permite lançar notas, faltas, causas e intervenções, ausências compensadas, conteúdo
+                            ministrado, planejamento de aula, sondagem de escrita e ocorrências. Também permite
+                            consultar horários de aulas, disciplinas padrão, matrículas e cadastro dos alunos.</p>
+                    </div>
 
+                    <div class="functionality">
+                        <h3>Passe Escolar</h3>
+                        <p>Controla a distribuição de passe escolar para alunos beneficiários, evitando sobreposição e
+                            informando as últimas retiradas.</p>
+                    </div>
 
-<!-- Loader de componentes -->
-<script src="assets/components/loader.js"></script>
+                    <div class="functionality">
+                        <h3>Controle Estatístico</h3>
+                        <p>Oferece relatórios gerenciais e estatísticos com opções de visualização, impressão e
+                            exportação.</p>
+                    </div>
 
-<!-- Navbar -->
-<script src="assets/navbar.js"></script>
+                    <div class="functionality">
+                        <h3>Almoxarifado</h3>
+                        <p>Gerencia estoques da unidade central ou de cada escola, permitindo concessão de itens a
+                            alunos ou professores e elaboração de pedidos entre unidades.</p>
+                    </div>
 
-<!-- Tradução -->
-<script src="assets/js/translate.js"></script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    <div class="functionality">
+                        <h3>Segurança e Integridade</h3>
+                        <p>Controle avançado de usuários com permissões por função e local de operação, garantindo
+                            proteção e confiabilidade das informações.</p>
+                    </div>
 
-<!-- Cookies (DEPOIS do loader) -->
-<script src="assets/js/cookies.js"></script>
+                </div>
+            </section>
+            <section class="back-button">
+                <button class="btn-back" onclick="window.location.href='sistemas.html'">Voltar</button>
+            </section>
+
+        </main>
+        <div id="contato-area"></div>
+        <div id="footer-area"></div>
+        <div id="cookies-area"></div>
+
+        <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg">
+        </a>
+
+        <script src="assets/components/loader.js"></script>
+
+        <script src="assets/navbar.js"></script>
+
+        <script src="assets/js/translate.js"></script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <script src="assets/js/cookies.js"></script>
 
 
 </body>
+
 </html>
-  
+</div>
 </body>
+
 </html>
