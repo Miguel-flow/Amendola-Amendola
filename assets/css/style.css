@@ -4,7 +4,8 @@
   --bg-light: #ffffff;
   --text: #111111;
   --text-light: #ffffff;
-  --icon: #ffe4e48c;
+  --icon-bg: #ffbf8a1a;
+  --shadow-orange: rgba(250, 127, 8, 0.2);
 
   /* Estrutura */
   --navbar-bg: #ffffff;
@@ -30,10 +31,11 @@ body.dark-mode {
   --text: #ffffff;
   --text-light: #ffffff;
 
-  --icon-bg: #2a2a2a;
+  --icon-bg: #242424;
 
   --shadow-light: rgba(0,0,0,1.5);
-   --shadow-medium: rgba(0,0,0,1);
+  --shadow-medium: rgba(0,0,0,1);
+  --shadow-orange: rgba(250, 127, 8, 0.1);
 }
 
 body {
@@ -323,7 +325,7 @@ a {
     min-width: 46px;
     height: 46px;
     border-radius: 50%;
-    background: var(--icon);
+    background: var(--icon-bg);
     display: flex;
     align-items: center;
     justify-content: center;
