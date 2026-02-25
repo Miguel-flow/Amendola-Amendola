@@ -1,0 +1,46 @@
+/* Estilo da área de busca */
+.links-toolbar {
+    display: flex;
+    gap: 15px;
+    margin: 30px auto;
+    justify-content: center;
+    max-width: 800px;
+    flex-wrap: wrap;
+}
+
+.links-toolbar input, .links-toolbar select {
+    padding: 14px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--shadow-light);
+    background: var(--bg-light);
+    color: var(--text);
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.links-toolbar input { flex: 2; min-width: 250px; }
+.links-toolbar select { flex: 1; min-width: 150px; cursor: pointer; }
+
+.links-toolbar input:focus { border-color: var(--orange); }
+
+/* Os cards seguem exatamente o estilo do seu CSS enviado */
+.card {
+    cursor: pointer;
+}
+
+.card .icon {
+    color: white; /* Garante que a letra dentro do círculo laranja fique branca */
+}
+
+/* Ajuste para o Dark Mode do seu sistema */
+html.dark-mode .links-toolbar input, 
+html.dark-mode .links-toolbar select {
+    background: var(--bg-card);
+    border-color: rgba(255,255,255,0.1);
+}
+
+@media (max-width: 600px) {
+    .about-amendola h2 { font-size: 28px; }
+    .links-toolbar { flex-direction: column; }
+}
