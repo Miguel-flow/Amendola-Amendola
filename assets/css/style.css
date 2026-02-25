@@ -47,7 +47,7 @@ body {
     display: flex;
     align-items: center;
     background-color: var(--bg);
-    padding: 10px 24px;
+    padding: 20px 24px;
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
@@ -72,13 +72,14 @@ body {
     gap: 30px;
     margin: 0;
     padding: 0;
+ 
 }
 
 .navbar-links li a {
     text-decoration: none;
     color: var(--text);
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.3s ease;
     text-transform: uppercase;
 }
@@ -148,7 +149,7 @@ body {
     }
 
     .navbar {
-        border-radius: 25px; /* Menos arredondado no mobile */
+        border-radius: 25px;
     }
 }
 
@@ -164,7 +165,7 @@ body {
   padding: 40px 20px;
   font-family: 'Poppins', Arial, sans-serif;
   text-align: center;
-  animation: slideInUp 1s ease-out 1.4s both;
+
 }
 
 .about-amendola h2 {
@@ -173,7 +174,6 @@ body {
   color: var(--text);
   margin-bottom: 12px;
   letter-spacing: -1px;
-  animation: fadeIn 1.2s ease-out 1.6s both;
 }
 
 .about-amendola .subtitle {
@@ -182,7 +182,6 @@ body {
   max-width: 700px;
   margin: 0 auto 50px;
   line-height: 1.7;
-  animation: fadeIn 1.2s ease-out 1.8s both;
 }
 
 .cards {
@@ -328,113 +327,119 @@ body {
   }
 }
 
-.servicos-amendola {
-  max-width: 1200px;
-  margin: -60px auto 80px auto;
-  padding: 40px 0px;
-  font-family: 'Poppins', Arial, sans-serif;
-  animation: slideInUp 1s ease-out 2.8s both;
+.emunicipio-section {
+    padding: 100px 0;
+    background-color: var(--bg-section); /* Ou var(--bg) se preferir liso */
+    overflow: hidden;
 }
 
-.servicos-grid {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 40px;
-  align-items: center;
+.center { text-align: center; margin-bottom: 60px; }
+
+.emunicipio-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 40px;
+    align-items: center;
 }
 
-.col {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
+/* Colunas de Recursos */
+.feature-col {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
-.item {
-  display: flex;
-  gap: 16px;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.7s ease;
+.feature-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: transform 0.3s ease;
 }
 
-.item.show {
-  opacity: 1;
-  transform: translateY(0);
+.feature-item:hover { transform: translateX(5px); }
+
+.feature-text h4 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    color: var(--text);
+    font-weight: 700;
 }
 
-.icon {
-  min-width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: var(--icon-bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  color: var(--orange);
+.feature-text p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text);
+    opacity: 0.8;
+    line-height: 1.6;
 }
 
-.item h4 {
-  margin: 0 0 6px;
-  font-size: 18px;
-  color: var(--text);
-  font-weight: 600;
+/* Ícones redondos como o seu estilo */
+.icon-box {
+    min-width: 50px;
+    height: 50px;
+    background: var(--icon-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
 }
 
-.item p {
-  margin: 0;
-  font-size: 16px;
-  color: var(--text);
-  line-height: 1.7;
+/* Vitrine do Celular */
+.phone-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
-.phone {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.phone-wrapper {
+    position: relative;
+    padding: 10px;
 }
 
-.phone img {
-  max-width: 280px;
-  width: 100%;
-  margin-bottom: 80px;
-  display: block;
-  transition: transform 0.3s ease;
+.app-screen {
+    max-width: 280px;
+    height: auto;
+    filter: drop-shadow(0 20px 40px var(--shadow-medium));
+    transition: transform 0.5s ease;
 }
 
-.phone img:hover {
-  transform: scale(1.05);
+.phone-wrapper:hover .app-screen { transform: scale(1.03) translateY(-10px); }
+
+/* Selos de Download */
+.download-badges {
+    display: flex;
+    gap: 15px;
 }
 
-.icones-download {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
+.download-badges img {
+    height: 40px;
+    transition: filter 0.3s, transform 0.2s;
 }
 
-.icones-download img {
-  width: 140px;
-  height: auto;
-  margin-bottom: 0 !important;
-  cursor: pointer;
-  transition: transform 0.2s;
+.download-badges img:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
 }
 
-.icones-download img:hover {
-  transform: scale(1.08);
+/* Responsivo para Tablet e Celular */
+@media (max-width: 1024px) {
+    .emunicipio-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px 20px;
+    }
+    
+    .phone-showcase {
+        grid-column: span 2;
+        order: -1; /* Celular vai para o topo */
+    }
 }
 
-@media (max-width: 900px) {
-  .servicos-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .phone {
-    order: -1;
-    margin-bottom: 40px;
-  }
+@media (max-width: 600px) {
+    .emunicipio-grid { grid-template-columns: 1fr; }
+    .phone-showcase { grid-column: span 1; }
+    .feature-item { text-align: center; flex-direction: column; align-items: center; }
 }
 
 .contact-section {
@@ -499,10 +504,10 @@ font-size: 16px;
     align-items: flex-start;
 }
 
-.icon-wrapper {
+.icon-wrapper-home {
     width: 44px;
     height: 44px;
-    background-color: var(--icon-bg); /* Sua variável de fundo de ícone */
+    background-color: var(--icon-bg);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -654,13 +659,11 @@ font-size: 16px;
     transition: opacity 0.3s;
 }
 
-/* Estado Ativo (Dark Mode) */
 html.dark-mode .toggle-track { background-color: var(--orange); }
 html.dark-mode .toggle-thumb { transform: translateX(16px); }
 html.dark-mode .icon-moon { opacity: 1; }
 html.dark-mode .icon-sun { opacity: 0.2; }
 
-/* Responsividade */
 @media (max-width: 900px) {
     .footer-container {
         flex-direction: column;
@@ -669,7 +672,7 @@ html.dark-mode .icon-sun { opacity: 0.2; }
     }
     
     .footer-nav {
-        order: -1; /* Links vão para o topo no mobile */
+        order: -1;
         gap: 15px;
     }
     

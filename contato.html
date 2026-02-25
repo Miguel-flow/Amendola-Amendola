@@ -1,565 +1,82 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8" />
+  <link rel="stylesheet" href="assets/css/contato.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contato | Amendola & Amendola</title>
-  <style>
-    :root{
-      --bg: #0b1020;
-      --card: rgba(255,255,255,.06);
-      --text: #e9ecf5;
-      --muted: rgba(233,236,245,.72);
-      --line: rgba(255,255,255,.14);
-      --accent: #6ee7ff;
-      --accent2:#a78bfa;
-      --danger:#ff6b6b;
-      --ok:#34d399;
-      --shadow: 0 20px 60px rgba(0,0,0,.35);
-      --radius: 18px;
-    }
-
-    *{ box-sizing: border-box; }
-    body{
-      margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(1200px 600px at 15% 10%, rgba(110,231,255,.18), transparent 60%),
-        radial-gradient(1000px 700px at 90% 30%, rgba(167,139,250,.20), transparent 55%),
-        linear-gradient(180deg, #070a14 0%, var(--bg) 100%);
-      min-height: 100vh;
-    }
-
-    a{ color: inherit; text-decoration: none; }
-    .container{
-      width: min(1120px, 92vw);
-      margin: 0 auto;
-      padding: 40px 0 64px;
-    }
-
-    header{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 14px 18px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      border-radius: var(--radius);
-      backdrop-filter: blur(10px);
-    }
-
-    .brand{
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 220px;
-    }
-    .logo{
-      width: 42px; height: 42px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 10px 26px rgba(110,231,255,.12);
-    }
-    .brand h1{
-      font-size: 14px;
-      margin: 0;
-      letter-spacing: .2px;
-      line-height: 1.2;
-    }
-    .brand small{
-      display: block;
-      color: var(--muted);
-      font-weight: 500;
-      margin-top: 2px;
-      font-size: 12px;
-    }
-
-    nav{
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-    .chip{
-      padding: 9px 12px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255,255,255,.03);
-      color: var(--muted);
-      font-size: 13px;
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
-    }
-    .chip:hover{
-      transform: translateY(-1px);
-      background: rgba(255,255,255,.06);
-      border-color: rgba(255,255,255,.22);
-      color: var(--text);
-    }
-
-    .hero{
-      margin-top: 22px;
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 18px;
-      align-items: stretch;
-    }
-
-    .hero-card{
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-      overflow: hidden;
-      position: relative;
-    }
-
-    .hero-card::before{
-      content:"";
-      position:absolute;
-      inset:-2px;
-      background: radial-gradient(600px 240px at 30% 0%, rgba(110,231,255,.12), transparent 55%),
-                  radial-gradient(600px 260px at 90% 20%, rgba(167,139,250,.14), transparent 55%);
-      pointer-events:none;
-      z-index:0;
-    }
-    .hero-card > *{ position: relative; z-index: 1; }
-
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 8px 10px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255,255,255,.03);
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 600;
-      width: fit-content;
-    }
-    .dot{
-      width: 8px; height: 8px;
-      border-radius: 999px;
-      background: var(--ok);
-      box-shadow: 0 0 0 6px rgba(52,211,153,.12);
-    }
-
-    h2{
-      margin: 14px 0 8px;
-      font-size: 34px;
-      letter-spacing: -.5px;
-      line-height: 1.1;
-    }
-    p{
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.55;
-      font-size: 15px;
-    }
-
-    .cta-row{
-      margin-top: 16px;
-      display:flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      align-items:center;
-    }
-
-    .btn{
-      border: 1px solid rgba(255,255,255,.18);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      padding: 11px 14px;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 14px;
-      cursor: pointer;
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-    }
-    .btn:hover{
-      transform: translateY(-1px);
-      background: rgba(255,255,255,.09);
-      border-color: rgba(255,255,255,.28);
-    }
-    .btn.primary{
-      border: none;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #0b1020;
-    }
-
-    .mini{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-
-    .info{
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      border-radius: var(--radius);
-      padding: 16px;
-      height: 100%;
-    }
-    .info h3{
-      margin: 0 0 8px;
-      font-size: 14px;
-      letter-spacing: .2px;
-    }
-    .info ul{
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display:grid;
-      gap: 10px;
-    }
-    .info li{
-      display:flex;
-      gap: 10px;
-      align-items:flex-start;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.4;
-    }
-    .icon{
-      width: 34px; height: 34px;
-      border-radius: 12px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.14);
-      display:grid;
-      place-items:center;
-      flex: 0 0 34px;
-    }
-    .icon svg{ width: 18px; height: 18px; opacity: .9; }
-
-    .grid{
-      margin-top: 18px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      align-items: start;
-    }
-
-    form{
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      border-radius: var(--radius);
-      padding: 20px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-    }
-
-    .form-head{
-      display:flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-    .form-head h3{
-      margin: 0;
-      font-size: 16px;
-      letter-spacing: .2px;
-    }
-    .hint{
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .fields{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .field{
-      display:flex;
-      flex-direction: column;
-      gap: 7px;
-    }
-    label{
-      font-size: 12px;
-      color: var(--muted);
-      font-weight: 650;
-      letter-spacing: .15px;
-    }
-
-    input, textarea, select{
-      width: 100%;
-      padding: 12px 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(10,14,28,.55);
-      color: var(--text);
-      outline: none;
-      transition: border-color .15s ease, background .15s ease;
-    }
-    input::placeholder, textarea::placeholder{
-      color: rgba(233,236,245,.45);
-    }
-    input:focus, textarea:focus, select:focus{
-      border-color: rgba(110,231,255,.55);
-      background: rgba(10,14,28,.70);
-    }
-
-    textarea{
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    .span-2{ grid-column: span 2; }
-
-    .row{
-      display:flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      align-items:center;
-      justify-content: space-between;
-      margin-top: 12px;
-    }
-
-    .consent{
-      display:flex;
-      gap: 10px;
-      align-items:flex-start;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.3;
-      max-width: 520px;
-    }
-    .consent input{
-      width: 18px; height: 18px;
-      margin-top: 2px;
-      accent-color: var(--accent);
-    }
-
-    .map{
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-    .map iframe{
-      width: 100%;
-      height: 100%;
-      min-height: 420px;
-      border: 0;
-      filter: saturate(1.08) contrast(1.02);
-    }
-
-    footer{
-      margin-top: 20px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255,255,255,.10);
-      color: var(--muted);
-      font-size: 12px;
-      display:flex;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    /* Responsivo */
-    @media (max-width: 920px){
-      .hero{ grid-template-columns: 1fr; }
-      .grid{ grid-template-columns: 1fr; }
-      .fields{ grid-template-columns: 1fr; }
-      .span-2{ grid-column: span 1; }
-      h2{ font-size: 28px; }
-      .map iframe{ min-height: 360px; }
-    }
-
-    .chip.voltar{
-  border-color: rgba(110,231,255,.45);
-  background: rgba(110,231,255,.08);
-  color: var(--text);
-}
-.chip.voltar:hover{
-  background: rgba(110,231,255,.14);
-  border-color: rgba(110,231,255,.70);
-}
-  </style>
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <div class="brand" aria-label="Marca">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          <h1>Amendola & Amendola</h1>
-          <small>Atendimento • Suporte • Comercial</small>
-        </div>
+
+   <div id="navbar"></div>
+  <section id="contato" class="contact-section">
+    <div class="container">
+
+      <div class="contact-header">
+        <span class="badge">Contato</span>
+        <h2>Vamos iniciar uma conversa?</h2>
+        <p>Escolha o canal de sua preferência ou envie uma mensagem direta abaixo.</p>
       </div>
 
-      <nav aria-label="Menu">
-        <a class="chip" href="#form">Fale conosco</a>
-        <a class="chip" href="#info">Informações</a>
-        <a class="chip" href="#mapa">Como chegar</a>
-        <a class="chip voltar" href="index.html">← Voltar</a>
-      </nav>
-    </header>
+      <div class="contact-main-grid">
 
-    <section class="hero">
-      <div class="hero-card">
-        <h2>Para Suporte Técnico acesse Flowdocs
-            Ou preencha os campos, para um simples contato.</h2>
-        <p>
-          Envie uma mensagem com seu objetivo, prazo e detalhes. Nossa equipe retorna com a melhor proposta
-          e próximos passos.
-        </p>
+        <div class="contact-sidebar">
+          <div class="card-info">
+            <div class="card-icon">📍</div>
+            <div class="card-text">
+              <h3>Localização</h3>
+              <p>Rua J. Carlos Mendes de Campos, 190<br>Sales/SP • CEP 14980-622</p>
+            </div>
+          </div>
 
-        <div class="cta-row">
-          <a class="btn primary" href="https://amendola.flowdocs.com.br:2053/public/home" aria-label="Ir para o formulário">
-            FlowDocs
-            <span aria-hidden="true">→</span>
-          </a>
-          <a class="btn" href="mailto:contato@suaempresa.com">
-            contato@amendolaeamendola.com.br
-          </a>
-          <a class="btn" href="tel:+5511999999999">
-            +55 (17) 3557-9090
-          </a>
+          <div class="card-info">
+            <div class="card-icon">📞</div>
+            <div class="card-text">
+              <h3>Telefone</h3>
+              <p>+55 (17) 3557-9090</p>
+              <p>+55 (17) 2137-2200</p>
+            </div>
+          </div>
+
+          <div class="card-info highlight">
+            <div class="card-icon">🚀</div>
+            <div class="card-text">
+              <h3>Suporte Técnico</h3>
+              <p>Acesse nossa plataforma</p>
+              <a href="https://amendola.flowdocs.com.br:2053/public/home" class="link-flow">Abrir FlowDocs →</a>
+            </div>
+          </div>
         </div>
+
+        <div class="contact-form-container">
+          <form class="premium-form" action="enviar.php" method="POST">
+            <div class="input-row">
+              <input type="text" name="nome" placeholder="Nome completo" required>
+              <input type="email" name="email" placeholder="E-mail profissional" required>
+            </div>
+            <input type="text" name="assunto" placeholder="Assunto">
+            <textarea name="mensagem" placeholder="Como podemos ajudar?" required></textarea>
+
+            <button type="submit" class="btn-gradient">Enviar Mensagem</button>
+          </form>
+        </div>
+
       </div>
 
-      <div class="mini" id="info">
-        <div class="info">
-          <h3>Contato rápido</h3>
-          <ul>
-            <li>
-              <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4V4Z" stroke="currentColor" opacity=".35"/><path d="M6.5 8.5h11M6.5 12h11M6.5 15.5h7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-              </div>
-              <div><strong style="color:var(--text)">E-mail</strong><br/>contato@amendolaeamendola.com.br</div>
-            </li>
-            <li>
-              <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M7 3h10v18H7V3Z" stroke="currentColor" opacity=".35"/><path d="M9 7h6M9 11h6M9 15h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-              </div>
-              <div><strong style="color:var(--text)">Telefone</strong><br/>+55 (17) 3557-9090</div>
-            </li>
-            <li>
-              <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" opacity=".35"/><path d="M12 12.2a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4Z" stroke="currentColor" stroke-width="1.7"/></svg>
-              </div>
-              <div><strong style="color:var(--text)">Endereço</strong><br/>Rua J. Carlos Mendes de Campos 190 — Cristo Redentor<br/>Sales — SP</div>
-            </li>
-          </ul>
-        </div>
+    </div>
+  </section>
 
-        <div class="info">
-          <h3>Horário</h3>
-          <ul>
-            <li>
-              <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" stroke="currentColor" opacity=".35"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div><strong style="color:var(--text)">Seg–Sex</strong><br/>08:00 – 17:00</div>
-            </li>
-            <li>
-              <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16" stroke="currentColor" opacity=".7"/><path d="M7 3v4M17 3v4" stroke="currentColor" opacity=".7" stroke-linecap="round"/><path d="M6 11h5M6 15h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-              </div>
-              <div><strong style="color:var(--text)">Sáb/Dom</strong><br/>Fechado</div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+  <!-- Loader de componentes -->
+<script src="assets/components/loader.js"></script>
 
-    <section class="grid">
-      <form id="form" action="#" method="post" autocomplete="on">
-        <div class="form-head">
-          <h3>Envie sua mensagem</h3>
-          <span class="hint">Campos com * são obrigatórios</span>
-        </div>
+<!-- Navbar -->
+<script src="assets/navbar.js"></script>
 
-        <div class="fields">
-          <div class="field">
-            <label for="nome">Nome *</label>
-            <input id="nome" name="nome" type="text" placeholder="Seu nome" required />
-          </div>
-
-          <div class="field">
-            <label for="empresa">Empresa</label>
-            <input id="empresa" name="empresa" type="text" placeholder="Nome da empresa (opcional)" />
-          </div>
-
-          <div class="field">
-            <label for="email">E-mail *</label>
-            <input id="email" name="email" type="email" placeholder="voce@exemplo.com" required />
-          </div>
-
-          <div class="field">
-            <label for="telefone">Telefone / WhatsApp</label>
-            <input id="telefone" name="telefone" type="tel" placeholder="+55 (11) 99999-9999" />
-          </div>
-
-          <div class="field span-2">
-            <label for="assunto">Assunto *</label>
-            <select id="assunto" name="assunto" required>
-              <option value="" selected disabled>Selecione uma opção</option>
-              <option>Sistema</option>
-              <option>Suporte</option>
-              <option>Apresentação</option>
-              <option>Treinamento</option>
-            </select>
-          </div>
-
-          <div class="field span-2">
-            <label for="mensagem">Mensagem *</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Conte um pouco sobre sua necessidade..." required></textarea>
-          </div>
-        </div>
-
-        <div class="row">
-          <label class="consent">
-            <input type="checkbox" name="consentimento" required />
-            Concordo em ser contatado(a) pela empresa com base nas informações fornecidas.
-          </label>
-
-          <button class="btn primary" type="submit">
-            Enviar
-            <span aria-hidden="true">→</span>
-          </button>
-        </div>
-
-        <p class="hint" style="margin-top:12px">
-          Dica: conecte esse formulário a um backend (PHP/Node/Forms) para receber as mensagens.
-        </p>
-      </form>
-
-      <div class="map" id="mapa" aria-label="Mapa">
-        <!-- Troque o src pelo link do Google Maps da sua empresa -->
-        <iframe
-          title="Mapa da empresa"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1858.135713352941!2d-49.49752262320958!3d-21.339786485462337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be7867b6fa1d17%3A0x42c5472c9c2ed4c8!2sAMENDOLA%20%26%20AMENDOLA%20SOFTWARE%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1761132974636!5m2!1spt-BR!2sbr">
-        </iframe>
-      </div>
-    </section>
-
-    <footer>
-      <div>© <span id="year"></span> Amendola & Amendola. Todos os direitos reservados.</div>
-      <div style="display:flex; gap:14px; flex-wrap:wrap;">
-        <a class="chip" href="politicadeprivacidade.html">Política de Privacidade</a>
-        <a class="chip" href="politica-de-cookies.html">Política de Cookies</a>
-      </div>
-    </footer>
-  </div>
-
-  <script>
-    // Só para atualizar o ano automaticamente
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<!-- Cookies -->
+<script src="assets/js/cookies.js"></script>
 </body>
+
 </html>
