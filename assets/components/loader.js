@@ -82,20 +82,37 @@ function initFooter() {
 }
 
 // =============================
-// 🚀 5. INICIALIZAÇÃO GERAL
+// 🚀 5. INICIALIZAÇÃO GERAL (Versão Corrigida)
 // =============================
 async function initPage() {
-  // Incluí a navbar aqui para centralizar o carregamento
-  await Promise.all([
-    loadComponent("navbar-area", "assets/components/navbar.html"), // Ajuste o caminho se necessário
-    loadComponent("contato-area", "assets/components/contato.html"),
-    loadComponent("footer-area", "assets/components/footer.html"),
-    loadComponent("cookies-area", "assets/components/cookies.html")
-  ]);
+  // Criamos uma lista de tarefas apenas para os elementos que REALMENTE existem no HTML
+  const tasks = [];
 
-  initNavbarLogic(); // Inicia lógica da navbar
-  initFooter();      // Inicia lógica do footer
-  initDarkMode();    // Inicia lógica do dark mode
+  if (document.getElementById("navbar")) {
+    tasks.push(loadComponent("navbar", "assets/components/navbar.html"));
+  }
+  
+  // Note que no seu loader original estava "navbar-area", mas no seu HTML você usou "navbar"
+  // Ajustei para "navbar" para bater com o seu HTML.
+  
+  if (document.getElementById("footer-area")) {
+    tasks.push(loadComponent("footer-area", "assets/components/footer.html"));
+  }
+
+  if (document.getElementById("cookies-area")) {
+    tasks.push(loadComponent("cookies-area", "assets/components/cookies.html"));
+  }
+  
+  if (document.getElementById("contato-area")) {
+    tasks.push(loadComponent("contato-area", "assets/components/contato.html"));
+  }
+
+  // Executa apenas as tarefas necessárias
+  await Promise.all(tasks);
+
+  initNavbarLogic(); 
+  initFooter();      
+  initDarkMode();    
 }
 
 document.addEventListener("DOMContentLoaded", initPage);
