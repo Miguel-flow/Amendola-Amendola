@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amendola & Amendola - Links</title>
+
+  <style>
+    :root{
+      --bg: #0b1020;
+      --text: #e9ecf5;
+      --muted: rgba(233,236,245,.72);
+      --line: rgba(255,255,255,.14);
+      --card: rgba(255,255,255,.06);
+      --accent: #6ee7ff;
+      --accent2:#a78bfa;
+      --shadow: 0 20px 60px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 15% 10%, rgba(110,231,255,.18), transparent 60%),
+        radial-gradient(1000px 700px at 90% 30%, rgba(167,139,250,.20), transparent 55%),
+        linear-gradient(180deg, #070a14 0%, var(--bg) 100%);
+      min-height: 100vh;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    .container{
+      width: min(1120px, 92vw);
+      margin: 0 auto;
+      padding: 40px 0 64px;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius);
+      backdrop-filter: blur(10px);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      min-width: 240px;
+    }
+    .logo{
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 10px 26px rgba(110,231,255,.12);
+      flex: 0 0 42px;
+    }
+    .brand h1{
+      margin: 0;
+      font-size: 14px;
+      letter-spacing: .2px;
+      line-height: 1.2;
+    }
+    .brand small{
+      display:block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    nav{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content:flex-end;
+    }
+
+    .chip{
+      padding: 9px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size: 13px;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .chip:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.22);
+      color: var(--text);
+    }
+    .chip.voltar{
+      border-color: rgba(110,231,255,.45);
+      background: rgba(110,231,255,.08);
+      color: var(--text);
+    }
+    .chip.voltar:hover{
+      background: rgba(110,231,255,.14);
+      border-color: rgba(110,231,255,.70);
+    }
+
+    .hero{
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background: radial-gradient(700px 260px at 25% 0%, rgba(110,231,255,.12), transparent 55%),
+                  radial-gradient(700px 280px at 90% 20%, rgba(167,139,250,.14), transparent 55%);
+      pointer-events:none;
+      z-index:0;
+    }
+    .hero > *{ position: relative; z-index: 1; }
+
+    h2{
+      margin: 0 0 8px;
+      font-size: 30px;
+      letter-spacing: -.5px;
+      line-height: 1.15;
+    }
+    p{
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 15px;
+    }
+
+    .toolbar{
+      margin-top: 14px;
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items:center;
+    }
+
+    .search{
+      flex: 1 1 320px;
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(10,14,28,.55);
+      border-radius: 14px;
+      padding: 10px 12px;
+    }
+    .search svg{ width: 18px; height: 18px; opacity: .9; }
+    .search input{
+      width: 100%;
+      border: 0;
+      outline: none;
+      background: transparent;
+      color: var(--text);
+      font-size: 14px;
+    }
+    .search input::placeholder{ color: rgba(233,236,245,.45); }
+
+    .select{
+      flex: 0 0 auto;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(10,14,28,.55);
+      color: var(--text);
+      border-radius: 14px;
+      padding: 10px 12px;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .grid{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .card{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: 0 12px 34px rgba(0,0,0,.28);
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+      min-height: 140px;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,.24);
+      background: rgba(255,255,255,.06);
+    }
+
+    .badge{
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 650;
+      letter-spacing: .15px;
+    }
+
+    .title{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .title h3{
+      margin: 0;
+      font-size: 16px;
+      letter-spacing: .2px;
+      line-height: 1.2;
+    }
+    .ext{
+      opacity: .85;
+      font-size: 14px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.03);
+      border-radius: 12px;
+      padding: 8px 10px;
+    }
+
+    .desc{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+      flex: 1 1 auto;
+    }
+
+    .url{
+      font-size: 12px;
+      color: rgba(233,236,245,.55);
+      word-break: break-all;
+    }
+
+    footer{
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      color: var(--muted);
+      font-size: 12px;
+      display:flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 980px){
+      .grid{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 620px){
+      .grid{ grid-template-columns: 1fr; }
+      h2{ font-size: 26px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Amendola & Amendola</h1>
+          <small>Central de Links</small>
+        </div>
+      </div>
+
+      <nav aria-label="Menu">
+        <a class="chip" href="contato.html">Contato</a>
+        <a class="chip voltar" href="index.html">← Voltar</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Links úteis</h2>
+      <p>Use a busca e o filtro para encontrar rapidamente o que você precisa.</p>
+
+      <div class="toolbar">
+        <div class="search" role="search">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" opacity=".7"/>
+            <path d="M16.5 16.5 21 21" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+          <input id="q" type="search" placeholder="Buscar links (ex: suporte, sistema, webmail)..." />
+        </div>
+
+        <select id="cat" class="select" aria-label="Filtrar por categoria">
+          <option value="all" selected>Todas as categorias</option>
+          <option value="sistemas">Sistemas</option>
+          <option value="suporte">Suporte</option>
+          <option value="documentos">Documentos</option>
+          <option value="treinamento">Treinamento</option>
+          <option value="interno">Interno</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="grid" id="grid">
+      <a class="card" data-cat="sistemas" href="https://amendolaeamendola.ddns.net/" target="_blank" rel="noopener">
+        <div class="title">
+          <h3>Amendola TA</h3>
+          <span class="ext" aria-hidden="true">↗</span>
+        </div>
+        <p class="desc">Site de Upload.</p>
+      </a>
+
+      <a class="card" data-cat="sistemas" href="https://fiorilli.com.br/appsia8" target="_blank" rel="noopener">
+        <div class="title">
+          <h3>SIA8</h3>
+          <span class="ext" aria-hidden="true">↗</span>
+        </div>
+        <p class="desc">Download SIA8.</p>
+      </a>
+
+      <a class="card" data-cat="documentos" href="https://fiorilli.com.br/downloadfiles/" target="_blank" rel="noopener">
+        <div class="title">
+          <h3>Downloads Fiorilli</h3>
+          <span class="ext" aria-hidden="true">↗</span>
+        </div>
+        <p class="desc">Downloads Fiorilli</p>
+      </a>
+
+      <a class="card" data-cat="interno" href="http://webmail.amendolaeamendola.com.br/" target="_blank" rel="noopener">
+        <div class="title">
+          <h3>Webmail</h3>
+          <span class="ext" aria-hidden="true">↗</span>
+        </div>
+        <p class="desc">Acesso ao e-mail corporativo.</p>
+      </a>
+
+      <a class="card" data-cat="interno" href="https://amendola.flowdocs.com.br:2053/credentials/login" target="_blank" rel="noopener">
+        <div class="title">
+          <h3>Amendola FlowDocs</h3>
+          <span class="ext" aria-hidden="true">↗</span>
+        </div>
+        <p class="desc">Acesso ao Sistema FlowDocs</p>
+      </a>
+
+      <a class="card" data-cat="suporte" href="https://wa.me/551735579090" target="_blank" rel="noopener">
+        <div class="title">
+          <h3>WhatsApp do Suporte</h3>
+          <span class="ext" aria-hidden="true">↗</span>
+        </div>
+        <p class="desc">Fale com a equipe de suporte via Whatsapp.</p>
+      </a>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Amendola & Amendola. Todos os direitos reservados.</div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a class="chip" href="politicadeprivacidade.html">Política de Privacidade</a>
+        <a class="chip" href="politica-de-cookies.html">Política de Cookies</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Ano no rodapé
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Busca + filtro
+    const q = document.getElementById("q");
+    const cat = document.getElementById("cat");
+    const cards = [...document.querySelectorAll(".card")];
+
+    function normalize(str){
+      return (str || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+    }
+
+    function applyFilters(){
+      const text = normalize(q.value);
+      const c = cat.value;
+
+      cards.forEach(card => {
+        const hay = normalize(card.innerText);
+        const inText = !text || hay.includes(text);
+        const inCat = (c === "all") || (card.dataset.cat === c);
+
+        card.style.display = (inText && inCat) ? "" : "none";
+      });
+    }
+
+    q.addEventListener("input", applyFilters);
+    cat.addEventListener("change", applyFilters);
+
+    // Aplica uma vez ao carregar
+    applyFilters();
+  </script>
+</body>
+</html>
