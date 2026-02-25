@@ -1,97 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Amendola & Amendola - Central de Links</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/links.css">
-    <link rel="stylesheet" href="assets/css/cookies.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amendola & Amendola - Central de Links</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/links.css">
+  <link rel="stylesheet" href="assets/css/cookies.css">
 </head>
+
 <body>
-<div id="navbar"></div>
+  <div id="navbar"></div>
 
-    <div class="container">
-        <section class="about-amendola">
-            <h2>Central de Links</h2>
-            <p class="subtitle">Acesso rápido aos sistemas e suporte especializado.</p>
-            
-            <div class="links-toolbar">
-                <input type="text" id="searchInput" placeholder="Buscar ferramenta ou sistema...">
-                <select id="catFilter">
-                    <option value="all">Todas as Categorias</option>
-                    <option value="sistemas">Sistemas</option>
-                    <option value="interno">Interno</option>
-                    <option value="documentos">Arquivos</option>
-                    <option value="suporte">Suporte</option>
-                </select>
-            </div>
-        </section>
+  <div class="container">
+    <section class="about-amendola">
+      <h2>Central de Links</h2>
+      <p class="subtitle">Acesso rápido aos sistemas e suporte especializado.</p>
 
-        <main class="cards" id="linksGrid">
-            </main>
+      <div class="links-toolbar">
+        <input type="text" id="searchInput" placeholder="Buscar ferramenta ou sistema...">
+        <select id="catFilter">
+          <option value="all">Todas as Categorias</option>
+          <option value="sistemas">Sistemas</option>
+          <option value="interno">Interno</option>
+          <option value="documentos">Arquivos</option>
+          <option value="suporte">Suporte</option>
+        </select>
+      </div>
+    </section>
 
-        <div id="no-results" style="display:none; text-align:center; padding: 40px; opacity:0.5;">
-            <p>Nenhum resultado encontrado.</p>
-        </div>
+    <main class="cards" id="linksGrid">
+    </main>
+
+    <div id="no-results" style="display:none; text-align:center; padding: 40px; opacity:0.5;">
+      <p>Nenhum resultado encontrado.</p>
     </div>
+  </div>
 
-    <div id="footer-area"></div>
-    <div id="cookies-area"></div>
+  <div id="footer-area"></div>
+  <div id="cookies-area"></div>
 
-    <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
-    </a>
+  <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+  </a>
 
-    <script src="assets/components/loader.js"></script>
-    <script src="assets/navbar.js"></script>
-    <script src="assets/js/cookies.js"></script>
+  <script src="assets/components/loader.js"></script>
 
-    <script>
-        const linksData = [
-            { title: "Amendola TA", desc: "Upload e gestão de arquivos da Amendola.", url: "https://amendolaeamendola.ddns.net/", cat: "sistemas" },
-            { title: "SIA8 Fiorilli", desc: "Downloads e atualizações do sistema SIA8.", url: "https://fiorilli.com.br/appsia8", cat: "sistemas" },
-            { title: "Downloads Fiorilli", desc: "Arquivos de suporte e executáveis.", url: "https://fiorilli.com.br/downloadfiles/", cat: "documentos" },
-            { title: "Webmail", desc: "Acesso direto ao e-mail institucional.", url: "http://webmail.amendolaeamendola.com.br/", cat: "interno" },
-            { title: "Amendola FlowDocs", desc: "Gestão documental e fluxo de trabalho digital.", url: "https://amendola.flowdocs.com.br:2053/credentials/login", cat: "interno" },
-            { title: "Suporte WhatsApp", desc: "Fale com nossa equipe técnica.", url: "https://wa.me/551735579090", cat: "suporte" }
-        ];
+  <script src="assets/components/navbar.html"></script>
 
-        const grid = document.getElementById('linksGrid');
-        const searchInput = document.getElementById('searchInput');
-        const catFilter = document.getElementById('catFilter');
+  <script src="assets/js/cookies.js"></script>
 
-        function renderLinks() {
-            const query = searchInput.value.toLowerCase();
-            const category = catFilter.value;
-            grid.innerHTML = '';
-            let count = 0;
+  <script>
+    const linksData = [
+      { title: "Amendola TA", desc: "Upload e gestão de arquivos da Amendola.", url: "https://amendolaeamendola.ddns.net/", cat: "sistemas" },
+      { title: "SIA8 Fiorilli", desc: "Downloads e atualizações do sistema SIA8.", url: "https://fiorilli.com.br/appsia8", cat: "sistemas" },
+      { title: "Downloads Fiorilli", desc: "Arquivos de suporte e executáveis.", url: "https://fiorilli.com.br/downloadfiles/", cat: "documentos" },
+      { title: "Webmail", desc: "Acesso direto ao e-mail institucional.", url: "http://webmail.amendolaeamendola.com.br/", cat: "interno" },
+      { title: "Amendola FlowDocs", desc: "Gestão documental e fluxo de trabalho digital.", url: "https://amendola.flowdocs.com.br:2053/credentials/login", cat: "interno" },
+      { title: "Suporte WhatsApp", desc: "Fale com nossa equipe técnica.", url: "https://wa.me/551735579090", cat: "suporte" }
+    ];
 
-            linksData.forEach(link => {
-                const matchText = link.title.toLowerCase().includes(query) || link.desc.toLowerCase().includes(query);
-                const matchCat = category === 'all' || link.cat === category;
+    const grid = document.getElementById('linksGrid');
+    const searchInput = document.getElementById('searchInput');
+    const catFilter = document.getElementById('catFilter');
 
-                if (matchText && matchCat) {
-                    const card = document.createElement('a');
-                    card.className = 'card';
-                    card.href = link.url;
-                    card.target = '_blank';
-                    card.style.textDecoration = 'none';
-                    card.innerHTML = `
+    function renderLinks() {
+      const query = searchInput.value.toLowerCase();
+      const category = catFilter.value;
+      grid.innerHTML = '';
+      let count = 0;
+
+      linksData.forEach(link => {
+        const matchText = link.title.toLowerCase().includes(query) || link.desc.toLowerCase().includes(query);
+        const matchCat = category === 'all' || link.cat === category;
+
+        if (matchText && matchCat) {
+          const card = document.createElement('a');
+          card.className = 'card';
+          card.href = link.url;
+          card.target = '_blank';
+          card.style.textDecoration = 'none';
+          card.innerHTML = `
                         <div class="icon">${link.title.charAt(0)}</div>
                         <h3>${link.title}</h3>
                         <p>${link.desc}</p>
                     `;
-                    grid.appendChild(card);
-                    count++;
-                }
-            });
-            document.getElementById('no-results').style.display = count === 0 ? 'block' : 'none';
+          grid.appendChild(card);
+          count++;
         }
+      });
+      document.getElementById('no-results').style.display = count === 0 ? 'block' : 'none';
+    }
 
-        searchInput.addEventListener('input', renderLinks);
-        catFilter.addEventListener('change', renderLinks);
-        renderLinks();
-    </script>
+    searchInput.addEventListener('input', renderLinks);
+    catFilter.addEventListener('change', renderLinks);
+    renderLinks();
+  </script>
 </body>
+
 </html>
