@@ -262,8 +262,8 @@
             <!-- Item 1 -->
             <div class="timeline-item active" data-index="0">
                 <div class="content-card">
-                    <span class="year">2018</span>
-                    <h2 class="title">O Início</h2>
+                    <span class="year">1000 a.c</span>
+                    <h2 class="title">XXXXXXXXX</h2>
                     <p class="description">
                         Tudo começou com uma visão simples, mas audaciosa. 
                         Em um pequeno espaço, com uma equipe pequena, 
@@ -275,8 +275,8 @@
             <!-- Item 2 -->
             <div class="timeline-item" data-index="1">
                 <div class="content-card">
-                    <span class="year">2019</span>
-                    <h2 class="title">Primeiros Passos</h2>
+                    <span class="year">0000</span>
+                    <h2 class="title">XXXXXXXXX</h2>
                     <p class="description">
                         O primeiro ano foi de descobertas. Cada desafio superado 
                         nos ensinava algo novo. Aprendemos que o caminho para a 
@@ -288,8 +288,8 @@
             <!-- Item 3 -->
             <div class="timeline-item" data-index="2">
                 <div class="content-card">
-                    <span class="year">2020</span>
-                    <h2 class="title">Crescimento</h2>
+                    <span class="year">942</span>
+                    <h2 class="title">XXXXXXXXX</h2>
                     <p class="description">
                         Um ano de transformação. A equipe cresceu, as ideias 
                         amadureceram e começamos a ver o impacto real do nosso 
@@ -301,8 +301,8 @@
             <!-- Item 4 -->
             <div class="timeline-item" data-index="3">
                 <div class="content-card">
-                    <span class="year">2021</span>
-                    <h2 class="title">Reconhecimento</h2>
+                    <span class="year">1521</span>
+                    <h2 class="title">XXXXXXXX</h2>
                     <p class="description">
                         Fomos descobertos por quem mais importava: nossos usuários. 
                         O boca a boca se tornou nosso maior marketing. Histórias 
@@ -314,8 +314,8 @@
             <!-- Item 5 -->
             <div class="timeline-item" data-index="4">
                 <div class="content-card">
-                    <span class="year">2022</span>
-                    <h2 class="title">Inovação</h2>
+                    <span class="year">1827</span>
+                    <h2 class="title">XXXXX</h2>
                     <p class="description">
                         Investimos em pesquisa e desenvolvimento como nunca antes. 
                         Novas tecnologias foram incorporadas, processos foram 
@@ -327,8 +327,8 @@
             <!-- Item 6 -->
             <div class="timeline-item" data-index="5">
                 <div class="content-card">
-                    <span class="year">2023</span>
-                    <h2 class="title">Expansão</h2>
+                    <span class="year">2000</span>
+                    <h2 class="title">XXXXXXX</h2>
                     <p class="description">
                         As fronteiras se expandiram. O que começou local 
                         agora ressoa globalmente. Milhares de pessoas em 
@@ -340,8 +340,8 @@
             <!-- Item 7 -->
             <div class="timeline-item" data-index="6">
                 <div class="content-card">
-                    <span class="year">2024</span>
-                    <h2 class="title">O Presente</h2>
+                    <span class="year">2030</span>
+                    <h2 class="title">XXXXXXX</h2>
                     <p class="description">
                         Com mais de um milhão de usuários, olhamos para trás 
                         com orgulho e para frente com ainda mais entusiasmo. 
@@ -362,176 +362,142 @@
         </div>
     </div>
 
-    <script>
-        const items = document.querySelectorAll('.timeline-item');
-        const totalItems = items.length;
-        const point = document.getElementById('point');
-        const progressFill = document.getElementById('progressFill');
-        const indicatorsContainer = document.getElementById('indicators');
-        let currentIndex = 0;
-        let isAnimating = false;
-        let touchStartX = 0;
-        let touchStartY = 0;
-        let wheelTimeout = null;
-        let wheelDeltaAccumulator = 0;
-        let lastWheelTime = 0;
+<script>
+    const items = document.querySelectorAll('.timeline-item');
+    const totalItems = items.length;
+    const point = document.getElementById('point');
+    const progressFill = document.getElementById('progressFill');
+    const indicatorsContainer = document.getElementById('indicators');
+    
+    let currentIndex = 0;
+    let isAnimating = false;
+    let lastAnimationTime = 0;
+    const ANIMATION_DURATION = 600; // Tempo da transição CSS
 
-        // Criar indicadores
-        items.forEach((_, i) => {
-            const indicator = document.createElement('div');
-            indicator.classList.add('indicator');
-            if (i === 0) indicator.classList.add('active');
-            indicator.addEventListener('click', () => goToSlide(i));
-            indicatorsContainer.appendChild(indicator);
+    // Criar indicadores
+    items.forEach((_, i) => {
+        const indicator = document.createElement('div');
+        indicator.classList.add('indicator');
+        if (i === 0) indicator.classList.add('active');
+        indicator.addEventListener('click', () => goToSlide(i));
+        indicatorsContainer.appendChild(indicator);
+    });
+
+    const indicators = document.querySelectorAll('.indicator');
+
+    function updatePoint() {
+        const line = document.querySelector('.horizontal-line');
+        const lineWidth = line.offsetWidth;
+        const progress = currentIndex / (totalItems - 1);
+        const leftPosition = (lineWidth * 0.15) + (lineWidth * 0.7 * progress);
+        point.style.left = `${leftPosition}px`;
+    }
+
+    function updateProgressBar() {
+        const progress = ((currentIndex + 1) / totalItems) * 100;
+        progressFill.style.width = `${progress}%`;
+    }
+
+    function updateContent() {
+        isAnimating = true;
+        lastAnimationTime = Date.now();
+
+        items.forEach((item, index) => {
+            item.classList.remove('active', 'exit-left', 'exit-right');
+            if (index === currentIndex) {
+                item.classList.add('active');
+            } else if (index < currentIndex) {
+                item.classList.add('exit-left');
+            } else {
+                item.classList.add('exit-right');
+            }
         });
 
-        const indicators = document.querySelectorAll('.indicator');
+        indicators.forEach((ind, i) => {
+            ind.classList.toggle('active', i === currentIndex);
+        });
 
-        function updatePoint() {
-            const line = document.querySelector('.horizontal-line');
-            const lineWidth = line.offsetWidth;
-            const progress = currentIndex / (totalItems - 1);
-            const leftPosition = (lineWidth * 0.15) + (lineWidth * 0.7 * progress);
-            point.style.left = `${leftPosition}px`;
+        updatePoint();
+        updateProgressBar();
+
+        setTimeout(() => {
+            isAnimating = false;
+        }, ANIMATION_DURATION);
+    }
+
+    function goToSlide(index) {
+        if (index >= 0 && index < totalItems && index !== currentIndex && !isAnimating) {
+            currentIndex = index;
+            updateContent();
         }
+    }
 
-        function updateProgressBar() {
-            const progress = ((currentIndex + 1) / totalItems) * 100;
-            progressFill.style.width = `${progress}%`;
-        }
+    // Scroll do mouse - Simplificado para resposta imediata
+    window.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        
+        if (isAnimating) return;
 
-        function updateContent() {
-            if (isAnimating) return;
-            isAnimating = true;
-
-            items.forEach((item, index) => {
-                item.classList.remove('active', 'exit-left', 'exit-right');
-                
-                if (index === currentIndex) {
-                    item.classList.add('active');
-                } else if (index < currentIndex) {
-                    item.classList.add('exit-left');
-                } else {
-                    item.classList.add('exit-right');
+        // Sensibilidade: se o scroll for maior que 20px de deslocamento
+        if (Math.abs(e.deltaY) > 20) {
+            if (e.deltaY > 0) {
+                if (currentIndex < totalItems - 1) {
+                    currentIndex++;
+                    updateContent();
                 }
-            });
-
-            indicators.forEach((ind, i) => {
-                ind.classList.toggle('active', i === currentIndex);
-            });
-
-            updatePoint();
-            updateProgressBar();
-
-            setTimeout(() => {
-                isAnimating = false;
-            }, 600);
-        }
-
-        function goToSlide(index) {
-            if (index >= 0 && index < totalItems && !isAnimating) {
-                currentIndex = index;
-                updateContent();
+            } else {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateContent();
+                }
             }
         }
+    }, { passive: false });
 
-        function nextItem() {
+    // Teclas - Sem cooldown para ser instantâneo
+    document.addEventListener('keydown', (e) => {
+        if (isAnimating) return;
+
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
             if (currentIndex < totalItems - 1) {
                 currentIndex++;
                 updateContent();
             }
-        }
-
-        function prevItem() {
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
             if (currentIndex > 0) {
                 currentIndex--;
                 updateContent();
             }
         }
+    });
 
-        // Scroll do mouse (Desktop) - CORRIGIDO
-        window.addEventListener('wheel', (e) => {
-            e.preventDefault();
-            
-            const now = Date.now();
-            const timeDiff = now - lastWheelTime;
-            lastWheelTime = now;
-            
-            // Acumular delta
-            wheelDeltaAccumulator += e.deltaY;
-            
-            // Limpar timeout anterior
-            if (wheelTimeout) {
-                clearTimeout(wheelTimeout);
+    // Touch (Mobile) - Mantido mas simplificado
+    let touchStartY = 0;
+    let touchStartX = 0;
+
+    window.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    window.addEventListener('touchend', (e) => {
+        if (isAnimating) return;
+
+        const touchEndX = e.changedTouches[0].clientX;
+        const diffX = touchStartX - touchEndX;
+        
+        if (Math.abs(diffX) > 50) { // Swipe mínimo de 50px
+            if (diffX > 0) {
+                if (currentIndex < totalItems - 1) { currentIndex++; updateContent(); }
+            } else {
+                if (currentIndex > 0) { currentIndex--; updateContent(); }
             }
-            
-            // Processar após delay
-            wheelTimeout = setTimeout(() => {
-                // Threshold mais baixo para ser mais responsivo
-                const threshold = 20;
-                
-                if (wheelDeltaAccumulator > threshold && currentIndex < totalItems - 1) {
-                    nextItem();
-                    wheelDeltaAccumulator = 0;
-                } else if (wheelDeltaAccumulator < -threshold && currentIndex > 0) {
-                    prevItem();
-                    wheelDeltaAccumulator = 0;
-                } else {
-                    // Se não chegou no threshold, reseta
-                    wheelDeltaAccumulator = 0;
-                }
-            }, 30);
-        }, { passive: false });
+        }
+    }, { passive: true });
 
-        // Teclas (Desktop)
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-                nextItem();
-            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-                prevItem();
-            }
-        });
-
-        // Swipe horizontal (Mobile)
-        window.addEventListener('touchstart', (e) => {
-            touchStartX = e.touches[0].clientX;
-            touchStartY = e.touches[0].clientY;
-        }, { passive: true });
-
-        window.addEventListener('touchend', (e) => {
-            const touchEndX = e.changedTouches[0].clientX;
-            const touchEndY = e.changedTouches[0].clientY;
-            
-            const diffX = touchStartX - touchEndX;
-            const diffY = touchStartY - touchEndY;
-            
-            // Verificar se é swipe horizontal
-            const isHorizontalSwipe = Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40;
-            
-            if (isHorizontalSwipe) {
-                if (diffX > 0) {
-                    nextItem();
-                } else {
-                    prevItem();
-                }
-            }
-        }, { passive: true });
-
-        // Prevenir scroll vertical no mobile
-        document.body.addEventListener('touchmove', (e) => {
-            const touchX = e.touches[0].clientX;
-            const touchY = e.touches[0].clientY;
-            const diffX = Math.abs(touchX - touchStartX);
-            const diffY = Math.abs(touchY - touchStartY);
-            
-            if (diffX > diffY && diffX > 10) {
-                e.preventDefault();
-            }
-        }, { passive: false });
-
-        // Inicializar
-        updatePoint();
-        updateProgressBar();
-    </script>
+    // Inicializar
+    updatePoint();
+    updateProgressBar();
+</script>
 </body>
 </html>
