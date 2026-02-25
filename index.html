@@ -4,41 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amendola & Amendola - HOME</title>
-
-    <!-- Favicons -->
+    <script>
+(function () {
+  if (localStorage.getItem("darkMode") === "true") {
+    document.documentElement.classList.add("dark-mode");
+  }
+})();
+</script>
+    
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <link href="assets/img/logo-amendola-2.png" rel="icon">
-
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
           crossorigin="anonymous">
 
     <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/cookies.css" rel="stylesheet">
     
 </head>
 
 <body>
-      <div id="loader" class="loader">
-    <div class="dot-spinner">
-      <div class="dot-spinner__dot"></div>
-      <div class="dot-spinner__dot"></div>
-      <div class="dot-spinner__dot"></div>
-      <div class="dot-spinner__dot"></div>
-      <div class="dot-spinner__dot"></div>
-      <div class="dot-spinner__dot"></div>
-      <div class="dot-spinner__dot"></div>
-      <div class="dot-spinner__dot"></div>
-    </div>
-    <p class="loading-text">Carregando...</p>
-  </div>
-
-
-  
-
-  
-<div id="main-content" style="display:none;">
+    
+<div id="main-content">
     <div id="navbar"></div>
 
     <section class="about-amendola">
@@ -186,15 +173,8 @@
 <!-- Navbar -->
 <script src="assets/navbar.js"></script>
 
-<!-- Tradução -->
-<script src="assets/js/translate.js"></script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 <!-- Cookies -->
 <script src="assets/js/cookies.js"></script>
 
-
-
-</div>
 </body>
 </html>
