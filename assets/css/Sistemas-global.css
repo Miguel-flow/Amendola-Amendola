@@ -78,7 +78,7 @@
 }
 
 .accordion-item.active .accordion-content {
-    max-height: 1000px; /* Valor alto o suficiente */
+    max-height: 1000px;
     opacity: 1;
     padding-bottom: 30px;
 }
@@ -90,7 +90,6 @@
     margin-bottom: 20px;
 }
 
-/* Botão de Detalhes Modernizado */
 .details-btn {
     display: inline-flex;
     align-items: center;

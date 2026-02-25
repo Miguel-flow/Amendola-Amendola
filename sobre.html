@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linha do Tempo</title>
     <style>
+        #navbar {
+            position: relative;
+            z-index: 9999;
+            /* Valor alto para ficar sobre o wrapper fixed */
+            width: 100%;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -25,7 +35,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Container principal */
         .timeline-wrapper {
             position: fixed;
             top: 0;
@@ -39,7 +48,6 @@
             background: #faf8f5;
         }
 
-        /* Barra de progresso com gradiente laranja forte */
         .progress-track {
             position: fixed;
             top: 0;
@@ -57,7 +65,6 @@
             box-shadow: 0 0 10px rgba(255, 107, 0, 0.4);
         }
 
-        /* A linha horizontal */
         .horizontal-line {
             width: 50%;
             max-width: 500px;
@@ -67,7 +74,6 @@
             margin-bottom: 50px;
         }
 
-        /* O ponto indicador */
         .point {
             width: 12px;
             height: 12px;
@@ -80,7 +86,6 @@
             transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Container do conteúdo */
         .content-container {
             position: relative;
             width: 100%;
@@ -91,7 +96,6 @@
             align-items: center;
         }
 
-        /* Cada item da timeline */
         .timeline-item {
             position: absolute;
             width: 100%;
@@ -117,7 +121,6 @@
             transform: translateX(100px);
         }
 
-        /* Card de conteúdo */
         .content-card {
             text-align: center;
             padding: 0 50px;
@@ -151,7 +154,6 @@
             font-weight: 400;
         }
 
-        /* Container dos indicadores e hint */
         .controls-container {
             position: fixed;
             bottom: 40px;
@@ -163,7 +165,6 @@
             gap: 20px;
         }
 
-        /* Indicadores */
         .indicators {
             display: flex;
             gap: 8px;
@@ -184,7 +185,6 @@
             box-shadow: 0 0 10px rgba(255, 107, 0, 0.4);
         }
 
-        /* Hint de interação */
         .interaction-hint {
             color: rgba(255, 140, 0, 0.5);
             font-size: 0.7rem;
@@ -195,7 +195,7 @@
             gap: 10px;
         }
 
-        .interaction-hint .icon {
+        .interaction-hint .icon-sobre {
             width: 24px;
             height: 24px;
             border: 1px solid rgba(255, 140, 0, 0.3);
@@ -207,12 +207,12 @@
             color: #ff6b00;
         }
 
-        /* Animação de entrada */
         @keyframes appleFadeIn {
             from {
                 opacity: 0;
                 transform: translateY(8px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -223,32 +223,35 @@
             animation: appleFadeIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
 
-        /* Responsivo */
         @media (max-width: 768px) {
             .horizontal-line {
                 width: 65%;
                 margin-bottom: 40px;
             }
-            
+
             .content-container {
                 height: 260px;
             }
-            
+
             .content-card {
                 padding: 0 30px;
             }
-            
+
             .title {
                 font-size: 1.6rem;
             }
-            
+
             .description {
                 font-size: 1rem;
             }
         }
     </style>
 </head>
+
 <body>
+
+    <div id="navbar"></div>
+
     <div class="timeline-wrapper">
         <div class="progress-track">
             <div class="progress-fill" id="progressFill"></div>
@@ -257,7 +260,7 @@
         <div class="horizontal-line">
             <div class="point" id="point"></div>
         </div>
-        
+
         <div class="content-container">
             <!-- Item 1 -->
             <div class="timeline-item active" data-index="0">
@@ -265,8 +268,8 @@
                     <span class="year">1000 a.c</span>
                     <h2 class="title">XXXXXXXXX</h2>
                     <p class="description">
-                        Tudo começou com uma visão simples, mas audaciosa. 
-                        Em um pequeno espaço, com uma equipe pequena, 
+                        Tudo começou com uma visão simples, mas audaciosa.
+                        Em um pequeno espaço, com uma equipe pequena,
                         plantamos as sementes do que viria a se tornar algo extraordinário.
                     </p>
                 </div>
@@ -278,8 +281,8 @@
                     <span class="year">0000</span>
                     <h2 class="title">XXXXXXXXX</h2>
                     <p class="description">
-                        O primeiro ano foi de descobertas. Cada desafio superado 
-                        nos ensinava algo novo. Aprendemos que o caminho para a 
+                        O primeiro ano foi de descobertas. Cada desafio superado
+                        nos ensinava algo novo. Aprendemos que o caminho para a
                         excelência é construído passo a passo, com paciência e persistência.
                     </p>
                 </div>
@@ -291,8 +294,8 @@
                     <span class="year">942</span>
                     <h2 class="title">XXXXXXXXX</h2>
                     <p class="description">
-                        Um ano de transformação. A equipe cresceu, as ideias 
-                        amadureceram e começamos a ver o impacto real do nosso 
+                        Um ano de transformação. A equipe cresceu, as ideias
+                        amadureceram e começamos a ver o impacto real do nosso
                         trabalho na vida das pessoas. O reconhecimento veio naturalmente.
                     </p>
                 </div>
@@ -304,8 +307,8 @@
                     <span class="year">1521</span>
                     <h2 class="title">XXXXXXXX</h2>
                     <p class="description">
-                        Fomos descobertos por quem mais importava: nossos usuários. 
-                        O boca a boca se tornou nosso maior marketing. Histórias 
+                        Fomos descobertos por quem mais importava: nossos usuários.
+                        O boca a boca se tornou nosso maior marketing. Histórias
                         de sucesso começaram a surgir em diferentes partes do mundo.
                     </p>
                 </div>
@@ -317,8 +320,8 @@
                     <span class="year">1827</span>
                     <h2 class="title">XXXXX</h2>
                     <p class="description">
-                        Investimos em pesquisa e desenvolvimento como nunca antes. 
-                        Novas tecnologias foram incorporadas, processos foram 
+                        Investimos em pesquisa e desenvolvimento como nunca antes.
+                        Novas tecnologias foram incorporadas, processos foram
                         refinados e criamos soluções que redefiniram padrões da indústria.
                     </p>
                 </div>
@@ -330,8 +333,8 @@
                     <span class="year">2000</span>
                     <h2 class="title">XXXXXXX</h2>
                     <p class="description">
-                        As fronteiras se expandiram. O que começou local 
-                        agora ressoa globalmente. Milhares de pessoas em 
+                        As fronteiras se expandiram. O que começou local
+                        agora ressoa globalmente. Milhares de pessoas em
                         diferentes continentes agora fazem parte da nossa história.
                     </p>
                 </div>
@@ -343,9 +346,9 @@
                     <span class="year">2030</span>
                     <h2 class="title">XXXXXXX</h2>
                     <p class="description">
-                        Com mais de um milhão de usuários, olhamos para trás 
-                        com orgulho e para frente com ainda mais entusiasmo. 
-                        O melhor está por vir. Esta é apenas a primeira página 
+                        Com mais de um milhão de usuários, olhamos para trás
+                        com orgulho e para frente com ainda mais entusiasmo.
+                        O melhor está por vir. Esta é apenas a primeira página
                         de uma história que está apenas começando.
                     </p>
                 </div>
@@ -356,148 +359,154 @@
     <div class="controls-container">
         <div class="indicators" id="indicators"></div>
         <div class="interaction-hint">
-            <span class="icon">↓</span>
+            <span class="icon-sobre">↓</span>
             <span>role para navegar</span>
-            <span class="icon">→</span>
+            <span class="icon-sobre">→</span>
         </div>
     </div>
 
-<script>
-    const items = document.querySelectorAll('.timeline-item');
-    const totalItems = items.length;
-    const point = document.getElementById('point');
-    const progressFill = document.getElementById('progressFill');
-    const indicatorsContainer = document.getElementById('indicators');
-    
-    let currentIndex = 0;
-    let isAnimating = false;
-    let lastAnimationTime = 0;
-    const ANIMATION_DURATION = 600; // Tempo da transição CSS
+    <script>
+        const items = document.querySelectorAll('.timeline-item');
+        const totalItems = items.length;
+        const point = document.getElementById('point');
+        const progressFill = document.getElementById('progressFill');
+        const indicatorsContainer = document.getElementById('indicators');
 
-    // Criar indicadores
-    items.forEach((_, i) => {
-        const indicator = document.createElement('div');
-        indicator.classList.add('indicator');
-        if (i === 0) indicator.classList.add('active');
-        indicator.addEventListener('click', () => goToSlide(i));
-        indicatorsContainer.appendChild(indicator);
-    });
+        let currentIndex = 0;
+        let isAnimating = false;
+        let lastAnimationTime = 0;
+        const ANIMATION_DURATION = 600;
 
-    const indicators = document.querySelectorAll('.indicator');
-
-    function updatePoint() {
-        const line = document.querySelector('.horizontal-line');
-        const lineWidth = line.offsetWidth;
-        const progress = currentIndex / (totalItems - 1);
-        const leftPosition = (lineWidth * 0.15) + (lineWidth * 0.7 * progress);
-        point.style.left = `${leftPosition}px`;
-    }
-
-    function updateProgressBar() {
-        const progress = ((currentIndex + 1) / totalItems) * 100;
-        progressFill.style.width = `${progress}%`;
-    }
-
-    function updateContent() {
-        isAnimating = true;
-        lastAnimationTime = Date.now();
-
-        items.forEach((item, index) => {
-            item.classList.remove('active', 'exit-left', 'exit-right');
-            if (index === currentIndex) {
-                item.classList.add('active');
-            } else if (index < currentIndex) {
-                item.classList.add('exit-left');
-            } else {
-                item.classList.add('exit-right');
-            }
+        items.forEach((_, i) => {
+            const indicator = document.createElement('div');
+            indicator.classList.add('indicator');
+            if (i === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => goToSlide(i));
+            indicatorsContainer.appendChild(indicator);
         });
 
-        indicators.forEach((ind, i) => {
-            ind.classList.toggle('active', i === currentIndex);
-        });
+        const indicators = document.querySelectorAll('.indicator');
 
-        updatePoint();
-        updateProgressBar();
-
-        setTimeout(() => {
-            isAnimating = false;
-        }, ANIMATION_DURATION);
-    }
-
-    function goToSlide(index) {
-        if (index >= 0 && index < totalItems && index !== currentIndex && !isAnimating) {
-            currentIndex = index;
-            updateContent();
+        function updatePoint() {
+            const line = document.querySelector('.horizontal-line');
+            const lineWidth = line.offsetWidth;
+            const progress = currentIndex / (totalItems - 1);
+            const leftPosition = (lineWidth * 0.15) + (lineWidth * 0.7 * progress);
+            point.style.left = `${leftPosition}px`;
         }
-    }
 
-    // Scroll do mouse - Simplificado para resposta imediata
-    window.addEventListener('wheel', (e) => {
-        e.preventDefault();
-        
-        if (isAnimating) return;
+        function updateProgressBar() {
+            const progress = ((currentIndex + 1) / totalItems) * 100;
+            progressFill.style.width = `${progress}%`;
+        }
 
-        // Sensibilidade: se o scroll for maior que 20px de deslocamento
-        if (Math.abs(e.deltaY) > 20) {
-            if (e.deltaY > 0) {
+        function updateContent() {
+            isAnimating = true;
+            lastAnimationTime = Date.now();
+
+            items.forEach((item, index) => {
+                item.classList.remove('active', 'exit-left', 'exit-right');
+                if (index === currentIndex) {
+                    item.classList.add('active');
+                } else if (index < currentIndex) {
+                    item.classList.add('exit-left');
+                } else {
+                    item.classList.add('exit-right');
+                }
+            });
+
+            indicators.forEach((ind, i) => {
+                ind.classList.toggle('active', i === currentIndex);
+            });
+
+            updatePoint();
+            updateProgressBar();
+
+            setTimeout(() => {
+                isAnimating = false;
+            }, ANIMATION_DURATION);
+        }
+
+        function goToSlide(index) {
+            if (index >= 0 && index < totalItems && index !== currentIndex && !isAnimating) {
+                currentIndex = index;
+                updateContent();
+            }
+        }
+
+        window.addEventListener('wheel', (e) => {
+            e.preventDefault();
+
+            if (isAnimating) return;
+
+            if (Math.abs(e.deltaY) > 20) {
+                if (e.deltaY > 0) {
+                    if (currentIndex < totalItems - 1) {
+                        currentIndex++;
+                        updateContent();
+                    }
+                } else {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updateContent();
+                    }
+                }
+            }
+        }, { passive: false });
+
+        document.addEventListener('keydown', (e) => {
+            if (isAnimating) return;
+
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
                 if (currentIndex < totalItems - 1) {
                     currentIndex++;
                     updateContent();
                 }
-            } else {
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
                 if (currentIndex > 0) {
                     currentIndex--;
                     updateContent();
                 }
             }
-        }
-    }, { passive: false });
+        });
 
-    // Teclas - Sem cooldown para ser instantâneo
-    document.addEventListener('keydown', (e) => {
-        if (isAnimating) return;
+        let touchStartY = 0;
+        let touchStartX = 0;
 
-        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-            if (currentIndex < totalItems - 1) {
-                currentIndex++;
-                updateContent();
+        window.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+
+        window.addEventListener('touchend', (e) => {
+            if (isAnimating) return;
+
+            const touchEndX = e.changedTouches[0].clientX;
+            const diffX = touchStartX - touchEndX;
+
+            if (Math.abs(diffX) > 50) {
+                if (diffX > 0) {
+                    if (currentIndex < totalItems - 1) { currentIndex++; updateContent(); }
+                } else {
+                    if (currentIndex > 0) { currentIndex--; updateContent(); }
+                }
             }
-        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateContent();
-            }
-        }
-    });
+        }, { passive: true });
 
-    // Touch (Mobile) - Mantido mas simplificado
-    let touchStartY = 0;
-    let touchStartX = 0;
+        updatePoint();
+        updateProgressBar();
+    </script>
 
-    window.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-        touchStartY = e.touches[0].clientY;
-    }, { passive: true });
 
-    window.addEventListener('touchend', (e) => {
-        if (isAnimating) return;
+    <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg">
+    </a>
 
-        const touchEndX = e.changedTouches[0].clientX;
-        const diffX = touchStartX - touchEndX;
-        
-        if (Math.abs(diffX) > 50) { // Swipe mínimo de 50px
-            if (diffX > 0) {
-                if (currentIndex < totalItems - 1) { currentIndex++; updateContent(); }
-            } else {
-                if (currentIndex > 0) { currentIndex--; updateContent(); }
-            }
-        }
-    }, { passive: true });
+    <script src="assets/components/loader.js"></script>
 
-    // Inicializar
-    updatePoint();
-    updateProgressBar();
-</script>
+    <script src="assets/navbar.js"></script>
+
+    <script src="assets/js/cookies.js"></script>
 </body>
+
 </html>
