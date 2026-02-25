@@ -5,331 +5,222 @@
   <link href="assets/img/logo-amendola-2.png" rel="icon">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amendola & Amendola - Equipe Flowdocs</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Equipe Flowdocs — Design & Engenharia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link href="assets/img/logo-amendola-2.png" rel="icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equipe Flowdocs — Design & Engenharia</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root {
-      --accent: #FD7A02;
-      --bg1: #0b0b0b;
-      --bg2: #161616;
-      --card: #141414;
-      --muted: rgba(255, 255, 255, .72);
-      --muted2: rgba(255, 255, 255, .55);
+      --bg: #F5F5F7;
+      --bg-card: rgba(255, 255, 255, 0.8);
+      --text: #1D1D1F;
+      --text-secondary: #86868B;
+      --orange: #FD7A02;
+      --icon-bg: rgba(253, 122, 2, 0.1);
+      --border: rgba(0, 0, 0, 0.08);
+      --nav-bg: rgba(245, 245, 247, 0.7);
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+      --pill-bg: #1D1D1F;
+      --pill-text: #FFFFFF;
+    }
+
+    html.dark-mode {
+      --bg: #000000;
+      --bg-card: #1C1C1E;
+      --text: #F5F5F7;
+      --text-secondary: #A1A1A6;
+      --orange: #FF9F0A; 
+      --icon-bg: rgba(255, 159, 10, 0.15);
+      --border: rgba(255, 255, 255, 0.1);
+      --nav-bg: rgba(0, 0, 0, 0.75);
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      --pill-bg: #FFFFFF;
+      --pill-text: #000000;
     }
 
     * {
       box-sizing: border-box;
+      transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+      -webkit-font-smoothing: antialiased;
     }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: #fff;
-      background: radial-gradient(1200px 600px at 30% 10%, rgba(253, 122, 2, .18), transparent 60%),
-        radial-gradient(900px 500px at 80% 30%, rgba(199, 21, 133, .16), transparent 55%),
-        linear-gradient(135deg, var(--bg1), var(--bg2));
-      overflow-x: hidden;
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(10px);
-      background: rgba(0, 0, 0, .55);
-      border-bottom: 1px solid rgba(255, 255, 255, .06);
-    }
-
-    .topbar-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 14px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      letter-spacing: .3px;
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 16px rgba(253, 122, 2, .7);
-    }
-
-    .btn-back {
-      text-decoration: none;
-      color: #fff;
-      background: rgba(255, 255, 255, .08);
-      border: 1px solid rgba(255, 255, 255, .10);
-      padding: 10px 14px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 700;
-      transition: .25s ease;
-    }
-
-    .btn-back:hover {
-      transform: translateY(-1px);
-      background: rgba(255, 255, 255, .12);
+      font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.47;
     }
 
     .hero {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 70px 18px 10px;
+      padding: 120px 22px 60px;
       text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .hero h1 {
-      margin: 0;
-      font-size: clamp(34px, 4vw, 52px);
-      font-weight: 900;
-    }
-
-    .hero h1 span {
-      color: var(--accent);
-      text-shadow: 0 0 18px rgba(253, 122, 2, .35);
-    }
-
-    .hero p {
-      margin: 14px auto 0;
-      max-width: 720px;
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 16px;
-    }
-
-    .grid {
-      max-width: 1100px;
-      margin: 34px auto 70px;
-      padding: 0 18px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    @media (max-width: 980px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 520px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .card {
-      position: relative;
-      background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .03));
-      border: 1px solid rgba(255, 255, 255, .08);
-      border-radius: 18px;
-      padding: 22px;
-      overflow: hidden;
-      transition: transform .25s ease;
-      min-height: 210px;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: -80px;
-      background: radial-gradient(circle at 20% 20%, rgba(253, 122, 2, .18), transparent 50%),
-        radial-gradient(circle at 80% 30%, rgba(199, 21, 133, .14), transparent 55%);
-      opacity: .75;
-      pointer-events: none;
-      transition: .25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-8px) scale(1.02);
-    }
-
-    .card:hover::before {
-      opacity: 1;
-    }
-
-    .avatar {
-      width: 74px;
-      height: 74px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      letter-spacing: .5px;
-      background: linear-gradient(135deg, var(--accent), #ffb066);
-      box-shadow: 0 10px 30px rgba(253, 122, 2, .25);
-      margin-bottom: 14px;
-    }
-
-    .name {
-      position: relative;
-      margin: 0 0 4px 0;
-      font-size: 18px;
-      font-weight: 900;
-    }
-
-    .role {
-      position: relative;
-      margin: 0 0 10px 0;
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: var(--icon-bg);
+      border-radius: 99px;
       font-size: 12px;
-      letter-spacing: 1.4px;
-      color: rgba(253, 122, 2, .95);
-      font-weight: 800;
+      font-weight: 600;
+      color: var(--orange);
+      margin-bottom: 24px;
+      letter-spacing: 1px;
       text-transform: uppercase;
     }
 
-    .desc {
-      position: relative;
-      margin: 0;
-      color: var(--muted2);
-      line-height: 1.55;
-      font-size: 14px;
+    .hero h1 {
+      font-size: clamp(40px, 8vw, 64px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 20px;
     }
 
-    .signature {
+    .hero p {
+      font-size: clamp(18px, 3vw, 24px);
+      color: var(--text-secondary);
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .team-section {
       max-width: 1100px;
-      margin: 0 auto 30px;
-      padding: 0 18px;
+      margin: 0 auto 80px;
+      padding: 0 22px;
     }
 
-    .signature-box {
-      border-radius: 18px;
-      padding: 18px;
-      border: 1px solid rgba(255, 255, 255, .08);
-      background: rgba(0, 0, 0, .35);
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 28px; /* Apple Squircle */
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--orange);
+    }
+
+    .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: var(--bg);
+      color: var(--text);
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0 auto 24px;
+      border: 1px solid var(--border);
     }
 
-    .signature-box b {
-      color: #fff;
+    .name { font-size: 20px; font-weight: 600; margin: 0 0 8px; }
+
+
+    /* --- Footer Signature --- */
+    .signature {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      padding: 80px 22px;
+      text-align: center;
     }
 
-    .signature-box span {
-      color: var(--muted);
-    }
+    .signature h2 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+    .signature p { color: var(--text-secondary); margin-bottom: 32px; font-size: 18px; }
 
-    .pill {
+    .btn-back-pill {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(253, 122, 2, .14);
-      border: 1px solid rgba(253, 122, 2, .25);
-      color: #fff;
-      font-weight: 800;
+      gap: 12px;
+      padding: 14px 32px;
+      background: var(--pill-bg);
+      color: var(--pill-text);
+      border-radius: 99px;
       text-decoration: none;
-      transition: .25s ease;
-    }
-
-    .pill:hover {
-      transform: translateY(-1px);
-      background: rgba(253, 122, 2, .20);
+      font-weight: 600;
+      font-size: 16px;
     }
 
     footer {
+      padding: 40px 22px;
       text-align: center;
-      padding: 22px 16px 30px;
-      color: rgba(255, 255, 255, .45);
-      font-size: 13px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      background: var(--bg);
     }
   </style>
 </head>
 
 <body>
 
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="brand">
-        <span class="dot"></span>
-        <span>Equipe Flowdocs</span>
+  <header class="hero">
+    <div class="hero-badge">The Creators</div>
+    <h1>O código por trás da experiência.</h1>
+    <p>Conheça as pessoas que projetaram e desenvolveram cada detalhe deste ecossistema.</p>
+  </header>
+
+  <main class="team-section">
+    <div class="grid">
+      <div class="card">
+        <div class="avatar">MA</div>
+        <h3 class="name">Miguel Amendola Assad</h3>
       </div>
 
-      <a class="btn-back" href="index.html">
-        <i class="fa-solid fa-arrow-left"></i> Voltar ao site
-      </a>
-    </div>
-  </div>
+      <div class="card">
+        <div class="avatar">LA</div>
+        <h3 class="name">Leonardo Amendola Alves</h3>
+      </div>
 
-  <section class="hero">
-    <h1>Quem fez este site? <span>Equipe Flowdocs</span>.</h1>
-    <p>
-      Um site não é só layout: é performance, segurança, experiência e cuidado.
-      Aqui está a equipe que construiu esta página com atenção aos detalhes.
-    </p>
-  </section>
+      <div class="card">
+        <div class="avatar">VH</div>
+        <h3 class="name">Victor Hugo Ellebroke</h3>
+      </div>
 
-  <section class="grid">
-    <div class="card">
-      <div class="avatar">MA</div>
-      <h3 class="name">Miguel Amendola Assad</h3>
-      <div class="role">Desenvolvimento</div>
-      <p class="desc">
-      </p>
+      <div class="card">
+        <div class="avatar">FI</div>
+        <h3 class="name">Flavio de Oliveira Mendes</h3>
+      </div>
     </div>
-
-    <div class="card">
-      <div class="avatar">LA</div>
-      <h3 class="name">Leonardo Amendola Alves</h3>
-      <div class="role">Desenvolvimento</div>
-      <p class="desc">
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="avatar">VH</div>
-      <h3 class="name">Victor Hugo de Souza Ellebroke</h3>
-      <div class="role">Desenvolvimento</div>
-      <p class="desc">
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="avatar">FI</div>
-      <h3 class="name">Flavio de Oliveira Izique Mendes</h3>
-      <div class="role">Desenvolvimento</div>
-      <p class="desc">
-      </p>
-    </div>
-  </section>
+  </main>
 
   <section class="signature">
-    <div class="signature-box">
-      <div>
-        <b>Desenvolvido com foco em qualidade</b><br>
-        <span>Design • Código • Detalhes • Evolução contínua</span>
-      </div>
-
-      <a class="pill" href="index.html">
-        <i class="fa-solid fa-house"></i> Voltar
-      </a>
-    </div>
+    <h2>Foco no que importa.</h2>
+    <p>Criamos ferramentas para que você possa focar no seu negócio.</p>
+    <a class="btn-back-pill" href="index.html">
+      <i class="fa-solid fa-arrow-left"></i> Voltar à Home
+    </a>
   </section>
 
-  <footer>
-    © 2026 • Equipe Flowdocs • Todos os direitos reservados
-  </footer>
+</body>
 
+</html>
+            <div id="footer-area"></div>
+  <script src="assets/components/loader.js"></script>
 </body>
 
 </html>

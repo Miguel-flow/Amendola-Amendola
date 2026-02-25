@@ -1,507 +1,280 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linha do Tempo</title>
+    <meta charset="UTF-8"><link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Linha do Tempo | Flowdocs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
     <style>
-        #navbar {
-            position: relative;
-            z-index: 9999;
-            width: 100%;
+        /* =========================================
+           🎨 VARIÁVEIS (APPLE STYLE)
+           ========================================= */
+        :root {
+            --bg: #F5F5F7;
+            --bg-card: rgba(255, 255, 255, 0.7);
+            --text: #1D1D1F;
+            --text-secondary: #86868B;
+            --orange: #FD7A02;
+            --icon-bg: rgba(253, 122, 2, 0.1);
+            --border: rgba(0, 0, 0, 0.08);
+            --nav-bg: rgba(245, 245, 247, 0.7);
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        html.dark-mode {
+            --bg: #000000;
+            --bg-card: #1C1C1E;
+            --text: #F5F5F7;
+            --text-secondary: #A1A1A6;
+            --orange: #FF9F0A; 
+            --border: rgba(255, 255, 255, 0.1);
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
         }
 
-        html {
-            overflow: hidden;
-        }
-
+        /* =========================================
+           🛠️ RESET E BASE
+           ========================================= */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif; }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background-color: #faf8f5;
-            color: #1d1d1f;
-            overflow: hidden;
-            height: 100vh;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .timeline-wrapper {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
+            background-color: var(--bg);
+            color: var(--text);
+            overflow: hidden; 
+            height: 100dvh; 
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: #faf8f5;
+            transition: background-color 0.4s ease, color 0.4s ease;
         }
 
-        .progress-track {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: rgba(255, 140, 0, 0.15);
-        }
+        #navbar { position: fixed; top: 0; width: 100%; z-index: 9999; }
+        #footer-area { position: fixed; bottom: 0; width: 100%; z-index: 9999; }
 
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #ff6b00, #ff8c00, #ff9500);
-            width: 0%;
-            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 0 10px rgba(255, 107, 0, 0.4);
-        }
-
-        .horizontal-line {
-            width: 50%;
-            max-width: 500px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, rgba(255, 140, 0, 0.3), transparent);
+        /* =========================================
+           ⏳ LINHA DO TEMPO
+           ========================================= */
+        .main-container {
+            flex: 1;
             position: relative;
-            margin-bottom: 50px;
-        }
-
-        .point {
-            width: 12px;
-            height: 12px;
-            background: linear-gradient(135deg, #ff6b00, #ff9500);
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            box-shadow: 0 0 20px rgba(255, 107, 0, 0.6), 0 0 40px rgba(255, 140, 0, 0.3);
-            transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .content-container {
-            position: relative;
-            width: 100%;
-            max-width: 700px;
-            height: 280px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .timeline-item {
-            position: absolute;
-            width: 100%;
-            opacity: 0;
-            transform: translateX(100px);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            pointer-events: none;
-        }
-
-        .timeline-item.active {
-            opacity: 1;
-            transform: translateX(0);
-            pointer-events: auto;
-        }
-
-        .timeline-item.exit-left {
-            opacity: 0;
-            transform: translateX(-100px);
-        }
-
-        .timeline-item.exit-right {
-            opacity: 0;
-            transform: translateX(100px);
-        }
-
-        .content-card {
-            text-align: center;
-            padding: 0 50px;
-        }
-
-        .year {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #ff6b00;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            margin-bottom: 14px;
-            display: block;
-        }
-
-        .title {
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
-            font-weight: 600;
-            color: #1d1d1f;
-            margin-bottom: 16px;
-            line-height: 1.15;
-            letter-spacing: -0.02em;
-        }
-
-        .description {
-            font-size: 1.1rem;
-            line-height: 1.65;
-            color: #6e6e73;
-            max-width: 480px;
-            margin: 0 auto;
-            font-weight: 400;
-        }
-
-        .controls-container {
-            position: fixed;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
-        }
-
-        .indicators {
-            display: flex;
-            gap: 8px;
-        }
-
-        .indicator {
-            width: 6px;
-            height: 6px;
-            background: rgba(255, 140, 0, 0.2);
-            border-radius: 3px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-        }
-
-        .indicator.active {
-            width: 28px;
-            background: linear-gradient(90deg, #ff6b00, #ff9500);
-            box-shadow: 0 0 10px rgba(255, 107, 0, 0.4);
-        }
-
-        .interaction-hint {
-            color: rgba(255, 140, 0, 0.5);
-            font-size: 0.7rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .interaction-hint .icon-sobre {
-            width: 24px;
-            height: 24px;
-            border: 1px solid rgba(255, 140, 0, 0.3);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 0.6rem;
-            color: #ff6b00;
+            padding-top: 60px; /* Compensa a nav */
+            padding-bottom: 60px; /* Ajuda a centralizar melhor fugindo do footer */
         }
 
-        @keyframes appleFadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(8px);
-            }
+        .progress-bar-top { position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--border); }
+        .progress-fill-top { height: 100%; width: 0%; background: var(--orange); transition: width 0.5s ease-out; }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .timeline-line {
+            width: 80%; max-width: 500px; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            position: relative; margin-bottom: 40px;
+        }
+        .timeline-dot {
+            position: absolute; top: 50%; left: 0%; transform: translate(-50%, -50%);
+            width: 14px; height: 14px; border-radius: 50%;
+            background: var(--orange); box-shadow: 0 0 15px var(--orange);
+            transition: left 0.6s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
-        .timeline-item.active .content-card {
-            animation: appleFadeIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        .cards-area {
+            position: relative; width: 100%; max-width: 700px;
+            height: 320px; display: flex; justify-content: center; align-items: center;
         }
 
+        .card-item {
+            position: absolute; width: 90%; max-width: 600px;
+            opacity: 0; pointer-events: none; transform: translateX(50px);
+            transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            background: var(--bg-card); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--border); border-radius: 24px;
+            padding: 40px; text-align: center; box-shadow: var(--shadow);
+        }
+
+        .card-item.active { opacity: 1; pointer-events: auto; transform: translateX(0); }
+        .card-item.exiting { transform: translateX(-50px); }
+
+        .card-year { font-size: 14px; font-weight: 700; color: var(--orange); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; display: block; }
+        .card-title { font-size: clamp(24px, 5vw, 36px); font-weight: 700; margin-bottom: 15px; }
+        .card-desc { font-size: 16px; line-height: 1.6; color: var(--text-secondary); }
+
+        /* =========================================
+           🎮 CONTROLES
+           ========================================= */
+        .controls {
+            position: absolute; 
+            bottom: 90px; /* Distância padrão para PC */
+            display: flex; flex-direction: column; align-items: center; gap: 15px;
+        }
+
+        .dots { display: flex; gap: 8px; }
+        .dot { width: 30px; height: 6px; background: var(--border); border-radius: 4px; overflow: hidden; position: relative; cursor: pointer; }
+        .dot-fill { position: absolute; top: 0; left: 0; height: 100%; width: 0%; background: var(--orange); }
+
+        .hint { font-size: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 8px; }
+
+        .whatsapp-btn {
+            position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px;
+            background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 10000; text-decoration: none; color: white; font-size: 24px;
+        }
+
+        /* 📱 AJUSTES ESPECÍFICOS PARA CELULAR */
         @media (max-width: 768px) {
-            .horizontal-line {
-                width: 65%;
-                margin-bottom: 40px;
+            .controls {
+                /* Empurra os controles bem mais para cima no celular para não bater no footer */
+                bottom: 140px; 
             }
-
-            .content-container {
-                height: 260px;
+            .cards-area {
+                height: 350px; /* Dá um pouco mais de espaço pro texto no mobile */
+                align-items: flex-start; /* Joga os cards um pouco mais pra cima */
             }
-
-            .content-card {
-                padding: 0 30px;
+            .card-item {
+                padding: 30px 20px; /* Ajusta o padding interno pro celular */
             }
-
-            .title {
-                font-size: 1.6rem;
-            }
-
-            .description {
-                font-size: 1rem;
+            .whatsapp-btn {
+                bottom: 80px; /* Sobe o WhatsApp também para não colar no footer */
             }
         }
     </style>
 </head>
-
 <body>
 
     <div id="navbar"></div>
 
-    <div class="timeline-wrapper">
-        <div class="progress-track">
-            <div class="progress-fill" id="progressFill"></div>
+    <div class="main-container">
+        <div class="progress-bar-top"><div class="progress-fill-top" id="topProgress"></div></div>
+
+        <div class="timeline-line">
+            <div class="timeline-dot" id="dot"></div>
         </div>
 
-        <div class="horizontal-line">
-            <div class="point" id="point"></div>
+        <div class="cards-area">
+            <div class="card-item active">
+                <span class="card-year">1000 a.c</span>
+                <h2 class="card-title">A Origem</h2>
+                <p class="card-desc">Tudo começou com uma visão simples, mas audaciosa. Em um pequeno espaço, plantamos as sementes do que viria a se tornar algo extraordinário.</p>
+            </div>
+            <div class="card-item">
+                <span class="card-year">2020</span>
+                <h2 class="card-title">A Fundação</h2>
+                <p class="card-desc">O primeiro ano foi de descobertas. Aprendemos que o caminho para a excelência é construído passo a passo, com paciência e persistência.</p>
+            </div>
+            <div class="card-item">
+                <span class="card-year">2026</span>
+                <h2 class="card-title">O Futuro</h2>
+                <p class="card-desc">O reconhecimento veio naturalmente. A equipe cresceu, as ideias amadureceram e o impacto real do nosso trabalho transformou negócios.</p>
+            </div>
         </div>
 
-        <div class="content-container">
-            <!-- Item 1 -->
-            <div class="timeline-item active" data-index="0">
-                <div class="content-card">
-                    <span class="year">1000 a.c</span>
-                    <h2 class="title">XXXXXXXXX</h2>
-                    <p class="description">
-                        Tudo começou com uma visão simples, mas audaciosa.
-                        Em um pequeno espaço, com uma equipe pequena,
-                        plantamos as sementes do que viria a se tornar algo extraordinário.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Item 2 -->
-            <div class="timeline-item" data-index="1">
-                <div class="content-card">
-                    <span class="year">0000</span>
-                    <h2 class="title">XXXXXXXXX</h2>
-                    <p class="description">
-                        O primeiro ano foi de descobertas. Cada desafio superado
-                        nos ensinava algo novo. Aprendemos que o caminho para a
-                        excelência é construído passo a passo, com paciência e persistência.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="timeline-item" data-index="2">
-                <div class="content-card">
-                    <span class="year">942</span>
-                    <h2 class="title">XXXXXXXXX</h2>
-                    <p class="description">
-                        Um ano de transformação. A equipe cresceu, as ideias
-                        amadureceram e começamos a ver o impacto real do nosso
-                        trabalho na vida das pessoas. O reconhecimento veio naturalmente.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Item 4 -->
-            <div class="timeline-item" data-index="3">
-                <div class="content-card">
-                    <span class="year">1521</span>
-                    <h2 class="title">XXXXXXXX</h2>
-                    <p class="description">
-                        Fomos descobertos por quem mais importava: nossos usuários.
-                        O boca a boca se tornou nosso maior marketing. Histórias
-                        de sucesso começaram a surgir em diferentes partes do mundo.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Item 5 -->
-            <div class="timeline-item" data-index="4">
-                <div class="content-card">
-                    <span class="year">1827</span>
-                    <h2 class="title">XXXXX</h2>
-                    <p class="description">
-                        Investimos em pesquisa e desenvolvimento como nunca antes.
-                        Novas tecnologias foram incorporadas, processos foram
-                        refinados e criamos soluções que redefiniram padrões da indústria.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Item 6 -->
-            <div class="timeline-item" data-index="5">
-                <div class="content-card">
-                    <span class="year">2000</span>
-                    <h2 class="title">XXXXXXX</h2>
-                    <p class="description">
-                        As fronteiras se expandiram. O que começou local
-                        agora ressoa globalmente. Milhares de pessoas em
-                        diferentes continentes agora fazem parte da nossa história.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Item 7 -->
-            <div class="timeline-item" data-index="6">
-                <div class="content-card">
-                    <span class="year">2030</span>
-                    <h2 class="title">XXXXXXX</h2>
-                    <p class="description">
-                        Com mais de um milhão de usuários, olhamos para trás
-                        com orgulho e para frente com ainda mais entusiasmo.
-                        O melhor está por vir. Esta é apenas a primeira página
-                        de uma história que está apenas começando.
-                    </p>
-                </div>
+        <div class="controls">
+            <div class="dots" id="dotsContainer"></div>
+            <div class="hint" id="interactionHint">
+                <i class="fa-solid fa-mouse"></i> <span id="hintText">Role para navegar</span>
             </div>
         </div>
     </div>
 
-    <div class="controls-container">
-        <div class="indicators" id="indicators"></div>
-        <div class="interaction-hint">
-            <span class="icon-sobre">↓</span>
-            <span>role para navegar</span>
-            <span class="icon-sobre">→</span>
-        </div>
-    </div>
+    <div id="footer-area"></div>
 
-    <script>
-        const items = document.querySelectorAll('.timeline-item');
-        const totalItems = items.length;
-        const point = document.getElementById('point');
-        const progressFill = document.getElementById('progressFill');
-        const indicatorsContainer = document.getElementById('indicators');
-
-        let currentIndex = 0;
-        let isAnimating = false;
-        let lastAnimationTime = 0;
-        const ANIMATION_DURATION = 600;
-
-        items.forEach((_, i) => {
-            const indicator = document.createElement('div');
-            indicator.classList.add('indicator');
-            if (i === 0) indicator.classList.add('active');
-            indicator.addEventListener('click', () => goToSlide(i));
-            indicatorsContainer.appendChild(indicator);
-        });
-
-        const indicators = document.querySelectorAll('.indicator');
-
-        function updatePoint() {
-            const line = document.querySelector('.horizontal-line');
-            const lineWidth = line.offsetWidth;
-            const progress = currentIndex / (totalItems - 1);
-            const leftPosition = (lineWidth * 0.15) + (lineWidth * 0.7 * progress);
-            point.style.left = `${leftPosition}px`;
-        }
-
-        function updateProgressBar() {
-            const progress = ((currentIndex + 1) / totalItems) * 100;
-            progressFill.style.width = `${progress}%`;
-        }
-
-        function updateContent() {
-            isAnimating = true;
-            lastAnimationTime = Date.now();
-
-            items.forEach((item, index) => {
-                item.classList.remove('active', 'exit-left', 'exit-right');
-                if (index === currentIndex) {
-                    item.classList.add('active');
-                } else if (index < currentIndex) {
-                    item.classList.add('exit-left');
-                } else {
-                    item.classList.add('exit-right');
-                }
-            });
-
-            indicators.forEach((ind, i) => {
-                ind.classList.toggle('active', i === currentIndex);
-            });
-
-            updatePoint();
-            updateProgressBar();
-
-            setTimeout(() => {
-                isAnimating = false;
-            }, ANIMATION_DURATION);
-        }
-
-        function goToSlide(index) {
-            if (index >= 0 && index < totalItems && index !== currentIndex && !isAnimating) {
-                currentIndex = index;
-                updateContent();
-            }
-        }
-
-        window.addEventListener('wheel', (e) => {
-            e.preventDefault();
-
-            if (isAnimating) return;
-
-            if (Math.abs(e.deltaY) > 20) {
-                if (e.deltaY > 0) {
-                    if (currentIndex < totalItems - 1) {
-                        currentIndex++;
-                        updateContent();
-                    }
-                } else {
-                    if (currentIndex > 0) {
-                        currentIndex--;
-                        updateContent();
-                    }
-                }
-            }
-        }, { passive: false });
-
-        document.addEventListener('keydown', (e) => {
-            if (isAnimating) return;
-
-            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-                if (currentIndex < totalItems - 1) {
-                    currentIndex++;
-                    updateContent();
-                }
-            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    updateContent();
-                }
-            }
-        });
-
-        let touchStartY = 0;
-        let touchStartX = 0;
-
-        window.addEventListener('touchstart', (e) => {
-            touchStartX = e.touches[0].clientX;
-            touchStartY = e.touches[0].clientY;
-        }, { passive: true });
-
-        window.addEventListener('touchend', (e) => {
-            if (isAnimating) return;
-
-            const touchEndX = e.changedTouches[0].clientX;
-            const diffX = touchStartX - touchEndX;
-
-            if (Math.abs(diffX) > 50) {
-                if (diffX > 0) {
-                    if (currentIndex < totalItems - 1) { currentIndex++; updateContent(); }
-                } else {
-                    if (currentIndex > 0) { currentIndex--; updateContent(); }
-                }
-            }
-        }, { passive: true });
-
-        updatePoint();
-        updateProgressBar();
-    </script>
-
-
-    <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg">
-    </a>
+    <a href="https://wa.me/551735579090" class="whatsapp-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
 
     <script src="assets/components/loader.js"></script>
 
-    <script src="assets/js/cookies.js"></script>
+    <script>
+        const cards = document.querySelectorAll('.card-item');
+        const total = cards.length;
+        const dotsContainer = document.getElementById('dotsContainer');
+        const topProgress = document.getElementById('topProgress');
+        const mainDot = document.getElementById('dot');
+        const hintIcon = document.querySelector('#interactionHint i');
+        const hintText = document.getElementById('hintText');
+        
+        let currentIndex = 0;
+        let isAnimating = false;
+        let timerInterval;
+        let timeLeft = 0;
+
+        cards.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            dot.innerHTML = `<div class="dot-fill" id="fill-${index}"></div>`;
+            dot.onclick = () => mudarSlide(index);
+            dotsContainer.appendChild(dot);
+        });
+
+        function atualizarUI() {
+            cards.forEach((card, i) => {
+                card.classList.remove('active', 'exiting');
+                if (i === currentIndex) card.classList.add('active');
+                else if (i < currentIndex) card.classList.add('exiting');
+            });
+
+            topProgress.style.width = ((currentIndex + 1) / total) * 100 + '%';
+            mainDot.style.left = (10 + (currentIndex * (80 / (total - 1)))) + '%';
+
+            document.querySelectorAll('.dot-fill').forEach((fill, i) => {
+                if(i < currentIndex) fill.style.width = '100%';
+                else fill.style.width = '0%';
+            });
+        }
+
+        function mudarSlide(index) {
+            if (index === currentIndex || isAnimating || index < 0 || index >= total) return;
+            isAnimating = true; currentIndex = index;
+            atualizarUI(); reiniciarTimer();
+            setTimeout(() => { isAnimating = false; }, 600);
+        }
+
+        function rodarTimer() {
+            timeLeft++;
+            const activeFill = document.getElementById(`fill-${currentIndex}`);
+            if(activeFill) activeFill.style.width = `${timeLeft}%`;
+
+            if (timeLeft >= 100) {
+                mudarSlide((currentIndex + 1) % total);
+            }
+        }
+
+        function reiniciarTimer() {
+            clearInterval(timerInterval);
+            timeLeft = 0;
+            timerInterval = setInterval(rodarTimer, 100);
+        }
+
+        // Eventos
+        window.addEventListener('wheel', (e) => {
+            if(isAnimating) return;
+            if (e.deltaY > 0) mudarSlide(currentIndex + 1);
+            else if (e.deltaY < 0) mudarSlide(currentIndex - 1);
+        });
+
+        let touchStartX = 0;
+        window.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; });
+        window.addEventListener('touchend', (e) => {
+            if(isAnimating) return;
+            const difX = touchStartX - e.changedTouches[0].clientX;
+            if (difX > 50) mudarSlide(currentIndex + 1);      
+            else if (difX < -50) mudarSlide(currentIndex - 1);
+        });
+
+        // 🟢 DETECÇÃO DE TOUCH CORRIGIDA
+        // Isso verifica de forma mais agressiva se a tela é touch
+        const isTouchDevice = (
+            'ontouchstart' in window || 
+            navigator.maxTouchPoints > 0 || 
+            window.matchMedia("(pointer: coarse)").matches
+        );
+
+        if (isTouchDevice) {
+            hintIcon.className = "fa-solid fa-hand-pointer";
+            hintText.innerText = "Arraste para o lado";
+        }
+
+        // Start
+        atualizarUI();
+        reiniciarTimer();
+    </script>
 </body>
 </html>

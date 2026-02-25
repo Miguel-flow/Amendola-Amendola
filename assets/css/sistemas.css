@@ -1,3 +1,39 @@
+:root {
+  --bg: #f0f2f5;
+  --bg-light: #ffffff;
+  --text: #111111;
+  --text-light: #ffffff;
+  --icon-bg: #ffbf8a1a;
+  --shadow-orange: rgba(250, 127, 8, 0.2);
+
+  --navbar-bg: #ffffff;
+  --bg-card: #00000005;
+  --section-bg: #f8f9fa;
+  --footer-bg: #1a1a1b;
+
+  --orange: #ff9800;
+
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+}
+
+html.dark-mode {
+  --bg: #121212;
+  --bg-light: #121212;
+  --bg-card: #1e1e1e;
+  --bg-footer: #000000;
+
+  --text: #ffffff;
+  --text-light: #ffffff;
+
+  --icon-bg: #242424;
+
+  --shadow-light: rgba(0, 0, 0, 1.5);
+  --shadow-medium: rgba(0, 0, 0, 1);
+  --shadow-orange: rgba(250, 127, 8, 0.1);
+}
+
+/* --- Animações --- */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -10,7 +46,7 @@
 
 @keyframes slideInUp {
     from {
-        transform: translateY(50px);
+        transform: translateY(30px);
         opacity: 0;
     }
 
@@ -20,131 +56,133 @@
     }
 }
 
+/* --- Header / Hero Section (CORRIGIDO) --- */
 .page-sistema .sistema-titulo {
-    background: linear-gradient(135deg, #ff7300, #ff9800);
-    color: var(--text-light);
-    padding: 4%;
+    background: var(--bg);
+    color: var(--text);
+    padding: 100px 20px 60px;
+    /* Aumentei o espaço superior para evitar colar no menu */
     text-align: center;
-    animation: fadeIn 1s ease-out;
-    margin-top: -130px;
+    animation: fadeIn 1.2s ease-out;
+    margin-top: 0;
+    /* Removido o margin negativo que causava a barra/vazamento */
+    position: relative;
 }
 
 .page-sistema .sistema-titulo .banner-text h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    margin-top: 65px;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 15px;
     font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text);
 }
 
 .page-sistema .sistema-titulo .banner-text h2 {
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-weight: 500;
+    color: var(--text-secondary);
 }
 
 .page-sistema .sistema-titulo hr {
-    border: 1px solid var(--text-light);
-    width: 50%;
-    margin: 20px auto;
+    border: none;
+    border-top: 1px solid var(--border);
+    width: 60px;
+    margin: 30px auto;
 }
 
 .page-sistema .sistema-titulo p {
-    font-size: 1.1rem;
-    max-width: 800px;
+    font-size: 1.15rem;
+    max-width: 750px;
     margin: 0 auto;
-    margin-bottom: 2px;
+    line-height: 1.5;
+    color: var(--text-secondary);
 }
 
+/* --- Bento Grid de Ícones --- */
 .page-sistema .icons-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 60px 20px;
-    background: var(--bg-light);
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 60px 10%;
+    background: var(--bg);
     animation: slideInUp 1s ease-out 0.2s both;
 }
 
 .page-sistema .icon-wrapper {
     text-align: center;
-    max-width: 300px;
-    margin: 20px;
+    padding: 30px;
+    background: var(--bg-card);
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-sistema .icon-wrapper:hover {
+    transform: translateY(-8px);
 }
 
 .page-sistema .icon-circle {
-    width: 80px;
-    height: 80px;
-    background: var(--orange);
-    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    background: var(--icon-bg);
+    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 15px;
-    color: var(--bg-light);
-    font-size: 2rem;
-    transition: transform 0.3s ease;
-}
-
-.page-sistema .icon-circle:hover {
-    transform: scale(1.1);
+    margin: 0 auto 20px;
+    color: var(--orange);
+    font-size: 1.8rem;
 }
 
 .page-sistema .icon-wrapper p {
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 10px;
-    color: var(--orange);
-}
-
-.page-sistema .icon-wrapper span {
-    font-size: 0.9rem;
     color: var(--text);
 }
 
+/* --- Features Section --- */
 .page-sistema .features {
     display: flex;
-    justify-content: space-between;
-    padding: 60px 20px;
-    background: var(--bg-light);
+    justify-content: center;
+    gap: 40px;
+    padding: 80px 10%;
+    background: var(--bg);
     flex-wrap: wrap;
     animation: slideInUp 1s ease-out 0.4s both;
 }
 
 .page-sistema .features .column {
-    max-width: 45%;
-    margin: 20px;
+    flex: 1;
     min-width: 300px;
+    max-width: 500px;
+    padding: 40px;
+    background: var(--bg-card);
+    border-radius: 28px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
 }
 
 .page-sistema .features h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 15px;
-    color: var(--text);
+    font-weight: 600;
 }
 
-.page-sistema .features p {
-    font-size: 1rem;
-    color: var(--text);
-}
-
-/* ===============================
-   INTEGRAÇÕES - BLOCO DESTACADO
-   =============================== */
 .page-sistema .integracoes {
     padding: 80px 20px;
     background: var(--bg-light);
-
     display: flex;
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
 }
 
-/* Quando houver apenas 1 bloco */
 .page-sistema .integracoes.single-block .bloco {
     max-width: 800px;
     width: 100%;
 }
 
-/* Quando houver dois blocos (ou mais) */
 .page-sistema .integracoes:not(.single-block) .bloco {
     max-width: 600px;
     width: 100%;
@@ -157,16 +195,6 @@
     }
 }
 
-.page-sistema .integracoes .bloco::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background: linear-gradient(90deg, #ff7300, #ff9800);
-    border-radius: 18px 18px 0 0;
-}
 
 .page-sistema .integracoes .bloco h3 {
     font-size: 1.8rem;
@@ -184,11 +212,6 @@
     gap: 14px;
 }
 
-.page-sistema .integracoes a {
-    text-decoration: none;
-    color: inherit;
-}
-
 .page-sistema .integracoes li {
     display: flex;
     gap: 14px;
@@ -197,13 +220,7 @@
     background: var(--bg-light);
     box-shadow: 0 14px 30px var(--shadow-light);
     border: 1px solid var(--bg-light);
-
-    transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease,
-        filter 0.35s ease,
-        opacity 0.35s ease,
-        background 0.35s ease;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease, opacity 0.35s ease, background 0.35s ease;
 }
 
 .page-sistema .integracoes li i {
@@ -222,6 +239,15 @@
 .page-sistema .integracoes .laranja {
     color: var(--orange);
     font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.page-sistema .integracoes a {
+    color: var(--orange);
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .page-sistema .integracoes li:hover {
@@ -236,114 +262,59 @@
     opacity: 0.55;
 }
 
-@media (max-width: 768px) {
-    .page-sistema .integracoes .bloco {
-        padding: 35px 25px;
-    }
-
-    .page-sistema .integracoes li {
-        padding: 18px;
-    }
-}
-
-.btn-toggle {
-    margin-top: 20px;
-    background: none;
-    border: none;
-    color: var(--orange);
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 15px;
-    text-transform: uppercase;
-}
-
 .page-sistema .functionalities {
-    padding: 60px 20px;
-    background: var(--bg-light);
+    padding: 80px 20px;
+    background: var(--bg);
     text-align: center;
     animation: slideInUp 1s ease-out 0.8s both;
 }
 
-.page-sistema .functionalities h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: var(--text);
-}
-
 .page-sistema .functionalities-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .page-sistema .functionality {
-    background: var(--bg-light);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px var(--shadow-light);
-    transition: transform 0.3s ease;
-}
-
-.page-sistema .functionality:hover {
-    transform: translateY(-5px);
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    text-align: left;
 }
 
 .page-sistema .functionality h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
     color: var(--orange);
-}
-
-.page-sistema .functionality p {
-    font-size: 0.9rem;
-    color: var(--text);
+    margin-bottom: 10px;
 }
 
 .page-sistema .back-button {
-    height: 20vh;
+    padding: 60px 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    animation: fadeIn 1s ease-out 1s both;
-    background: var(--bg-light);
+    background: var(--bg);
 }
 
 .page-sistema .btn-back {
     background-color: var(--orange);
-    color: var(--text-light);
+    color: var(--pill-text);
     border: none;
-    padding: 20px 150px;
+    padding: 18px 80px;
     border-radius: 999px;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.btn-back:hover {
-    background-color: var(--orange);
-    transform: scale(1.05);
+.page-sistema .btn-back:hover {
+ transform: translateY(-8px);
+
 }
 
-@media (max-width: 768px) {
-    .page-sistema .sistema-titulo h1 {
-        font-size: 2rem;
-    }
-
-    .page-sistema .icons-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .page-sistema .features {
-        flex-direction: column;
-    }
-
-    .page-sistema .functionalities-container {
-        grid-template-columns: 1fr;
-    }
-}
-
+/* --- Helpers --- */
 .lista-wrapper {
     overflow: hidden;
 }
@@ -355,8 +326,6 @@
 }
 
 .btn-toggle {
-    display: inline-block;
-    margin-top: 15px;
     background: none;
     border: none;
     color: var(--text);
