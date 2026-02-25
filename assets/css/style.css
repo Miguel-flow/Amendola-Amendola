@@ -20,7 +20,6 @@
 html.dark-mode {
   --bg: #121212;
   --bg-light: #121212;
-  --bg-section: #181818;
   --bg-card: #1e1e1e;
   --bg-footer: #000000;
 
@@ -329,7 +328,7 @@ body {
 
 .emunicipio-section {
     padding: 100px 0;
-    background-color: var(--bg-section); /* Ou var(--bg) se preferir liso */
+    background-color: var(--bg-section); 
     overflow: hidden;
 }
 
@@ -373,7 +372,6 @@ body {
     line-height: 1.6;
 }
 
-/* Ícones redondos como o seu estilo */
 .icon-box {
     min-width: 50px;
     height: 50px;
@@ -385,7 +383,6 @@ body {
     font-size: 22px;
 }
 
-/* Vitrine do Celular */
 .phone-showcase {
     display: flex;
     flex-direction: column;
