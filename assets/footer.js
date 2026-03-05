@@ -9,36 +9,21 @@ function initFooter() {
     return;
   }
 
-  // Abrir / fechar menu
   button.addEventListener("click", (e) => {
     e.stopPropagation();
     menu.classList.toggle("active");
   });
 
-  // Fechar menu ao clicar fora
   document.addEventListener("click", (e) => {
     if (!selector.contains(e.target)) {
       menu.classList.remove("active");
     }
   });
 
-  // Trocar idioma ao clicar
-  langLinks.forEach(link => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const lang = link.dataset.lang;
-      if (typeof translatePage === "function") translatePage(lang);
-      menu.classList.remove("active");
-    });
-  });
-
   console.log("Footer inicializado ✅");
 }
 
-// Deixa global para chamar do loader
 window.initFooter = initFooter;
-
-
 
 setTimeout(() => {
   const button = document.getElementById("langButton");
