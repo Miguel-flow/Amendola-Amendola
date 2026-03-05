@@ -2,56 +2,63 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amêndola & Amêndola - Política de Privacidade</title>
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="assets/img/logo-amendola-2.png" rel="icon">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: #f5f6f7;
       color: #222;
     }
 
-    .topbar {
-      background: #111;
-      color: #fff;
-      padding: 14px 18px;
-    }
-
     .container {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 24px 18px;
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
     .card {
       background: #fff;
-      border-radius: 12px;
-      padding: 22px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, .08);
+      border-radius: 14px;
+      padding: 35px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
     }
 
     h1 {
-      margin: 0 0 10px 0;
-      font-size: 28px;
+      font-size: 30px;
+      margin-bottom: 5px;
     }
 
     h2 {
-      margin: 26px 0 10px 0;
+      margin-top: 28px;
       font-size: 20px;
+      border-left: 4px solid #FD7A02;
+      padding-left: 10px;
     }
 
-    p,
+    p {
+      line-height: 1.7;
+      margin-top: 10px;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
     li {
-      line-height: 1.6;
+      margin: 6px 0;
     }
 
     .muted {
-      color: #666;
+      color: #777;
       font-size: 14px;
     }
 
@@ -59,214 +66,228 @@
       display: inline-block;
       background: #FD7A02;
       color: #fff;
-      border-radius: 999px;
-      padding: 6px 10px;
+      border-radius: 50px;
+      padding: 6px 12px;
       font-size: 12px;
-      font-weight: 700;
-    }
-
-    a {
-      color: #FD7A02;
-      text-decoration: underline;
-    }
-
-    .toc {
-      background: #f7f7f7;
-      border: 1px solid #eee;
-      border-radius: 10px;
-      padding: 14px;
-      margin: 14px 0;
-    }
-
-    .toc a {
-      text-decoration: none;
-    }
-
-    .footer {
-      margin-top: 18px;
-      text-align: center;
-      color: #777;
-      font-size: 13px;
-    }
-
-    code {
-      background: #f1f1f1;
-      padding: 2px 6px;
-      border-radius: 6px;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
 
     .hr {
       height: 1px;
       background: #eee;
-      margin: 18px 0;
+      margin: 30px 0;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+    }
+
+    /* Botão LGPD */
+    .btn-lgpd {
+      background: #FD7A02;
+      color: #fff;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .2s ease;
+      box-shadow: 0 6px 18px rgba(253, 122, 2, 0.25);
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    .btn-lgpd:hover {
+      background: #e86d00;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(253, 122, 2, 0.35);
     }
   </style>
 </head>
 
 <body>
-  <div class="topbar">
-    <strong>Amêndola & Amêndola</strong> <span class="muted">• Política de Privacidade</span>
-  </div>
+
+  <div id="navbar"></div>
 
   <div class="container">
     <div class="card">
+
       <span class="pill">LGPD</span>
-      <h1>Política de Privacidade</h1>
+
+      <h1>Política de Privacidade e Termos de Uso</h1>
+
       <p class="muted">
         Última atualização: <strong>12/02/2026</strong>
       </p>
 
+      <h2>Termos e Condições de Uso</h2>
+
       <p>
-        Esta Política de Privacidade descreve como a <strong>Amêndola & Amêndola Software</strong> (“nós”) trata dados
-        pessoais
-        quando você utiliza nossos sites, páginas e serviços online (“Serviços”). Também explica seus direitos como
-        titular de dados,
-        conforme a <strong>Lei nº 13.709/2018 (LGPD)</strong>.
+        Os presentes Termos e Condições de Uso visam regular a utilização por você, usuário,
+        dos serviços disponibilizados pelo site institucional da
+        <strong>Amêndola & Amêndola Software</strong>.
       </p>
 
-      <div class="toc">
-        <strong>Sumário</strong>
-        <ol>
-          <li><a href="#controlador">Quem é o controlador e como falar conosco</a></li>
-          <li><a href="#dados">Quais dados coletamos</a></li>
-          <li><a href="#finalidades">Para que usamos os dados (finalidades)</a></li>
-          <li><a href="#baselegal">Bases legais</a></li>
-          <li><a href="#compartilhamento">Compartilhamento com terceiros</a></li>
-          <li><a href="#cookies">Cookies e tecnologias semelhantes</a></li>
-          <li><a href="#retencao">Retenção e armazenamento</a></li>
-          <li><a href="#seguranca">Segurança</a></li>
-          <li><a href="#direitos">Seus direitos (LGPD)</a></li>
-          <li><a href="#criancas">Dados de crianças e adolescentes</a></li>
-          <li><a href="#alteracoes">Alterações desta política</a></li>
-        </ol>
-      </div>
-
-      <h2 id="controlador">1) Quem é o controlador e como falar conosco</h2>
       <p>
-        O controlador dos dados pessoais tratados nos Serviços é: <strong>Amêndola & Amêndola Software</strong>.
+        O site institucional possui caráter informativo e gratuito. Entretanto,
+        a utilização de alguns serviços ou funcionalidades poderá exigir o
+        registro prévio do usuário.
       </p>
+
+      <p>
+        A Amêndola & Amêndola não se responsabiliza por danos a terceiros que
+        decorram de falhas de acesso, transmissão, difusão ou disponibilização
+        de conteúdo e serviços do portal.
+      </p>
+
+      <p>
+        A oferta de serviços e conteúdos neste portal busca atender critérios
+        de acessibilidade e boas práticas de navegação.
+      </p>
+
+      <h2>Termo de Aceitação</h2>
+
+      <p>
+        Ao utilizar os serviços disponibilizados neste site, o usuário declara
+        estar de acordo com todos os termos e condições apresentados neste documento.
+      </p>
+
+      <p>
+        Estes Termos de Uso poderão ser modificados a qualquer momento, em
+        decorrência de alterações na legislação, atualização de serviços ou
+        implementação de novas tecnologias.
+      </p>
+
+      <p>
+        A continuidade do uso do site após alterações será considerada como
+        aceitação automática das novas condições.
+      </p>
+
+      <h2>Tratamento de Informações</h2>
+
+      <p>
+        A privacidade e a proteção das informações dos usuários são muito
+        importantes para a Amêndola & Amêndola Software. Por isso, adotamos
+        medidas de segurança para garantir a proteção dos dados pessoais,
+        bem como o sigilo e uso adequado dessas informações.
+      </p>
+
+      <p>
+        Utilizamos boas práticas de segurança para proteger os dados coletados
+        contra acessos não autorizados, uso indevido, fraudes, danos,
+        sabotagens ou qualquer tipo de violação.
+      </p>
+
+      <p>
+        Ao realizar um cadastro ou entrar em contato por meio do site, o usuário
+        autoriza o envio de comunicações relacionadas aos serviços da empresa.
+        Esse consentimento poderá ser revogado a qualquer momento pelo titular
+        dos dados.
+      </p>
+
+      <p>
+        A Amêndola & Amêndola não divulga endereços eletrônicos ou outras
+        informações pessoais dos usuários sem o consentimento do titular,
+        exceto quando necessário para cumprimento de obrigações legais.
+      </p>
+
+      <h2>Uso de Cookies</h2>
+
+      <p>
+        Este portal pode utilizar cookies, que são arquivos enviados pelo
+        servidor do site ao computador do usuário com o objetivo de identificar
+        preferências de navegação e melhorar a experiência de uso.
+      </p>
+
+      <p>
+        Esses cookies ajudam a personalizar o acesso ao site, permitindo,
+        por exemplo, registrar preferências de navegação ou evitar a repetição
+        de determinados avisos exibidos ao usuário.
+      </p>
+
+      <p>
+        Caso o usuário prefira, é possível desativar os cookies por meio das
+        configurações do navegador. Entretanto, algumas funcionalidades do
+        site poderão não funcionar corretamente.
+      </p>
+
+      <h2>Acesso a Conteúdo Restrito</h2>
+
+      <p>
+        Alguns serviços ou áreas do site podem exigir cadastro prévio do usuário
+        e acesso por meio de login e senha.
+      </p>
+
+      <p>
+        O usuário é responsável pela veracidade das informações fornecidas
+        durante o cadastro, bem como pela guarda e utilização segura de
+        suas credenciais de acesso.
+      </p>
+
+      <p>
+        O compartilhamento de login ou senha com terceiros é expressamente
+        proibido.
+      </p>
+
+      <h2>Relacionamento com Terceiros</h2>
+
+      <p>
+        Este site pode conter links para páginas de terceiros. O conteúdo
+        dessas páginas não é de responsabilidade da Amêndola & Amêndola
+        Software e não está sujeito a esta Política de Privacidade.
+      </p>
+
+      <h2>Responsabilidade dos Usuários</h2>
+
+      <p>
+        Ao utilizar o site, o usuário compromete-se a não realizar atividades
+        que violem a legislação brasileira ou os princípios de boa conduta
+        na internet.
+      </p>
+
       <ul>
-        <li><strong>E-mail de contato:</strong> contato@amendolaeamendola.com.br</li>
-        <li><strong>Endereço:</strong> Rua J. Carlos Mendes de Campos, 190, Sales/SP, Brasil</li>
-        <li><strong>Telefone:</strong> +55 (17) 2137-2200 / +55 (17) 3557-9090</li>
+        <li>Utilizar o conteúdo do site para fins comerciais sem autorização</li>
+        <li>Transmitir conteúdos ilegais, ofensivos ou discriminatórios</li>
+        <li>Divulgar mensagens que contenham calúnia, injúria ou difamação</li>
+        <li>Tentar acessar sistemas ou informações sem autorização</li>
+        <li>Enviar mensagens em massa ou conteúdos não solicitados</li>
       </ul>
 
-      <h2 id="dados">2) Quais dados coletamos</h2>
-      <p>Podemos tratar as seguintes categorias de dados:</p>
-      <ul>
-        <li><strong>Dados de navegação:</strong> IP, data/hora, informações do dispositivo e navegador, páginas
-          acessadas e logs técnicos.</li>
-        <li><strong>Dados fornecidos por você:</strong> nome, e-mail, telefone e conteúdo enviado via formulários ou
-          contato.</li>
-        <li><strong>Dados de suporte/chamados:</strong> informações necessárias para atendimento quando você abre um
-          chamado na plataforma.</li>
-        <li><strong>Cookies e identificadores:</strong> conforme descrito na Política de Cookies (preferências e
-          consentimento, por exemplo).</li>
-      </ul>
+      <h2>Lei Geral de Proteção de Dados (LGPD)</h2>
 
-      <h2 id="finalidades">3) Para que usamos os dados (finalidades)</h2>
-      <ul>
-        <li><strong>Operação do site</strong> (ex.: segurança, prevenção a fraudes, estabilidade e funcionamento).</li>
-        <li><strong>Atendimento e suporte</strong> (responder solicitações, abrir/gerenciar chamados e suporte técnico).
-        </li>
-        <li><strong>Comunicação</strong> (retornar contato, enviar informações solicitadas).</li>
-        <li><strong>Melhoria e métricas</strong> (quando autorizado): entender uso do site e aprimorar
-          conteúdo/experiência.</li>
-        <li><strong>Recursos de terceiros</strong> (quando autorizado): mapas incorporados, mídia e integrações (ex.:
-          Google Maps/YouTube).</li>
-        <li><strong>Cumprimento legal</strong> (quando necessário): atender obrigações regulatórias e solicitações de
-          autoridades.</li>
-      </ul>
-
-      <h2 id="baselegal">4) Bases legais</h2>
-      <p>Tratamos dados pessoais com base em:</p>
-      <ul>
-        <li><strong>Execução de contrato</strong> ou procedimentos preliminares (quando você solicita serviço, suporte
-          ou atendimento).</li>
-        <li><strong>Legítimo interesse</strong> (por exemplo, segurança do site e prevenção a fraudes, com avaliações de
-          impacto quando aplicável).</li>
-        <li><strong>Consentimento</strong> (por exemplo, cookies não essenciais e recursos de terceiros, quando ativados
-          por você).</li>
-        <li><strong>Cumprimento de obrigação legal/regulatória</strong> (quando aplicável).</li>
-      </ul>
-
-      <h2 id="compartilhamento">5) Compartilhamento com terceiros</h2>
       <p>
-        Podemos compartilhar dados com prestadores de serviço que nos ajudam a operar os Serviços, como:
-        hospedagem, segurança, CDN, plataformas de atendimento e recursos incorporados (ex.: mapas).
-      </p>
-      <p>
-        Quando você habilita recursos de terceiros (como mapas/vídeos), esses provedores podem coletar dados conforme
-        suas próprias políticas.
-        Recomendamos que você consulte as políticas dos respectivos provedores.
-      </p>
-
-      <h2 id="cookies">6) Cookies e tecnologias semelhantes</h2>
-      <p>
-        Utilizamos cookies para funcionalidades essenciais e, mediante sua autorização, para recursos adicionais e
-        métricas.
-        Você pode gerenciar suas preferências no banner de cookies do site.
-      </p>
-      <p>
-        Para detalhes, consulte nossa
-        <a href="politica-de-cookies.html" target="_blank" rel="noopener">Política de Cookies</a>.
-      </p>
-
-      <h2 id="retencao">7) Retenção e armazenamento</h2>
-      <p>
-        Mantemos dados pessoais apenas pelo tempo necessário para cumprir as finalidades descritas nesta política,
-        respeitando prazos legais
-        e necessidades de auditoria/segurança. Logs técnicos podem ser mantidos por período limitado para segurança e
-        diagnóstico.
-      </p>
-
-      <h2 id="seguranca">8) Segurança</h2>
-      <p>
-        Adotamos medidas técnicas e organizacionais para proteger dados pessoais contra acessos não autorizados, perda,
-        alteração indevida
-        ou destruição. Nenhum sistema é 100% seguro, mas trabalhamos continuamente para aumentar a proteção.
-      </p>
-
-      <h2 id="direitos">9) Seus direitos (LGPD)</h2>
-      <p>Você pode solicitar, conforme aplicável:</p>
-      <ul>
-        <li>confirmação e acesso aos dados;</li>
-        <li>correção de dados incompletos/inexatos;</li>
-        <li>anonimização, bloqueio ou eliminação;</li>
-        <li>portabilidade (quando aplicável);</li>
-        <li>informações sobre compartilhamento;</li>
-        <li>revogação do consentimento;</li>
-        <li>oposição a tratamentos com base em legítimo interesse, quando cabível.</li>
-      </ul>
-      <p>
-        Para exercer seus direitos, envie um e-mail para <strong>contato@amendolaeamendola.com.br</strong> com o assunto
-        <code>LGPD - Solicitação do Titular</code>. Podemos solicitar informações adicionais para confirmar sua
-        identidade.
-      </p>
-
-      <h2 id="criancas">10) Dados de crianças e adolescentes</h2>
-      <p>
-        Nossos Serviços não são direcionados a crianças. Se identificarmos tratamento indevido de dados de crianças,
-        adotaremos as medidas necessárias para exclusão e adequação, conforme aplicável.
-      </p>
-
-      <h2 id="alteracoes">11) Alterações desta política</h2>
-      <p>
-        Podemos atualizar esta política periodicamente. Quando houver mudanças relevantes, publicaremos a versão
-        atualizada nesta página,
-        com a data de “Última atualização”.
+        A Amêndola & Amêndola Software atua em conformidade com a
+        <button class="btn-lgpd"
+          onclick="window.open('http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm', '_blank')">
+          Lei nº 13.709/2018 – Lei Geral de Proteção de Dados (LGPD)
+        </button>
       </p>
 
       <div class="hr"></div>
+
       <p class="footer">
-        © <span id="year"></span> Amêndola & Amêndola Software — Todos os direitos reservados.
+        © <script>document.write(new Date().getFullYear())</script>
+        Amêndola & Amêndola Software — Todos os direitos reservados.
       </p>
+
     </div>
   </div>
+  
+  <div id="contato-area"></div>
+  <div id="footer-area"></div>
+  <div id="cookies-area"></div>
 
-  <script>
-    document.getElementById("year").innerText = new Date().getFullYear();
-  </script>
+  <a href="https://wa.me/551735579090" class="whatsapp-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
+  <script src="assets/components/loader.js"></script>
+
+  <script src="assets/js/cookies.js"></script>
+
+  
 </body>
 
 </html>
