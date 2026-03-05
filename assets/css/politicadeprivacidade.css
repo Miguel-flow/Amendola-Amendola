@@ -1,0 +1,288 @@
+/* =========================================================
+   TEMA CLARO/ESCURO (não mexe na navbar)
+   - :root para funcionar sempre
+   - DARK somente quando o site ativar via classe/atributo
+   ========================================================= */
+
+   :root{
+    /* claro (default) */
+    --bg: #f5f6f7;
+    --surface: #ffffff;
+    --surface2: #f3f4f6;
+    --text: #111827;
+    --muted: #6b7280;
+    --border: rgba(17,24,39,.10);
+    --shadow: 0 16px 50px rgba(0,0,0,.10);
+  
+    --brand: #FD7A02;
+    --brand2: #ff9a3d;
+    --brandHover: #e86d00;
+  
+    --link: #FD7A02;
+    --ring: rgba(253,122,2,.25);
+    --chipBg: rgba(253,122,2,.10);
+  }
+  
+  /* DARK: somente quando o site ativar dark via classe/atributo */
+  html[data-theme="dark"],
+  html.dark,
+  html.dark-mode,
+  body.dark,
+  body.dark-mode,
+  body.theme-dark,
+  [data-bs-theme="dark"]{
+    --bg: #0b0f14;
+    --surface: #151a22;
+    --surface2: #0f141c;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --border: rgba(255,255,255,.10);
+    --shadow: 0 18px 70px rgba(0,0,0,.55);
+  
+    --brand: #FD7A02;
+    --brand2: #ff9a3d;
+    --brandHover: #ff8a1a;
+  
+    --link: #ff9a3d;
+    --ring: rgba(253,122,2,.30);
+    --chipBg: rgba(253,122,2,.14);
+  }
+  
+  /* ==============================
+     Página (não mexe na navbar)
+     ============================== */
+  body.privacy-page{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  body.privacy-page .container{
+    max-width: 980px;
+    margin: auto;
+    padding: 46px 20px;
+  }
+  
+  /* Card premium + detalhes laranja */
+  body.privacy-page .card{
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0)),
+      var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 34px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Linha laranja no topo do card */
+  body.privacy-page .card::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background: linear-gradient(90deg, var(--brand), var(--brand2));
+    pointer-events:none;
+  }
+  
+  /* Glows */
+  body.privacy-page .card::before{
+    content:"";
+    position:absolute;
+    right:-140px;
+    top:-140px;
+    width: 340px;
+    height: 340px;
+    background: radial-gradient(circle, rgba(253,122,2,.22), transparent 62%);
+    pointer-events:none;
+  }
+  
+  body.privacy-page .card .glow{
+    position:absolute;
+    left:-170px;
+    bottom:-170px;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(255,154,61,.14), transparent 65%);
+    pointer-events:none;
+    z-index: 0;
+  }
+  
+  body.privacy-page h1{
+    font-size: 30px;
+    margin: 10px 0 6px;
+    position: relative;
+    z-index: 1;
+    letter-spacing: -0.2px;
+  }
+  
+  body.privacy-page h2{
+    margin-top: 28px;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    padding-left: 12px;
+    letter-spacing: -0.2px;
+  }
+  
+  /* Barra laranja nos títulos */
+  body.privacy-page h2::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+    width: 4px;
+    height: 18px;
+    border-radius: 99px;
+    background: linear-gradient(180deg, var(--brand), var(--brand2));
+  }
+  
+  body.privacy-page p{
+    line-height: 1.75;
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+    color: var(--text);
+  }
+  
+  body.privacy-page ul{
+    margin-top: 10px;
+    padding-left: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  body.privacy-page li{
+    margin: 6px 0;
+    color: var(--text);
+  }
+  
+  body.privacy-page .pill{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(90deg, var(--brand), var(--brand2));
+    color: #fff;
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 12px 28px rgba(253,122,2,.18);
+  }
+  
+  body.privacy-page .pill::before{
+    content:"●";
+    font-size: 10px;
+    opacity: .95;
+  }
+  
+  body.privacy-page .hr{
+    height: 1px;
+    background: var(--border);
+    margin: 30px 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  body.privacy-page .footer{
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* ==============================
+     Caixa LGPD com detalhe laranja
+     ============================== */
+  body.privacy-page .lgpd-box{
+    margin-top: 18px;
+    padding: 18px 18px 16px;
+    border-radius: 16px;
+    background:
+      linear-gradient(180deg, rgba(253,122,2,.10), rgba(253,122,2,.03)),
+      var(--surface2);
+    border: 1px solid rgba(253,122,2,.22);
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* remove barra do h2 interno (fica mais clean) */
+  body.privacy-page .lgpd-title{
+    margin-top: 0;
+  }
+  
+  body.privacy-page .lgpd-box .lgpd-chip{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: var(--chipBg);
+    border: 1px solid rgba(253,122,2,.22);
+    color: var(--text);
+    font-weight: 800;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  body.privacy-page .lgpd-box .lgpd-chip i{
+    color: var(--brand);
+  }
+  
+  /* ==============================
+     Botão LGPD (FORÇADO BRANCO)
+     ============================== */
+  body.privacy-page .btn-lgpd{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  
+    background: linear-gradient(90deg, var(--brand), var(--brand2));
+    color: #ffffff !important;
+    text-decoration: none !important;
+  
+    border: none;
+    padding: 12px 16px;
+    border-radius: 12px;
+  
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+  
+    transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+    box-shadow: 0 14px 30px rgba(253,122,2,.22);
+    margin-top: 10px;
+  }
+  
+  body.privacy-page .btn-lgpd:visited,
+  body.privacy-page .btn-lgpd:hover,
+  body.privacy-page .btn-lgpd:active{
+    color: #ffffff !important;
+    text-decoration: none !important;
+  }
+  
+  body.privacy-page .btn-lgpd:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(253,122,2,.32);
+    filter: saturate(1.05);
+  }
+  
+  body.privacy-page .btn-lgpd:focus{
+    outline: none;
+    box-shadow: 0 0 0 4px var(--ring), 0 18px 40px rgba(253,122,2,.32);
+  }
+  
+  body.privacy-page .btn-lgpd i{
+    font-size: 16px;
+    color: #ffffff !important;
+  }
