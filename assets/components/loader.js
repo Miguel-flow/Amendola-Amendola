@@ -1,5 +1,5 @@
 // =============================
-// 🔥 1. APLICAR TEMA IMEDIATAMENTE (anti-pisca)
+// 1. APLICAR TEMA IMEDIATAMENTE
 // =============================
 (function applyThemeEarly() {
   const saved = localStorage.getItem("darkMode") === "true";
@@ -9,7 +9,7 @@
 })();
 
 // =============================
-// 📦 2. FUNÇÃO PARA CARREGAR COMPONENTES
+// 2. FUNÇÃO PARA CARREGAR COMPONENTES
 // =============================
 async function loadComponent(id, file) {
   const el = document.getElementById(id);
@@ -19,7 +19,7 @@ async function loadComponent(id, file) {
     const res = await fetch(file);
     if (!res.ok) throw new Error(`Erro ao carregar: ${file}`);
     el.innerHTML = await res.text();
-    return true; // Retorna true para confirmar que carregou
+    return true; 
   } catch (err) {
     console.error(err);
     return false;
@@ -27,11 +27,9 @@ async function loadComponent(id, file) {
 }
 
 // =============================
-// 🌙 DARK MODE (Atualizado para Delegação)
+//  DARK MODE
 // =============================
 function initDarkMode() {
-  // Usamos delegação de evento no document para que funcione 
-  // mesmo se a navbar for injetada depois
   document.addEventListener("click", (e) => {
     const toggle = e.target.closest("#darkModeToggle");
     if (!toggle) return;
@@ -43,20 +41,18 @@ function initDarkMode() {
 }
 
 // =============================
-// 📱 NAVBAR (Menu Mobile)
+//  NAVBAR (Menu Mobile)
 // =============================
 function initNavbarLogic() {
   document.addEventListener('click', (e) => {
     const menuIcon = e.target.closest('#mobile-menu-icon');
     const navMenu = document.getElementById('navbar-menu');
 
-    // Abre/Fecha Menu
     if (menuIcon && navMenu) {
       navMenu.classList.toggle('active');
       menuIcon.classList.toggle('open');
     }
 
-    // Fecha ao clicar em link
     if (e.target.closest('.navbar-links a') && navMenu) {
       navMenu.classList.remove('active');
     }
@@ -64,7 +60,7 @@ function initNavbarLogic() {
 }
 
 // =============================
-// 🌍 3. FOOTER (IDIOMA)
+//  3. FOOTER (IDIOMA)
 // =============================
 function initFooter() {
   document.addEventListener("click", (e) => {
@@ -82,19 +78,16 @@ function initFooter() {
 }
 
 // =============================
-// 🚀 5. INICIALIZAÇÃO GERAL (Versão Corrigida)
+//  5. INICIALIZAÇÃO GERAL
 // =============================
 async function initPage() {
-  // Criamos uma lista de tarefas apenas para os elementos que REALMENTE existem no HTML
   const tasks = [];
 
   if (document.getElementById("navbar")) {
     tasks.push(loadComponent("navbar", "assets/components/navbar.html"));
   }
   
-  // Note que no seu loader original estava "navbar-area", mas no seu HTML você usou "navbar"
-  // Ajustei para "navbar" para bater com o seu HTML.
-  
+ 
   if (document.getElementById("footer-area")) {
     tasks.push(loadComponent("footer-area", "assets/components/footer.html"));
   }
@@ -107,7 +100,6 @@ async function initPage() {
     tasks.push(loadComponent("contato-area", "assets/components/contato.html"));
   }
 
-  // Executa apenas as tarefas necessárias
   await Promise.all(tasks);
 
   initNavbarLogic(); 

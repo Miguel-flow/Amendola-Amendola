@@ -1,11 +1,5 @@
-/* =========================================================
-   TEMA CLARO/ESCURO (não mexe na navbar)
-   - :root para funcionar sempre
-   - DARK somente quando o site ativar via classe/atributo
-   ========================================================= */
-
    :root{
-    /* claro (default) */
+
     --bg: #f5f6f7;
     --surface: #ffffff;
     --surface2: #f3f4f6;
@@ -23,7 +17,6 @@
     --chipBg: rgba(253,122,2,.10);
   }
   
-  /* DARK: somente quando o site ativar dark via classe/atributo */
   html[data-theme="dark"],
   html.dark,
   html.dark-mode,
@@ -48,9 +41,6 @@
     --chipBg: rgba(253,122,2,.14);
   }
   
-  /* ==============================
-     Página (não mexe na navbar)
-     ============================== */
   body.privacy-page{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -64,7 +54,6 @@
     padding: 46px 20px;
   }
   
-  /* Card premium + detalhes laranja */
   body.privacy-page .card{
     background:
       linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0)),
@@ -77,7 +66,6 @@
     overflow: hidden;
   }
   
-  /* Linha laranja no topo do card */
   body.privacy-page .card::after{
     content:"";
     position:absolute;
@@ -89,7 +77,7 @@
     pointer-events:none;
   }
   
-  /* Glows */
+
   body.privacy-page .card::before{
     content:"";
     position:absolute;
@@ -129,7 +117,6 @@
     letter-spacing: -0.2px;
   }
   
-  /* Barra laranja nos títulos */
   body.privacy-page h2::before{
     content:"";
     position:absolute;
@@ -200,9 +187,6 @@
     z-index: 1;
   }
   
-  /* ==============================
-     Caixa LGPD com detalhe laranja
-     ============================== */
   body.privacy-page .lgpd-box{
     margin-top: 18px;
     padding: 18px 18px 16px;
@@ -215,7 +199,6 @@
     z-index: 1;
   }
   
-  /* remove barra do h2 interno (fica mais clean) */
   body.privacy-page .lgpd-title{
     margin-top: 0;
   }
@@ -238,9 +221,6 @@
     color: var(--brand);
   }
   
-  /* ==============================
-     Botão LGPD (FORÇADO BRANCO)
-     ============================== */
   body.privacy-page .btn-lgpd{
     display: inline-flex;
     align-items: center;
