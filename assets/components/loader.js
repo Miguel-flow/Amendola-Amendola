@@ -15,15 +15,28 @@ async function loadComponent(id, file) {
   const el = document.getElementById(id);
   if (!el) return;
 
-  try {
-    const res = await fetch(file);
-    if (!res.ok) throw new Error(`Erro ao carregar: ${file}`);
-    el.innerHTML = await res.text();
-    return true; 
-  } catch (err) {
-    console.error(err);
-    return false;
+  const cleanFile = file.replace(/\.html$/i, "");
+  const localHosts = ["localhost", "127.0.0.1", "::1"];
+  const useHtmlFirst = localHosts.includes(window.location.hostname) || window.location.protocol === "file:";
+  const candidates = cleanFile === file
+    ? [file]
+    : (useHtmlFirst ? [file, cleanFile] : [cleanFile, file]);
+
+  let lastError;
+
+  for (const candidate of candidates) {
+    try {
+      const res = await fetch(candidate);
+      if (!res.ok) throw new Error(`Erro ao carregar: ${candidate}`);
+      el.innerHTML = await res.text();
+      return true;
+    } catch (err) {
+      lastError = err;
+    }
   }
+
+  console.error(lastError);
+  return false;
 }
 
 // =============================
