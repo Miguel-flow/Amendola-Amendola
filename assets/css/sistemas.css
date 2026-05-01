@@ -1,17 +1,22 @@
 :root {
-  --bg: #f0f2f5;
+  --bg: #f3f5f7;
   --bg-light: #ffffff;
-  --text: #111111;
+  --text: #14171a;
+  --text-secondary: #56616f;
   --text-light: #ffffff;
-  --icon-bg: #ffbf8a1a;
+  --icon-bg: rgba(255, 152, 0, 0.12);
   --shadow-orange: rgba(250, 127, 8, 0.2);
+  --border: rgba(20, 23, 26, 0.1);
+  --shadow: 0 16px 38px rgba(15, 23, 42, 0.1);
 
   --navbar-bg: #ffffff;
-  --bg-card: #00000005;
+  --bg-card: #ffffff;
   --section-bg: #f8f9fa;
   --footer-bg: #1a1a1b;
 
   --orange: #ff9800;
+  --orange-dark: #e87500;
+  --pill-text: #ffffff;
 
   --shadow-light: rgba(0, 0, 0, 0.1);
   --shadow-medium: rgba(0, 0, 0, 0.15);
@@ -19,17 +24,20 @@
 
 html.dark-mode {
   --bg: #121212;
-  --bg-light: #121212;
+  --bg-light: #1b1b1d;
   --bg-card: #1e1e1e;
   --bg-footer: #000000;
+  --text-secondary: rgba(255, 255, 255, 0.72);
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow: 0 16px 38px rgba(0, 0, 0, 0.42);
 
   --text: #ffffff;
   --text-light: #ffffff;
 
   --icon-bg: #242424;
 
-  --shadow-light: rgba(0, 0, 0, 1.5);
-  --shadow-medium: rgba(0, 0, 0, 1);
+  --shadow-light: rgba(0, 0, 0, 0.55);
+  --shadow-medium: rgba(0, 0, 0, 0.75);
   --shadow-orange: rgba(250, 127, 8, 0.1);
 }
 
@@ -57,8 +65,12 @@ html.dark-mode {
 }
 
 /* --- Header / Hero Section (CORRIGIDO) --- */
+.page-sistema {
+    font-family: var(--content-font, "Segoe UI", Roboto, Arial, sans-serif);
+}
+
 .page-sistema .sistema-titulo {
-    background: var(--bg);
+    background: linear-gradient(180deg, var(--section-bg), var(--bg));
     color: var(--text);
     padding: 100px 20px 60px;
     /* Aumentei o espaço superior para evitar colar no menu */
@@ -67,13 +79,14 @@ html.dark-mode {
     margin-top: 0;
     /* Removido o margin negativo que causava a barra/vazamento */
     position: relative;
+    border-bottom: 1px solid var(--border);
 }
 
 .page-sistema .sistema-titulo .banner-text h1 {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     margin-bottom: 15px;
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     color: var(--text);
 }
 
@@ -92,10 +105,12 @@ html.dark-mode {
 }
 
 .page-sistema .sistema-titulo p {
-    font-size: 1.15rem;
+    font-size: var(--content-text-size, 18px);
     max-width: 750px;
     margin: 0 auto;
-    line-height: 1.5;
+    line-height: var(--content-line-height, 1.6);
+    font-weight: 400;
+    letter-spacing: 0;
     color: var(--text-secondary);
 }
 
@@ -103,7 +118,7 @@ html.dark-mode {
 .page-sistema .icons-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    gap: 24px;
     padding: 60px 10%;
     background: var(--bg);
     animation: slideInUp 1s ease-out 0.2s both;
@@ -113,20 +128,23 @@ html.dark-mode {
     text-align: center;
     padding: 30px;
     background: var(--bg-card);
-    border-radius: 24px;
+    border-radius: 8px;
     border: 1px solid var(--border);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .page-sistema .icon-wrapper:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
+    border-color: var(--shadow-orange);
+    box-shadow: 0 22px 50px rgba(15, 23, 42, 0.14);
 }
 
 .page-sistema .icon-circle {
     width: 64px;
     height: 64px;
     background: var(--icon-bg);
-    border-radius: 18px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,16 +154,26 @@ html.dark-mode {
 }
 
 .page-sistema .icon-wrapper p {
+    font-size: var(--content-text-size, 18px);
+    line-height: var(--content-line-height, 1.6);
     font-weight: 600;
+    letter-spacing: 0;
     margin-bottom: 10px;
     color: var(--text);
+}
+
+.page-sistema .icon-wrapper span {
+    display: block;
+    color: var(--text-secondary);
+    font-size: var(--content-text-size, 18px);
+    line-height: var(--content-line-height, 1.6);
 }
 
 /* --- Features Section --- */
 .page-sistema .features {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 24px;
     padding: 80px 10%;
     background: var(--bg);
     flex-wrap: wrap;
@@ -158,7 +186,7 @@ html.dark-mode {
     max-width: 500px;
     padding: 40px;
     background: var(--bg-card);
-    border-radius: 28px;
+    border-radius: 8px;
     border: 1px solid var(--border);
     box-shadow: var(--shadow);
 }
@@ -171,7 +199,7 @@ html.dark-mode {
 
 .page-sistema .integracoes {
     padding: 80px 20px;
-    background: var(--bg-light);
+    background: var(--section-bg);
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -216,10 +244,13 @@ html.dark-mode {
     display: flex;
     gap: 14px;
     padding: 20px 22px;
-    border-radius: 12px;
+    border-radius: 8px;
     background: var(--bg-light);
     box-shadow: 0 14px 30px var(--shadow-light);
-    border: 1px solid var(--bg-light);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: var(--content-text-size, 18px);
+    line-height: var(--content-line-height, 1.6);
     transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease, opacity 0.35s ease, background 0.35s ease;
 }
 
@@ -231,9 +262,19 @@ html.dark-mode {
 }
 
 .page-sistema .integracoes span {
-    font-size: 15px;
+    font-size: var(--content-text-size, 18px);
     color: var(--text);
-    line-height: 1.6;
+    line-height: var(--content-line-height, 1.6);
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.page-sistema .features p,
+.page-sistema .functionality p {
+    font-size: var(--content-text-size, 18px);
+    line-height: var(--content-line-height, 1.6);
+    font-weight: 400;
+    letter-spacing: 0;
 }
 
 .page-sistema .integracoes .laranja {
@@ -251,15 +292,14 @@ html.dark-mode {
 }
 
 .page-sistema .integracoes li:hover {
-    transform: scale(1.04);
+    transform: translateY(-4px);
     background: var(--bg-light);
     box-shadow: 0 14px 30px var(--shadow-orange);
     z-index: 2;
 }
 
 .page-sistema .integracoes ul:hover li:not(:hover) {
-    filter: blur(1.8px);
-    opacity: 0.55;
+    opacity: 0.72;
 }
 
 .page-sistema .functionalities {
@@ -280,9 +320,10 @@ html.dark-mode {
 .page-sistema .functionality {
     background: var(--bg-card);
     padding: 30px;
-    border-radius: 20px;
+    border-radius: 8px;
     border: 1px solid var(--border);
     text-align: left;
+    box-shadow: var(--shadow);
 }
 
 .page-sistema .functionality h3 {
@@ -298,7 +339,7 @@ html.dark-mode {
 }
 
 .page-sistema .btn-back {
-    background-color: var(--orange);
+    background: linear-gradient(135deg, var(--orange), var(--orange-dark));
     color: var(--pill-text);
     border: none;
     padding: 18px 80px;
@@ -310,7 +351,7 @@ html.dark-mode {
 }
 
 .page-sistema .btn-back:hover {
- transform: translateY(-8px);
+ transform: translateY(-4px);
 
 }
 
@@ -331,4 +372,67 @@ html.dark-mode {
     color: var(--text);
     font-weight: 600;
     cursor: pointer;
+}
+
+.contact-wrapper {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(280px, 0.8fr) 1.2fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.contact-card,
+.map-box {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.contact-card {
+    padding: 28px;
+}
+
+.contact-card h3,
+.secao-titulo-principal h2 {
+    color: var(--text);
+    letter-spacing: 0;
+}
+
+.contact-card .info-item {
+    display: flex;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.contact-card .icon-circle,
+.contact-icon-circle {
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background: var(--icon-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-text p {
+    margin: 4px 0 0;
+}
+
+.map-box iframe {
+    display: block;
+    width: 100%;
+    min-height: 360px;
+    border: 0;
+}
+
+@media (max-width: 850px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
 }

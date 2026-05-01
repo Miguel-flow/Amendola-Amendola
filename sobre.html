@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8"><link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cookies.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Amendola & Amendola - Linha do Tempo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -35,7 +36,7 @@
         /* =========================================
            🛠️ RESET E BASE
            ========================================= */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--content-font, "Segoe UI", Roboto, Arial, sans-serif); }
         
         body {
             background-color: var(--bg);
@@ -89,7 +90,7 @@
             opacity: 0; pointer-events: none; transform: translateX(50px);
             transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
             background: var(--bg-card); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
-            border: 1px solid var(--border); border-radius: 24px;
+            border: 1px solid var(--border); border-radius: 8px;
             padding: 40px; text-align: center; box-shadow: var(--shadow);
         }
 
@@ -98,7 +99,7 @@
 
         .card-year { font-size: 14px; font-weight: 700; color: var(--orange); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; display: block; }
         .card-title { font-size: clamp(24px, 5vw, 36px); font-weight: 700; margin-bottom: 15px; }
-        .card-desc { font-size: 16px; line-height: 1.6; color: var(--text-secondary); }
+        .card-desc { font-size: var(--content-text-size, 18px); line-height: var(--content-line-height, 1.6); font-weight: 400; letter-spacing: 0; color: var(--text-secondary); }
 
         /* =========================================
            🎮 CONTROLES
@@ -177,10 +178,12 @@
     </div>
 
     <div id="footer-area"></div>
+    <div id="cookies-area"></div>
 
     <a href="https://wa.me/551735579090" class="whatsapp-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
 
     <script src="assets/components/loader.js"></script>
+    <script src="assets/js/cookies.js"></script>
 
     <script>
         const cards = document.querySelectorAll('.card-item');

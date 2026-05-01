@@ -37,15 +37,19 @@ function initCookies(){
   }
 
   window.configurarCookies = function(){
+    const overlay = document.getElementById("cookie-modal-overlay");
+    if (!overlay) return;
+
     const c = getConsent() || {};
     document.getElementById("functional").checked = !!c.functional;
     document.getElementById("analytics").checked  = !!c.analytics;
     document.getElementById("marketing").checked  = !!c.marketing;
-    document.getElementById("cookie-modal-overlay").style.display = "flex";
+    overlay.style.display = "flex";
   };
 
   window.fecharModal = function(){
-    document.getElementById("cookie-modal-overlay").style.display = "none";
+    const overlay = document.getElementById("cookie-modal-overlay");
+    if (overlay) overlay.style.display = "none";
   };
 
   window.salvarCookies = function(){

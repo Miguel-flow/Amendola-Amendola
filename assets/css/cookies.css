@@ -162,7 +162,7 @@ body {
   background: #fff;
   width: 100%;
   max-width: 820px;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 28px;
   position: relative;
   font-family: Arial, sans-serif;
@@ -222,7 +222,7 @@ body {
   position: absolute;
   inset: 0;
   background: #ccc;
-  border-radius: 24px;
+  border-radius: 8px;
   transition: .3s;
 }
 

@@ -1,25 +1,26 @@
 /* Container principal */
 .accordion {
-    font-family: 'Poppins', sans-serif; /* Combinando com o restante do site */
-    max-width: 900px;
-    margin: 100px auto;
+    font-family: var(--content-font, "Segoe UI", Roboto, Arial, sans-serif);
+    max-width: 960px;
+    margin: 90px auto;
     padding: 0 20px;
 }
 
 /* Item do Accordion */
 .accordion-item {
-    background: var(--bg-card);
-    border: 1px solid var(--shadow-light);
-    border-radius: 12px;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 8px;
     margin-bottom: 16px;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     position: relative;
 }
 
 /* Efeito ao passar o mouse */
 .accordion-item:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 30px var(--shadow-medium);
+    box-shadow: 0 22px 50px rgba(15, 23, 42, 0.14);
     border-color: var(--orange);
 }
 
@@ -34,6 +35,7 @@
     font-weight: 700;
     color: var(--text);
     background: transparent;
+    letter-spacing: 0;
 }
 
 /* Ícone Redondo */
@@ -42,7 +44,7 @@
     height: 32px;
     background: var(--icon-bg);
     color: var(--orange);
-    border-radius: 50%;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,7 +56,7 @@
 /* Estilo quando ATIVO */
 .accordion-item.active {
     border-color: var(--orange);
-    background: var(--bg-light); /* Um fundo levemente diferente para destacar */
+    background: var(--bg-light);
 }
 
 .accordion-item.active .accordion-header {
@@ -84,8 +86,10 @@
 }
 
 .accordion-content p {
-    font-size: 15px;
-    line-height: 1.8;
+    font-size: var(--content-text-size, 18px);
+    line-height: var(--content-line-height, 1.6);
+    font-weight: 400;
+    letter-spacing: 0;
     opacity: 0.8;
     margin-bottom: 20px;
 }
@@ -95,14 +99,14 @@
     align-items: center;
     gap: 8px;
     padding: 12px 24px;
-    background: var(--orange);
+    background: linear-gradient(135deg, var(--orange), var(--orange-dark));
     color: #fff;
     font-weight: 600;
     border-radius: 8px;
     text-decoration: none;
     font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0;
     transition: 0.3s;
 }
 
