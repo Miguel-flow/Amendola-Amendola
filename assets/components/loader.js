@@ -51,10 +51,25 @@ function initNavbarLogic() {
     if (menuIcon && navMenu) {
       navMenu.classList.toggle('active');
       menuIcon.classList.toggle('open');
+      menuIcon.setAttribute('aria-expanded', navMenu.classList.contains('active'));
     }
 
     if (e.target.closest('.navbar-links a') && navMenu) {
       navMenu.classList.remove('active');
+      const button = document.getElementById('mobile-menu-icon');
+      if (button) button.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+function initActiveNavLink() {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  document.querySelectorAll('.navbar-links a').forEach((link) => {
+    const targetPage = link.getAttribute('href');
+    if (targetPage === currentPage) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
     }
   });
 }
@@ -102,6 +117,7 @@ async function initPage() {
 
   await Promise.all(tasks);
 
+  initActiveNavLink();
   initNavbarLogic(); 
   initFooter();      
   initDarkMode();    

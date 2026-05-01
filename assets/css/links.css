@@ -10,7 +10,7 @@
 
 .links-toolbar input, .links-toolbar select {
     padding: 14px 20px;
-    border-radius: 12px;
+    border-radius: 8px;
     border: 1px solid var(--shadow-light);
     background: var(--bg-light);
     color: var(--text);

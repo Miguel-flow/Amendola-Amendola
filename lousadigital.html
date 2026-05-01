@@ -11,46 +11,49 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/sistemas.css" rel="stylesheet">
   <link href="assets/css/cookies.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .calendar-container {
+      max-width: 1100px;
+      width: 90%;
+      margin: 90px auto;
+      padding: 0;
+    }
+
+    .calendar-title {
+      text-align: center;
+      margin-bottom: 25px;
+      font-family: var(--content-font, "Segoe UI", Roboto, Arial, sans-serif);
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing: 0;
+      font-size: 32px;
+    }
+
+    .calendar-container iframe {
+      width: 100%;
+      height: 1000px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+      display: block;
+      background: var(--bg-light);
+    }
+
+    .tf-custom-footer {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
 </head>
 
+<body>
 <div id="navbar"></div>
-
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
-  .calendar-container {
-    max-width: 85%;
-    margin: 100px auto 90px;
-    padding: 0 15px;
-  }
-
-  .calendar-title {
-    text-align: center;
-    margin-bottom: 25px;
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
-    font-weight: 700;
-    font-size: 28px;
-  }
-
-  .calendar-container iframe {
-    width: 100%;
-    height: 1150px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: block;
-  }
-
-  .tf-custom-footer {
-    position: relative;
-    z-index: 1;
-  }
-</style>
 
 <div class="calendar-container">
   <h2 class="calendar-title">Agenda de Viagens</h2>
@@ -65,9 +68,7 @@
 <div id="footer-area"></div>
 <div id="cookies-area"></div>
 
-<a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank">
-  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg">
-</a>
+<a href="https://wa.me/551735579090" class="whatsapp-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script src="assets/components/loader.js"></script>
 
