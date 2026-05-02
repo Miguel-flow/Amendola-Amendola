@@ -12,83 +12,263 @@
   <link href="assets/img/logo-amendola-2.png" rel="icon">
 </head>
 
-<body>
+<body class="links-page">
   <div id="navbar"></div>
 
-  <div class="container">
-    <section class="about-amendola">
-      <h2>Links</h2>
-      <p class="subtitle">Aqui voce encontra links para te ajudar</p>
+  <main class="links-shell">
+    <section class="links-hero" aria-labelledby="links-title">
+      <div class="links-hero-copy">
+        <span class="links-kicker"><i class="fa-solid fa-bolt"></i> Central de acesso</span>
+        <h1 id="links-title">Links rapidos Amendola</h1>
+        <p>Atalhos organizados para suporte, sistemas, downloads e canais internos em uma unica tela.</p>
+      </div>
 
-      <div class="links-toolbar">
-        <input type="text" id="searchInput" placeholder="Buscar ferramenta ou sistema...">
-        <select id="catFilter">
-          <option value="all">Geral</option>
-     </select>
+      <div class="links-spotlight" aria-label="Atalho em destaque">
+        <span>Mais usado agora</span>
+        <strong>Amendola FlowDocs</strong>
+        <a href="https://amendola.flowdocs.com.br:2053/credentials/login" target="_blank" rel="noopener noreferrer">
+          Abrir plataforma <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
       </div>
     </section>
 
-    <main class="cards" id="linksGrid">
-    </main>
+    <section class="links-command-center" aria-label="Busca de links">
+      <div class="links-toolbar">
+        <label class="search-box" for="searchInput">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="Buscar ferramenta, sistema ou suporte...">
+        </label>
 
-    <div id="no-results" style="display:none; text-align:center; padding: 40px; opacity:0.5;">
-      <p>Nenhum resultado encontrado.</p>
+        <label class="select-box" for="catFilter">
+          <i class="fa-solid fa-layer-group"></i>
+          <select id="catFilter" aria-label="Filtrar categoria">
+            <option value="all">Todos</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="category-pills" id="categoryPills" aria-label="Categorias"></div>
+
+      <div class="links-summary">
+        <span id="resultCount">0 links encontrados</span>
+        <button type="button" id="clearSearch">Limpar filtros</button>
+      </div>
+    </section>
+
+    <section class="links-grid" id="linksGrid" aria-label="Lista de links"></section>
+
+    <div id="no-results" class="empty-state" hidden>
+      <i class="fa-solid fa-link-slash"></i>
+      <h2>Nenhum link encontrado</h2>
+      <p>Tente limpar os filtros ou buscar por outro termo.</p>
     </div>
-  </div>
+  </main>
 
   <div id="footer-area"></div>
   <div id="cookies-area"></div>
 
-  <a href="https://wa.me/551735579090" class="whatsapp-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+  <a href="https://wa.me/551735579090" class="whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
 
   <script src="assets/components/loader.js"></script>
-
   <script src="assets/js/cookies.js"></script>
 
   <script>
+    const categories = {
+      all: { label: "Todos", icon: "fa-border-all" },
+      sistemas: { label: "Sistemas", icon: "fa-display" },
+      documentos: { label: "Documentos", icon: "fa-folder-open" },
+      interno: { label: "Interno", icon: "fa-building-user" },
+      suporte: { label: "Suporte", icon: "fa-headset" }
+    };
+
     const linksData = [
-      { title: "Amendola TA", desc: "Upload e gestão de arquivos da Amendola.", url: "https://amendolaeamendola.ddns.net/", cat: "sistemas" },
-      { title: "SIA8 Fiorilli", desc: "Downloads e atualizações do sistema SIA8.", url: "https://fiorilli.com.br/appsia8", cat: "sistemas" },
-      { title: "Downloads Fiorilli", desc: "Arquivos de suporte e executáveis.", url: "https://fiorilli.com.br/downloadfiles/", cat: "documentos" },
-      { title: "Webmail", desc: "Acesso direto ao e-mail institucional.", url: "http://webmail.amendolaeamendola.com.br/", cat: "interno" },
-      { title: "Amendola FlowDocs", desc: "Gestão documental e fluxo de trabalho digital.", url: "https://amendola.flowdocs.com.br:2053/credentials/login", cat: "interno" },
-      { title: "Suporte WhatsApp", desc: "Fale com nossa equipe técnica.", url: "https://wa.me/551735579090", cat: "suporte" }
+      {
+        title: "Amendola TA",
+        desc: "Upload e gestao de arquivos da Amendola.",
+        url: "https://amendolaeamendola.ddns.net/",
+        cat: "sistemas",
+        icon: "fa-cloud-arrow-up",
+        tone: "orange",
+        tag: "Arquivos"
+      },
+      {
+        title: "SIA8 Fiorilli",
+        desc: "Downloads e atualizacoes do sistema SIA8.",
+        url: "https://fiorilli.com.br/appsia8",
+        cat: "sistemas",
+        icon: "fa-rotate",
+        tone: "teal",
+        tag: "Atualizacao"
+      },
+      {
+        title: "Downloads Fiorilli",
+        desc: "Arquivos de suporte, instaladores e executaveis.",
+        url: "https://fiorilli.com.br/downloadfiles/",
+        cat: "documentos",
+        icon: "fa-download",
+        tone: "blue",
+        tag: "Downloads"
+      },
+      {
+        title: "Webmail",
+        desc: "Acesso direto ao e-mail institucional.",
+        url: "http://webmail.amendolaeamendola.com.br/",
+        cat: "interno",
+        icon: "fa-envelope",
+        tone: "slate",
+        tag: "Email"
+      },
+      {
+        title: "Amendola FlowDocs",
+        desc: "Gestao documental e fluxo de trabalho digital.",
+        url: "https://amendola.flowdocs.com.br:2053/credentials/login",
+        cat: "interno",
+        icon: "fa-file-signature",
+        tone: "orange",
+        tag: "Principal",
+        featured: true
+      },
+      {
+        title: "Suporte WhatsApp",
+        desc: "Fale com nossa equipe tecnica pelo WhatsApp.",
+        url: "https://wa.me/551735579090",
+        cat: "suporte",
+        icon: "fa-brands fa-whatsapp",
+        tone: "green",
+        tag: "Atendimento"
+      }
     ];
 
-    const grid = document.getElementById('linksGrid');
-    const searchInput = document.getElementById('searchInput');
-    const catFilter = document.getElementById('catFilter');
+    const grid = document.getElementById("linksGrid");
+    const searchInput = document.getElementById("searchInput");
+    const catFilter = document.getElementById("catFilter");
+    const categoryPills = document.getElementById("categoryPills");
+    const resultCount = document.getElementById("resultCount");
+    const clearSearch = document.getElementById("clearSearch");
+    const emptyState = document.getElementById("no-results");
+
+    function iconClass(link) {
+      return link.icon.includes("fa-brands") ? link.icon : `fa-solid ${link.icon}`;
+    }
+
+    function fillCategories() {
+      Object.entries(categories).forEach(([value, category]) => {
+        if (value !== "all") {
+          const option = document.createElement("option");
+          option.value = value;
+          option.textContent = category.label;
+          catFilter.appendChild(option);
+        }
+
+        const pill = document.createElement("button");
+        pill.type = "button";
+        pill.className = value === "all" ? "category-pill active" : "category-pill";
+        pill.dataset.category = value;
+        pill.innerHTML = `<i class="fa-solid ${category.icon}"></i>${category.label}`;
+        categoryPills.appendChild(pill);
+      });
+    }
+
+    function setCategory(category) {
+      catFilter.value = category;
+      document.querySelectorAll(".category-pill").forEach((pill) => {
+        pill.classList.toggle("active", pill.dataset.category === category);
+      });
+      renderLinks();
+    }
+
+    function fallbackCopy(url) {
+      const textArea = document.createElement("textarea");
+      textArea.value = url;
+      textArea.setAttribute("readonly", "");
+      textArea.style.position = "fixed";
+      textArea.style.left = "-9999px";
+      document.body.appendChild(textArea);
+      textArea.select();
+      const copied = document.execCommand("copy");
+      textArea.remove();
+      return copied ? Promise.resolve() : Promise.reject();
+    }
+
+    function copyLink(url, button) {
+      const copyTask = navigator.clipboard
+        ? navigator.clipboard.writeText(url)
+        : fallbackCopy(url);
+
+      copyTask.catch(() => fallbackCopy(url)).then(() => {
+        const original = button.innerHTML;
+        button.innerHTML = '<i class="fa-solid fa-check"></i>';
+        button.setAttribute("aria-label", "Link copiado");
+        setTimeout(() => {
+          button.innerHTML = original;
+          button.setAttribute("aria-label", "Copiar link");
+        }, 1400);
+      }).catch(() => {
+        button.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i>';
+      });
+    }
 
     function renderLinks() {
-      const query = searchInput.value.toLowerCase();
+      const query = searchInput.value.trim().toLowerCase();
       const category = catFilter.value;
-      grid.innerHTML = '';
+      grid.innerHTML = "";
       let count = 0;
 
-      linksData.forEach(link => {
-        const matchText = link.title.toLowerCase().includes(query) || link.desc.toLowerCase().includes(query);
-        const matchCat = category === 'all' || link.cat === category;
+      linksData.forEach((link) => {
+        const categoryLabel = categories[link.cat].label;
+        const searchable = `${link.title} ${link.desc} ${categoryLabel} ${link.tag}`.toLowerCase();
+        const matchText = searchable.includes(query);
+        const matchCat = category === "all" || link.cat === category;
 
         if (matchText && matchCat) {
-          const card = document.createElement('a');
-          card.className = 'card';
-          card.href = link.url;
-          card.target = '_blank';
-          card.style.textDecoration = 'none';
+          const card = document.createElement("article");
+          card.className = link.featured ? "link-card featured" : "link-card";
           card.innerHTML = `
-                        <div class="icon">${link.title.charAt(0)}</div>
-                        <h3>${link.title}</h3>
-                        <p>${link.desc}</p>
-                    `;
+            <div class="link-card-top">
+              <span class="link-icon ${link.tone}">
+                <i class="${iconClass(link)}"></i>
+              </span>
+              <span class="link-tag">${link.tag}</span>
+            </div>
+            <h2>${link.title}</h2>
+            <p>${link.desc}</p>
+            <div class="link-meta">
+              <span><i class="fa-solid ${categories[link.cat].icon}"></i>${categoryLabel}</span>
+              <span>${new URL(link.url).hostname}</span>
+            </div>
+            <div class="link-actions">
+              <a href="${link.url}" target="_blank" rel="noopener noreferrer">
+                Abrir <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <button type="button" class="copy-link" aria-label="Copiar link">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          `;
+
+          const copyButton = card.querySelector(".copy-link");
+          copyButton.addEventListener("click", () => copyLink(link.url, copyButton));
+
           grid.appendChild(card);
           count++;
         }
       });
-      document.getElementById('no-results').style.display = count === 0 ? 'block' : 'none';
+
+      resultCount.textContent = `${count} ${count === 1 ? "link encontrado" : "links encontrados"}`;
+      emptyState.hidden = count !== 0;
     }
 
-    searchInput.addEventListener('input', renderLinks);
-    catFilter.addEventListener('change', renderLinks);
+    fillCategories();
+    searchInput.addEventListener("input", renderLinks);
+    catFilter.addEventListener("change", () => setCategory(catFilter.value));
+    categoryPills.addEventListener("click", (event) => {
+      const pill = event.target.closest(".category-pill");
+      if (pill) setCategory(pill.dataset.category);
+    });
+    clearSearch.addEventListener("click", () => {
+      searchInput.value = "";
+      setCategory("all");
+    });
     renderLinks();
   </script>
 </body>

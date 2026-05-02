@@ -13,34 +13,231 @@
   <link href="assets/css/cookies.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
+    .lousa-page {
+      background:
+        linear-gradient(180deg, rgba(255, 152, 0, 0.08), transparent 320px),
+        var(--bg);
     }
 
-    .calendar-container {
-      max-width: 1100px;
-      width: 90%;
-      margin: 90px auto;
-      padding: 0;
+    .lousa-shell {
+      width: min(1200px, 90vw);
+      margin: 0 auto;
+      padding: 128px 0 80px;
     }
 
-    .calendar-title {
-      text-align: center;
-      margin-bottom: 25px;
-      font-family: var(--content-font, "Segoe UI", Roboto, Arial, sans-serif);
-      color: var(--text);
+    .lousa-hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+      gap: 32px;
+      align-items: end;
+      min-height: 360px;
+      overflow: hidden;
+      border-radius: 8px;
+      padding: clamp(28px, 5vw, 54px);
+      background:
+        linear-gradient(100deg, rgba(8, 11, 16, 0.88) 0%, rgba(8, 11, 16, 0.62) 54%, rgba(255, 152, 0, 0.16) 100%),
+        url("assets/img/amendolapredio.png") center / cover;
+      box-shadow: 0 28px 70px rgba(15, 23, 42, 0.22);
+      color: #fff;
+    }
+
+    .lousa-hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 5px;
+      background: linear-gradient(90deg, #ff9800, #15b8a6, #ffffff);
+    }
+
+    .lousa-copy,
+    .clock-panel {
+      position: relative;
+      z-index: 1;
+    }
+
+    .lousa-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      color: #ffbd5a;
+      font-size: 13px;
       font-weight: 800;
       letter-spacing: 0;
-      font-size: 32px;
+      text-transform: uppercase;
+    }
+
+    .lousa-copy h1 {
+      max-width: 760px;
+      margin: 0 0 16px;
+      font-size: clamp(40px, 7vw, 72px);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    .lousa-copy p {
+      max-width: 640px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .lousa-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .lousa-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 44px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 8px;
+      padding: 0 16px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.12);
+      text-decoration: none;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .lousa-action.primary {
+      border-color: transparent;
+      background: var(--orange);
+      box-shadow: 0 18px 34px rgba(232, 117, 0, 0.3);
+    }
+
+    .lousa-action:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .lousa-action.primary:hover {
+      background: var(--orange-dark);
+    }
+
+    .clock-panel {
+      justify-self: end;
+      width: min(100%, 380px);
+      padding: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 8px;
+      background: rgba(6, 8, 12, 0.64);
+      backdrop-filter: blur(18px);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .clock-label {
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .clock-time {
+      margin: 8px 0 6px;
+      font-size: clamp(42px, 6vw, 64px);
+      font-weight: 900;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .clock-date {
+      color: rgba(255, 255, 255, 0.78);
+      text-transform: capitalize;
+    }
+
+    .lousa-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .lousa-stat {
+      min-height: 118px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-light);
+      box-shadow: 0 16px 38px rgba(15, 23, 42, 0.08);
+    }
+
+    .lousa-stat i {
+      color: var(--orange);
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    .lousa-stat strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--text);
+      font-size: 18px;
+    }
+
+    .lousa-stat span {
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    .calendar-board {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-light);
+      box-shadow: 0 30px 80px rgba(15, 23, 42, 0.14);
+    }
+
+    .calendar-board-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 24px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(90deg, rgba(255, 152, 0, 0.12), rgba(21, 184, 166, 0.08));
+    }
+
+    .calendar-board-header h2 {
+      margin: 0;
+      color: var(--text);
+      font-size: clamp(24px, 3vw, 34px);
+      letter-spacing: 0;
+    }
+
+    .calendar-board-header p {
+      margin: 6px 0 0;
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .calendar-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      color: #08756b;
+      background: rgba(21, 184, 166, 0.12);
+      border: 1px solid rgba(21, 184, 166, 0.24);
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 800;
     }
 
     .calendar-container iframe {
       width: 100%;
-      height: 1000px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+      height: min(980px, 92vh);
+      min-height: 720px;
+      border: 0;
       display: block;
       background: var(--bg-light);
     }
@@ -49,30 +246,170 @@
       position: relative;
       z-index: 1;
     }
+
+    @media (max-width: 900px) {
+      .lousa-shell {
+        padding-top: 112px;
+      }
+
+      .lousa-hero,
+      .lousa-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .clock-panel {
+        justify-self: stretch;
+      }
+
+      .calendar-board-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .lousa-shell {
+        width: min(100% - 32px, 1200px);
+      }
+
+      .lousa-hero {
+        padding: 26px 20px;
+      }
+
+      .lousa-actions {
+        flex-direction: column;
+      }
+
+      .lousa-action {
+        justify-content: center;
+      }
+
+      .calendar-container iframe {
+        min-height: 640px;
+      }
+    }
   </style>
 </head>
 
-<body>
-<div id="navbar"></div>
+<body class="lousa-page">
+  <div id="navbar"></div>
 
-<div class="calendar-container">
-  <h2 class="calendar-title">Agenda de Viagens</h2>
+  <main class="lousa-shell">
+    <section class="lousa-hero" aria-labelledby="lousa-title">
+      <div class="lousa-copy">
+        <span class="lousa-kicker"><i class="fa-solid fa-tv"></i> Lousa Digital</span>
+        <h1 id="lousa-title">Agenda de Viagens</h1>
+        <p>Um painel vivo para acompanhar deslocamentos, horarios e compromissos do time com mais clareza.</p>
 
-  <iframe
-    src="https://calendar.google.com/calendar/embed?src=amendolasoftware%40gmail.com&ctz=America%2FSao_Paulo&color=%23E9A14C"
-    scrolling="no" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Agenda de Viagens">
-  </iframe>
-</div>
+        <div class="lousa-actions">
+          <a class="lousa-action primary" href="https://calendar.google.com/calendar/embed?src=amendolasoftware%40gmail.com&ctz=America%2FSao_Paulo&color=%23E9A14C" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            Abrir agenda
+          </a>
+          <button class="lousa-action" type="button" id="fullscreenButton">
+            <i class="fa-solid fa-expand"></i>
+            Modo lousa
+          </button>
+        </div>
+      </div>
 
-<div id="contato-area"></div>
-<div id="footer-area"></div>
-<div id="cookies-area"></div>
+      <aside class="clock-panel" aria-label="Horario atual">
+        <div class="clock-label">Agora em Sales/SP</div>
+        <div class="clock-time" id="clockTime">--:--:--</div>
+        <div class="clock-date" id="clockDate">Carregando data</div>
+      </aside>
+    </section>
 
-<a href="https://wa.me/551735579090" class="whatsapp-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    <section class="lousa-stats" aria-label="Resumo da agenda">
+      <div class="lousa-stat">
+        <i class="fa-solid fa-route"></i>
+        <strong>Painel de viagens</strong>
+        <span>Consulta rapida para deslocamentos, reservas e compromissos externos.</span>
+      </div>
+      <div class="lousa-stat">
+        <i class="fa-solid fa-satellite-dish"></i>
+        <strong>Atualizacao ao vivo</strong>
+        <span id="updatedAt">Sincronizando horario local...</span>
+      </div>
+      <div class="lousa-stat">
+        <i class="fa-solid fa-location-dot"></i>
+        <strong>Fuso oficial</strong>
+        <span>America/Sao_Paulo para manter o painel alinhado com a agenda da equipe.</span>
+      </div>
+    </section>
 
-<script src="assets/components/loader.js"></script>
+    <section class="calendar-board">
+      <div class="calendar-board-header">
+        <div>
+          <h2>Calendario operacional</h2>
+          <p>Agenda compartilhada para acompanhar a programacao de viagens em tela cheia.</p>
+        </div>
+        <span class="calendar-status"><i class="fa-solid fa-circle"></i> Online</span>
+      </div>
 
-<script src="assets/js/cookies.js"></script>
+      <div class="calendar-container">
+        <iframe
+          data-cookie-category="functional"
+          data-src="https://calendar.google.com/calendar/embed?src=amendolasoftware%40gmail.com&ctz=America%2FSao_Paulo&color=%23E9A14C"
+          scrolling="no" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Agenda de Viagens">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <div id="contato-area"></div>
+  <div id="footer-area"></div>
+  <div id="cookies-area"></div>
+
+  <a href="https://wa.me/551735579090" class="whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+
+  <script src="assets/components/loader.js"></script>
+  <script src="assets/js/cookies.js"></script>
+
+  <script>
+    (function () {
+      const clockTime = document.getElementById("clockTime");
+      const clockDate = document.getElementById("clockDate");
+      const updatedAt = document.getElementById("updatedAt");
+      const fullscreenButton = document.getElementById("fullscreenButton");
+
+      function updateClock() {
+        const now = new Date();
+        clockTime.textContent = now.toLocaleTimeString("pt-BR", {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit"
+        });
+        clockDate.textContent = now.toLocaleDateString("pt-BR", {
+          weekday: "long",
+          day: "2-digit",
+          month: "long",
+          year: "numeric"
+        });
+        updatedAt.textContent = `Ultima leitura: ${now.toLocaleTimeString("pt-BR", {
+          hour: "2-digit",
+          minute: "2-digit"
+        })}`;
+      }
+
+      fullscreenButton.addEventListener("click", async () => {
+        try {
+          if (!document.fullscreenElement) {
+            await document.documentElement.requestFullscreen();
+            fullscreenButton.innerHTML = '<i class="fa-solid fa-compress"></i> Sair da lousa';
+          } else {
+            await document.exitFullscreen();
+            fullscreenButton.innerHTML = '<i class="fa-solid fa-expand"></i> Modo lousa';
+          }
+        } catch (error) {
+          console.warn("Nao foi possivel alternar tela cheia.", error);
+        }
+      });
+
+      updateClock();
+      setInterval(updateClock, 1000);
+    })();
+  </script>
 
 </body>
 

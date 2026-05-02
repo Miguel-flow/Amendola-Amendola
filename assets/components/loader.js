@@ -109,6 +109,7 @@ function initLocalCleanUrlFallback() {
     if (/^(https?:|mailto:|tel:|whatsapp:)/i.test(href)) return null;
     if (/\.[a-z0-9]+$/i.test(href)) return null;
 
+    const suffix = href.match(/[?#].*$/)?.[0] || '';
     const cleanHref = href.split(/[?#]/)[0].replace(/^\.\//, '').replace(/^\/+/, '').replace(/\/$/, '');
     if (!cleanHref || cleanHref === '.') return null;
 
@@ -119,7 +120,7 @@ function initLocalCleanUrlFallback() {
       sse: 'SSE.html'
     };
 
-    return pageFiles[cleanHref.toLowerCase()] || `${cleanHref}.html`;
+    return `${pageFiles[cleanHref.toLowerCase()] || `${cleanHref}.html`}${suffix}`;
   }
 
   document.addEventListener('click', (e) => {
