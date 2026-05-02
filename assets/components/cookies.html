@@ -1,108 +1,98 @@
-<div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de privacidade e cookies">
   <div class="cookie-content">
+    <div class="cookie-badge" aria-hidden="true">
+      <i class="fa-solid fa-shield-halved"></i>
+    </div>
+
     <p class="cookie-text">
-      <strong>Cookies & Privacidade</strong><br>
-      Utilizamos cookies para garantir o funcionamento do site (obrigatórios) e, com a sua autorização, para
-      melhorar a experiência, medir audiência e exibir conteúdos/serviços de terceiros (ex.: mapas).
-      Você pode <a href="#" onclick="configurarCookies(); return false;">gerenciar suas preferências</a>.
-      <br><br>
+      <strong>Privacidade e cookies</strong>
+      Usamos cookies necessários para o site funcionar. Com sua autorização, também usamos cookies funcionais,
+      analíticos e de marketing para carregar recursos de terceiros, medir audiência e melhorar sua experiência.
+      Você pode aceitar, rejeitar os não essenciais ou ajustar cada categoria.
       <small>
-        Controlador: Amêndola & Amêndola Software •
-        <a href="politicadeprivacidade" target="_blank">Política de Privacidade</a>
+        Controlador: Amêndola & Amêndola Software.
+        <a href="politicadeprivacidade" target="_blank" rel="noopener noreferrer">Ver política completa</a>
       </small>
     </p>
 
-    <div class="cookie-buttons">
-      <button class="cookie-btn btn-magenta" onclick="configurarCookies()">PREFERÊNCIAS</button>
-      <button class="cookie-btn" onclick="rejeitarCookies()">REJEITAR</button>
-      <button class="cookie-btn btn-laranja" onclick="aceitarCookies()">EU ACEITO</button>
+    <div class="cookie-buttons" aria-label="Opções de consentimento">
+      <button type="button" class="cookie-btn btn-settings" onclick="configurarCookies()">Preferências</button>
+      <button type="button" class="cookie-btn btn-neutral" onclick="rejeitarCookies()">Rejeitar não essenciais</button>
+      <button type="button" class="cookie-btn btn-primary" onclick="aceitarCookies()">Aceitar tudo</button>
     </div>
   </div>
 </div>
 
-<div id="cookie-modal-overlay" role="dialog" aria-modal="true">
+<div id="cookie-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
   <div id="cookie-modal">
-    <div class="close-modal" onclick="fecharModal()">✕</div>
+    <button type="button" class="close-modal" onclick="fecharModal()" aria-label="Fechar preferências de cookies">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
 
-    <h2>Preferências de Privacidade</h2>
+    <span class="modal-kicker">LGPD</span>
+    <h2 id="cookie-modal-title">Preferências de privacidade</h2>
     <p>
-      Aqui você escolhe quais cookies autoriza. Você pode alterar ou revogar seu consentimento a qualquer momento
-      clicando em <strong>“Configurar Cookies”</strong> no rodapé.
+      Defina quais categorias de cookies e tecnologias semelhantes você autoriza. Cookies opcionais ficam desativados
+      até que você dê consentimento e podem ser alterados a qualquer momento no rodapé.
     </p>
 
     <div class="cookie-meta">
-      <strong>Informações LGPD</strong><br>
-      • Controlador: Amêndola & Amêndola Software<br>
-      • Finalidades: funcionamento do site, melhorias de navegação, métricas e recursos de terceiros (quando
-      ativados)<br>
-      • Base legal: <em>legítimo interesse</em> para cookies estritamente necessários e <em>consentimento</em> para os
-      demais<br>
-      • Compartilhamento (quando ativado): serviços de terceiros como Google/Meta/YouTube/Cloudflare, conforme
-      política<br>
-      • Retenção: varia por fornecedor. Em geral, cookies de preferência e analíticos podem durar de sessão até 13 meses
-      (dependendo do provedor)
-      <br>
+      <strong>Resumo transparente</strong>
+      <span>Base legal: legítimo interesse para cookies necessários e consentimento para cookies opcionais.</span>
+      <span>Finalidades: funcionamento do site, segurança, recursos de terceiros, métricas e comunicação institucional.</span>
+      <span>Retenção: varia por categoria e fornecedor, pelo tempo necessário à finalidade informada.</span>
     </div>
 
-    <div class="cookie-option">
-      <div>
-        <strong>Obrigatórios (necessários)</strong>
-        <small>
-          Essenciais para o site funcionar (segurança, navegação e preferências básicas). Sempre ativos e não podem ser
-          desativados.
-        </small>
+    <div class="cookie-options">
+      <div class="cookie-option">
+        <div>
+          <strong>Necessários</strong>
+          <small>Garantem segurança, carregamento do site e gravação da sua escolha de privacidade. Sempre ativos.</small>
+        </div>
+        <label class="switch" aria-label="Cookies necessários sempre ativos">
+          <input type="checkbox" checked disabled>
+          <span class="slider"></span>
+        </label>
       </div>
-      <label class="switch">
-        <input type="checkbox" checked disabled>
-        <span class="slider"></span>
-      </label>
-    </div>
 
-    <div class="cookie-option">
-      <div>
-        <strong>Funcionais (recursos)</strong>
-        <small>
-          Permitem recursos como mapas incorporados e integrações de serviços. Sem eles, alguns componentes podem não
-          carregar.
-        </small>
+      <div class="cookie-option">
+        <div>
+          <strong>Funcionais</strong>
+          <small>Permitem incorporar recursos como Google Maps e Google Calendar. Sem consentimento, esses conteúdos ficam bloqueados.</small>
+        </div>
+        <label class="switch" aria-label="Autorizar cookies funcionais">
+          <input type="checkbox" id="functional">
+          <span class="slider"></span>
+        </label>
       </div>
-      <label class="switch">
-        <input type="checkbox" id="functional">
-        <span class="slider"></span>
-      </label>
-    </div>
 
-    <div class="cookie-option">
-      <div>
-        <strong>Analíticos (métricas)</strong>
-        <small>
-          Ajudam a entender como o site é usado (páginas mais acessadas, tempo de navegação), para melhorar a
-          experiência.
-        </small>
+      <div class="cookie-option">
+        <div>
+          <strong>Analíticos</strong>
+          <small>Ajudam a entender uso, desempenho e páginas mais acessadas para melhorar o site.</small>
+        </div>
+        <label class="switch" aria-label="Autorizar cookies analíticos">
+          <input type="checkbox" id="analytics">
+          <span class="slider"></span>
+        </label>
       </div>
-      <label class="switch">
-        <input type="checkbox" id="analytics">
-        <span class="slider"></span>
-      </label>
-    </div>
 
-    <div class="cookie-option">
-      <div>
-        <strong>Marketing (publicidade)</strong>
-        <small>
-          Podem ser usados para personalização de conteúdo e medição de campanhas. Envolve terceiros e rastreamento.
-        </small>
+      <div class="cookie-option">
+        <div>
+          <strong>Marketing</strong>
+          <small>Podem apoiar personalização de campanhas e medição de anúncios, sempre condicionados ao seu consentimento.</small>
+        </div>
+        <label class="switch" aria-label="Autorizar cookies de marketing">
+          <input type="checkbox" id="marketing">
+          <span class="slider"></span>
+        </label>
       </div>
-      <label class="switch">
-        <input type="checkbox" id="marketing">
-        <span class="slider"></span>
-      </label>
     </div>
 
     <div class="modal-footer">
-      <button class="btn-ghost" onclick="rejeitarCookies()">Rejeitar não essenciais</button>
-      <button class="btn-save" onclick="salvarCookies()">Salvar preferências</button>
-      <button class="btn-save" style="background:#0f7a2a;" onclick="aceitarCookies()">Aceitar tudo</button>
+      <button type="button" class="btn-ghost" onclick="rejeitarCookies()">Rejeitar não essenciais</button>
+      <button type="button" class="btn-save" onclick="salvarCookies()">Salvar preferências</button>
+      <button type="button" class="btn-accept-all" onclick="aceitarCookies()">Aceitar tudo</button>
     </div>
   </div>
 </div>

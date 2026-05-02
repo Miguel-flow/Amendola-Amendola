@@ -1,0 +1,5 @@
+# Local browser profiles generated during visual checks.
+.edge-profile-codex*/
+
+# Local screenshot previews generated during QA.
+preview-*.png

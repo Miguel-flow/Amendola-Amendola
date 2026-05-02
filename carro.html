@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amendola & Amendola - Carro</title>
+  <title>Amendola & Amendola - Frota</title>
   <link href="assets/img/logo-amendola-2.png" rel="icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="assets/css/style.css" rel="stylesheet">
@@ -12,88 +12,237 @@
   <link href="assets/css/cookies.css" rel="stylesheet">
 </head>
 
-<body class="index-page">
-
+<body class="fleet-page">
   <div id="navbar"></div>
 
-  <main>
-    <section id="tabela-veiculos">
-      <div class="container text-center">
-        <h2 class="mb-4">Tabela de Veículos</h2>
+  <main class="fleet-main">
+    <section class="fleet-hero" aria-labelledby="fleet-title">
+      <div class="fleet-hero-copy">
+        <span class="fleet-kicker"><i class="fa-solid fa-car-side"></i> Frota Amendola</span>
+        <h1 id="fleet-title">Painel de Veiculos</h1>
+        <p>Consulta rapida de placas, modelos e identificacao interna para deixar a rotina mais simples.</p>
+      </div>
 
+      <div class="fleet-hero-panel">
+        <span>Resumo da frota</span>
+        <strong id="fleetTotal">10</strong>
+        <p>veiculos cadastrados</p>
+      </div>
+    </section>
+
+    <section class="fleet-stats" aria-label="Resumo dos veiculos">
+      <article class="fleet-stat">
+        <i class="fa-solid fa-list-ol"></i>
+        <span>Total</span>
+        <strong id="statTotal">0</strong>
+      </article>
+      <article class="fleet-stat">
+        <i class="fa-solid fa-star"></i>
+        <span>Modelo destaque</span>
+        <strong id="statTopModel">-</strong>
+      </article>
+      <article class="fleet-stat">
+        <i class="fa-solid fa-hashtag"></i>
+        <span>Numerados</span>
+        <strong id="statNumbered">0</strong>
+      </article>
+      <article class="fleet-stat">
+        <i class="fa-solid fa-shapes"></i>
+        <span>Modelos</span>
+        <strong id="statModels">0</strong>
+      </article>
+    </section>
+
+    <section class="fleet-tools" aria-label="Ferramentas de busca">
+      <label class="fleet-search" for="fleetSearch">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input id="fleetSearch" type="search" placeholder="Buscar por numero, modelo ou placa...">
+      </label>
+
+      <label class="fleet-select" for="modelFilter">
+        <i class="fa-solid fa-filter"></i>
+        <select id="modelFilter" aria-label="Filtrar por modelo">
+          <option value="all">Todos os modelos</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="fleet-grid" id="fleetGrid" aria-label="Cards dos veiculos"></section>
+
+    <section class="fleet-table-card" aria-labelledby="fleet-table-title">
+      <div class="fleet-table-head">
+        <div>
+          <span>Conferencia rapida</span>
+          <h2 id="fleet-table-title">Tabela de Veiculos</h2>
+        </div>
+        <strong id="resultCount">0 resultados</strong>
+      </div>
+
+      <div class="fleet-table-wrap">
         <table>
           <thead>
             <tr>
-              <th>Número</th>
+              <th>Numero</th>
               <th>Modelo</th>
               <th>Placa</th>
+              <th>Status</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>01</td>
-              <td>Yaris</td>
-              <td>SWH-9I21</td>
-            </tr>
-            <tr>
-              <td>02</td>
-              <td>Voyage</td>
-              <td>EOD-6252</td>
-            </tr>
-            <tr>
-              <td>03</td>
-              <td>Voyage</td>
-              <td>BWW-2953</td>
-            </tr>
-            <tr>
-              <td>04</td>
-              <td>Voyage</td>
-              <td>FHY-9894</td>
-            </tr>
-            <tr>
-              <td>05</td>
-              <td>Gol</td>
-              <td>GCH-3945</td>
-            </tr>
-            <tr>
-              <td>06</td>
-              <td>Voyage</td>
-              <td>FXZ-4656</td>
-            </tr>
-            <tr>
-              <td>07</td>
-              <td>Voyage</td>
-              <td>GHI-0F27</td>
-            </tr>
-            <tr>
-              <td>08</td>
-              <td>Gol</td>
-              <td>FWR-9928</td>
-            </tr>
-            <tr>
-              <td>09</td>
-              <td>Gol</td>
-              <td>FCH-3939</td>
-            </tr>
-            <tr>
-              <td>—</td>
-              <td>Polo</td>
-              <td>FVV-6065</td>
-            </tr>
-          </tbody>
+          <tbody id="fleetTableBody"></tbody>
         </table>
       </div>
     </section>
+
+    <div id="noVehicles" class="fleet-empty" hidden>
+      <i class="fa-solid fa-car-burst"></i>
+      <h2>Nenhum veiculo encontrado</h2>
+      <p>Tente buscar por outro modelo, numero ou placa.</p>
+    </div>
   </main>
 
   <div id="contato-area"></div>
   <div id="footer-area"></div>
   <div id="cookies-area"></div>
 
-  <a href="https://wa.me/551735579090" class="whatsapp-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-  <script src="assets/components/loader.js"></script>
+  <a href="https://wa.me/551735579090" class="whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
 
+  <script src="assets/components/loader.js"></script>
   <script src="assets/js/cookies.js"></script>
+
+  <script>
+    const vehicles = [
+      { number: "01", model: "Yaris", plate: "SWH-9I21" },
+      { number: "02", model: "Voyage", plate: "EOD-6252" },
+      { number: "03", model: "Voyage", plate: "BWW-2953" },
+      { number: "04", model: "Voyage", plate: "FHY-9894" },
+      { number: "05", model: "Gol", plate: "GCH-3945" },
+      { number: "06", model: "Voyage", plate: "FXZ-4656" },
+      { number: "07", model: "Voyage", plate: "GHI-0F27" },
+      { number: "08", model: "Gol", plate: "FWR-9928" },
+      { number: "09", model: "Gol", plate: "FCH-3939" },
+      { number: "-", model: "Polo", plate: "FVV-6065" }
+    ];
+
+    const modelColors = {
+      Yaris: "blue",
+      Voyage: "orange",
+      Gol: "teal",
+      Polo: "slate"
+    };
+
+    const fleetGrid = document.getElementById("fleetGrid");
+    const fleetTableBody = document.getElementById("fleetTableBody");
+    const fleetSearch = document.getElementById("fleetSearch");
+    const modelFilter = document.getElementById("modelFilter");
+    const noVehicles = document.getElementById("noVehicles");
+    const resultCount = document.getElementById("resultCount");
+
+    function copyPlate(plate, button) {
+      const fallbackCopy = () => {
+        const textArea = document.createElement("textarea");
+        textArea.value = plate;
+        textArea.setAttribute("readonly", "");
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        document.body.appendChild(textArea);
+        textArea.select();
+        const copied = document.execCommand("copy");
+        textArea.remove();
+        return copied ? Promise.resolve() : Promise.reject();
+      };
+
+      const copyTask = navigator.clipboard ? navigator.clipboard.writeText(plate) : fallbackCopy();
+      copyTask.catch(fallbackCopy).then(() => {
+        const original = button.innerHTML;
+        button.innerHTML = '<i class="fa-solid fa-check"></i> Copiada';
+        setTimeout(() => {
+          button.innerHTML = original;
+        }, 1200);
+      }).catch(() => {
+        button.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i>';
+      });
+    }
+
+    function fillModelFilter() {
+      [...new Set(vehicles.map((vehicle) => vehicle.model))].sort().forEach((model) => {
+        const option = document.createElement("option");
+        option.value = model;
+        option.textContent = model;
+        modelFilter.appendChild(option);
+      });
+    }
+
+    function updateStats() {
+      const counts = vehicles.reduce((acc, vehicle) => {
+        acc[vehicle.model] = (acc[vehicle.model] || 0) + 1;
+        return acc;
+      }, {});
+      const topModel = Object.entries(counts).sort((a, b) => b[1] - a[1])[0];
+
+      document.getElementById("fleetTotal").textContent = vehicles.length;
+      document.getElementById("statTotal").textContent = vehicles.length;
+      document.getElementById("statTopModel").textContent = `${topModel[0]} (${topModel[1]})`;
+      document.getElementById("statNumbered").textContent = vehicles.filter((vehicle) => vehicle.number !== "-").length;
+      document.getElementById("statModels").textContent = Object.keys(counts).length;
+    }
+
+    function vehicleMatches(vehicle, query, model) {
+      const content = `${vehicle.number} ${vehicle.model} ${vehicle.plate}`.toLowerCase();
+      const matchesQuery = content.includes(query);
+      const matchesModel = model === "all" || vehicle.model === model;
+      return matchesQuery && matchesModel;
+    }
+
+    function renderVehicles() {
+      const query = fleetSearch.value.trim().toLowerCase();
+      const model = modelFilter.value;
+      const filtered = vehicles.filter((vehicle) => vehicleMatches(vehicle, query, model));
+
+      fleetGrid.innerHTML = "";
+      fleetTableBody.innerHTML = "";
+
+      filtered.forEach((vehicle) => {
+        const color = modelColors[vehicle.model] || "orange";
+        const card = document.createElement("article");
+        card.className = "vehicle-card";
+        card.innerHTML = `
+          <div class="vehicle-card-top">
+            <span class="vehicle-number ${color}">${vehicle.number}</span>
+            <span class="vehicle-model">${vehicle.model}</span>
+          </div>
+          <div class="vehicle-plate">${vehicle.plate}</div>
+          <div class="vehicle-card-actions">
+            <span><i class="fa-solid fa-circle-check"></i> Disponivel</span>
+            <button type="button" aria-label="Copiar placa ${vehicle.plate}">
+              <i class="fa-regular fa-copy"></i> Copiar placa
+            </button>
+          </div>
+        `;
+        const copyButton = card.querySelector("button");
+        copyButton.addEventListener("click", () => copyPlate(vehicle.plate, copyButton));
+        fleetGrid.appendChild(card);
+
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${vehicle.number}</td>
+          <td>${vehicle.model}</td>
+          <td><strong>${vehicle.plate}</strong></td>
+          <td><span class="status-pill">Disponivel</span></td>
+        `;
+        fleetTableBody.appendChild(row);
+      });
+
+      resultCount.textContent = `${filtered.length} ${filtered.length === 1 ? "resultado" : "resultados"}`;
+      noVehicles.hidden = filtered.length !== 0;
+    }
+
+    fillModelFilter();
+    updateStats();
+    renderVehicles();
+
+    fleetSearch.addEventListener("input", renderVehicles);
+    modelFilter.addEventListener("change", renderVehicles);
+  </script>
 </body>
 
 </html>
