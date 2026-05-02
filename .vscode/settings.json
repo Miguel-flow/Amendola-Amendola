@@ -1,0 +1,14 @@
+{
+  "files.exclude": {
+    "**/.edge-profile-codex*": true,
+    "**/preview-*.png": true
+  },
+  "search.exclude": {
+    "**/.edge-profile-codex*": true,
+    "**/preview-*.png": true
+  },
+  "files.watcherExclude": {
+    "**/.edge-profile-codex*/**": true,
+    "**/preview-*.png": true
+  }
+}
