@@ -2,7 +2,7 @@
 .accordion {
     font-family: var(--content-font, "Segoe UI", Roboto, Arial, sans-serif);
     max-width: 960px;
-    margin: 90px auto;
+    margin: 128px auto 90px;
     padding: 0 20px;
 }
 
@@ -113,4 +113,10 @@
 .details-btn:hover {
     filter: brightness(1.1);
     box-shadow: 0 4px 15px var(--shadow-orange);
+}
+
+@media (max-width: 850px) {
+    .accordion {
+        margin-top: 118px;
+    }
 }
