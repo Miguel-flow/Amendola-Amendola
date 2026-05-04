@@ -33,7 +33,7 @@ body.privacy-page {
   font-family: var(--content-font, "Segoe UI", Roboto, Arial, sans-serif);
 }
 
-body.privacy-page a {
+.privacy-main a {
   color: var(--privacy-orange-dark);
   font-weight: 700;
 }
