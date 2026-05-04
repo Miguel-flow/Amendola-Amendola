@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -9,7 +9,7 @@
   <meta name="description" content="Conheça o FlowDocs, sistema de fluxo de documentos da Amendola & Amendola.">
   <meta name="keywords" content="FlowDocs, sistema, documentos, gestão">
   <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/sistemas.css" rel="stylesheet">
+  <link href="assets/css/sistemas.css?v=square-carousel" rel="stylesheet">
   <link href="assets/css/cookies.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
  
@@ -109,64 +109,74 @@
       </div>
     </section>
 
-    <section class="functionalities">
+    <section class="functionalities functionality-gallery" data-flowdocs-gallery>
       <h2>Funcionalidades completas do FLOWDOCS</h2>
 
-      <div class="functionalities-container">
-        <div class="functionality">
-          <h3>TRAMITAÇÃO ELETRÔNICA</h3>
-          <p>Permite o fluxo rápido e seguro de documentos entre setores e usuários, eliminando papéis e facilitando o
-            acompanhamento em tempo real.</p>
-        </div>
+      <div class="functionality-gallery-viewport" aria-label="Galeria automática de funcionalidades">
+        <button type="button" class="functionality-gallery-button gallery-prev" data-gallery-prev aria-label="Funcionalidade anterior">
+          <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
 
-        <div class="functionality">
-          <h3>PROTOCOLOS ONLINE</h3>
-          <p>Receba e gerencie solicitações feitas pelo cidadão diretamente pela plataforma, com emissão automática de
-            protocolos e acompanhamento simplificado.</p>
-        </div>
+        <div class="functionalities-container functionality-track">
+          <div class="functionality">
+            <h3>TRAMITAÇÃO ELETRÔNICA</h3>
+            <p>Permite o fluxo rápido e seguro de documentos entre setores e usuários, eliminando papéis e facilitando o
+              acompanhamento em tempo real.</p>
+          </div>
 
-        <div class="functionality">
-          <h3>ASSINATURA DIGITAL</h3>
-          <p>Integração com certificados digitais para validação segura de documentos, garantindo autenticidade e
-            validade jurídica.</p>
-        </div>
+          <div class="functionality">
+            <h3>PROTOCOLOS ONLINE</h3>
+            <p>Receba e gerencie solicitações feitas pelo cidadão diretamente pela plataforma, com emissão automática de
+              protocolos e acompanhamento simplificado.</p>
+          </div>
 
-        <div class="functionality">
-          <h3>ARMAZENAMENTO SEGURO</h3>
-          <p>Organização centralizada e protegida dos documentos eletrônicos, com controle de acesso por usuário e
-            níveis de permissão.</p>
-        </div>
+          <div class="functionality">
+            <h3>ASSINATURA DIGITAL</h3>
+            <p>Integração com certificados digitais para validação segura de documentos, garantindo autenticidade e
+              validade jurídica.</p>
+          </div>
 
-        <div class="functionality">
-          <h3>INTEGRAÇÃO COM OUTROS SISTEMAS</h3>
-          <p>Conecta-se facilmente com sistemas da Fiorilli, permitindo troca automática de informações e documentos.
-          </p>
-        </div>
+          <div class="functionality">
+            <h3>ARMAZENAMENTO SEGURO</h3>
+            <p>Organização centralizada e protegida dos documentos eletrônicos, com controle de acesso por usuário e
+              níveis de permissão.</p>
+          </div>
 
-        <div class="functionality">
-          <h3>RELATÓRIOS E MONITORAMENTO</h3>
-          <p>Gera relatórios completos sobre o andamento dos processos, prazos e responsáveis, facilitando a gestão e
-            auditoria dos fluxos.</p>
-        </div>
+          <div class="functionality">
+            <h3>INTEGRAÇÃO COM OUTROS SISTEMAS</h3>
+            <p>Conecta-se facilmente com sistemas da Fiorilli, permitindo troca automática de informações e documentos.
+            </p>
+          </div>
 
-        <div class="functionality">
-          <h3>ACESSO REMOTO</h3>
-          <p>Permite que servidores e cidadãos acompanhem e realizem solicitações de qualquer lugar, usando
-            dispositivos web, com segurança e praticidade.</p>
-        </div>
+          <div class="functionality">
+            <h3>RELATÓRIOS E MONITORAMENTO</h3>
+            <p>Gera relatórios completos sobre o andamento dos processos, prazos e responsáveis, facilitando a gestão e
+              auditoria dos fluxos.</p>
+          </div>
 
-        <div class="functionality">
-          <h3>REDUÇÃO DE BUROCRACIA</h3>
-          <p>Automatiza etapas manuais e elimina documentos em papel, aumentando a eficiência e reduzindo custos
-            operacionais.</p>
-        </div>
+          <div class="functionality">
+            <h3>ACESSO REMOTO</h3>
+            <p>Permite que servidores e cidadãos acompanhem e realizem solicitações de qualquer lugar, usando
+              dispositivos web, com segurança e praticidade.</p>
+          </div>
 
-        <div class="functionality">
-          <h3>CIDADÃO</h3>
-          <p>Facilita o acesso do cidadão aos serviços públicos por meio de uma interface intuitiva, promovendo
-            transparência, agilidade e comunicação direta com os órgãos responsáveis. Incentiva a participação social
+          <div class="functionality">
+            <h3>REDUÇÃO DE BUROCRACIA</h3>
+            <p>Automatiza etapas manuais e elimina documentos em papel, aumentando a eficiência e reduzindo custos
+              operacionais.</p>
+          </div>
+
+          <div class="functionality">
+            <h3>CIDADÃO</h3>
+            <p>Facilita o acesso do cidadão aos serviços públicos por meio de uma interface intuitiva, promovendo
+              transparência, agilidade e comunicação direta com os órgãos responsáveis. Incentiva a participação social
             e oferece suporte para acompanhamento em tempo real das solicitações.</p>
+          </div>
         </div>
+
+        <button type="button" class="functionality-gallery-button gallery-next" data-gallery-next aria-label="Próxima funcionalidade">
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
       </div>
     </section>
 
@@ -184,6 +194,7 @@
   <script src="assets/components/loader.js" defer></script>
 
   <script src="assets/js/cookies.js" defer></script>
+  <script src="assets/js/sistemas-carousel.js?v=square-carousel" defer></script>
 
 </body>
 
