@@ -754,7 +754,7 @@ section p,
 .tf-custom-footer {
   background-color: var(--f-bg);
   color: var(--f-text);
-  padding: 30px 0;
+  padding: 34px 0;
   border-top: 1px solid var(--f-border);
   font-family: var(--content-font);
   font-size: 12px;
@@ -766,18 +766,48 @@ section p,
   margin: 0 auto;
   width: 90%;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-columns: minmax(160px, 0.85fr) minmax(260px, 1.35fr) auto minmax(180px, 0.9fr);
   gap: 24px;
   align-items: center;
+}
+
+.footer-brand {
+  display: grid;
+  gap: 6px;
+}
+
+.footer-brand strong {
+  color: var(--f-text-strong);
+  font-size: 13px;
 }
 
 .footer-brand p {
   margin: 0;
 }
 
+.footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 0;
+  color: var(--f-text);
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.footer-contact span,
+.footer-contact a {
+  color: var(--f-text);
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: var(--orange);
+}
+
 .footer-nav {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -884,6 +914,10 @@ html.dark-mode .icon-sun {
 
   .footer-nav {
     gap: 15px;
+  }
+
+  .footer-contact {
+    justify-content: center;
   }
 
   .footer-actions {

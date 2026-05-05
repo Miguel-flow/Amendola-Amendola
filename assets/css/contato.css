@@ -168,10 +168,50 @@ html.dark-mode .contact-form-container { background: var(--bg-card); }
 
 .map-wrapper iframe { width: 100%; height: 100%; border: none; }
 
+.contact-map-panel {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+    overflow: hidden;
+}
+
+html.dark-mode .contact-map-panel {
+    background: var(--bg-card);
+}
+
+.contact-map-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 24px 28px;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-map-header h3 {
+    margin: 0;
+    color: var(--text);
+    font-size: 24px;
+    letter-spacing: 0;
+}
+
+.contact-map-frame {
+    height: 420px;
+}
+
+.contact-map-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 @media (max-width: 900px) {
     .contact-main-grid { grid-template-columns: 1fr; }
     .input-row { grid-template-columns: 1fr; }
     .contact-header h2 { font-size: 32px; }
+    .contact-map-frame { height: 340px; }
 }
 
 @media (max-width: 520px) {
@@ -195,5 +235,15 @@ html.dark-mode .contact-form-container { background: var(--bg-card); }
     .premium-form input,
     .premium-form textarea {
         width: 100%;
+    }
+
+    .contact-map-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 22px 20px;
+    }
+
+    .contact-map-frame {
+        height: 300px;
     }
 }
