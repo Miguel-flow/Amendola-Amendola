@@ -49,7 +49,6 @@ function initDarkMode() {
 
     const isDark = document.documentElement.classList.toggle("dark-mode");
     localStorage.setItem("darkMode", isDark);
-    console.log("Modo escuro:", isDark);
   });
 }
 
