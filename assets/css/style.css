@@ -338,7 +338,6 @@ section p,
   box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
   transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
   text-align: left;
-  animation: slideInUp 0.6s ease-out 0.3s both;
   transform-style: preserve-3d;
   will-change: transform;
 }
@@ -1071,6 +1070,43 @@ html.dark-mode .icon-sun {
 .about-amendola:hover::before {
   transform: scale(1.08);
 }
+
+/* ===== SCROLL REVEAL ===== */
+[data-sr] {
+  opacity: 0;
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-sr],
+[data-sr="up"] {
+  transform: translateY(36px);
+}
+
+[data-sr="left"]  { transform: translateX(-36px); }
+[data-sr="right"] { transform: translateX(36px); }
+[data-sr="fade"]  { transform: none; }
+
+[data-sr].sr-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+[data-sr-delay="1"] { transition-delay: 0.10s; }
+[data-sr-delay="2"] { transition-delay: 0.20s; }
+[data-sr-delay="3"] { transition-delay: 0.30s; }
+[data-sr-delay="4"] { transition-delay: 0.40s; }
+
+/* ===== HERO ENTRANCE ===== */
+@keyframes heroUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge        { animation: heroUp 0.6s ease-out 0.10s both; }
+.hero-content h1   { animation: heroUp 0.7s ease-out 0.20s both; }
+.hero-subtitle     { animation: heroUp 0.6s ease-out 0.32s both; }
+.hero-actions      { animation: heroUp 0.6s ease-out 0.44s both; }
 
 /* ===== HERO LIMPO ===== */
 .hero-section {

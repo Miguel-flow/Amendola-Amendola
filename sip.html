@@ -21,7 +21,7 @@
     <main class="page-sistema">
 
         <section class="sistema-titulo">
-            <div class="banner-text">
+            <div class="banner-text" data-sr>
                 <h1>SIP</h1>
                 <h2>Sistema Integrado de Pessoal</h2>
                 <hr>
@@ -35,7 +35,7 @@
         </section>
 
         <section id="beneficios" class="icons-container">
-            <div class="icon-wrapper">
+            <div class="icon-wrapper" data-sr data-sr-delay="1">
                 <div class="icon-circle">
                     <i class="fas fa-user-friends" aria-hidden="true"></i>
                 </div>
@@ -43,7 +43,7 @@
                 <span>Centralize dados de colaboradores, servidores e históricos funcionais, garantindo informações
                     precisas e acessíveis.</span>
             </div>
-            <div class="icon-wrapper">
+            <div class="icon-wrapper" data-sr data-sr-delay="2">
                 <div class="icon-circle">
                     <i class="fas fa-file-alt" aria-hidden="true"></i>
                 </div>
@@ -51,7 +51,7 @@
                 <span>Suporte completo ao eSocial, conforme o Decreto nº 8.373/2014, que institui o Sistema de
                     Escrituração Digital das Obrigações Fiscais, Previdenciárias e Trabalhistas
             </div>
-            <div class="icon-wrapper">
+            <div class="icon-wrapper" data-sr data-sr-delay="3">
                 <div class="icon-circle">
                     <i class="fas fa-clock" aria-hidden="true"></i>
                 </div>
@@ -62,12 +62,12 @@
         </section>
 
         <section class="features">
-            <div class="column">
+            <div class="column" data-sr>
                 <h3>Centralização de dados de pessoal</h3>
                 <p>O SIP permite acompanhar todas as informações de colaboradores em um único sistema, desde
                     cadastros iniciais, histórico de cargos e salários, até documentação obrigatória.</p>
             </div>
-            <div class="column">
+            <div class="column" data-sr>
                 <h3>Lançamentos web</h3>
                 <p>Os módulos web permitem lançamentos rápidos e seguros pelas unidades externas, descentralizando o
                     processo e facilitando a extração de documentos de forma ágil e econômica.</p>
@@ -76,7 +76,7 @@
 
         <section class="integracoes ">
 
-            <div class="bloco">
+            <div class="bloco" data-sr>
                 <h3><i class="fas fa-plug"></i> Integrações com sistemas externos</h3>
                 <ul id="lista-integracoes">
                     <li><i class="fas fa-check"></i> <strong>SEFIP</strong> - Sistema Empresa de Recolhimento do
@@ -100,7 +100,7 @@
                 <button class="btn-toggle" onclick="toggleIntegracoes()">Mostrar mais</button>
             </div>
 
-            <div class="bloco">
+            <div class="bloco" data-sr>
                 <h3><i class="fas fa-retweet" aria-hidden="true"></i> Integrações entre sistemas Fiorilli</h3>
                 <ul>
                     <li>
@@ -123,32 +123,32 @@
         <section class="functionalities">
             <h2>Funcionalidades completas do SIP</h2>
             <div class="functionalities-container">
-                <div class="functionality">
+                <div class="functionality" data-sr>
                     <h3>CADASTRO DE SERVIDORES</h3>
                     <p>Registro completo de informações pessoais, contratuais e funcionais dos servidores e
                         colaboradores.</p>
                 </div>
-                <div class="functionality">
+                <div class="functionality" data-sr>
                     <h3>FOLHA DE PAGAMENTO</h3>
                     <p>Controle total de salários, descontos, benefícios e encargos sociais, com geração de
                         relatórios detalhados.</p>
                 </div>
-                <div class="functionality">
+                <div class="functionality" data-sr>
                     <h3>HISTÓRICO FUNCIONAL</h3>
                     <p>Monitoramento de progressão de cargos, promoções, férias, licenças e outros eventos
                         funcionais.</p>
                 </div>
-                <div class="functionality">
+                <div class="functionality" data-sr>
                     <h3>INTEGRAÇÃO COM FLOWDOCS</h3>
                     <p>Automatiza tramitação de documentos, protocolos de solicitações e aprovações internas,
                         mantendo o histórico completo.</p>
                 </div>
-                <div class="functionality">
+                <div class="functionality" data-sr>
                     <h3>RELATÓRIOS E ANÁLISES</h3>
                     <p>Geração de relatórios gerenciais, acompanhamento de prazos e indicadores de desempenho da
                         equipe.</p>
                 </div>
-                <div class="functionality">
+                <div class="functionality" data-sr>
                     <h3>ACESSO REMOTO</h3>
                     <p>Permite acesso seguro para servidores autorizados, de qualquer dispositivo conectado à
                         internet.</p>
@@ -170,6 +170,7 @@
     <script src="assets/components/loader.js"></script>
 
     <script src="assets/js/cookies.js"></script>
+    <script src="assets/js/scroll-reveal.js"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

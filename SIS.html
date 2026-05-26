@@ -20,7 +20,7 @@
 
     <main class="page-sistema">
         <section class="sistema-titulo">
-            <div class="banner-text">
+            <div class="banner-text" data-sr>
                 <h1>SIS</h1>
                 <h2>Sistema Integrado de Saúde</h2>
                 <hr>
@@ -35,7 +35,7 @@
         </section>
 
         <section id="beneficios" class="icons-container">
-            <div class="icon-wrapper">
+            <div class="icon-wrapper" data-sr data-sr-delay="1">
                 <div class="icon-circle">
                     <i class="fas fa-user-md" aria-hidden="true"></i>
                 </div>
@@ -43,7 +43,7 @@
                 <span>Centralize consultas, exames e internações em um único sistema, facilitando o acompanhamento
                     completo da saúde do paciente.</span>
             </div>
-            <div class="icon-wrapper">
+            <div class="icon-wrapper" data-sr data-sr-delay="2">
                 <div class="icon-circle">
                     <i class="fas fa-pills" aria-hidden="true"></i>
                 </div>
@@ -51,7 +51,7 @@
                 <span>Gerencie estoque de farmácia, dispensação e receita eletrônica com total rastreabilidade e
                     conformidade legal.</span>
             </div>
-            <div class="icon-wrapper">
+            <div class="icon-wrapper" data-sr data-sr-delay="3">
                 <div class="icon-circle">
                     <i class="fas fa-syringe" aria-hidden="true"></i>
                 </div>
@@ -62,13 +62,13 @@
         </section>
 
         <section class="features">
-            <div class="column">
+            <div class="column" data-sr>
                 <h3>Prontuário Eletrônico Completo</h3>
                 <p>O SIS oferece prontuário médico eletrônico seguro e completo, com histórico médico detalhado,
                     evolução clínica, prescrições e exames. Todos os dados ficam centralizados e acessíveis
                     para toda a equipe de saúde do município.</p>
             </div>
-            <div class="column">
+            <div class="column" data-sr>
                 <h3>Gestão Inteligente de Agendamentos</h3>
                 <p>Sistema de marcação de consultas online para pacientes e profissionais, com controle de filas,
                     SMS de lembrete automático e otimização da agenda dos profissionais de saúde.</p>
@@ -76,7 +76,7 @@
         </section>
 
         <section class="integracoes">
-            <div class="bloco">
+            <div class="bloco" data-sr>
                 <h3><i class="fas fa-plug"></i> Integrações com sistemas externos</h3>
                 <ul id="lista-integracoes">
                     <li><i class="fas fa-check"></i> <strong>BPAMAG</strong> - Boletim de Produção Ambulatorial;
@@ -103,7 +103,7 @@
                 <button class="btn-toggle" onclick="toggleIntegracoes()">Mostrar mais</button>
             </div>
 
-            <div class="bloco">
+            <div class="bloco" data-sr>
                 <h3><i class="fas fa-retweet" aria-hidden="true"></i> Integrações com outros sistemas Fiorilli</h3>
                 <ul>
                     <li>
@@ -119,39 +119,39 @@
         <section class="functionalities">
             <h2>Funcionalidades completas do SIS</h2>
             <div class="functionalities-container">
-                <div class="functionality">
+                <div class="functionality" data-sr>
                     <h3>PrONTUÁRIO ELETRÔNICO</h3>
                     <p>Histórico médico completo com CID-10, evolução, prescrições, exames e anexos de imagens.</p>
                 </div>
-                <div class="functionality">
+                <div class="functionality" data-sr>
                     <h3>AGENDAMENTO INTELIGENTE</h3>
                     <p>Marcação online, filas virtuais, SMS automático e otimização de agenda médica.</p>
                 </div>
-                <div class="functionality">
+                <div class="functionality" data-sr>
                     <h3>FARMÁCIA POPULAR</h3>
                     <p>Controle total de estoque, dispensação, receita eletrônica e relatórios ANVISA.</p>
                 </div>
-                <div class="functionality">
+                <div class="functionality" data-sr>
                     <h3>IMUNIZAÇÕES</h3>
                     <p>Carteira de vacinação digital, campanhas, doses, lotes e relatórios Ministério da Saúde.</p>
                 </div>
-                <div class="functionality">
+                <div class="functionality" data-sr>
                     <h3>ATENÇÃO BÁSICA</h3>
                     <p>Controle do Bolsa Família Saúde, visitas domiciliares e indicadores de saúde básica.</p>
                 </div>
-                <div class="functionality">
+                <div class="functionality" data-sr>
                     <h3>SIAB/SIOPS</h3>
                     <p>Produção individualizada, relatórios mensais e validação automática para repasses SUS.</p>
                 </div>
-                <div class="functionality">
+                <div class="functionality" data-sr>
                     <h3>ESTATÍSTICAS DE SAÚDE</h3>
                     <p>Dashboards em tempo real com indicadores de saúde pública do município.</p>
                 </div>
-                <div class="functionality">
+                <div class="functionality" data-sr>
                     <h3>REGISTRO DE NASCIDOS VIVOS</h3>
                     <p>SINASC completo integrado com cartórios e relatórios para o Ministério da Saúde.</p>
                 </div>
-                <div class="functionality">
+                <div class="functionality" data-sr>
                     <h3>ATENDIMENTO DOMICILIAR</h3>
                     <p>Controle de equipes multiprofissionais, planejamento e relatórios de visitas.</p>
                 </div>
@@ -172,6 +172,7 @@
     <script src="assets/components/loader.js"></script>
 
     <script src="assets/js/cookies.js"></script>
+    <script src="assets/js/scroll-reveal.js"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

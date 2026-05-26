@@ -19,7 +19,7 @@
   <section id="contato" class="contact-section">
     <div class="container">
 
-      <div class="contact-header">
+      <div class="contact-header" data-sr>
         <span class="badge">Contato</span>
         <h2>Vamos iniciar uma conversa?</h2>
         <p>Escolha o canal de sua preferência ou envie uma mensagem direta abaixo.</p>
@@ -28,7 +28,7 @@
       <div class="contact-main-grid">
 
         <div class="contact-sidebar">
-          <div class="card-info">
+          <div class="card-info" data-sr>
             <div class="card-icon">📍</div>
             <div class="card-text">
               <h3>Localização</h3>
@@ -36,7 +36,7 @@
             </div>
           </div>
 
-          <div class="card-info">
+          <div class="card-info" data-sr>
             <div class="card-icon">📞</div>
             <div class="card-text">
               <h3>Telefone</h3>
@@ -55,7 +55,7 @@
           </div>
         </div>
 
-        <div class="contact-form-container">
+        <div class="contact-form-container" data-sr>
           <form class="premium-form" action="enviar.php" method="POST">
             <div class="input-row">
               <input type="text" name="nome" placeholder="Nome completo" required>
@@ -98,6 +98,7 @@
   <script src="assets/components/loader.js"></script>
 
   <script src="assets/js/cookies.js"></script>
+  <script src="assets/js/scroll-reveal.js"></script>
     <script>
     (function () {
       var btn = document.getElementById('back-to-top');

@@ -296,7 +296,7 @@
 
   <main class="lousa-shell">
     <section class="lousa-hero" aria-labelledby="lousa-title">
-      <div class="lousa-copy">
+      <div class="lousa-copy" data-sr>
         <span class="lousa-kicker"><i class="fa-solid fa-tv"></i> Lousa Digital</span>
         <h1 id="lousa-title">Agenda de Viagens</h1>
         <p>Um painel vivo para acompanhar deslocamentos, horarios e compromissos do time com mais clareza.</p>
@@ -321,17 +321,17 @@
     </section>
 
     <section class="lousa-stats" aria-label="Resumo da agenda">
-      <div class="lousa-stat">
+      <div class="lousa-stat" data-sr>
         <i class="fa-solid fa-route"></i>
         <strong>Painel de viagens</strong>
         <span>Consulta rapida para deslocamentos, reservas e compromissos externos.</span>
       </div>
-      <div class="lousa-stat">
+      <div class="lousa-stat" data-sr>
         <i class="fa-solid fa-satellite-dish"></i>
         <strong>Atualizacao ao vivo</strong>
         <span id="updatedAt">Sincronizando horario local...</span>
       </div>
-      <div class="lousa-stat">
+      <div class="lousa-stat" data-sr>
         <i class="fa-solid fa-location-dot"></i>
         <strong>Fuso oficial</strong>
         <span>America/Sao_Paulo para manter o painel alinhado com a agenda da equipe.</span>
@@ -363,6 +363,7 @@
 
   <script src="assets/components/loader.js"></script>
   <script src="assets/js/cookies.js"></script>
+  <script src="assets/js/scroll-reveal.js"></script>
 
   <script>
     (function () {
