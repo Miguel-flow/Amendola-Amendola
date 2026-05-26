@@ -123,6 +123,7 @@ section p,
   flex-shrink: 0;
 }
 
+
 .navbar-container-right {
   display: flex;
   align-items: center;
@@ -1104,6 +1105,7 @@ html.dark-mode .icon-sun {
 }
 
 .hero-badge        { animation: heroUp 0.6s ease-out 0.10s both; }
+.hero-logo         { animation: heroUp 0.7s ease-out 0.20s both; }
 .hero-content h1   { animation: heroUp 0.7s ease-out 0.20s both; }
 .hero-subtitle     { animation: heroUp 0.6s ease-out 0.32s both; }
 .hero-actions      { animation: heroUp 0.6s ease-out 0.44s both; }
@@ -1142,6 +1144,14 @@ html.dark-mode .icon-sun {
   font-weight: 600;
   margin-bottom: 28px;
   letter-spacing: 0.3px;
+}
+
+.hero-logo {
+  display: block;
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 24px;
 }
 
 .hero-content h1 {
@@ -1244,6 +1254,10 @@ html.dark-mode .icon-sun {
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 34px;
+  }
+
+  .hero-logo {
+    max-width: 300px;
   }
 
   .hero-section {
