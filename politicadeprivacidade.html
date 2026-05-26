@@ -320,5 +320,16 @@
 
   <script src="assets/components/loader.js"></script>
   <script src="assets/js/cookies.js"></script>
+    <script>
+    (function () {
+      var btn = document.getElementById('back-to-top');
+      window.addEventListener('scroll', function () {
+        btn.classList.toggle('visible', window.scrollY > 400);
+      });
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+    </script>
 </body>
 </html>

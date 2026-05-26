@@ -19,9 +19,10 @@
 
         <!-- Hero -->
         <section class="hero-section">
+            <canvas id="waves-canvas" aria-hidden="true"></canvas>
             <div class="hero-content">
                 <span class="hero-badge">
-                    <i class="fa-solid fa-shield-halved"></i> Gestão Pública Municipal
+                    <i class="fa-solid fa-shield-halved"></i> Soluções Tecnológicas para Municípios
                 </span>
                 <h1>Soluções tecnológicas<br>para municípios</h1>
                 <p class="hero-subtitle">
@@ -92,9 +93,122 @@
     <div id="cookies-area"></div>
 
     <a href="https://wa.me/551735579090" class="whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+    <button id="back-to-top" aria-label="Voltar ao topo">↑</button>
 
     <script src="assets/components/loader.js"></script>
     <script src="assets/js/cookies.js"></script>
+
+    <script>
+    (function () {
+      var btn = document.getElementById('back-to-top');
+      window.addEventListener('scroll', function () {
+        btn.classList.toggle('visible', window.scrollY > 400);
+      });
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+    </script>
+
+    <script>
+    document.querySelectorAll('.card').forEach(function (card) {
+      card.addEventListener('mousemove', function (e) {
+        var rect = card.getBoundingClientRect();
+        var relX = (e.clientX - rect.left) / rect.width  - 0.5;
+        var relY = (e.clientY - rect.top)  / rect.height - 0.5;
+        var rotY =  relX * 16;  // ±8 deg
+        var rotX = -relY * 16;  // ±8 deg
+        card.style.transition = 'box-shadow 0.3s ease, border-color 0.3s ease, transform 0.1s ease';
+        card.style.transform  = 'rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) translateY(-6px)';
+      });
+
+      card.addEventListener('mouseleave', function () {
+        card.style.transition = 'box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease';
+        card.style.transform  = '';
+      });
+    });
+    </script>
+
+    <script>
+    (function () {
+      const canvas = document.getElementById('waves-canvas');
+      const ctx = canvas.getContext('2d');
+      let W, H;
+
+      const waves = [
+        // topo — opacidade baixa, rápidas
+        { amp: 16, freq: 0.013, speed: 0.008, phase: 0.0, yRatio: 0.18, color: 'rgba(239,159,39,0.07)',  lw: 1.5 },
+        { amp: 20, freq: 0.009, speed: 0.006, phase: 1.4, yRatio: 0.26, color: 'rgba(250,199,117,0.09)', lw: 2.0 },
+        { amp: 12, freq: 0.016, speed: 0.010, phase: 2.8, yRatio: 0.32, color: 'rgba(186,117,23,0.06)',  lw: 1.5 },
+        // meio — opacidade média
+        { amp: 26, freq: 0.008, speed: 0.005, phase: 0.9, yRatio: 0.45, color: 'rgba(239,159,39,0.11)',  lw: 2.5 },
+        { amp: 30, freq: 0.006, speed: 0.003, phase: 3.2, yRatio: 0.53, color: 'rgba(250,199,117,0.13)', lw: 3.0 },
+        { amp: 18, freq: 0.011, speed: 0.006, phase: 1.6, yRatio: 0.60, color: 'rgba(186,117,23,0.09)',  lw: 2.0 },
+        // base — opacidade maior, lentas
+        { amp: 36, freq: 0.005, speed: 0.003, phase: 0.5, yRatio: 0.70, color: 'rgba(239,159,39,0.15)',  lw: 3.5 },
+        { amp: 40, freq: 0.004, speed: 0.002, phase: 2.1, yRatio: 0.78, color: 'rgba(250,199,117,0.18)', lw: 4.0 },
+        { amp: 28, freq: 0.007, speed: 0.004, phase: 1.2, yRatio: 0.85, color: 'rgba(186,117,23,0.13)',  lw: 3.0 },
+        { amp: 22, freq: 0.006, speed: 0.002, phase: 3.7, yRatio: 0.92, color: 'rgba(239,159,39,0.20)',  lw: 3.5 },
+      ];
+
+      // 3 logos em ondas e posições diferentes para parecer natural
+      const riders = [
+        { waveIdx: 2, xRatio: 0.13, size: 30, alpha: 0.60 },
+        { waveIdx: 5, xRatio: 0.84, size: 33, alpha: 0.70 },
+      ];
+
+      const logo = new Image();
+      logo.src = 'assets/img/foto-topo.png';
+
+      function resize() {
+        W = canvas.width  = canvas.offsetWidth;
+        H = canvas.height = canvas.offsetHeight;
+      }
+
+      function draw(t) {
+        ctx.clearRect(0, 0, W, H);
+
+        // Ondas
+        waves.forEach(function (w) {
+          var y0 = H * w.yRatio;
+          ctx.beginPath();
+          ctx.moveTo(0, y0 + Math.sin(w.phase + t * w.speed) * w.amp);
+          for (var x = 1; x <= W; x++) {
+            ctx.lineTo(x, y0 + Math.sin(w.phase + t * w.speed + x * w.freq) * w.amp);
+          }
+          ctx.strokeStyle = w.color;
+          ctx.lineWidth   = w.lw;
+          ctx.stroke();
+        });
+
+        // Logos sobre as ondas
+        if (logo.complete && logo.naturalWidth > 0) {
+          riders.forEach(function (r) {
+            var w     = waves[r.waveIdx];
+            var lx    = W * r.xRatio;
+            var angle = w.phase + t * w.speed + lx * w.freq;
+            var ly    = H * w.yRatio + Math.sin(angle) * w.amp - r.size * 0.65;
+            var tilt  = Math.atan(w.amp * w.freq * Math.cos(angle)) * 0.6;
+
+            ctx.save();
+            ctx.translate(lx, ly);
+            ctx.rotate(tilt);
+            ctx.globalAlpha = r.alpha;
+            ctx.shadowColor = 'rgba(239,159,39,0.30)';
+            ctx.shadowBlur  = 8;
+            ctx.drawImage(logo, -r.size / 2, -r.size / 2, r.size, r.size);
+            ctx.restore();
+          });
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      resize();
+      window.addEventListener('resize', resize);
+      requestAnimationFrame(draw);
+    })();
+    </script>
 </body>
 
 </html>

@@ -327,6 +327,7 @@ section p,
   z-index: 2;
   max-width: 1240px;
   margin: 0 auto;
+  perspective: 800px;
 }
 
 .card {
@@ -335,13 +336,14 @@ section p,
   border-radius: 16px;
   padding: 32px 28px;
   box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
-  transition: all 0.3s ease;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
   text-align: left;
   animation: slideInUp 0.6s ease-out 0.3s both;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .card:hover {
-  transform: translateY(-6px);
   border-color: var(--orange-soft);
   box-shadow: 0 20px 50px rgba(15, 23, 42, 0.13);
 }
@@ -916,6 +918,39 @@ html.dark-mode .icon-sun {
   }
 }
 
+/* ===== BACK TO TOP ===== */
+#back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #EF9F27;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, background 0.2s ease;
+  z-index: 900;
+  box-shadow: 0 4px 14px rgba(239, 159, 39, 0.35);
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#back-to-top:hover {
+  background: #d4891e;
+}
+
 /* ===== WHATSAPP ===== */
 .whatsapp-btn {
   position: fixed;
@@ -1013,8 +1048,24 @@ html.dark-mode .icon-sun {
 
 /* ===== HERO LIMPO ===== */
 .hero-section {
+  position: relative;
+  overflow: hidden;
   padding: 130px 40px 60px;
   text-align: center;
+}
+
+#waves-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-badge {

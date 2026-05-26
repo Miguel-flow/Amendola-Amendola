@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -61,6 +61,7 @@
   <div id="cookies-area"></div>
 
   <a href="https://wa.me/551735579090" class="whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+    <button id="back-to-top" aria-label="Voltar ao topo">&#8593;</button>
 
   <script src="assets/components/loader.js"></script>
   <script src="assets/js/cookies.js"></script>
@@ -121,6 +122,15 @@
         tag: "FlowDocs",
       },
       {
+        title: "Firebird 5.0",
+        desc: "Instalador do banco de dados Firebird 5.0 para sistemas Amendola.",
+        url: "content/firebird/AmendolaFirebirdSetup.zip",
+        cat: "documentos",
+        icon: "fa-fire",
+        tone: "orange",
+        tag: "Downloads"
+      },
+      {
         title: "Suporte WhatsApp",
         desc: "Fale com nossa equipe tecnica pelo WhatsApp.",
         url: "https://wa.me/551735579090",
@@ -129,6 +139,7 @@
         tone: "green",
         tag: "Atendimento"
       }
+
     ];
 
     const grid = document.getElementById("linksGrid");
@@ -138,6 +149,10 @@
     const resultCount = document.getElementById("resultCount");
     const clearSearch = document.getElementById("clearSearch");
     const emptyState = document.getElementById("no-results");
+
+    function getHostname(url) {
+      try { return new URL(url).hostname; } catch { return new URL(url, location.href).hostname; }
+    }
 
     function iconClass(link) {
       return link.icon.includes("fa-brands") ? link.icon : `fa-solid ${link.icon}`;
@@ -226,7 +241,7 @@
             <p>${link.desc}</p>
             <div class="link-meta">
               <span><i class="fa-solid ${categories[link.cat].icon}"></i>${categoryLabel}</span>
-              <span>${new URL(link.url).hostname}</span>
+              <span>${getHostname(link.url)}</span>
             </div>
             <div class="link-actions">
               <a href="${link.url}" target="_blank" rel="noopener noreferrer">
@@ -263,6 +278,17 @@
     });
     renderLinks();
   </script>
+    <script>
+    (function () {
+      var btn = document.getElementById('back-to-top');
+      window.addEventListener('scroll', function () {
+        btn.classList.toggle('visible', window.scrollY > 400);
+      });
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+    </script>
 </body>
 
 </html>

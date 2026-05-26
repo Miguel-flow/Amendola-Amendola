@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8"><link rel="stylesheet" href="assets/css/style.css">
@@ -182,6 +182,7 @@
     <div id="cookies-area"></div>
 
     <a href="https://wa.me/551735579090" class="whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+    <button id="back-to-top" aria-label="Voltar ao topo">&#8593;</button>
 
     <script src="assets/components/loader.js"></script>
     <script src="assets/js/cookies.js"></script>
@@ -279,6 +280,17 @@
         // Start
         atualizarUI();
         reiniciarTimer();
+    </script>
+    <script>
+    (function () {
+      var btn = document.getElementById('back-to-top');
+      window.addEventListener('scroll', function () {
+        btn.classList.toggle('visible', window.scrollY > 400);
+      });
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
     </script>
 </body>
 </html>
