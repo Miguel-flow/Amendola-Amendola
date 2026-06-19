@@ -59,6 +59,11 @@
       originalCards.forEach((card) => {
         const clone = card.cloneNode(true);
         clone.setAttribute("aria-hidden", "true");
+        // Clones are never observed by scroll-reveal, so a copied data-sr
+        // attribute would keep them stuck at opacity:0 and leave blank gaps
+        // sliding through the loop. Strip it so clones are always visible.
+        clone.removeAttribute("data-sr");
+        clone.classList.add("sr-visible");
         track.appendChild(clone);
       });
     }

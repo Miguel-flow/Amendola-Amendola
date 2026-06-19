@@ -787,6 +787,11 @@ section p,
   color: var(--orange);
 }
 
+.footer-contact a.phone-highlight {
+  font-weight: 700;
+  font-size: 14px;
+}
+
 .footer-nav {
   display: flex;
   gap: 16px;
