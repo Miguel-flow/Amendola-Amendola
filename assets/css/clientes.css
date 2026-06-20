@@ -94,6 +94,7 @@ html.dark-mode .clientes-search input { background: var(--bg-card); }
 .clientes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-items: start;
     gap: 24px;
     max-width: 1200px;
     margin: 0 auto;
@@ -145,35 +146,43 @@ html.dark-mode .cliente-card { background: var(--bg-card); }
 .cliente-name {
     font-size: 18px;
     font-weight: 800;
-    margin: 0 0 4px;
+    margin: 0;
     letter-spacing: 0;
-    line-height: 1.2;
-}
-
-.cliente-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 14px;
-    font-size: 13px;
-    color: var(--text-secondary);
-}
-
-.cliente-meta a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
+    line-height: 1.25;
     overflow-wrap: anywhere;
 }
 
-.cliente-meta a:hover { color: var(--orange); }
-
-.cliente-meta span {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
+/* Meta: lista vertical (site / telefone / CNPJ) */
+.cliente-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    font-size: 13.5px;
+    color: var(--text-secondary);
 }
+
+.cliente-meta > a,
+.cliente-meta > .cliente-cnpj {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+    color: var(--text-secondary);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.cliente-meta > a:hover { color: var(--orange); }
+
+.cliente-meta i {
+    flex: 0 0 16px;
+    width: 16px;
+    text-align: center;
+    color: var(--orange);
+    font-size: 13px;
+}
+
+.cliente-meta span { min-width: 0; overflow-wrap: anywhere; }
 
 /* Links dos sistemas */
 .cliente-links {
