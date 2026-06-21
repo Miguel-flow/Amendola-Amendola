@@ -112,6 +112,8 @@ html.dark-mode .clientes-search input { background: var(--bg-card); }
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
+.cliente-card[hidden] { display: none; }
+
 html.dark-mode .cliente-card { background: var(--bg-card); }
 
 .cliente-card:hover {
