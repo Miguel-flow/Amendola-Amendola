@@ -94,7 +94,7 @@ html.dark-mode .clientes-search input { background: var(--bg-card); }
 .clientes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    align-items: start;
+    align-items: stretch;
     gap: 24px;
     max-width: 1200px;
     margin: 0 auto;
