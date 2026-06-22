@@ -1,0 +1,5 @@
+#!/bin/bash
+export PHPRC="/usr/local/php/7.4/lib/php.ini"
+export PATH="/usr/local/php/7.4/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/lib/oracle/18.5/client64/lib:$LD_LIBRARY_PATH"
+export HISTTIMEFORMAT="%F %T "
