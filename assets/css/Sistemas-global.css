@@ -92,6 +92,7 @@
     letter-spacing: 0;
     opacity: 0.8;
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 .details-btn {

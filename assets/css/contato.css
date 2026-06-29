@@ -65,7 +65,8 @@ html.dark-mode .card-info { background: var(--bg-card); }
     border-color: var(--orange);
 }
 
-.card-info.highlight {
+.card-info.highlight,
+html.dark-mode .card-info.highlight {
     background: linear-gradient(135deg, var(--orange), var(--orange-dark));
     color: #fff;
     border: none;
