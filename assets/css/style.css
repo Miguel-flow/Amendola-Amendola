@@ -542,23 +542,100 @@ section p,
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 24px;
+}
+
+.phone-scene {
+  perspective: 1200px;
+  padding: 20px 30px 0;
 }
 
 .phone-wrapper {
   position: relative;
   padding: 10px;
+  transform: rotateX(4deg) rotateY(-14deg);
+  transform-style: preserve-3d;
+  will-change: transform;
+  animation: phoneFloat 7s ease-in-out infinite;
+}
+
+@keyframes phoneFloat {
+  0%, 100% { transform: rotateX(4deg) rotateY(-14deg) translateY(0); }
+  50%      { transform: rotateX(9deg) rotateY(14deg) translateY(-20px); }
+}
+
+.phone-wrapper.phone-hidden {
+  opacity: 0;
+  animation: none;
+}
+
+.phone-wrapper.phone-enter {
+  animation:
+    phoneEntrance 1.15s cubic-bezier(0.22, 1, 0.36, 1) both,
+    phoneFloat 7s ease-in-out 1.15s infinite;
+}
+
+@keyframes phoneEntrance {
+  0% {
+    opacity: 0;
+    transform: rotateY(-75deg) rotateX(12deg) translateY(60px) scale(0.8);
+  }
+  55% {
+    opacity: 1;
+  }
+  78% {
+    transform: rotateY(8deg) rotateX(2deg) translateY(-8px) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(4deg) rotateY(-14deg) translateY(0) scale(1);
+  }
+}
+
+.phone-wrapper.is-tilting {
+  animation: none;
 }
 
 .app-screen {
   max-width: 280px;
   height: auto;
-  filter: drop-shadow(0 20px 40px var(--shadow-medium));
-  transition: transform 0.5s ease;
+  display: block;
+  filter: drop-shadow(0 24px 32px var(--shadow-medium));
 }
 
-.phone-wrapper:hover .app-screen {
-  transform: scale(1.03) translateY(-10px);
+.phone-glare {
+  position: absolute;
+  inset: 4% 6%;
+  border-radius: 44px;
+  background: radial-gradient(circle at var(--gx, 30%) var(--gy, 20%), rgba(255, 255, 255, 0.28), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.phone-wrapper.is-tilting .phone-glare {
+  opacity: 1;
+}
+
+.phone-ground {
+  width: 200px;
+  height: 26px;
+  margin: -6px auto 0;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, var(--shadow-medium), transparent 70%);
+  animation: phoneGround 7s ease-in-out infinite;
+}
+
+@keyframes phoneGround {
+  0%, 100% { transform: scaleX(1); opacity: 0.9; }
+  50%      { transform: scaleX(0.8); opacity: 0.55; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phone-wrapper,
+  .phone-ground {
+    animation: none;
+  }
 }
 
 .download-badges {

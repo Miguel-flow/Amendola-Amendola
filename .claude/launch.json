@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "site",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "3000"],
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:\\Users\\migue\\AppData\\Local\\Temp\\claude\\C--Users-migue-OneDrive-Documentos-GitHub-Amendola-Amendola\\d85c98cf-6c93-4391-8e1e-84357ee53d9c\\scratchpad\\serve.ps1"],
       "port": 3000
     }
   ]
