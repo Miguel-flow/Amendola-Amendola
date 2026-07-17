@@ -124,6 +124,15 @@
         tag: "FlowDocs",
       },
       {
+        title: "Instalador Firebird",
+        desc: "Instalador Amendola do Firebird 5 em arquivo zip.",
+        url: "downloads/AmendolaFirebirdSetup.zip",
+        cat: "documentos",
+        icon: "fa-database",
+        tone: "red",
+        tag: "Instalador"
+      },
+      {
         title: "Suporte WhatsApp",
         desc: "Fale com nossa equipe tecnica pelo WhatsApp.",
         url: "https://wa.me/551735579090",
@@ -247,7 +256,8 @@
           `;
 
           const copyButton = card.querySelector(".copy-link");
-          copyButton.addEventListener("click", () => copyLink(link.url, copyButton));
+          const absoluteUrl = new URL(link.url, location.href).href;
+          copyButton.addEventListener("click", () => copyLink(absoluteUrl, copyButton));
 
           grid.appendChild(card);
           count++;

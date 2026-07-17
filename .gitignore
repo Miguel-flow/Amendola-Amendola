@@ -3,3 +3,7 @@
 
 # Local screenshot previews generated during QA.
 preview-*.png
+
+# Instaladores grandes (>100 MB, acima do limite do GitHub).
+# Copiar manualmente para a pasta downloads/ no servidor.
+downloads/*.zip

@@ -234,6 +234,7 @@
 .link-icon.blue { background: linear-gradient(135deg, #2378ff, #174caa); }
 .link-icon.slate { background: linear-gradient(135deg, #53616f, #1f2933); }
 .link-icon.green { background: linear-gradient(135deg, #25d366, #118c43); }
+.link-icon.red { background: linear-gradient(135deg, #ef4444, #b91c1c); }
 
 .link-tag {
     color: var(--text-secondary);
