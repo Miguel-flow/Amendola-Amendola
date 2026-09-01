@@ -26,7 +26,11 @@ async function loadComponent(id, file) {
 
   for (const candidate of candidates) {
     try {
-      const res = await fetch(candidate);
+      // cache: "no-cache" = sempre revalida com o servidor antes de usar a
+      // copia local (ETag/304, resposta barata). Sem isso o navegador segura
+      // versoes antigas do componente: um fetch() feito por JS NAO respeita o
+      // Ctrl+F5, entao a navbar continuava velha mesmo apos hard refresh.
+      const res = await fetch(candidate, { cache: "no-cache" });
       if (!res.ok) throw new Error(`Erro ao carregar: ${candidate}`);
       el.innerHTML = await res.text();
       return true;
