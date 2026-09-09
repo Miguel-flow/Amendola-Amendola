@@ -1,0 +1,447 @@
+/* Pagina de Erros/Solucoes do FlowDocs.
+   Reaproveita a linguagem visual de links.css, mas troca o grid de cards
+   por uma lista de itens expansiveis: solucao costuma ter varios passos e
+   nao cabe bem em card curto. */
+
+.erros-page {
+    background:
+        linear-gradient(180deg, rgba(255, 152, 0, 0.08), transparent 330px),
+        var(--bg);
+}
+
+.erros-shell {
+    width: min(1080px, 90vw);
+    margin: 0 auto;
+    padding: 128px 0 86px;
+}
+
+.erros-hero {
+    margin-bottom: 22px;
+}
+
+.erros-hero-copy,
+.erros-command-center,
+.erro-card,
+.empty-state {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-light);
+    box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+}
+
+.erros-hero-copy {
+    position: relative;
+    overflow: hidden;
+    min-height: 240px;
+    padding: clamp(28px, 5vw, 50px);
+    color: #fff;
+    background:
+        linear-gradient(105deg, rgba(8, 11, 16, 0.9), rgba(8, 11, 16, 0.58)),
+        url("../img/amendolapredio.png") center / cover;
+}
+
+.erros-hero-copy::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--orange), #13b8a6, #ffffff);
+}
+
+.erros-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    color: #ffbd5a;
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.erros-hero h1 {
+    max-width: 740px;
+    margin: 0 0 14px;
+    font-size: clamp(38px, 6.4vw, 66px);
+    line-height: 0.98;
+}
+
+.erros-hero p {
+    max-width: 660px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+/* ---------- Busca e filtros ---------- */
+
+.erros-command-center {
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.erros-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(190px, 240px);
+    gap: 14px;
+}
+
+.search-box,
+.select-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 52px;
+    padding: 0 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    background: var(--surface-muted);
+}
+
+.search-box input,
+.select-box select {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    color: var(--text);
+    background: transparent;
+    font: inherit;
+}
+
+.select-box select { cursor: pointer; }
+
+.search-box:focus-within,
+.select-box:focus-within {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 4px var(--shadow-orange);
+}
+
+.category-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.category-pill,
+.erros-summary button {
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.category-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 38px;
+    padding: 0 13px;
+    border-radius: 8px;
+    color: var(--text-secondary);
+    background: var(--surface-muted);
+    font-weight: 800;
+    transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.category-pill:hover,
+.category-pill.active {
+    color: #fff;
+    background: var(--orange);
+    transform: translateY(-1px);
+}
+
+.erros-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: 18px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.erros-summary-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.erros-summary button {
+    color: var(--orange-dark);
+    background: transparent;
+    font-weight: 900;
+}
+
+/* ---------- Lista de erros ---------- */
+
+.erros-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.erro-card {
+    overflow: hidden;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.erro-card:hover {
+    border-color: rgba(255, 152, 0, 0.32);
+}
+
+.erro-card.aberto {
+    border-color: rgba(255, 152, 0, 0.45);
+    box-shadow: 0 24px 58px rgba(15, 23, 42, 0.13);
+}
+
+.erro-head {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr) auto 20px;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    border: 0;
+    cursor: pointer;
+    text-align: left;
+    color: var(--text);
+    background: transparent;
+    font-family: inherit;
+}
+
+.erro-icon {
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+}
+
+.erro-head h2 {
+    margin: 0 0 4px;
+    font-size: 19px;
+    line-height: 1.25;
+    letter-spacing: 0;
+}
+
+.erro-head .erro-resumo {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.erro-tag {
+    color: var(--text-secondary);
+    background: var(--surface-muted);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 7px 10px;
+    font-size: 12px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.erro-chevron {
+    color: var(--text-secondary);
+    transition: transform 0.25s ease;
+}
+
+.erro-card.aberto .erro-chevron { transform: rotate(180deg); }
+
+.erro-body {
+    padding: 0 20px 20px;
+    border-top: 1px solid var(--border);
+    margin-top: 4px;
+    padding-top: 20px;
+}
+
+.erro-bloco { margin-bottom: 18px; }
+
+.erro-bloco h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.erro-bloco.problema h3 { color: #ef4444; }
+.erro-bloco.solucao h3 { color: #12a594; }
+
+.erro-bloco p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.erro-mensagem {
+    padding: 14px 16px;
+    border-radius: 8px;
+    border-left: 3px solid #ef4444;
+    background: var(--surface-muted);
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+}
+
+.erro-passos {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.erro-passos li { margin-bottom: 8px; }
+.erro-passos li:last-child { margin-bottom: 0; }
+
+.erro-passos code,
+.erro-bloco p code {
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: var(--icon-bg);
+    color: var(--orange-dark);
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.92em;
+    overflow-wrap: anywhere;
+}
+
+.erro-obs {
+    display: flex;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border-left: 3px solid var(--orange);
+    background: var(--orange-soft);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+.erro-obs i {
+    color: var(--orange-dark);
+    margin-top: 3px;
+}
+
+.erro-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.erro-rodape .erro-autor {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.copiar-solucao {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 0 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    color: var(--text);
+    background: var(--surface-muted);
+    font-family: inherit;
+    font-weight: 900;
+    font-size: 13px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.copiar-solucao:hover {
+    color: var(--orange-dark);
+    border-color: rgba(255, 152, 0, 0.35);
+}
+
+/* ---------- Vazio ---------- */
+
+.empty-state {
+    text-align: center;
+    padding: 48px 22px;
+    color: var(--text-secondary);
+}
+
+.empty-state i {
+    color: var(--orange);
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.empty-state h2 {
+    color: var(--text);
+    margin: 0 0 8px;
+}
+
+/* ---------- Dark mode ---------- */
+
+html.dark-mode .erros-hero-copy,
+html.dark-mode .erros-command-center,
+html.dark-mode .erro-card,
+html.dark-mode .empty-state {
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
+}
+
+html.dark-mode .erro-obs { background: rgba(255, 152, 0, 0.1); }
+
+/* ---------- Responsivo ---------- */
+
+@media (max-width: 720px) {
+    .erros-shell {
+        width: min(100% - 32px, 1080px);
+        padding-top: 112px;
+    }
+
+    .erros-toolbar { grid-template-columns: 1fr; }
+
+    .erros-summary {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /* Some o resumo e a tag: no celular o titulo precisa da largura toda. */
+    .erro-head {
+        grid-template-columns: 44px minmax(0, 1fr) 20px;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .erro-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .erro-head .erro-resumo,
+    .erro-head .erro-tag { display: none; }
+
+    .erro-body { padding: 18px 16px 16px; }
+}
+
+@media (max-width: 440px) {
+    .erros-hero h1 { font-size: 34px; }
+
+    .erros-hero-copy,
+    .erros-command-center { padding: 20px; }
+}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Amêndola &amp; Amêndola - Erros e Soluções</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/erros.css?v=20260909">
+  <link rel="stylesheet" href="assets/css/cookies.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="assets/img/logo-amendola-2.png">
+  <link rel="apple-touch-icon" href="assets/img/logo-amendola-2.png">
+</head>
+
+<body class="erros-page">
+  <div id="navbar"></div>
+
+  <main class="erros-shell">
+    <section class="erros-hero" aria-labelledby="erros-title">
+      <div class="erros-hero-copy" data-sr>
+        <span class="erros-kicker"><i class="fa-solid fa-triangle-exclamation"></i> Base de conhecimento</span>
+        <h1 id="erros-title">Erros e soluções FlowDocs</h1>
+        <p>Erros conhecidos do FlowDocs e a melhor maneira de corrigi-los, reunidos em um só lugar.</p>
+      </div>
+    </section>
+
+    <section class="erros-command-center" aria-label="Busca de erros">
+      <div class="erros-toolbar">
+        <label class="search-box" for="searchInput">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="Buscar erro, mensagem, configuração..." autocomplete="off">
+        </label>
+
+        <label class="select-box" for="catFilter">
+          <i class="fa-solid fa-layer-group"></i>
+          <select id="catFilter" aria-label="Filtrar categoria">
+            <option value="all">Todos</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="category-pills" id="categoryPills" aria-label="Categorias"></div>
+
+      <div class="erros-summary">
+        <span id="resultCount">0 erros encontrados</span>
+        <div class="erros-summary-actions">
+          <button type="button" id="toggleAll">Expandir todos</button>
+          <button type="button" id="clearSearch">Limpar filtros</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="erros-lista" id="errosLista" aria-label="Lista de erros"></section>
+
+    <div id="no-results" class="empty-state" hidden>
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <h2>Nenhum erro encontrado</h2>
+      <p>Tente limpar os filtros ou buscar por outro termo.</p>
+    </div>
+  </main>
+
+  <div id="footer-area"></div>
+  <div id="cookies-area"></div>
+
+  <a href="https://wa.me/551735579090" class="whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+  <button id="back-to-top" aria-label="Voltar ao topo">&#8593;</button>
+
+  <script src="assets/components/loader.js?v=20260901"></script>
+  <script src="assets/js/cookies.js"></script>
+  <script src="assets/js/scroll-reveal.js"></script>
+
+  <script>
+    /* =========================================================
+       CATEGORIAS
+       Ajuste a vontade: e so adicionar/remover chaves aqui.
+       So aparecem como filtro as categorias que tem erro cadastrado.
+       ========================================================= */
+    const categories = {
+      all:            { label: "Todos",          icon: "fa-border-all" },
+      credenciamento: { label: "Credenciamento", icon: "fa-id-card-clip" },
+      cadastro:       { label: "Cadastro",       icon: "fa-address-card" },
+      acesso:         { label: "Acesso",         icon: "fa-right-to-bracket" },
+      assinatura:     { label: "Assinatura",     icon: "fa-file-signature" },
+      integracao:     { label: "Integração",     icon: "fa-plug" },
+      outros:         { label: "Outros",         icon: "fa-circle-question" }
+    };
+
+    /* =========================================================
+       ERROS E SOLUCOES
+
+       Para adicionar um erro novo, copie o bloco abaixo e preencha:
+
+         {
+           id: "identificador-unico",      // vira link direto: erros#identificador-unico
+           titulo: "Titulo curto do erro",
+           cat: "credenciamento",          // uma das chaves de `categories`
+           resumo: "Uma linha explicando quando o erro acontece.",
+           mensagem: "Texto exato que o sistema mostra (opcional).",
+           solucao: [
+             "Primeiro passo.",
+             "Segundo passo, com `CONFIG_EM_CRASE` virando destaque."
+           ],
+           obs: "Observacao importante (opcional).",
+           autor: "Quem respondeu",        // opcional
+           data: "12/08/2026"              // opcional
+         }
+
+       Texto entre `crases` vira destaque de codigo em qualquer campo.
+       ========================================================= */
+    const errosData = [
+      {
+        id: "endereco-nao-encontrado-municipio",
+        titulo: "Endereço não encontrado no município",
+        cat: "credenciamento",
+        resumo: "O logradouro informado não é localizado na base do município.",
+        mensagem: "",
+        solucao: [
+          "Informar um CEP pertencente ao próprio município.",
+          "Ativar a configuração `CADASTRAR_ENDERECO_NAO_ENCONTRADO_MUNICIPIO` para cadastrar automaticamente o logradouro na base de dados."
+        ],
+        obs: "Nas implantações, deixar ativado como padrão — isso ajuda no credenciamento.",
+        autor: "Leonardo Amêndola",
+        data: "12/08/2026"
+      }
+    ];
+
+    /* ========================================================= */
+
+    const lista = document.getElementById("errosLista");
+    const searchInput = document.getElementById("searchInput");
+    const catFilter = document.getElementById("catFilter");
+    const categoryPills = document.getElementById("categoryPills");
+    const resultCount = document.getElementById("resultCount");
+    const clearSearch = document.getElementById("clearSearch");
+    const toggleAll = document.getElementById("toggleAll");
+    const emptyState = document.getElementById("no-results");
+
+    const abertos = new Set();
+
+    function escapeHtml(text) {
+      return String(text ?? "").replace(/[&<>"']/g, (c) => (
+        { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+      ));
+    }
+
+    // Escapa tudo e so depois converte `crase` em <code>, para o texto do
+    // erro nunca conseguir injetar HTML na pagina.
+    function fmt(text) {
+      return escapeHtml(text).replace(/`([^`]+)`/g, "<code>$1</code>");
+    }
+
+    function textoBusca(erro) {
+      const cat = categories[erro.cat] ? categories[erro.cat].label : "";
+      return [erro.titulo, erro.resumo, erro.mensagem, cat, erro.autor, ...(erro.solucao || []), erro.obs]
+        .filter(Boolean).join(" ").toLowerCase();
+    }
+
+    function fillCategories() {
+      // So entram no filtro as categorias realmente usadas.
+      const usadas = new Set(errosData.map((e) => e.cat));
+
+      Object.entries(categories).forEach(([value, category]) => {
+        if (value !== "all" && !usadas.has(value)) return;
+
+        if (value !== "all") {
+          const option = document.createElement("option");
+          option.value = value;
+          option.textContent = category.label;
+          catFilter.appendChild(option);
+        }
+
+        const pill = document.createElement("button");
+        pill.type = "button";
+        pill.className = value === "all" ? "category-pill active" : "category-pill";
+        pill.dataset.category = value;
+        pill.innerHTML = `<i class="fa-solid ${category.icon}"></i>${category.label}`;
+        categoryPills.appendChild(pill);
+      });
+    }
+
+    function setCategory(category) {
+      catFilter.value = category;
+      document.querySelectorAll(".category-pill").forEach((pill) => {
+        pill.classList.toggle("active", pill.dataset.category === category);
+      });
+      render();
+    }
+
+    function textoPlano(erro) {
+      const passos = (erro.solucao || []).map((p, i) => `${i + 1}. ${p}`).join("\n");
+      return [erro.titulo, "", passos, erro.obs ? `\nObs: ${erro.obs}` : ""]
+        .join("\n").replace(/`/g, "").trim();
+    }
+
+    function copiarSolucao(erro, button) {
+      const texto = textoPlano(erro);
+      const done = () => {
+        const original = button.innerHTML;
+        button.innerHTML = '<i class="fa-solid fa-check"></i> Copiado';
+        setTimeout(() => { button.innerHTML = original; }, 1500);
+      };
+
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(texto).then(done).catch(() => fallback());
+      } else {
+        fallback();
+      }
+
+      function fallback() {
+        const area = document.createElement("textarea");
+        area.value = texto;
+        area.style.position = "fixed";
+        area.style.left = "-9999px";
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand("copy");
+        area.remove();
+        done();
+      }
+    }
+
+    function montarCard(erro) {
+      const cat = categories[erro.cat] || categories.outros;
+      const card = document.createElement("article");
+      card.className = abertos.has(erro.id) ? "erro-card aberto" : "erro-card";
+      card.id = erro.id;
+
+      const bodyId = `body-${erro.id}`;
+      const passos = (erro.solucao || []).map((p) => `<li>${fmt(p)}</li>`).join("");
+
+      card.innerHTML = `
+        <button type="button" class="erro-head" aria-expanded="${abertos.has(erro.id)}" aria-controls="${bodyId}">
+          <span class="erro-icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
+          <span>
+            <h2>${fmt(erro.titulo)}</h2>
+            ${erro.resumo ? `<p class="erro-resumo">${fmt(erro.resumo)}</p>` : ""}
+          </span>
+          <span class="erro-tag"><i class="fa-solid ${cat.icon}"></i> ${escapeHtml(cat.label)}</span>
+          <i class="fa-solid fa-chevron-down erro-chevron"></i>
+        </button>
+
+        <div class="erro-body" id="${bodyId}" ${abertos.has(erro.id) ? "" : "hidden"}>
+          ${erro.mensagem ? `
+          <div class="erro-bloco problema">
+            <h3><i class="fa-solid fa-circle-exclamation"></i> Erro</h3>
+            <p class="erro-mensagem">${fmt(erro.mensagem)}</p>
+          </div>` : ""}
+
+          <div class="erro-bloco solucao">
+            <h3><i class="fa-solid fa-circle-check"></i> Solução</h3>
+            <ol class="erro-passos">${passos}</ol>
+          </div>
+
+          ${erro.obs ? `
+          <p class="erro-obs">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span>${fmt(erro.obs)}</span>
+          </p>` : ""}
+
+          <div class="erro-rodape">
+            <span class="erro-autor">
+              ${erro.autor ? `<i class="fa-solid fa-user"></i> ${escapeHtml(erro.autor)}` : ""}
+              ${erro.data ? ` &middot; ${escapeHtml(erro.data)}` : ""}
+            </span>
+            <button type="button" class="copiar-solucao">
+              <i class="fa-regular fa-copy"></i> Copiar solução
+            </button>
+          </div>
+        </div>
+      `;
+
+      const head = card.querySelector(".erro-head");
+      const body = card.querySelector(".erro-body");
+      head.addEventListener("click", () => {
+        const vaiAbrir = !abertos.has(erro.id);
+        if (vaiAbrir) abertos.add(erro.id); else abertos.delete(erro.id);
+        card.classList.toggle("aberto", vaiAbrir);
+        head.setAttribute("aria-expanded", vaiAbrir);
+        body.hidden = !vaiAbrir;
+        atualizarBotaoTodos();
+      });
+
+      card.querySelector(".copiar-solucao")
+        .addEventListener("click", (ev) => copiarSolucao(erro, ev.currentTarget));
+
+      return card;
+    }
+
+    function visiveis() {
+      const query = searchInput.value.trim().toLowerCase();
+      const category = catFilter.value;
+      return errosData.filter((erro) => {
+        const matchTexto = !query || textoBusca(erro).includes(query);
+        const matchCat = category === "all" || erro.cat === category;
+        return matchTexto && matchCat;
+      });
+    }
+
+    function atualizarBotaoTodos() {
+      const lista = visiveis();
+      const todosAbertos = lista.length > 0 && lista.every((e) => abertos.has(e.id));
+      toggleAll.textContent = todosAbertos ? "Recolher todos" : "Expandir todos";
+    }
+
+    function render() {
+      const encontrados = visiveis();
+      lista.innerHTML = "";
+      encontrados.forEach((erro) => lista.appendChild(montarCard(erro)));
+
+      resultCount.textContent =
+        `${encontrados.length} ${encontrados.length === 1 ? "erro encontrado" : "erros encontrados"}`;
+      emptyState.hidden = encontrados.length !== 0;
+      atualizarBotaoTodos();
+    }
+
+    fillCategories();
+
+    searchInput.addEventListener("input", render);
+    catFilter.addEventListener("change", () => setCategory(catFilter.value));
+
+    categoryPills.addEventListener("click", (event) => {
+      const pill = event.target.closest(".category-pill");
+      if (pill) setCategory(pill.dataset.category);
+    });
+
+    clearSearch.addEventListener("click", () => {
+      searchInput.value = "";
+      setCategory("all");
+    });
+
+    toggleAll.addEventListener("click", () => {
+      const encontrados = visiveis();
+      const todosAbertos = encontrados.length > 0 && encontrados.every((e) => abertos.has(e.id));
+      encontrados.forEach((e) => todosAbertos ? abertos.delete(e.id) : abertos.add(e.id));
+      render();
+    });
+
+    render();
+
+    // Link direto para um erro: erros#id-do-erro abre e rola ate ele.
+    if (location.hash) {
+      const alvo = errosData.find((e) => e.id === location.hash.slice(1));
+      if (alvo) {
+        // O link direto tem prioridade sobre qualquer filtro: o navegador
+        // restaura o texto da busca anterior ao voltar/recarregar, e com o
+        // filtro ativo o card alvo nem chegaria a ser renderizado.
+        searchInput.value = "";
+        abertos.add(alvo.id);
+        setCategory("all");
+        document.getElementById(alvo.id)?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+  </script>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('back-to-top');
+      window.addEventListener('scroll', function () {
+        btn.classList.toggle('visible', window.scrollY > 400);
+      });
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+</body>
+
+</html>
