@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Amêndola &amp; Amêndola - Painel</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/clientes.css?v=20260717">
+  <link rel="stylesheet" href="assets/css/links.css?v=20260717">
+  <link rel="stylesheet" href="assets/css/admin.css?v=20260915">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="assets/img/logo-amendola-2.png">
+  <link rel="apple-touch-icon" href="assets/img/logo-amendola-2.png">
+</head>
+
+<body class="admin-page">
+
+  <header class="admin-topo">
+    <a class="admin-marca" href="index.html">
+      <img src="assets/img/logo-amendola-2.png" alt="">
+      <span>Painel <small>clientes &amp; links</small></span>
+    </a>
+    <div class="admin-topo-acoes">
+      <div class="admin-usuario" id="usuarioBox" hidden>
+        <i class="fa-solid fa-circle-user"></i>
+        <span id="usuarioEmail"></span>
+        <button type="button" class="btn-sec" data-sair><i class="fa-solid fa-right-from-bracket"></i> Sair</button>
+      </div>
+      <button type="button" class="btn-icone" id="darkModeToggle" aria-label="Alternar tema escuro">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="admin-shell">
+
+    <section id="telaCarregando" class="admin-centro">
+      <p><i class="fa-solid fa-spinner fa-spin"></i> Carregando...</p>
+    </section>
+
+    <section id="telaConfig" class="admin-cartao admin-centro" hidden>
+      <h1><i class="fa-solid fa-plug-circle-exclamation"></i> Firebase não configurado</h1>
+      <p>Cole o <code>firebaseConfig</code> do projeto <strong>site-amendola</strong> em
+        <code>assets/js/firebase.js</code> e recarregue a página.</p>
+    </section>
+
+    <section id="telaLogin" class="admin-cartao admin-centro" hidden>
+      <h1>Entrar</h1>
+      <p>Acesso restrito à equipe Amêndola.</p>
+      <form id="formLogin" class="admin-form" novalidate>
+        <label class="admin-campo">E-mail
+          <input type="email" id="loginEmail" autocomplete="username" required>
+        </label>
+        <label class="admin-campo">Senha
+          <input type="password" id="loginSenha" autocomplete="current-password" required>
+        </label>
+        <p class="admin-erro" id="loginErro" role="alert" hidden></p>
+        <button type="submit" class="btn-pri">Entrar</button>
+        <button type="button" class="btn-link" id="btnEsqueci">Esqueci minha senha</button>
+      </form>
+    </section>
+
+    <section id="telaSemPermissao" class="admin-cartao admin-centro" hidden>
+      <h1><i class="fa-solid fa-lock"></i> Sem permissão</h1>
+      <p id="semPermissaoMsg">Seu usuário entrou, mas ainda não é administrador. Peça para criarem no Firestore
+        um documento na coleção <code>admins</code> com este ID:</p>
+      <p><code class="admin-uid" id="uidAtual"></code></p>
+      <button type="button" class="btn-sec" data-sair>Sair</button>
+    </section>
+
+    <section id="telaPainel" hidden>
+      <div class="admin-abas" role="tablist">
+        <button type="button" class="admin-aba ativa" role="tab" aria-selected="true" data-aba="abaClientes">
+          <i class="fa-solid fa-building-user"></i> Clientes
+        </button>
+        <button type="button" class="admin-aba" role="tab" aria-selected="false" data-aba="abaLinks">
+          <i class="fa-solid fa-link"></i> Links rápidos
+        </button>
+      </div>
+
+      <div id="abaClientes" role="tabpanel">
+        <div class="admin-toolbar">
+          <label class="admin-busca">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" id="buscaClientes" placeholder="Buscar por nome, site, CNPJ ou link..." autocomplete="off">
+          </label>
+          <span class="admin-conta" id="contaClientes"></span>
+          <button type="button" class="btn-sec" id="btnImportarClientes" hidden>
+            <i class="fa-solid fa-file-import"></i> Importar clientes do site
+          </button>
+          <button type="button" class="btn-pri" id="btnNovoCliente"><i class="fa-solid fa-plus"></i> Novo cliente</button>
+        </div>
+        <div class="admin-lista" id="listaClientes"></div>
+      </div>
+
+      <div id="abaLinks" role="tabpanel" hidden>
+        <div class="admin-toolbar">
+          <span class="admin-conta" id="contaLinks"></span>
+          <span class="admin-espaco"></span>
+          <button type="button" class="btn-sec" id="btnImportarLinks" hidden>
+            <i class="fa-solid fa-file-import"></i> Importar links do site
+          </button>
+          <button type="button" class="btn-pri" id="btnNovoLink"><i class="fa-solid fa-plus"></i> Novo link</button>
+        </div>
+        <div class="admin-lista" id="listaLinks"></div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="admin-dialogo" id="dlgCliente" aria-labelledby="dlgClienteTitulo">
+    <form id="formCliente" novalidate>
+      <div class="dlg-topo">
+        <h2 id="dlgClienteTitulo">Novo cliente</h2>
+        <button type="button" class="btn-icone" data-fechar aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="dlg-corpo">
+        <div class="admin-grade">
+          <label class="admin-campo inteira">Nome *
+            <input type="text" id="cliNome" required>
+          </label>
+          <label class="admin-campo inteira">Site
+            <input type="url" id="cliSite" placeholder="https://municipio.sp.gov.br">
+          </label>
+          <label class="admin-campo">CNPJ
+            <input type="text" id="cliCnpj" inputmode="numeric" placeholder="00.000.000/0000-00">
+          </label>
+          <label class="admin-campo">Telefone
+            <input type="tel" id="cliTelefone" placeholder="(14) 3000-0000">
+          </label>
+        </div>
+
+        <div class="admin-sub">
+          <h3>Links dos sistemas</h3>
+          <button type="button" class="btn-sec" id="btnAddLink"><i class="fa-solid fa-plus"></i> Adicionar link</button>
+        </div>
+        <div class="link-linhas" id="linhasLinks"></div>
+
+        <p class="admin-erro" id="erroCliente" role="alert" hidden></p>
+      </div>
+      <div class="dlg-rodape">
+        <button type="button" class="btn-sec" data-fechar>Cancelar</button>
+        <button type="submit" class="btn-pri">Salvar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="admin-dialogo" id="dlgLink" aria-labelledby="dlgLinkTitulo">
+    <form id="formLink" novalidate>
+      <div class="dlg-topo">
+        <h2 id="dlgLinkTitulo">Novo link</h2>
+        <button type="button" class="btn-icone" data-fechar aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="dlg-corpo">
+        <div class="admin-grade">
+          <label class="admin-campo inteira">Título *
+            <input type="text" id="lnkTitulo" required>
+          </label>
+          <label class="admin-campo inteira">Descrição
+            <input type="text" id="lnkDescricao">
+          </label>
+          <label class="admin-campo inteira">Endereço *
+            <input type="text" id="lnkUrl" placeholder="https://... ou downloads/arquivo.zip" required>
+          </label>
+          <label class="admin-campo">Categoria
+            <select id="lnkCategoria"></select>
+          </label>
+          <label class="admin-campo">Etiqueta
+            <input type="text" id="lnkTag" placeholder="Ex.: Downloads">
+          </label>
+          <label class="admin-campo">Ícone (Font Awesome)
+            <span class="admin-icone-campo">
+              <span class="link-icon orange" id="lnkPreview"><i class="fa-solid fa-link"></i></span>
+              <input type="text" id="lnkIcone" placeholder="fa-link">
+            </span>
+          </label>
+          <label class="admin-campo">Cor
+            <select id="lnkCor"></select>
+          </label>
+          <label class="admin-campo">Ordem
+            <input type="number" id="lnkOrdem" step="10">
+          </label>
+        </div>
+        <p class="admin-erro" id="erroLink" role="alert" hidden></p>
+      </div>
+      <div class="dlg-rodape">
+        <button type="button" class="btn-sec" data-fechar>Cancelar</button>
+        <button type="submit" class="btn-pri">Salvar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="admin-toast" id="toast" role="status" hidden></div>
+
+  <script src="assets/components/loader.js?v=20260901"></script>
+  <script type="module" src="assets/js/admin.js?v=20260915"></script>
+</body>
+
+</html>

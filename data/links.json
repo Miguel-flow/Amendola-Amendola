@@ -1,0 +1,79 @@
+[
+  {
+    "id": "amendola-ta",
+    "titulo": "Amendola TA",
+    "descricao": "Upload e gestao de arquivos da Amendola.",
+    "url": "https://amendolaeamendola.ddns.net/",
+    "categoria": "sistemas",
+    "icone": "fa-cloud-arrow-up",
+    "cor": "orange",
+    "tag": "Arquivos",
+    "ordem": 10
+  },
+  {
+    "id": "sia8-fiorilli",
+    "titulo": "SIA8 Fiorilli",
+    "descricao": "Downloads e atualizacoes do sistema SIA8.",
+    "url": "https://fiorilli.com.br/appsia8",
+    "categoria": "sistemas",
+    "icone": "fa-rotate",
+    "cor": "teal",
+    "tag": "Atualizacao",
+    "ordem": 20
+  },
+  {
+    "id": "downloads-fiorilli",
+    "titulo": "Downloads Fiorilli",
+    "descricao": "Arquivos de suporte, instaladores e executaveis.",
+    "url": "https://fiorilli.com.br/downloadfiles/",
+    "categoria": "documentos",
+    "icone": "fa-download",
+    "cor": "blue",
+    "tag": "Downloads",
+    "ordem": 30
+  },
+  {
+    "id": "webmail",
+    "titulo": "Webmail",
+    "descricao": "Acesso direto ao e-mail institucional.",
+    "url": "http://webmail.amendolaeamendola.com.br/",
+    "categoria": "interno",
+    "icone": "fa-envelope",
+    "cor": "slate",
+    "tag": "Email",
+    "ordem": 40
+  },
+  {
+    "id": "amendola-flowdocs",
+    "titulo": "Amendola FlowDocs",
+    "descricao": "Gestao documental e fluxo de trabalho digital.",
+    "url": "https://amendola.flowdocs.com.br:2053/credentials/login",
+    "categoria": "interno",
+    "icone": "fa-file-signature",
+    "cor": "slate",
+    "tag": "FlowDocs",
+    "ordem": 50
+  },
+  {
+    "id": "instalador-firebird",
+    "titulo": "Instalador Firebird",
+    "descricao": "Instalador Amendola do Firebird 5 em arquivo zip.",
+    "url": "downloads/AmendolaFirebirdSetup.zip",
+    "categoria": "documentos",
+    "icone": "fa-database",
+    "cor": "red",
+    "tag": "Instalador",
+    "ordem": 60
+  },
+  {
+    "id": "suporte-whatsapp",
+    "titulo": "Suporte WhatsApp",
+    "descricao": "Fale com nossa equipe tecnica pelo WhatsApp.",
+    "url": "https://wa.me/551735579090",
+    "categoria": "suporte",
+    "icone": "fa-brands fa-whatsapp",
+    "cor": "green",
+    "tag": "Atendimento",
+    "ordem": 70
+  }
+]

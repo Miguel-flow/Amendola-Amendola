@@ -1,0 +1,4479 @@
+[
+  {
+    "id": "aguas-de-lindoia",
+    "nome": "Aguas de Lindóia",
+    "site": "https://aguasdelindoia.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.439.683/0001-89",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://aguasdelindoia.flowdocs.com.br/public/home"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://transparencia.aguasdelindoia.sp.gov.br:8079/scpi9/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://www.aguasdelindoia.sp.gov.br/portal-da-transparencia"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://transparencia.aguasdelindoia.sp.gov.br:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://transparencia.aguasdelindoia.sp.gov.br:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://transparencia.aguasdelindoia.sp.gov.br:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "aguas-de-lindoia-saae",
+    "nome": "Aguas de Lindóia - SAAE",
+    "site": "https://saaeaguasdelindoia.com.br",
+    "telefone": "",
+    "cnpj": "46.439.865/0001-50",
+    "links": [
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://138.99.204.156:5656/scpi9/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://138.99.204.156:8079/transparencia"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://138.99.204.156:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://138.99.204.156:8080/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "aguas-de-sao-pedro",
+    "nome": "Aguas de Sao Pedro",
+    "site": "https://aguasdesaopedro.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.739.174/0001-09",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://aguasdesaopedro.flowdocs.com.br:2053/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://aguasdesaopedro.integrador.app.br:2083/credencial/login"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://aguasdesaopedro.dcfiorilli.com.br:8079/scpi9/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://scpiaguasdesaopedro.dcfiorilli.com.br:8079/transparencia"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://aguasdesaopedro.dcfiorilli.com.br:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://aguasdesaopedro.dcfiorilli.com.br:8080/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://scpiaguasdesaopedro.dcfiorilli.com.br:8080/sipweb/"
+      }
+    ]
+  },
+  {
+    "id": "aracoiaba-da-serra",
+    "nome": "Araçoiaba da Serra",
+    "site": "https://www.aracoiaba.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "46.634.069/0001-78",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://aracoiabadaserra.flowdocs.com.br"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://aracoiabadaserra.integrador.app.br/credencial/login"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://189.57.151.122:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://189.57.151.122:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://pmaracoiabadaserra.com.br:8443/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://pmaracoiabadaserra.com.br:8443/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://189.57.151.122:8080/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "arealva",
+    "nome": "Arealva",
+    "site": "https://arealva.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.137.428/0001-81",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://arealva.flowdocs.com.br/"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://arealva.integrador.app.br:2053"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://portaltransp.arealva.sp.gov.br:5885/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://servicos.arealva.sp.gov.br:8443"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://nfe.arealva.sp.gov.br:8443/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "https://rh.arealva.sp.gov.br:8443/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "ariranha",
+    "nome": "Ariranha",
+    "site": "https://ariranha.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.117.116/0001-43",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "http://ariranha.integrador.app.br:2053/"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "https://transparencia.pmariranha.com.br/scpi9/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://transparencia.pmariranha.com.br/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://servicosweb.ariranha.sp.gov.br/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://servicosweb.ariranha.sp.gov.br/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://portal.pmariranha.com.br:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "arvap",
+    "nome": "ARVAP",
+    "site": "https://arvap.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "54.299.163/0001-46",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://arvap.flowdocs.com.br/public/home"
+      }
+    ]
+  },
+  {
+    "id": "assis",
+    "nome": "Assis",
+    "site": "https://assis.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.179.941/0001-35",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://assis.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://transparencia.assis.sp.gov.br:8077/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://tributacao.assis.sp.gov.br/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://nfse.assis.sp.gov.br/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "auriflama",
+    "nome": "Auriflama",
+    "site": "https://auriflama.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.660.594/0001-03",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://auriflama.flowdocs.com.br:2053/public/home"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://45.160.255.243:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://45.160.255.243:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://auriflamasp.dcfiorilli.com.br:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://auriflamasp.dcfiorilli.com.br:8080/issweb/home"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://45.160.255.243:8080/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "avai",
+    "nome": "Avaí",
+    "site": "https://avai.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.137.436/0001-28",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://avai.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://170.238.88.61:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://170.238.88.61:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://170.238.88.61:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://170.238.88.61:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://170.238.88.61:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "avanhandava",
+    "nome": "Avanhandava",
+    "site": "https://www.avanhandava.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "45.665.890/0001-99",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://avanhandava.integrador.app.br:2053"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://45.71.14.83:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://45.71.14.83:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://45.71.14.83:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://45.71.14.83:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://45.71.14.83:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "avare",
+    "nome": "Avaré",
+    "site": "https://avare.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.634.168/0001-50",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://flowdocs.avare.sp.gov.br/"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://integrador.avare.sp.gov.br/"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "https://transparencia.avare.sp.gov.br/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://transparencia.avare.sp.gov.br/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://servicos.avare.sp.gov.br/home"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://issweb.avare.sp.gov.br/issweb/paginas/login"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "https://holerite.avare.sp.gov.br/sipweb/trabalhador/login/login.xhtml"
+      },
+      {
+        "tipo": "sia",
+        "rotulo": "SIAWeb",
+        "url": "https://sia.avare.sp.gov.br/credencial/login"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Protocolo",
+        "url": "https://protocolo.avare.sp.gov.br/sseweb/",
+        "icone": "fa-stamp"
+      }
+    ]
+  },
+  {
+    "id": "barbosa",
+    "nome": "Barbosa",
+    "site": "https://barbosa.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.162.178/0001-30",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://barbosa.flowdocs.com.br:2053/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://barbosa.integrador.app.br:2053"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://transparencia.barbosa.sp.gov.br:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://207.248.11.0:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://45.71.14.160:5661/issweb"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://207.248.11.0:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "bariri",
+    "nome": "Bariri",
+    "site": "https://bariri.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.181.376/0001-40",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://bariri.flowdocs.com.br:2053"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://187.62.191.5:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://187.62.191.5:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://sipweb.bariri.sp.gov.br:5661/servicosweb"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://sipweb.bariri.sp.gov.br:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://sipweb.bariri.sp.gov.br:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "barra-do-turvo",
+    "nome": "Barra do Turvo",
+    "site": "https://barradoturvo.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.634.317/0001-80",
+    "links": [
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://191.37.146.80:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://191.37.146.80:8079/transparencia/"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://191.37.146.80:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://191.37.146.80:5661/sipweb/"
+      }
+    ]
+  },
+  {
+    "id": "bocaina",
+    "nome": "Bocaina",
+    "site": "https://bocaina.sp.gov.br",
+    "telefone": "",
+    "cnpj": "06.164.475/0001-08",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://bocaina.flowdocs.com.br:2053/"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://201.28.69.179:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://201.28.69.179:8079/transparencia"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://201.28.69.179:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://201.28.69.179:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://201.28.69.179:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "bofete",
+    "nome": "Bofete",
+    "site": "https://bofete.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.634.143/0001-56",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://bofete.flowdocs.com.br/"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://bofete.integrador.app.br:2053"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://transparencia.bofete.sp.gov.br:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://transparencia.bofete.sp.gov.br:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://transparencia.bofete.sp.gov.br:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://transparencia.bofete.sp.gov.br:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://transparencia.bofete.sp.gov.br:5663/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "bora",
+    "nome": "Borá",
+    "site": "https://www.bora.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "44.544.906/0001-42",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://bora.flowdocs.com.br/"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://bora.integrador.app.br/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://bora.portalservicos.app.br/home"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://borasp.dcfiorilli.com.br:8085/issweb/"
+      }
+    ]
+  },
+  {
+    "id": "boraceia",
+    "nome": "Boracéia",
+    "site": "https://boraceia.sp.gov.br",
+    "telefone": "(14) 3295-9100",
+    "cnpj": "46.189.734/0001-61",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://boraceia.flowdocs.com.br:2053/public/home"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://187.62.176.190:5656/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://187.62.176.190:8081/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://187.62.176.190:8081/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://187.62.176.190:8081/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "botucatu",
+    "nome": "Botucatu",
+    "site": "https://www.botucatu.sp.gov.br/",
+    "telefone": "(14) 3811-1400",
+    "cnpj": "46.634.101/0001-15",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://botucatu.flowdocs.com.br:2053/"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://botucatu.integrador.app.br:2053/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://botucatu.portalservicos.app.br:2053/home"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://siabotucatu.dcfiorilli.com.br:8089/issweb/paginas/login"
+      },
+      {
+        "tipo": "sia",
+        "rotulo": "SIAWeb",
+        "url": "https://botucatu.siaweb.app.br:2053/credencial/login"
+      }
+    ]
+  },
+  {
+    "id": "cabralia-paulista",
+    "nome": "Cabrália Paulista",
+    "site": "https://www.cabralia.sp.gov.br/",
+    "telefone": "(14) 3285-1244",
+    "cnpj": "46.137.469/0001-78",
+    "links": [
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://186.224.14.206:5656/scpi9/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://186.224.14.206:5656/transparencia/"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://186.224.14.206:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://186.224.14.206:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "cafelandia",
+    "nome": "Cafelandia",
+    "site": "https://cafelandia.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.186.375/0001-99",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://cafelandia.integrador.app.br:2096"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://170.238.91.104:5656/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://170.238.91.104:5656/Transparencia"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://170.238.91.104:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://170.238.91.104:5661/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "candido-rodrigues",
+    "nome": "Cândido Rodriguês",
+    "site": "https://www.candidorodrigues.sp.gov.br/",
+    "telefone": "(16) 3257-1133",
+    "cnpj": "45.374.261/0001-00",
+    "links": [
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "https://portal.candidorodrigues.sp.gov.br/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://portal.candidorodrigues.sp.gov.br/transparencia"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://portal.candidorodrigues.sp.gov.br:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://portal.candidorodrigues.sp.gov.br:8080/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://portal.candidorodrigues.sp.gov.br:8080/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "carmo-do-rio-claro",
+    "nome": "Carmo do Rio Claro",
+    "site": "https://www.carmodorioclaro.mg.gov.br/",
+    "telefone": "(35) 3561-2000",
+    "cnpj": "18.243.287/0001-46",
+    "links": [
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://177.11.86.115:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://177.11.86.115:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://177.11.86.115:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://177.11.86.115:5661/issweb/paginas/login"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://177.11.86.115:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "castilho",
+    "nome": "Castilho",
+    "site": "https://castilho.sp.gov.br",
+    "telefone": "(18) 3741-9000",
+    "cnpj": "45.663.556/0001-04",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://castilho.flowdocs.com.br:2053/public/home"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://186.237.221.103:8079/Transparencia"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://45.175.171.143:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://45.175.171.143:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://143.0.71.241:5662/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "catigua",
+    "nome": "Catiguá",
+    "site": "https://www.catigua.sp.gov.br/home/",
+    "telefone": "(17) 3564-9500",
+    "cnpj": "45.124.344/0001-40",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://catigua.flowdocs.com.br:2096/"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://catigua.integrador.app.br:2096/credencial/login"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://catigua.portalservicos.app.br:2096/home"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://iss.catigua.sp.gov.br:8090/issweb/home"
+      }
+    ]
+  },
+  {
+    "id": "cerqueira-cesar",
+    "nome": "Cerqueira César",
+    "site": "https://www.cerqueiracesar.sp.gov.br",
+    "telefone": "(14) 3714-7200",
+    "cnpj": "46.634.184/0001-42",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://cerqueiracesar.flowdocs.com.br:2053/"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://45.162.155.24:5651/issweb/paginas/login"
+      }
+    ]
+  },
+  {
+    "id": "cismetro-limeira",
+    "nome": "Cismetro Limeira",
+    "site": "https://www.cismetrolimeira.com.br/",
+    "telefone": "",
+    "cnpj": "48.227.378/0001-59",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://cismetrolimeira.flowdocs.com.br:2053/"
+      }
+    ]
+  },
+  {
+    "id": "cm-assis",
+    "nome": "CM Assis",
+    "site": "https://www.assis.sp.leg.br/",
+    "telefone": "",
+    "cnpj": "49.898.521/0001-05",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://cmassis.flowdocs.com.br:2053/public/home"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência CM",
+        "url": "https://scpi.assis.sp.gov.br:8079/TransparenciaCamara/"
+      }
+    ]
+  },
+  {
+    "id": "cm-mineiros-do-tiete",
+    "nome": "CM Mineiros do Tietê",
+    "site": "https://camaramineirosdotiete.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "49.883.598/0001-01",
+    "links": [
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência CM",
+        "url": "http://189.91.231.6:8079/transparencia/"
+      }
+    ]
+  },
+  {
+    "id": "cm-pinhalzinho",
+    "nome": "CM Pinhalzinho",
+    "site": "https://www.camarapinhalzinho.sp.gov.br/index.html",
+    "telefone": "",
+    "cnpj": "45.142.353/0001-64",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://cmpinhalzinho.flowdocs.com.br:2053/public/home"
+      }
+    ]
+  },
+  {
+    "id": "colombia",
+    "nome": "Colômbia",
+    "site": "https://colombia.sp.gov.br",
+    "telefone": "(17) 3335-8500",
+    "cnpj": "52.381.720/0001-48",
+    "links": [
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://187.72.53.129:5656/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://187.72.53.129:5656/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://187.72.53.129:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://187.72.53.129:8080/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://187.72.53.129:8080/sipweb"
+      }
+    ]
+  },
+  {
+    "id": "duartina",
+    "nome": "Duartina",
+    "site": "https://duartina.sp.gov.br",
+    "telefone": "(14) 3282-8282",
+    "cnpj": "46.137.485/0001-60",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://duartina.flowdocs.com.br"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://duartina.integrador.app.br/credencial/login"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://186.224.0.34:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://186.224.0.34:8079/Transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://186.224.0.35:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://186.224.0.35:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://186.224.0.36:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "embauba",
+    "nome": "Embaúba",
+    "site": "https://embauba.sp.gov.br",
+    "telefone": "(17) 3566-8000",
+    "cnpj": "65.712.648/0001-36",
+    "links": [
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://transparencia.embauba.sp.gov.br:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://transparencia.embauba.sp.gov.br:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://nfe.embauba.sp.gov.br:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://nfe.embauba.sp.gov.br:5661/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "estrela-d-oeste",
+    "nome": "Estrela d'Oeste",
+    "site": "https://pmestrela.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.112.224/0001-23",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "http://estreladoeste.integrador.app.br:2053"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://132.255.175.250:8079/scpi9/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://132.255.175.250:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://201.28.106.170:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://201.28.106.170:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://132.255.175.250:6061/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "fernando-prestes",
+    "nome": "Fernando Prestes",
+    "site": "https://fernandoprestes.sp.gov.br",
+    "telefone": "(16) 3258-4000",
+    "cnpj": "47.826.763/0001-50",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://fernandoprestes.flowdocs.com.br:2096"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://fernandoprestes.integrador.app.br:2096/"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://transparencia.fernandoprestes.sp.gov.br:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://transparencia.fernandoprestes.sp.gov.br:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://transparencia.fernandoprestes.sp.gov.br:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://transparencia.fernandoprestes.sp.gov.br:5661/issweb"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://transparencia.fernandoprestes.sp.gov.br:8085/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "fernao",
+    "nome": "Fernão",
+    "site": "https://fernao.sp.gov.br",
+    "telefone": "(14) 3273-1004",
+    "cnpj": "01.612.848/0001-34",
+    "links": [
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://www.transparencia.fernao.sp.gov.br:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://www.transparencia.fernao.sp.gov.br:8079/Transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://186.224.14.162:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://186.224.14.162:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://transparencia.fernao.sp.gov.br:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "florinea",
+    "nome": "Florínea",
+    "site": "https://florinia.sp.gov.br",
+    "telefone": "(18) 3377-0620",
+    "cnpj": "44.493.575/0001-69",
+    "links": [
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://transparencia.florinea.sp.gov.br:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://transparencia.florinea.sp.gov.br:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://transparencia.florinea.sp.gov.br:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://transparencia.florinea.sp.gov.br:8080/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://transparencia.florinea.sp.gov.br:8080/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "galia",
+    "nome": "Gália",
+    "site": "https://galia.sp.gov.br",
+    "telefone": "(14) 3274-9020",
+    "cnpj": "44.518.389/0001-37",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://galia.flowdocs.com.br"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://galia.integrador.app.br"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://186.224.14.198:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://186.224.14.198:8079/Transparencia/Default.aspx"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://186.224.14.198:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://186.224.14.198:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://186.224.14.198:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "garca",
+    "nome": "Garça",
+    "site": "https://garca.sp.gov.br",
+    "telefone": "(14) 3407-6600",
+    "cnpj": "44.518.371/0001-35",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://garca.integrador.app.br:2053"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://179.96.132.27:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://179.96.132.27:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://179.96.132.27:2015/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://179.96.132.27:2015/issweb/home"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://179.96.132.27:2020/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "garca-saae",
+    "nome": "Garça - SAAE",
+    "site": "https://saaegarca.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "48.211.262/0001-21",
+    "links": [
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://179.96.132.27:8080/servicosweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "getulina",
+    "nome": "Getulina",
+    "site": "https://getulina.sp.gov.br",
+    "telefone": "(14) 3552-9222",
+    "cnpj": "44.528.842/0001-96",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://getulina.flowdocs.com.br/public/home"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://179.96.132.27:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://187.8.116.50:5656/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://187.8.116.50:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://187.8.116.50:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://187.8.116.50:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "guaicara",
+    "nome": "Guaiçara",
+    "site": "https://guaicara.sp.gov.br",
+    "telefone": "(14) 3547-9217",
+    "cnpj": "46.203.469/0001-29",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://guaicara.integrador.app.br"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://transparencia.guaicara.sp.gov.br:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://transparencia.guaicara.sp.gov.br:8079/TRANSPARENCIA/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://notafiscal.guaicara.sp.gov.br:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://notafiscal.guaicara.sp.gov.br:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://holerite.guaicara.sp.gov.br:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "guaimbe",
+    "nome": "Guaimbê",
+    "site": "https://guaimbe.sp.gov.br",
+    "telefone": "(14) 3553-9700",
+    "cnpj": "44.529.592/0001-09",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://guaimbe.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://guaimbe.ddns.net:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://guaimbe.ddns.net:8079/TRANSPARENCIA/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://guaimbe.ddns.net:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://guaimbe.ddns.net:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://guaimbe.ddns.net:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "guapiacu",
+    "nome": "Guapiaçu",
+    "site": "https://guapiacu.sp.gov.br",
+    "telefone": "(17) 3267-9700",
+    "cnpj": "45.728.326/0001-78",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://guapiacu.integrador.app.br/credencial/login"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://187.8.185.250:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://187.8.185.250:8079/Transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://187.9.146.42:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://187.9.146.42:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://187.8.185.250:5662/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "guara",
+    "nome": "Guará",
+    "site": "https://guara.sp.gov.br",
+    "telefone": "(16) 3831-9800",
+    "cnpj": "45.353.299/0001-04",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://guara.flowdocs.com.br/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://guara.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "https://servicos.guara.sp.gov.br/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://servicos.guara.sp.gov.br/Transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://cidadao.guara.sp.gov.br:8443/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://cidadao.guara.sp.gov.br:8443/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://sip8.guara.sp.gov.br:8080/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "guaranta",
+    "nome": "Guarantã",
+    "site": "https://guaranta.sp.gov.br",
+    "telefone": "(14) 3586-3300",
+    "cnpj": "46.187.506/0001-52",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://guaranta.integrador.app.br:2053"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://pmgta.ddns.net:8079/scpi9/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://pmgta.ddns.net:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://tributos.guaranta.sp.gov.br:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://tributos.guaranta.sp.gov.br:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://pmgta.ddns.net:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "guzolandia",
+    "nome": "Guzolândia",
+    "site": "https://guzolandia.sp.gov.br",
+    "telefone": "(17) 3637-1123",
+    "cnpj": "45.746.112/0001-24",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://guzolandia.flowdocs.com.br:2053/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://guzolandia.integrador.app.br:2053"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://45.172.167.50:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://45.172.167.50:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://45.172.167.50:8080/servicosweb/home.jsf;jsessionid=yIu1fM3ojnkY3puhzxG-25p1.undefined"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://45.172.167.50:8080/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://45.172.167.50:8080/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "holambra",
+    "nome": "Holambra",
+    "site": "https://holambra.sp.gov.br",
+    "telefone": "(19) 3802-8000",
+    "cnpj": "67.172.437/0001-83",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://holambra.flowdocs.com.br:2096/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://holambra.integrador.app.br:2096/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://179.175.14.22:8082/transparenciafinancas"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://179.175.14.22:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://179.175.14.22:8080/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://179.175.14.22:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "iacanga",
+    "nome": "Iacanga",
+    "site": "https://iacanga.sp.gov.br",
+    "telefone": "(14) 3294-9400",
+    "cnpj": "46.137.477/0001-14",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://iacanga.flowdocs.com.br:2053/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://iacanga.integrador.app.br:2053"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://scpiiacanga.dcfiorilli.com.br:879/transparencia"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://sppmiacanga.dcfiorilli.com.br:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://sppmiacanga.dcfiorilli.com.br:8080/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://sppmiacanga.dcfiorilli.com.br:8080/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "ibate",
+    "nome": "Ibaté",
+    "site": "https://ibate.sp.gov.br",
+    "telefone": "(16) 3343-1252",
+    "cnpj": "45.355.575/0001-65",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://ibate.flowdocs.com.br:2096/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://ibate.integrador.app.br:8443/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://200.205.131.109:5656/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://186.209.77.236:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://186.209.77.236:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://200.205.131.109:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "ibira",
+    "nome": "Ibirá",
+    "site": "https://ibira.sp.gov.br",
+    "telefone": "(17) 3551-9900",
+    "cnpj": "45.158.193/0001-41",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://ibira.flowdocs.com.br:2096/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://ibira.integrador.app.br:2053/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://transparencia.ibira.sp.gov.br:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://servicosweb.ibira.sp.gov.br/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://issweb.ibira.sp.gov.br/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "https://sipwebtrabalhador.ibira.sp.gov.br:5659/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "ibirarema",
+    "nome": "Ibirarema",
+    "site": "https://ibirarema.sp.gov.br",
+    "telefone": "(14) 3307-1471",
+    "cnpj": "46.211.694/0001-07",
+    "links": [
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://177.55.48.120:5656/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://177.55.48.120:5656/transparencia"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://177.55.48.120:3389/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://177.55.48.120:3389/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://177.55.48.120:3389/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "ibitinga",
+    "nome": "Ibitinga",
+    "site": "https://ibitinga.sp.gov.br",
+    "telefone": "(16) 3352-7000",
+    "cnpj": "45.321.460/0001-50",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://ibitinga.integrador.app.br:2053/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://www.transparencia.ibitinga.sp.gov.br/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://164.163.52.93:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://164.163.52.93:8080/issweb/home"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "https://www.intranet.ibitinga.sp.gov.br/servicos/rh/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "ibitinga-saae",
+    "nome": "Ibitinga - SAAE",
+    "site": "https://www.saaeibitinga.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "45.321.791/0001-90",
+    "links": [
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://164.163.52.93:8079/transparenciaconsorcio1/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://201.182.160.98:5661/servicosweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "itabera",
+    "nome": "Itabera",
+    "site": "https://itabera.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.634.374/0001-60",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://itabera.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://e7e90e9dc282.sn.mynetname.net:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://e7e90e9dc282.sn.mynetname.net:8079/transparencia"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://sppmitabera.dcfiorilli.com.br:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://sppmitabera.dcfiorilli.com.br:8080/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://e7e90e9dc282.sn.mynetname.net:8068/sipweb"
+      }
+    ]
+  },
+  {
+    "id": "itai",
+    "nome": "Itaí",
+    "site": "https://www.itai.sp.gov.br/",
+    "telefone": "(14) 3761-9200",
+    "cnpj": "46.634.200/0001-05",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://itai.flowdocs.com.br:2053"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://itai.integrador.app.br:2053"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://itai.portalservicos.app.br:2053/home"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://itaisp.dcfiorilli.com.br:8090/issweb"
+      },
+      {
+        "tipo": "sia",
+        "rotulo": "SIAWeb",
+        "url": "https://itai.siaweb.app.br:2053/credencial/login"
+      }
+    ]
+  },
+  {
+    "id": "itajobi",
+    "nome": "Itajobi",
+    "site": "https://itajobi.sp.gov.br",
+    "telefone": "(17) 3546-9000",
+    "cnpj": "45.126.851/0001-13",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://itajobi.flowdocs.com.br"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://itajobi.integrador.app.br/credencial/login"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://sistemas.itajobi.sp.gov.br/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://nfes.itajobi.sp.gov.br/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://nfes.itajobi.sp.gov.br/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "itapira",
+    "nome": "Itapira",
+    "site": "https://itapira.sp.gov.br",
+    "telefone": "(19) 3843-9100",
+    "cnpj": "45.281.144/0001-00",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://itapira.flowdocs.com.br:2096/"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://itapira.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://transparencia.itapira.sp.gov.br:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://transparencia.itapira.sp.gov.br:8079/Transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://transparencia.itapira.sp.gov.br:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://holerite.itapira.sp.gov.br:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "itapira-saae",
+    "nome": "Itapira - SAAE",
+    "site": "https://saaeitapira.com.br",
+    "telefone": "(19) 3913-9500",
+    "cnpj": "46.378.766/0001-05",
+    "links": [
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://page.saaeitapira.com.br/servicosweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "itaporanga",
+    "nome": "Itaporanga",
+    "site": "https://itaporanga.sp.gov.br",
+    "telefone": "(15) 3565-1397",
+    "cnpj": "46.634.408/0001-16",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://itaporanga.flowdocs.com.br/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://itaporanga.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://177.223.110.33:8079/transparencia/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://45.163.40.11:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://45.163.40.11:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://45.163.40.11:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://45.163.40.11:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "itobi",
+    "nome": "Itobi",
+    "site": "https://itobi.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.735.461/0001-40",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://itobi.flowdocs.com.br:2053/"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://186.200.38.82:8079/scpi9/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://186.200.38.82:8079/transparencia/"
+      }
+    ]
+  },
+  {
+    "id": "jaciara-mt",
+    "nome": "Jaciara - MT",
+    "site": "https://www.jaciara.mt.gov.br/",
+    "telefone": "(66) 3461-7900",
+    "cnpj": "03.347.135/0001-16",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://jaciara.integrador.app.br:2053/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://intranet.jaciara.mt.gov.br:5656/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://intranet.jaciara.mt.gov.br:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://intranet.jaciara.mt.gov.br:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://sip.jaciara.mt.gov.br:5662/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "jacupiranga",
+    "nome": "Jacupiranga",
+    "site": "https://jacupiranga.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.582.185/0001-90",
+    "links": [
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://servicos.jacupiranga.sp.gov.br:8079/Transparencia/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://servicos.jacupiranga.sp.gov.br:8079/Transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://servicos.jacupiranga.sp.gov.br:5661/servicosweb"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://servicos.jacupiranga.sp.gov.br:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://servicos.jacupiranga.sp.gov.br:5661/sipweb/"
+      }
+    ]
+  },
+  {
+    "id": "jahu",
+    "nome": "Jahu",
+    "site": "https://www.jau.sp.gov.br/",
+    "telefone": "(14) 3602-1777",
+    "cnpj": "46.195.079/0001-54",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://jau.flowdocs.com.br:2053/public/home/group/5"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://jau.integrador.app.br:2053"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://servicos.jau.sp.gov.br:8079/scpi9/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://179.174.56.79:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://jau.portalservicos.app.br:2053/home"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://servicos.jau.sp.gov.br:8090/issweb/home"
+      }
+    ]
+  },
+  {
+    "id": "jose-bonifacio",
+    "nome": "Jose Bonifacio",
+    "site": "https://josebonifacio.sp.gov.br/",
+    "telefone": "(17) 3245-9200",
+    "cnpj": "45.141.132/0001-71",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://josebonifacio.flowdocs.com.br/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://josebonifacio.integrador.app.br:2053"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://transparencia.josebonifacio.sp.gov.br/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://nfse.josebonifacio.sp.gov.br:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://nfse.josebonifacio.sp.gov.br:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://portalservidor.josebonifacio.sp.gov.br:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "julio-mesquita",
+    "nome": "Júlio Mesquita",
+    "site": "https://juliomesquita.sp.gov.br",
+    "telefone": "(14) 3487-9090",
+    "cnpj": "44.518.496/0001-65",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://juliomesquita.flowdocs.com.br/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://pmjm.ddns.net:808/transparencia/default.aspx"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://pmjm.ddns.net:5662/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://pmjm.ddns.net:5662/sipweb/trabalhador/login/login.xhtml"
+      },
+      {
+        "tipo": "sia",
+        "rotulo": "SIAWeb",
+        "url": "https://itai.siaweb.app.br:2053/credencial/login"
+      }
+    ]
+  },
+  {
+    "id": "juscimeira",
+    "nome": "Juscimeira",
+    "site": "https://www.juscimeira.mt.gov.br/",
+    "telefone": "(66) 3412-1371",
+    "cnpj": "15.023.955/0001-31",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://juscimeira.flowdocs.com.br:2053/public/home"
+      }
+    ]
+  },
+  {
+    "id": "laranjal-paulista",
+    "nome": "Laranjal Paulista",
+    "site": "https://laranjalpaulista.sp.gov.br",
+    "telefone": "(15) 3283-8300",
+    "cnpj": "46.634.606/0001-80",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://laranjalpaulista.flowdocs.com.br:2096/"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://laranjalpaulista.integrador.app.br:8443/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://189.45.236.250:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://pmlpta.ddns.com.br:6118/servicosweb"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://pmlpta.ddns.com.br:6118/issweb"
+      }
+    ]
+  },
+  {
+    "id": "leme",
+    "nome": "Leme",
+    "site": "https://www.leme.sp.gov.br/",
+    "telefone": "(19) 3097-1000",
+    "cnpj": "46.362.661/0001-68",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://leme.flowdocs.com.br:2053/"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://leme.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://lemespscpi.dcfiorilli.com.br:879/TRANSPARENCIA/"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "https://leme.amendola.cloud:887/sipweb/trabalhador/login/login.xhtml"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://leme.portalservicos.app.br:2053/home"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "https://lemespscpi.dcfiorilli.com.br:879/scpi9/"
+      }
+    ]
+  },
+  {
+    "id": "lindoia",
+    "nome": "Lindóia",
+    "site": "https://lindoia.sp.gov.br",
+    "telefone": "(19) 3898-9900",
+    "cnpj": "45.678.000/0001-83",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://lindoia.flowdocs.com.br:2087/"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://lindoia.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://prefeituralindoia.hopto.org:8079/scpi9/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://prefeituralindoia.hopto.org:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://prefeituralindoia.hopto.org:5656/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://prefeituralindoia.hopto.org:5656/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://prefeituralindoia.hopto.org:5656/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "lucianopolis",
+    "nome": "Lucianópolis",
+    "site": "https://lucianopolis.sp.gov.br",
+    "telefone": "(14) 3286-1209",
+    "cnpj": "44.518.504/0001-73",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://lucianopolis.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://transparencia.lucianopolis.sp.gov.br:6570/Transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://tributos.lucianopolis.sp.gov.br:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://tributos.lucianopolis.sp.gov.br:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://servicos.lucianopolis.sp.gov.br:6572/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "magda",
+    "nome": "Magda",
+    "site": "https://magda.sp.gov.br",
+    "telefone": "(17) 3487-9020",
+    "cnpj": "45.660.628/0001-51",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://magda.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://45.173.134.192:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://45.173.134.192:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://45.173.134.192:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://45.173.134.192:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "marapoama",
+    "nome": "Marapoama",
+    "site": "https://marapoama.sp.gov.br",
+    "telefone": "(17) 3548-9100",
+    "cnpj": "65.712.580/0001-95",
+    "links": [
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://177.137.148.195:5656/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://177.137.148.195:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://177.137.148.195:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "mendonca",
+    "nome": "Mendonça",
+    "site": "https://mendonca.sp.gov.br",
+    "telefone": "(17) 3248-9000",
+    "cnpj": "46.935.110/0001-46",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://mendonca.flowdocs.com.br:8443/"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://mendonca.integrador.app.br:2053"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://170.0.51.27:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://170.0.51.27:8083/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://170.0.51.27:8083/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://170.0.51.27:8083/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "mineiros-do-tiete",
+    "nome": "Mineiros do Tiete",
+    "site": "https://www.mineirosdotiete.sp.gov.br/index",
+    "telefone": "",
+    "cnpj": "46.199.253/0001-37",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://mineirosdotiete.flowdocs.com.br:2053/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://mineirosdotiete.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "https://spmineirostiete.dcfiorilli.com.br:879/scpi9/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://mineirosdotiete.portalservicos.app.br:2053/home"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://spmineirostiete.dcfiorilli.com.br:8100/issweb/paginas/login"
+      }
+    ]
+  },
+  {
+    "id": "mirandopolis",
+    "nome": "Mirandópolis",
+    "site": "https://mirandopolis.sp.gov.br",
+    "telefone": "",
+    "cnpj": "44.438.968/0001-70",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://mirandopolis.integrador.app.br:2053"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://138.0.140.51:5660/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://138.0.140.51:5660/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "monte-aprazivel",
+    "nome": "Monte Aprazível",
+    "site": "http://www.monteaprazivel.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "53.221.701/0001-17",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://monteaprazivel.flowdocs.com.br:2053/public/home"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://transparencia.monteaprazivel.sp.gov.br:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://170.0.24.38:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://170.0.24.38:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://170.0.24.38:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "monte-azul-paulista",
+    "nome": "Monte Azul Paulista",
+    "site": "https://monteazulpaulista.sp.gov.br/novosite/",
+    "telefone": "",
+    "cnpj": "52.942.380/0001-87",
+    "links": [
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://7de607488a45.sn.mynetname.net:8079/Transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://7de607488a45.sn.mynetname.net:35000/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://7de607488a45.sn.mynetname.net:35000/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "monteiro-lobato",
+    "nome": "Monteiro Lobato",
+    "site": "https://monteirolobato.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.643.482/0001-07",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://monteirolobato.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://201.28.168.194:9000/transparencia/default.aspx"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://pmml.dyndns.org:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://pmml.dyndns.org:5661/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "morro-agudo",
+    "nome": "Morro Agudo",
+    "site": "https://morroagudo.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "45.345.899/0001-12",
+    "links": [
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://morroagudosp.dcfiorilli.com.br:5661/servicosweb/imovel.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://morroagudosp.dcfiorilli.com.br:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "https://servicosweb.morroagudo.sp.gov.br:8443/sipweb/"
+      }
+    ]
+  },
+  {
+    "id": "morungaba",
+    "nome": "Morungaba",
+    "site": "https://morungaba.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.755.238/0001-65",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://morungaba.flowdocs.com.br:2096/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://morungaba.integrador.app.br:2096/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://servicos.morungaba.sp.gov.br:5800/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://morungabasp.dcfiorilli.com.br:8080/servicosweb"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://morungabasp.dcfiorilli.com.br:8080/issweb"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://servicos.morungaba.sp.gov.br:5600/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "nazare-paulista",
+    "nome": "Nazaré Paulista",
+    "site": "https://www.nazarepaulista.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "45.279.643/0001-54",
+    "links": [
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://spnazarepaulista.dcfiorilli.com.br:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://spnazarepaulista.dcfiorilli.com.br:8080/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "nova-europa",
+    "nome": "Nova Europa",
+    "site": "https://novaeuropa.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "71.989.982/0001-34",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://novaeuropa.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://sppmnovaeuropa1.dcfiorilli.com.br:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://sppmnovaeuropa1.dcfiorilli.com.br:8080/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "novais",
+    "nome": "Novais",
+    "site": "https://www.novais.sp.gov.br/home/",
+    "telefone": "",
+    "cnpj": "65.711.699/0001-43",
+    "links": [
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://transparencia.novais.sp.gov.br:5656/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://iss.novais.sp.gov.br:1415/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://iss.novais.sp.gov.br:1415/issweb/home"
+      }
+    ]
+  },
+  {
+    "id": "novo-horizonte",
+    "nome": "Novo Horizonte",
+    "site": "https://novohorizonte.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.152.139/0001-99",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://novohorizonte.integrador.app.br:2053/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://online.novohorizonte.sp.gov.br:8080/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://nfe.novohorizonte.sp.gov.br:8080/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://holerite.novohorizonte.sp.gov.br:8080/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "nuporanga",
+    "nome": "Nuporanga",
+    "site": "https://nuporanga.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "46.754.388/0001-00",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://nuporanga.flowdocs.com.br:2096/public/home/group/5"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://nuporanga.integrador.app.br:2053"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://181.191.10.193:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://181.191.10.193:5661/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "onda-verde",
+    "nome": "Onda Verde",
+    "site": "https://ondaverde.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.148.699/0001-70",
+    "links": [
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://187.103.85.129:8079/Transparência/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://187.103.85.129:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://187.103.85.129:5661/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "panorama",
+    "nome": "Panorama",
+    "site": "https://panorama.sp.gov.br",
+    "telefone": "",
+    "cnpj": "44.918.712/0001-60",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "http://panorama.integrador.app.br:2053"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://186.208.139.159:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://186.208.139.159:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://186.208.139.159:5661/issweb/home.jsf#"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://186.208.139.159:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "paraty",
+    "nome": "Paraty",
+    "site": "https://paraty.rj.gov.br/",
+    "telefone": "",
+    "cnpj": "29.172.475/0001-47",
+    "links": [
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://186.237.171.226:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://186.237.171.226:5661/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "pedra-preta-mt",
+    "nome": "Pedra Preta -MT",
+    "site": "https://www.pedrapreta.mt.gov.br/",
+    "telefone": "",
+    "cnpj": "03.773.942/0001-09",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://pedrapreta.integrador.app.br:2053"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://portal.pedrapreta.mt.gov.br:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://portal.pedrapreta.mt.gov.br:5662/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://portal.pedrapreta.mt.gov.br:5662/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://portal.pedrapreta.mt.gov.br:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "pedreira",
+    "nome": "Pedreira",
+    "site": "https://pedreira.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.410.775/0001-36",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://pedreira.integrador.app.br:2053/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://186.237.171.226:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://intranet.pedreira.sp.gov.br:5661/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "pedrinhas-paulista",
+    "nome": "Pedrinhas Paulista",
+    "site": "https://pedrinhaspaulista.sp.gov.br",
+    "telefone": "",
+    "cnpj": "64.614.381/0001-81",
+    "links": [
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://179.0.108.201:8079/transparencia/Erro.aspx"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://170.80.42.129:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://170.80.42.129:8080/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://179.0.108.201:8080/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "pilar-do-sul",
+    "nome": "Pilar do Sul",
+    "site": "https://pilardosul.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.634.473/0001-41",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://pilardosul.flowdocs.com.br:2096/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://pilardosul.integrador.app.br:2096/credencial/login"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://www.issiptu.pilardosul.sp.gov.br:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://www.nfse.pilardosul.sp.gov.br:5661/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "pinhalzinho",
+    "nome": "Pinhalzinho",
+    "site": "https://www.pinhalzinho.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "45.623.600/0001-44",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://pinhalzinho.flowdocs.com.br:2053/public/home"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://pinhalzinho-amendola.ddns.net:8079/scpi9/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://pinhalzinho-amendola.ddns.net:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://pinhalzinho.portalservicos.app.br:2053/home"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://nfe.pinhalzinho.sp.gov.br:5661/issweb/home"
+      }
+    ]
+  },
+  {
+    "id": "piracaia",
+    "nome": "Piracaia",
+    "site": "https://piracaia.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.279.627/0001-61",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://piracaia.flowdocs.com.br:2053/"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://piracaia.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://177.136.92.250:8079/transparencia/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://177.136.92.253:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://piracaia.portalservicos.app.br:2053/home"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://177.136.92.253:8090/issweb/home"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://177.136.92.253:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "pirajui",
+    "nome": "Pirajuí",
+    "site": "https://pirajui.sp.gov.br",
+    "telefone": "",
+    "cnpj": "44.555.027/0001-16",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://pirajui.flowdocs.com.br:2096/"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://pirajui.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://prefeiturapirajui.ddns.net:3390/Transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://prefeiturapirajui1.ddns.net:3392/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://prefeiturapirajui1.ddns.net:3392/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://prefeiturapirajui.ddns.net:3392/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "pirangi",
+    "nome": "Pirangi",
+    "site": "https://pirangi.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.343.969/0001-01",
+    "links": [
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência CM",
+        "url": "http://portal.pmpirangi.com.br:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://servicosweb.pirangi.sp.gov.br/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://servicosweb.pirangi.sp.gov.br/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://portal.pmpirangi.com.br:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "pm-fartura",
+    "nome": "PM Fartura",
+    "site": "https://www.fartura.sp.gov.br/",
+    "telefone": "",
+    "cnpj": ".   .   .    -",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://fartura.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "scpi",
+        "rotulo": "SCPI 9",
+        "url": "http://191.37.47.115:8079/scpi9"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://191.37.47.115:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://191.37.47.115:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://191.37.47.115:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://191.37.47.115:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "pongai",
+    "nome": "Pongaí",
+    "site": "https://pongai.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.227.849/0001-01",
+    "links": [
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://187.9.83.34:5656/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://187.9.83.34:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://187.9.83.34:8080/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://187.9.83.34:8080/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "pontal",
+    "nome": "Pontal",
+    "site": "https://pontal.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.352.267/0001-86",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://pontal.flowdocs.com.br:2096/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://45.71.128.162:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://45.71.128.162:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://45.71.128.162:5661/issweb/paginas/login"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://45.71.128.162:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "pontalinda",
+    "nome": "Pontalinda",
+    "site": "https://pontalinda.sp.gov.br",
+    "telefone": "",
+    "cnpj": "65.712.077/0001-30",
+    "links": [
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://132.255.172.143:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://132.255.172.143:56610/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://132.255.172.143:56610/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://132.255.172.143:56610/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "potirendaba",
+    "nome": "Potirendaba",
+    "site": "https://potirendaba.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.094.901/0001-28",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://potirendaba.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://transparencia.potirendaba.sp.gov.br:8079/transparencia"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://servicosonline.potirendaba.sp.gov.br:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://servicosonline.potirendaba.sp.gov.br:5661/issweb"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://191.243.12.90:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "prefeitura-municipal-de-irapua",
+    "nome": "Prefeitura Municipal de Irapuã",
+    "site": "https://irapua.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.158.532/0001-90",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://irapua.integrador.app.br:2083/credencial/login"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://170.0.49.34:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://170.0.49.34:8080/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "prefeitura-municipal-de-itau-de-minas",
+    "nome": "Prefeitura Municipal de Itau de Minas",
+    "site": "https://itaudeminas.mg.gov.br",
+    "telefone": "",
+    "cnpj": "23.767.031/0001-78",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://novohorizonte.integrador.app.br:2053"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://177.221.27.2:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://45.70.19.36:5661/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "prefeitura-pontal-do-araguaia",
+    "nome": "Prefeitura Pontal do Araguaia",
+    "site": "https://www.pontaldoaraguaia.mt.gov.br/site",
+    "telefone": "",
+    "cnpj": "33.000.670/0001-67",
+    "links": [
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://191.5.77.37:8081/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://191.5.77.37:8081/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "presidente-alves",
+    "nome": "Presidente Alves",
+    "site": "https://presidentealves.sp.gov.br",
+    "telefone": "",
+    "cnpj": "44.555.688/0001-41",
+    "links": [
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://transparencia.presidentealves.sp.gov.br/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://servicosweb.presidentealves.sp.gov.br/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://nfse.presidentealves.sp.gov.br/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "quintana",
+    "nome": "Quintana",
+    "site": "https://www.quintana.sp.gov.br",
+    "telefone": "",
+    "cnpj": "44.569.051/0001-04",
+    "links": [
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://transparencia.quintana.sp.gov.br:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://transparencia.quintana.sp.gov.br:8080/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "reginopolis",
+    "nome": "Reginópolis",
+    "site": "https://reginopolis.sp.gov.br",
+    "telefone": "",
+    "cnpj": "44.556.033/0001-98",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://reginopolis.flowdocs.com.br:2053/"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://reginopolis.integrador.app.br:2096/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://transparencia.reginopolis.sp.gov.br:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://131.100.204.153:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://131.100.204.153:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://45.185.14.63:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "rio-das-pedras",
+    "nome": "Rio das Pedras",
+    "site": "https://riodaspedras.sp.gov.br",
+    "telefone": "",
+    "cnpj": "44.826.840/0001-83",
+    "links": [
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://riodaspedras.brgov.com.br:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://riodaspedras.brgov.com.br:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://riodaspedras.brgov.com.br:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://riodaspedras.brgov.com.br:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "rosana",
+    "nome": "Rosana",
+    "site": "https://rosana.sp.gov.br",
+    "telefone": "",
+    "cnpj": "67.662.452/0001-00",
+    "links": [
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://admin.rosana.sp.gov.br:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://admin.rosana.sp.gov.br:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://admin.rosana.sp.gov.br:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://admin.rosana.sp.gov.br:5662/sipweb/trabalhador/login/login.xhtml"
+      },
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://rosana.flowdocs.com.br:2053/credentials/login"
+      }
+    ]
+  },
+  {
+    "id": "rubiacea",
+    "nome": "Rubiácea",
+    "site": "https://rubiacea.sp.gov.br",
+    "telefone": "",
+    "cnpj": "44.437.549/0001-13",
+    "links": [
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://187.9.70.98:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://187.9.70.98:5661/servicosweb/home.xhtml"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://187.9.70.98:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://187.9.70.98:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "sabino",
+    "nome": "Sabino",
+    "site": "https://sabino.sp.gov.br",
+    "telefone": "",
+    "cnpj": "44.534.089/0001-41",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://sabino.flowdocs.com.br:2096/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://transparencia.sabino.sp.gov.br:5656/Transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://portalservicos.sabino.sp.gov.br:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://portalservicos.sabino.sp.gov.br:8080/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://portalservicos.sabino.sp.gov.br:8080/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "saemba-bariri",
+    "nome": "SAEMBA Bariri",
+    "site": "https://saemba.sp.gov.br",
+    "telefone": "",
+    "cnpj": "02.310.729/0001-90",
+    "links": [
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://187.62.177.9:5661/servicosweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "sales",
+    "nome": "Sales",
+    "site": "https://sales.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.613.196/0001-90",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://sales.flowdocs.com.br:2053/"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://sales.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://170.0.48.169:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://170.0.48.169:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://170.0.48.169:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://170.0.48.169:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "sales-oliveira",
+    "nome": "Sales Oliveira",
+    "site": "https://salesoliveira.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.756.029/0001-07",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://salesoliveira.flowdocs.com.br/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://189.112.90.177:8079/Transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://189.112.90.177:9090/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://189.112.90.177:9090/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://189.112.90.177:9090/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "saltinho",
+    "nome": "Saltinho",
+    "site": "https://saltinho.sp.gov.br",
+    "telefone": "",
+    "cnpj": "66.831.959/0001-87",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://saltinho.flowdocs.com.br:2053/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://saltinho.integrador.app.br:2053"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://transparencia.saltinho.sp.gov.br:879/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://sppmsaltinho.dcfiorilli.com.br:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://sppmsaltinho.dcfiorilli.com.br:8080/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://sppmsaltinho.dcfiorilli.com.br:8080/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "santa-lucia",
+    "nome": "Santa Lúcia",
+    "site": "https://santalucia.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "45.282.704/0001-32",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://santalucia.flowdocs.com.br:2053/"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://spsantalucia.dcfiorilli.com.br:8082/issweb"
+      }
+    ]
+  },
+  {
+    "id": "santo-antonio-de-posse",
+    "nome": "Santo Antonio de Posse",
+    "site": "https://pmsaposse.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "45.331.196/0001-35",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://pmsaposse.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://servicos.pmsaposse.sp.gov.br:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://servicos.pmsaposse.sp.gov.br:8080/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "sao-bento-da-sapucai",
+    "nome": "São Bento da Sapucai",
+    "site": "https://saobentodosapucai.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "45.958.300.158 -",
+    "links": [
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://sbsamendola.ddns.net:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://saobentodosapucai.portalservicos.app.br/issue-booklet?menuID=5"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://177.71.227.128:8090/issweb/home"
+      }
+    ]
+  },
+  {
+    "id": "sao-joaquim-da-barra",
+    "nome": "São Joaquim da Barra",
+    "site": "https://saojoaquimdabarra.sp.gov.br",
+    "telefone": "",
+    "cnpj": "59.851.543/0001-65",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://saojoaquimdabarra.flowdocs.com.br:2053/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://saojoaquimdabarra.integrador.app.br:2053"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://intranet.saojoaquimdabarra.sp.gov.br:8079/Transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://intranet.saojoaquimdabarra.sp.gov.br:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://intranet.saojoaquimdabarra.sp.gov.br:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://intranet.saojoaquimdabarra.sp.gov.br:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "sao-luiz-do-paraitinga",
+    "nome": "São Luiz do Paraitinga",
+    "site": "https://saoluizdoparaitinga.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "46.631.248/0001-51",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://saoluizdoparaitinga.flowdocs.com.br:2096"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://177.124.9.225:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://177.124.9.225:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://177.124.9.225:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://177.124.9.225:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "serra-negra",
+    "nome": "Serra Negra",
+    "site": "https://serranegra.sp.gov.br",
+    "telefone": "",
+    "cnpj": "44.847.663/0001-11",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://serranegra.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://spserranegra.dcfiorilli.com.br:879/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://siaserranegra.dcfiorilli.com.br:8080/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://siaserranegra.dcfiorilli.com.br:8080/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://spserranegra.dcfiorilli.com.br:8080/sipweb/"
+      }
+    ]
+  },
+  {
+    "id": "sud-mennucci",
+    "nome": "Sud Mennucci",
+    "site": "https://sudmennucci.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.746.120/0001-70",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://sudmennucci.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://179.191.11.10:8079/Transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://179.191.11.10:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://179.191.11.10:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://179.191.11.10:5661/sipweb/trabalhador/login/login.xhtml"
+      },
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://sudmennucci.flowdocs.com.br/credentials/login"
+      }
+    ]
+  },
+  {
+    "id": "tabapua",
+    "nome": "Tabapua",
+    "site": "https://tabapua.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "45.128.816/0001-33",
+    "links": [
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://iss.tabapua.sp.gov.br/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://iss.tabapua.sp.gov.br/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://rh.tabapua.sp.gov.br:11322/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "tabatinga",
+    "nome": "Tabatinga",
+    "site": "https://tabatinga.sp.gov.br",
+    "telefone": "",
+    "cnpj": "71.989.685/0001-99",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://tabatinga.flowdocs.com.br/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://tabatinga.integrador.app.br/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://189.20.141.242:8079/Transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://189.20.141.242:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://189.20.141.242:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://189.20.141.242:5656/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "taguai",
+    "nome": "Taguaí",
+    "site": "https://taguai.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.223.723/0001-50",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://taguai.flowdocs.com.br:2096/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://portal.taguai.sp.gov.br:5656/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://portal.taguai.sp.gov.br:5662/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://portal.taguai.sp.gov.br:5662/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://portal.taguai.sp.gov.br:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "tanabi",
+    "nome": "Tanabi",
+    "site": "https://tanabi.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.157.104/0001-42",
+    "links": [
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://192.140.120.240:8008/servicosweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "tapirai",
+    "nome": "Tapiraí",
+    "site": "https://tapirai.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.634.465/0001-03",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://tapirai.flowdocs.com.br:2053/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://tapirai.dcfiorilli.com.br:879/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://tapirai.dcfiorilli.com.br:8443/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://tapirai.dcfiorilli.com.br:8443/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "https://tapirai.dcfiorilli.com.br:8443/sipweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "taquarituba",
+    "nome": "Taquarituba",
+    "site": "https://taquarituba.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.634.218/0001-07",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://taquarituba.flowdocs.com.br:2053/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://taquarituba.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://sistemasweb.taquarituba.sp.gov.br:8079/transparenciaIPREM/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://taquaritubasp.dcfiorilli.com.br:8443/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://taquaritubasp.dcfiorilli.com.br:8443/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "terra-roxa",
+    "nome": "Terra Roxa",
+    "site": "https://terraroxa.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "75.587.204/0001-70",
+    "links": [
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://170.80.207.108:35001/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://170.80.207.108:35001/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://170.80.207.108:5662/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "ubarana",
+    "nome": "Ubarana",
+    "site": "https://ubarana.sp.gov.br",
+    "telefone": "",
+    "cnpj": "65.708.786/0001-41",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://ubarana.flowdocs.com.br:2053/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://ubarana.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://transparencia.ubarana.sp.gov.br:5656/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://transparencia.ubarana.sp.gov.br:8089/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://transparencia.ubarana.sp.gov.br:8089/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "urania",
+    "nome": "Urânia",
+    "site": "https://urania.sp.gov.br",
+    "telefone": "",
+    "cnpj": "46.611.117/0001-02",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://urania.integrador.app.br:2096"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://45.175.170.61:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://45.175.170.61:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://45.175.170.61:5661/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "uru",
+    "nome": "Uru",
+    "site": "https://uru.sp.gov.br",
+    "telefone": "",
+    "cnpj": "44.556.207/0001-12",
+    "links": [
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://prefeiturauru.ddns.net:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://prefeituradeuru.ddns.net:5656/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://prefeituradeuru.ddns.net:5656/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://prefeiturauru.ddns.net:5656/sipweb/"
+      }
+    ]
+  },
+  {
+    "id": "urupes",
+    "nome": "Urupês",
+    "site": "https://urupes.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.159.381/0001-94",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://urupes.flowdocs.com.br/"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://urupes.integrador.app.br:2053/credencial/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://transparencia.urupes.sp.gov.br:5656/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://transparencia.urupes.sp.gov.br:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://transparencia.urupes.sp.gov.br:5661/issweb/home.jsf"
+      }
+    ]
+  },
+  {
+    "id": "viradouro",
+    "nome": "Viradouro",
+    "site": "https://viradouro.sp.gov.br",
+    "telefone": "",
+    "cnpj": "45.709.912/0001-75",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://viradouro.flowdocs.com.br:2096/public/home"
+      },
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://viradouro.integrador.app.br:2053/"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://191.5.98.25:8079/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://191.5.98.25:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://191.5.98.25:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://191.5.98.25:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "vista-alegre-do-alto",
+    "nome": "Vista Alegre do Alto",
+    "site": "https://vistaalegredoalto.sp.gov.br",
+    "telefone": "",
+    "cnpj": "52.854.775/0001-28",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://vistaalegredoalto.flowdocs.com.br"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://transparencia.vistaalegredoalto.sp.gov.br/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "https://servicosweb.vistaalegredoalto.sp.gov.br/servicosweb/"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://servicosweb.vistaalegredoalto.sp.gov.br/issweb"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://01.vistaalegredoalto.sp.gov.br:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "vargem",
+    "nome": "Vargem",
+    "site": "https://vargem.sp.gov.br/",
+    "telefone": "",
+    "cnpj": "67.160.507/0001-83",
+    "links": [
+      {
+        "tipo": "flow",
+        "rotulo": "FlowDocs",
+        "url": "https://vargem.flowdocs.com.br:2053/credentials/login"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "https://vargem.amendola.cloud/transparencia/Default.aspx"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "https://vargem.amendola.cloud/issweb/paginas/login"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "https://vargem.amendola.cloud/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  },
+  {
+    "id": "zacarias",
+    "nome": "Zacarias",
+    "site": "https://zacarias.sp.gov.br",
+    "telefone": "",
+    "cnpj": "65.708.760/0001-01",
+    "links": [
+      {
+        "tipo": "integrador",
+        "rotulo": "Integrador",
+        "url": "https://zacarias.integrador.app.br:2083"
+      },
+      {
+        "tipo": "transp",
+        "rotulo": "Transparência",
+        "url": "http://200.95.195.202:8075/transparencia/"
+      },
+      {
+        "tipo": "portal",
+        "rotulo": "Serviços",
+        "url": "http://200.95.195.202:5661/servicosweb/home.jsf"
+      },
+      {
+        "tipo": "iss",
+        "rotulo": "ISS",
+        "url": "http://200.95.195.202:5661/issweb/home.jsf"
+      },
+      {
+        "tipo": "sip",
+        "rotulo": "Holerite",
+        "url": "http://200.95.195.202:5661/sipweb/trabalhador/login/login.xhtml"
+      }
+    ]
+  }
+]

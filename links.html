@@ -44,7 +44,7 @@
       <div class="category-pills" id="categoryPills" aria-label="Categorias"></div>
 
       <div class="links-summary">
-        <span id="resultCount">0 links encontrados</span>
+        <span id="resultCount">Carregando links...</span>
         <button type="button" id="clearSearch">Limpar filtros</button>
       </div>
     </section>
@@ -68,81 +68,12 @@
   <script src="assets/js/cookies.js"></script>
   <script src="assets/js/scroll-reveal.js"></script>
 
-  <script>
-    const categories = {
-      all: { label: "Todos", icon: "fa-border-all" },
-      sistemas: { label: "Sistemas", icon: "fa-display" },
-      documentos: { label: "Documentos", icon: "fa-folder-open" },
-      interno: { label: "Interno", icon: "fa-building-user" },
-      suporte: { label: "Suporte", icon: "fa-headset" }
-    };
+  <script type="module">
+    // Os links sao cadastrados no painel (admin.html) e vem do Firebase.
+    import { carregarColecao } from "./assets/js/firebase.js";
+    import { CATEGORIAS_LINK as categories, CORES_LINK, escapeHtml, urlSegura, classeIcone } from "./assets/js/cadastros.js";
 
-    const linksData = [
-      {
-        title: "Amendola TA",
-        desc: "Upload e gestao de arquivos da Amendola.",
-        url: "https://amendolaeamendola.ddns.net/",
-        cat: "sistemas",
-        icon: "fa-cloud-arrow-up",
-        tone: "orange",
-        tag: "Arquivos"
-      },
-      {
-        title: "SIA8 Fiorilli",
-        desc: "Downloads e atualizacoes do sistema SIA8.",
-        url: "https://fiorilli.com.br/appsia8",
-        cat: "sistemas",
-        icon: "fa-rotate",
-        tone: "teal",
-        tag: "Atualizacao"
-      },
-      {
-        title: "Downloads Fiorilli",
-        desc: "Arquivos de suporte, instaladores e executaveis.",
-        url: "https://fiorilli.com.br/downloadfiles/",
-        cat: "documentos",
-        icon: "fa-download",
-        tone: "blue",
-        tag: "Downloads"
-      },
-      {
-        title: "Webmail",
-        desc: "Acesso direto ao e-mail institucional.",
-        url: "http://webmail.amendolaeamendola.com.br/",
-        cat: "interno",
-        icon: "fa-envelope",
-        tone: "slate",
-        tag: "Email"
-      },
-      {
-        title: "Amendola FlowDocs",
-        desc: "Gestao documental e fluxo de trabalho digital.",
-        url: "https://amendola.flowdocs.com.br:2053/credentials/login",
-        cat: "interno",
-        icon: "fa-file-signature",
-        tone: "slate",
-        tag: "FlowDocs",
-      },
-      {
-        title: "Instalador Firebird",
-        desc: "Instalador Amendola do Firebird 5 em arquivo zip.",
-        url: "downloads/AmendolaFirebirdSetup.zip",
-        cat: "documentos",
-        icon: "fa-database",
-        tone: "red",
-        tag: "Instalador"
-      },
-      {
-        title: "Suporte WhatsApp",
-        desc: "Fale com nossa equipe tecnica pelo WhatsApp.",
-        url: "https://wa.me/551735579090",
-        cat: "suporte",
-        icon: "fa-brands fa-whatsapp",
-        tone: "green",
-        tag: "Atendimento"
-      }
-
-    ];
+    let linksData = [];
 
     const grid = document.getElementById("linksGrid");
     const searchInput = document.getElementById("searchInput");
@@ -154,10 +85,6 @@
 
     function getHostname(url) {
       try { return new URL(url).hostname; } catch { return new URL(url, location.href).hostname; }
-    }
-
-    function iconClass(link) {
-      return link.icon.includes("fa-brands") ? link.icon : `fa-solid ${link.icon}`;
     }
 
     function fillCategories() {
@@ -234,19 +161,19 @@
           card.className = link.featured ? "link-card featured" : "link-card";
           card.innerHTML = `
             <div class="link-card-top">
-              <span class="link-icon ${link.tone}">
-                <i class="${iconClass(link)}"></i>
+              <span class="link-icon ${escapeHtml(link.tone)}">
+                <i class="${escapeHtml(classeIcone(link.icon))}"></i>
               </span>
-              <span class="link-tag">${link.tag}</span>
+              ${link.tag ? `<span class="link-tag">${escapeHtml(link.tag)}</span>` : ""}
             </div>
-            <h2>${link.title}</h2>
-            <p>${link.desc}</p>
+            <h2>${escapeHtml(link.title)}</h2>
+            <p>${escapeHtml(link.desc)}</p>
             <div class="link-meta">
-              <span><i class="fa-solid ${categories[link.cat].icon}"></i>${categoryLabel}</span>
-              <span>${getHostname(link.url)}</span>
+              <span><i class="fa-solid ${categories[link.cat].icon}"></i>${escapeHtml(categoryLabel)}</span>
+              <span>${escapeHtml(getHostname(link.url))}</span>
             </div>
             <div class="link-actions">
-              <a href="${link.url}" target="_blank" rel="noopener noreferrer">
+              <a href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer">
                 Abrir <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
               <button type="button" class="copy-link" aria-label="Copiar link">
@@ -279,7 +206,28 @@
       searchInput.value = "";
       setCategory("all");
     });
-    renderLinks();
+
+    carregarColecao("links", "data/links.json")
+      .then(({ dados }) => {
+        linksData = dados
+          .filter((l) => l && l.titulo && urlSegura(l.url, { relativa: true }))
+          .sort((a, b) => (Number(a.ordem) || 0) - (Number(b.ordem) || 0))
+          .map((l) => ({
+            title: l.titulo,
+            desc: l.descricao || "",
+            url: urlSegura(l.url, { relativa: true }),
+            cat: categories[l.categoria] && l.categoria !== "all" ? l.categoria : "sistemas",
+            icon: l.icone || "fa-link",
+            tone: CORES_LINK[l.cor] ? l.cor : "orange",
+            tag: l.tag || ""
+          }));
+        renderLinks();
+      })
+      .catch((err) => {
+        console.error(err);
+        resultCount.textContent = "Não foi possível carregar os links";
+        emptyState.hidden = false;
+      });
   </script>
     <script>
     (function () {

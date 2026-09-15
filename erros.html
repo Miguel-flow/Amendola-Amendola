@@ -15,6 +15,111 @@
 </head>
 
 <body class="erros-page">
+
+  <!-- ####################################################################
+       #                                                                  #
+       #   PARA ADICIONAR UM ERRO NOVO, MEXA SO NO BLOCO ABAIXO.          #
+       #                                                                  #
+       #   1. Ache o MODELO la embaixo, DENTRO da lista errosData.        #
+       #   2. Copie o bloco do modelo e cole logo abaixo dele,            #
+       #      sempre entre o  [  e o  ];  da lista. Preencha.             #
+       #   3. Salve e suba so este erros.html. Pronto.                    #
+       #                                                                  #
+       #   Colar FORA da lista quebra a pagina inteira.                   #
+       #   Nao precisa mexer em mais nada do arquivo.                     #
+       #                                                                  #
+       #################################################################### -->
+  <script>
+    /* ---------- COMO PREENCHER ---------------------------------------
+
+       So  titulo  e  solucao  sao obrigatorios. O resto pode apagar.
+
+       cat: use uma destas -> credenciamento, cadastro, acesso,
+            assinatura, integracao, outros.  (sem cat, cai em "outros")
+
+       Texto entre `crases` vira destaque de codigo. Ex.:
+            "Ativar a configuracao `MINHA_CONFIG` no sistema."
+
+       Cuidado so com isto: cada erro fica entre { }, com virgula
+       depois da chave de fecho, assim ->  },
+       ------------------------------------------------------------------ */
+
+    const errosData = [
+
+      /* ===== MODELO ========================================================
+         Copie o bloco abaixo, cole LOGO AQUI EMBAIXO (ainda dentro
+         desta lista) e preencha. So titulo e solucao sao obrigatorios.
+
+      {
+        titulo: "Titulo curto do erro",
+        cat: "credenciamento",
+        resumo: "Uma linha dizendo quando o erro acontece.",
+        mensagem: "Texto exato que o sistema mostra.",
+        solucao: [
+          "Primeiro passo.",
+          "Segundo passo."
+        ],
+        obs: "Observacao importante.",
+        autor: "Seu nome",
+        data: "09/09/2026"
+      },
+
+         ==================================================================== */
+{
+        titulo: "Erro ao subir/anexar PDF",
+        cat: "Novo Processo",
+        resumo: "Esse erro ocorre ao tentar anexar algum documento ao processo no flowdocs",
+        mensagem: "Erro ao extrair assinatura do documento(Signatura API)",
+        solucao: [
+          "Para solucionar esse problema, primeiro entre no servidor do cliente e acesse o gerenciador de tarefas e verificar na parte de serviços o signature-api e iniciar ",
+          "Caso o serviço não iniciar ir no Setup e mudar a porta do serviço "
+        ],
+        autor: "Miguel",
+        data: "09/09/2026"
+      },
+
+      {
+        titulo: "Erro ao gerar PDF",
+        cat: "Inbox",
+        resumo: "Esse erro ocorre ao gerar PDF ou anexar conteúdo na função 'Novo Processo'.",
+        mensagem: "Não foi possível converter HTML para PDF. O seguinte erro ocorreu: Não foi possível gerar o arquivo PDF 'C:\\Fiorilli\\API\\fileserver\\temp\\tramite_temp_34365643.pdf'.",
+        solucao: [
+          "Para solucionar esse problema, primeiro entre no servidor do cliente e acesse o seguinte caminho: `C:\\Fiorilli\\API\\fileserver\\pdfdata\\bin`.",
+          "Após isso, extraia a pasta DLLs. Caso o problema ainda não seja resolvido, acesse a pasta `C:\\Fiorilli` e, em Propriedades > Segurança, adicione os usuários `IIS_IUSRS` e `IUSR` com as permissões de leitura e gravação."
+        ],
+        autor: "Miguel",
+        data: "09/09/2026"
+      },
+
+      {
+        titulo: "Endereço não encontrado no município",
+        cat: "credenciamento",
+        resumo: "O logradouro informado não é localizado na base do município.",
+        solucao: [
+          "Informar um CEP pertencente ao próprio município.",
+          "Ativar a configuração `CADASTRAR_ENDERECO_NAO_ENCONTRADO_MUNICIPIO` para cadastrar automaticamente o logradouro na base de dados."
+        ],
+        obs: "Nas implantações, deixar ativado como padrão — isso ajuda no credenciamento.",
+        autor: "Leonardo Amêndola",
+        data: "12/08/2026"
+      },
+
+    ];
+
+    /* Categorias do filtro. So aparecem as que tem erro cadastrado,
+       entao pode deixar as extras aqui sem poluir a tela. */
+    const categories = {
+      all:            { label: "Todos",          icon: "fa-border-all" },
+      credenciamento: { label: "Credenciamento", icon: "fa-id-card-clip" },
+      cadastro:       { label: "Cadastro",       icon: "fa-address-card" },
+      acesso:         { label: "Acesso",         icon: "fa-right-to-bracket" },
+      assinatura:     { label: "Assinatura",     icon: "fa-file-signature" },
+      integracao:     { label: "Integração",     icon: "fa-plug" },
+      outros:         { label: "Outros",         icon: "fa-circle-question" }
+    };
+  </script>
+  <!-- ############ FIM DO BLOCO QUE VOCE EDITA ########################## -->
+
   <div id="navbar"></div>
 
   <main class="erros-shell">
@@ -72,62 +177,6 @@
   <script src="assets/js/scroll-reveal.js"></script>
 
   <script>
-    /* =========================================================
-       CATEGORIAS
-       Ajuste a vontade: e so adicionar/remover chaves aqui.
-       So aparecem como filtro as categorias que tem erro cadastrado.
-       ========================================================= */
-    const categories = {
-      all:            { label: "Todos",          icon: "fa-border-all" },
-      credenciamento: { label: "Credenciamento", icon: "fa-id-card-clip" },
-      cadastro:       { label: "Cadastro",       icon: "fa-address-card" },
-      acesso:         { label: "Acesso",         icon: "fa-right-to-bracket" },
-      assinatura:     { label: "Assinatura",     icon: "fa-file-signature" },
-      integracao:     { label: "Integração",     icon: "fa-plug" },
-      outros:         { label: "Outros",         icon: "fa-circle-question" }
-    };
-
-    /* =========================================================
-       ERROS E SOLUCOES
-
-       Para adicionar um erro novo, copie o bloco abaixo e preencha:
-
-         {
-           id: "identificador-unico",      // vira link direto: erros#identificador-unico
-           titulo: "Titulo curto do erro",
-           cat: "credenciamento",          // uma das chaves de `categories`
-           resumo: "Uma linha explicando quando o erro acontece.",
-           mensagem: "Texto exato que o sistema mostra (opcional).",
-           solucao: [
-             "Primeiro passo.",
-             "Segundo passo, com `CONFIG_EM_CRASE` virando destaque."
-           ],
-           obs: "Observacao importante (opcional).",
-           autor: "Quem respondeu",        // opcional
-           data: "12/08/2026"              // opcional
-         }
-
-       Texto entre `crases` vira destaque de codigo em qualquer campo.
-       ========================================================= */
-    const errosData = [
-      {
-        id: "endereco-nao-encontrado-municipio",
-        titulo: "Endereço não encontrado no município",
-        cat: "credenciamento",
-        resumo: "O logradouro informado não é localizado na base do município.",
-        mensagem: "",
-        solucao: [
-          "Informar um CEP pertencente ao próprio município.",
-          "Ativar a configuração `CADASTRAR_ENDERECO_NAO_ENCONTRADO_MUNICIPIO` para cadastrar automaticamente o logradouro na base de dados."
-        ],
-        obs: "Nas implantações, deixar ativado como padrão — isso ajuda no credenciamento.",
-        autor: "Leonardo Amêndola",
-        data: "12/08/2026"
-      }
-    ];
-
-    /* ========================================================= */
-
     const lista = document.getElementById("errosLista");
     const searchInput = document.getElementById("searchInput");
     const catFilter = document.getElementById("catFilter");
@@ -138,6 +187,31 @@
     const emptyState = document.getElementById("no-results");
 
     const abertos = new Set();
+
+    // Cada erro precisa de um id (usado no link direto e no controle de
+    // aberto/fechado). Gerado a partir do titulo, para nao ser mais um
+    // campo a preencher a mao. Titulos repetidos ganham sufixo numerico.
+    (function prepararDados() {
+      const usados = new Set();
+
+      errosData.forEach((erro) => {
+        const base = String(erro.id || erro.titulo || "erro")
+          .toLowerCase()
+          .normalize("NFD").replace(/[̀-ͯ]/g, "")
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "") || "erro";
+
+        let id = base;
+        let n = 2;
+        while (usados.has(id)) id = `${base}-${n++}`;
+
+        usados.add(id);
+        erro.id = id;
+
+        // Categoria invalida ou ausente nao pode sumir com o erro da lista.
+        if (!categories[erro.cat] || erro.cat === "all") erro.cat = "outros";
+      });
+    })();
 
     function escapeHtml(text) {
       return String(text ?? "").replace(/[&<>"']/g, (c) => (
@@ -299,8 +373,8 @@
     }
 
     function atualizarBotaoTodos() {
-      const lista = visiveis();
-      const todosAbertos = lista.length > 0 && lista.every((e) => abertos.has(e.id));
+      const encontrados = visiveis();
+      const todosAbertos = encontrados.length > 0 && encontrados.every((e) => abertos.has(e.id));
       toggleAll.textContent = todosAbertos ? "Recolher todos" : "Expandir todos";
     }
 
