@@ -114,7 +114,10 @@ function renderizar(clientes) {
   input.addEventListener("input", filter);
   filter();
 
+  // Sem o scroll-reveal novo (ex.: versao antiga em cache), mostra os cards
+  // direto em vez de deixa-los invisiveis.
   if (window.srObserve) window.srObserve(grid);
+  else grid.querySelectorAll("[data-sr]").forEach((el) => el.classList.add("sr-visible"));
 }
 
 carregarColecao("clientes", "data/clientes.json")
