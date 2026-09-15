@@ -1195,25 +1195,25 @@ html.dark-mode .icon-sun {
 }
 
 /* ===== SCROLL REVEAL ===== */
-[data-sr] {
+/* So esconde quando o scroll-reveal.js carregou (html.sr-on); se o script
+   falhar, o conteudo continua visivel em vez de sumir. */
+.sr-on [data-sr]:not(.sr-visible) {
   opacity: 0;
+}
+
+[data-sr] {
   transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
               transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-[data-sr],
-[data-sr="up"] {
+.sr-on [data-sr]:not(.sr-visible),
+.sr-on [data-sr="up"]:not(.sr-visible) {
   transform: translateY(36px);
 }
 
-[data-sr="left"]  { transform: translateX(-36px); }
-[data-sr="right"] { transform: translateX(36px); }
-[data-sr="fade"]  { transform: none; }
-
-[data-sr].sr-visible {
-  opacity: 1;
-  transform: translate(0, 0);
-}
+.sr-on [data-sr="left"]:not(.sr-visible)  { transform: translateX(-36px); }
+.sr-on [data-sr="right"]:not(.sr-visible) { transform: translateX(36px); }
+.sr-on [data-sr="fade"]:not(.sr-visible)  { transform: none; }
 
 [data-sr-delay="1"] { transition-delay: 0.10s; }
 [data-sr-delay="2"] { transition-delay: 0.20s; }

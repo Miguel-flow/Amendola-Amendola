@@ -1,10 +1,23 @@
 (function () {
   'use strict';
 
+  function mostrar(el) {
+    el.classList.add('sr-visible');
+  }
+
+  // Sem IntersectionObserver nada seria revelado: deixa tudo visivel
+  // (o CSS so esconde [data-sr] quando <html> tem a classe sr-on).
+  if (!('IntersectionObserver' in window)) {
+    window.srObserve = function () {};
+    return;
+  }
+
+  document.documentElement.classList.add('sr-on');
+
   const observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
-        entry.target.classList.add('sr-visible');
+        mostrar(entry.target);
         observer.unobserve(entry.target);
       }
     });
@@ -28,4 +41,17 @@
   } else {
     init();
   }
+
+  // Rede de seguranca: se o observer nao disparar (aba em segundo plano,
+  // navegador com bug), o que ja esta na tela nao pode ficar invisivel.
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      document.querySelectorAll('[data-sr]:not(.sr-visible)').forEach(function (el) {
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+          mostrar(el);
+          observer.unobserve(el);
+        }
+      });
+    }, 1200);
+  });
 })();
