@@ -197,6 +197,41 @@ html.dark-mode {
     font-weight: 600;
 }
 
+/* Card com link externo (ex.: curso do Flowdocs) */
+.page-sistema .features .column-treinamento {
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid var(--orange);
+}
+
+.page-sistema .features .column-treinamento h3 i {
+    color: var(--orange);
+}
+
+.page-sistema .btn-treinamento {
+    align-self: flex-start;
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    background: var(--orange);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.page-sistema .column-treinamento p {
+    margin-bottom: 24px;
+}
+
+.page-sistema .btn-treinamento:hover {
+    background: var(--orange-dark);
+    transform: translateY(-2px);
+}
+
 .page-sistema .integracoes {
     padding: 80px 20px;
     background: var(--section-bg);
