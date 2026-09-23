@@ -596,13 +596,6 @@ section p,
   animation: none;
 }
 
-.app-screen {
-  max-width: 280px;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 24px 32px var(--shadow-medium));
-}
-
 .phone-glare {
   position: absolute;
   inset: 4% 6%;
@@ -615,6 +608,10 @@ section p,
 
 .phone-wrapper.is-tilting .phone-glare {
   opacity: 1;
+}
+
+.phone-wrapper.is-over-screen .phone-glare {
+  opacity: 0.35;
 }
 
 .phone-ground {

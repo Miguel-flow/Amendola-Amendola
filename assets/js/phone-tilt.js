@@ -27,6 +27,16 @@
       });
     }
 
+    // No toque, o celular para de flutuar e fica reto enquanto a pessoa usa a tela
+    var screen = phone.querySelector('.phone-screen');
+    if (screen) {
+      screen.addEventListener('pointerdown', function (e) {
+        if (e.pointerType === 'mouse') return;
+        phone.classList.remove('phone-hidden', 'phone-enter');
+        phone.classList.add('is-using');
+      });
+    }
+
     if (!window.matchMedia('(hover: hover)').matches) return;
 
     // Pose de repouso = frame 0% da animação phoneFloat, para a volta ser suave
@@ -41,7 +51,7 @@
       phone.style.transform =
         'rotateX(' + curRotX.toFixed(2) + 'deg)' +
         ' rotateY(' + curRotY.toFixed(2) + 'deg)' +
-        (hovering ? ' translateY(-10px) scale(1.03)' : '');
+        (hovering ? ' translateY(-10px)' : '');
 
       var settled = Math.abs(curRotX - targetRotX) < 0.05 && Math.abs(curRotY - targetRotY) < 0.05;
       if (hovering || !settled) {
@@ -57,8 +67,12 @@
       var r = scene.getBoundingClientRect();
       var relX = (e.clientX - r.left) / r.width - 0.5;
       var relY = (e.clientY - r.top) / r.height - 0.5;
-      targetRotY = relX * 24;
-      targetRotX = -relY * 16;
+      // Sobre a tela o celular quase não inclina, para os cliques ficarem precisos
+      var overScreen = screen && screen.contains(e.target);
+      var force = overScreen ? 0.15 : 1;
+      targetRotY = relX * 24 * force;
+      targetRotX = -relY * 16 * force;
+      phone.classList.toggle('is-over-screen', !!overScreen);
       phone.style.setProperty('--gx', (relX * 120 + 50).toFixed(1) + '%');
       phone.style.setProperty('--gy', (relY * 120 + 50).toFixed(1) + '%');
       hovering = true;
@@ -70,6 +84,7 @@
 
     scene.addEventListener('mouseleave', function () {
       hovering = false;
+      phone.classList.remove('is-over-screen');
       targetRotX = REST_X;
       targetRotY = REST_Y;
       if (!raf) raf = requestAnimationFrame(loop);
