@@ -28,6 +28,8 @@
   position: relative;
   width: 320px;
   aspect-ratio: 320 / 660;
+  /* Aumenta o celular inteiro (moldura, textos e ícones) na mesma proporção */
+  zoom: 1.12;
   padding: 11px;
   border-radius: 54px;
   background: linear-gradient(145deg, #2c2c2e, #0d0d0f 45%, #1d1d20);
@@ -909,13 +911,31 @@
   transition: transform 0.4s ease;
 }
 
-@media (max-width: 400px) {
+.phone-ground {
+  width: 240px;
+}
+
+/* Em telas estreitas o celular ocupa a largura disponível sem estourar */
+@media (max-width: 480px) {
   .phone-scene {
     padding: 20px 0 0;
   }
 
   .phone-device {
+    zoom: 1.06;
+  }
+}
+
+@media (max-width: 400px) {
+  .phone-device {
     width: 296px;
+    zoom: 1.02;
+  }
+}
+
+@media (max-width: 350px) {
+  .phone-device {
+    zoom: 1;
   }
 }
 

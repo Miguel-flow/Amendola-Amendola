@@ -554,7 +554,7 @@ section p,
   position: relative;
   padding: 10px;
   transform: rotateX(4deg) rotateY(-14deg);
-  transform-style: preserve-3d;
+  /* Sem preserve-3d: com ele o navegador erra o alvo dos cliques na tela inclinada */
   will-change: transform;
   animation: phoneFloat 7s ease-in-out infinite;
 }
