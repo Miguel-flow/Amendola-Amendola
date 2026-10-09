@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="AmendolaFirebirdSetup">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/downloads/AmendolaFirebirdSetup.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -34,5 +34,23 @@
                 <span class="icon-moon">🌙</span>
             </button>
         </div>
+
+        <div class="footer-bottom">
+            <div class="lang-selector" id="langSelector" data-no-i18n>
+                <button type="button" id="langButton" class="lang-button" aria-haspopup="listbox" aria-expanded="false" aria-label="Idioma / Language">
+                    <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    <span id="langAtual">Português (Brasil)</span>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </button>
+
+                <ul class="lang-menu" id="langMenu" role="listbox" aria-label="Idioma / Language">
+                    <li><button type="button" role="option" data-lang="pt-BR" lang="pt-BR">Português (Brasil)</button></li>
+                    <li><button type="button" role="option" data-lang="pt-PT" lang="pt-PT">Português (Portugal)</button></li>
+                    <li><button type="button" role="option" data-lang="en" lang="en">English</button></li>
+                    <li><button type="button" role="option" data-lang="es" lang="es">Español</button></li>
+                    <li><button type="button" role="option" data-lang="ja" lang="ja">日本語</button></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </footer>

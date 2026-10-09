@@ -1005,7 +1005,119 @@ html.dark-mode .icon-sun {
   filter: none;
 }
 
+/* Seletor de idioma (a logica fica em assets/js/i18n.js) */
+html.i18n-carregando body {
+  visibility: hidden;
+}
+
+.footer-bottom {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  /* Em telas onde a margem lateral e estreita, afasta o seletor do botao
+     flutuante "voltar ao topo", que fica no canto inferior direito. */
+  padding-right: max(0px, calc(84px - (100vw - min(1200px, 90vw)) / 2));
+  border-top: 1px solid var(--f-border);
+}
+
+.lang-selector {
+  position: relative;
+}
+
+.lang-button {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--f-border);
+  border-radius: 8px;
+  color: var(--f-text-strong);
+  font-size: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.lang-button:hover,
+.lang-button[aria-expanded="true"] {
+  border-color: var(--orange);
+  background: rgba(255, 152, 0, 0.12);
+}
+
+.lang-button:focus-visible,
+.lang-menu button:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+.lang-button .fa-chevron-down {
+  font-size: 10px;
+  transition: transform 0.2s;
+}
+
+.lang-button[aria-expanded="true"] .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.lang-menu {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 8px);
+  z-index: 20;
+  display: none;
+  min-width: 100%;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--f-bg);
+  border: 1px solid var(--f-border);
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.lang-menu.active {
+  display: block;
+}
+
+.lang-menu button {
+  all: unset;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: var(--f-text);
+  font-size: 12px;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.lang-menu button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--f-text-strong);
+}
+
+.lang-menu button[aria-selected="true"] {
+  color: var(--orange);
+  font-weight: 600;
+}
+
 @media (max-width: 900px) {
+  .footer-bottom {
+    justify-content: center;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .lang-menu {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
   .footer-container {
     grid-template-columns: 1fr;
     justify-items: center;
