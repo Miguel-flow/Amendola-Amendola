@@ -1503,3 +1503,42 @@ html.i18n-carregando body {
     font-size: 26px;
   }
 }
+
+/* =============================
+   TRANSIÇÃO ENTRE PÁGINAS
+   (View Transitions — Chrome/Edge/Safari; outros navegadores ignoram)
+   ============================= */
+@view-transition {
+  navigation: auto;
+}
+
+main {
+  view-transition-name: conteudo;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.25s;
+}
+
+::view-transition-old(conteudo) {
+  animation: vt-sair 0.2s ease both;
+}
+
+::view-transition-new(conteudo) {
+  animation: vt-entrar 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes vt-sair {
+  to { opacity: 0; transform: translateY(-8px); }
+}
+
+@keyframes vt-entrar {
+  from { opacity: 0; transform: translateY(14px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}
