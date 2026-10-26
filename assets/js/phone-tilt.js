@@ -39,7 +39,7 @@
 
     if (!window.matchMedia('(hover: hover)').matches) return;
 
-    // Pose de repouso reta (= frame 0% da animação phoneFloat), para o texto da tela ficar nítido
+    // Pose de repouso reta, para o texto da tela ficar nítido
     var REST_X = 0, REST_Y = 0;
     var targetRotX = REST_X, targetRotY = REST_Y;
     var curRotX = REST_X, curRotY = REST_Y;
@@ -49,9 +49,9 @@
       curRotX += (targetRotX - curRotX) * 0.12;
       curRotY += (targetRotY - curRotY) * 0.12;
       var flat = Math.abs(curRotX) < 0.05 && Math.abs(curRotY) < 0.05;
-      // Sem rotação nenhuma quando reto: até rotate(0deg) com casas decimais borra o texto
+      // Reto sobre a tela fica sem transform nenhum: qualquer transform borra o texto
       phone.style.transform = flat
-        ? (hovering ? 'translateY(-10px)' : '')
+        ? (hovering && !phone.classList.contains('is-over-screen') ? 'translateY(-10px)' : '')
         : 'rotateX(' + curRotX.toFixed(2) + 'deg)' +
           ' rotateY(' + curRotY.toFixed(2) + 'deg)' +
           (hovering ? ' translateY(-10px)' : '');

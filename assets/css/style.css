@@ -553,15 +553,10 @@ section p,
 .phone-wrapper {
   position: relative;
   padding: 10px;
-  /* Em repouso o celular fica reto: texto dentro de um plano girado em 3D é rasterizado
-     como textura e fica borrado. A inclinação aparece só na entrada e ao passar o mouse.
-     Sem will-change pelo mesmo motivo (a camada seria rasterizada uma vez e esticada). */
-  animation: phoneFloat 7s ease-in-out infinite;
-}
-
-@keyframes phoneFloat {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-12px); }
+  /* Em repouso o celular fica parado e reto. Qualquer animação contínua (girar ou flutuar)
+     joga a tela numa camada de GPU: o texto perde o ClearType do Windows, cai em posições de
+     meio pixel e fica borrado. Por isso não há will-change nem animação infinita aqui; o
+     movimento aparece só na entrada e ao passar o mouse fora da tela. */
 }
 
 .phone-wrapper.phone-hidden {
@@ -570,9 +565,7 @@ section p,
 }
 
 .phone-wrapper.phone-enter {
-  animation:
-    phoneEntrance 1.15s cubic-bezier(0.22, 1, 0.36, 1) both,
-    phoneFloat 7s ease-in-out 1.15s infinite;
+  animation: phoneEntrance 1.15s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes phoneEntrance {
@@ -620,12 +613,7 @@ section p,
   margin: -6px auto 0;
   border-radius: 50%;
   background: radial-gradient(ellipse at center, var(--shadow-medium), transparent 70%);
-  animation: phoneGround 7s ease-in-out infinite;
-}
-
-@keyframes phoneGround {
-  0%, 100% { transform: scaleX(1); opacity: 0.9; }
-  50%      { transform: scaleX(0.8); opacity: 0.55; }
+  opacity: 0.9;
 }
 
 @media (prefers-reduced-motion: reduce) {
