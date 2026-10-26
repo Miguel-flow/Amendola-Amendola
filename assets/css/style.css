@@ -553,15 +553,15 @@ section p,
 .phone-wrapper {
   position: relative;
   padding: 10px;
-  transform: rotateX(4deg) rotateY(-14deg);
-  /* Sem preserve-3d: com ele o navegador erra o alvo dos cliques na tela inclinada */
-  will-change: transform;
+  /* Em repouso o celular fica reto: texto dentro de um plano girado em 3D é rasterizado
+     como textura e fica borrado. A inclinação aparece só na entrada e ao passar o mouse.
+     Sem will-change pelo mesmo motivo (a camada seria rasterizada uma vez e esticada). */
   animation: phoneFloat 7s ease-in-out infinite;
 }
 
 @keyframes phoneFloat {
-  0%, 100% { transform: rotateX(4deg) rotateY(-14deg) translateY(0); }
-  50%      { transform: rotateX(9deg) rotateY(14deg) translateY(-20px); }
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
 }
 
 .phone-wrapper.phone-hidden {
@@ -588,7 +588,7 @@ section p,
   }
   100% {
     opacity: 1;
-    transform: rotateX(4deg) rotateY(-14deg) translateY(0) scale(1);
+    transform: none;
   }
 }
 

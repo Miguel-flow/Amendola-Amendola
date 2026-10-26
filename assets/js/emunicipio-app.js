@@ -33,7 +33,9 @@
         { icone: 'list-details', titulo: 'Consultar lista de espera', desc: 'Acompanhe sua inscrição na creche' },
         { h5: 'Pré-matrícula' },
         { icone: 'user-check', titulo: 'Inscrever na lista de espera', desc: 'Inscreva-se na lista de espera da escola' },
-        { icone: 'list-details', titulo: 'Consultar lista de espera', desc: 'Acompanhe sua inscrição na escola' }
+        { icone: 'list-details', titulo: 'Consultar lista de espera', desc: 'Acompanhe sua inscrição na escola' },
+        { h5: 'Cardápio' },
+        { icone: 'tools-kitchen-2', titulo: 'Consultar cardápio', desc: 'Veja o cardápio da merenda escolar' }
       ]
     },
     saude: {
@@ -52,7 +54,9 @@
         { icone: 'calendar-month', titulo: 'Agendamentos', desc: 'Acompanhe suas consultas marcadas' },
         { h5: 'Agendamento de transportes' },
         { icone: 'ambulance', titulo: 'Agendar transporte', desc: 'Solicite transporte para tratamento' },
-        { icone: 'calendar-event', titulo: 'Agendamentos', desc: 'Acompanhe seus transportes marcados' }
+        { icone: 'calendar-event', titulo: 'Agendamentos', desc: 'Acompanhe seus transportes marcados' },
+        { h5: 'Equipe de saúde' },
+        { icone: 'shield-cross', titulo: 'Agentes', desc: 'Visitas, domicílios e atendimentos' }
       ]
     },
     folha: {
@@ -71,7 +75,21 @@
         { icone: 'alarm', titulo: 'Marcar ponto', desc: 'Registre sua entrada e saída' },
         { icone: 'clock', titulo: 'Consulta de ponto', desc: 'Baixe ou assine o espelho de ponto' },
         { icone: 'calendar-event', titulo: 'Comprovante de ponto', desc: 'Veja o comprovante de registro de ponto' },
-        { icone: 'calendar-cog', titulo: 'Manutenção de ponto', desc: 'Solicite ajustes nos registros' }
+        { icone: 'calendar-cog', titulo: 'Manutenção de ponto', desc: 'Solicite ajustes nos registros' },
+        { icone: 'calendar-x', titulo: 'Consulta de faltas', desc: 'Acompanhe suas faltas' },
+        { icone: 'mood-sick', titulo: 'Consulta de afastamentos', desc: 'Veja seus afastamentos e licenças' },
+        { h5: 'Afastamentos e licenças' },
+        { icone: 'beach', titulo: 'Solicitar férias', desc: 'Peça e acompanhe suas férias' },
+        { icone: 'medal', titulo: 'Solicitar licença prêmio', desc: 'Solicite sua licença prêmio' },
+        { icone: 'calendar-check', titulo: 'Solicitar falta abonada', desc: 'Solicite o abono de uma falta' },
+        { icone: 'edit', titulo: 'Justificar ausência', desc: 'Envie a justificativa de uma ausência' },
+        { h5: 'Adiantamentos e cursos' },
+        { icone: 'coin', titulo: 'Solicitar adiantamento salarial', desc: 'Peça um adiantamento de salário' },
+        { icone: 'gift-card', titulo: 'Solicitar adiantamento 13º salário', desc: 'Peça o adiantamento do 13º salário' },
+        { icone: 'cast', titulo: 'Solicitar curso extracurricular', desc: 'Solicite um curso extracurricular' },
+        { h5: 'Cadastro' },
+        { icone: 'user-cog', titulo: 'Alteração cadastral', desc: 'Atualize seus dados cadastrais' },
+        { icone: 'id-badge-2', titulo: 'Crachá', desc: 'Visualize seu crachá funcional' }
       ]
     },
     portal: {
@@ -87,7 +105,19 @@
         { icone: 'receipt-2', titulo: 'Segunda via de carnê', desc: 'Emita a segunda via do seu carnê' },
         { icone: 'id', titulo: 'Autenticidade de documentos', desc: 'Verifique a autenticidade de documentos emitidos' },
         { icone: 'rosette', titulo: 'Certidão de regularidade fiscal', desc: 'Emita sua certidão de regularidade fiscal' },
-        { icone: 'folder', titulo: 'Documentos', desc: 'Emita documentos do seu cadastro' }
+        { icone: 'folder', titulo: 'Documentos', desc: 'Emita documentos do seu cadastro' },
+        { icone: 'user-cog', titulo: 'Atualização cadastral', desc: 'Confira e atualize os seus dados de contribuinte' }
+      ]
+    },
+    assistencia: {
+      nome: 'Assistência Social',
+      desc: 'Unidades, benefícios e atendimento no seu município.',
+      cor: 'grape',
+      icone: 'heart-handshake',
+      secoes: [
+        { h4: 'Serviços disponíveis' },
+        { icone: 'map-pin', titulo: 'Onde ser atendido', desc: 'Unidades, endereços, telefones e horários' },
+        { icone: 'gift-card', titulo: 'Benefícios do município', desc: 'O que existe, quem tem direito e como pedir' }
       ]
     },
     contabilidade: {
@@ -111,6 +141,7 @@
   var avisos = [
     { titulo: 'Sua solicitação foi respondida', texto: 'Protocolo 2026/003977 – Buraco na via', quando: 'Hoje, 08:12', cor: 'orange', icone: 'headset', lido: false, abre: 'faleconosco' },
     { titulo: 'Boletim do 3º bimestre', texto: 'As notas já estão disponíveis.', quando: 'Ontem', cor: 'indigo', icone: 'school', lido: false, abre: 'ensino' },
+    { titulo: 'Cardápio da merenda', texto: 'O cardápio de novembro já está disponível.', quando: '24/10', cor: 'indigo', icone: 'tools-kitchen-2', lido: false, abre: 'ensino' },
     { titulo: 'Holerite de setembro', texto: 'Seu contracheque está disponível.', quando: '20/09', cor: 'violet', icone: 'cash', lido: false, abre: 'folha' },
     { titulo: 'Campanha de vacinação', texto: 'Vacina contra a gripe nas unidades de saúde até 30/09.', quando: '15/09', cor: 'pink', icone: 'heart', lido: true, abre: 'saude' },
     { titulo: 'IPTU 2026', texto: 'A última parcela vence em 30/09.', quando: '10/09', cor: 'green', icone: 'building-bank', lido: true, abre: 'portal' }
@@ -156,12 +187,18 @@
       el.classList.remove('no-anim');
     }
 
+    // Barra de status branca quando a tela atual começa com cabeçalho colorido
+    function atualizarStatus() {
+      app.classList.toggle('is-dark-status', !!$('.app-modhead', view(stack[stack.length - 1])));
+    }
+
     function atualizarAbas() {
       // Dentro de um módulo nenhuma aba fica destacada, como no app
       var raiz = stack.length === 1 ? stack[0] : null;
       $$('.app-tabbar [data-tab]').forEach(function (b) {
         b.classList.toggle('is-active', b.getAttribute('data-tab') === raiz);
       });
+      atualizarStatus();
     }
 
     function push(nome) {
@@ -270,7 +307,8 @@
           '<div><strong>' + esc(a.titulo) + '</strong><span>' + esc(a.texto) + '</span><small>' + esc(a.quando) + '</small></div>' +
           '</button></li>';
       }).join('');
-      $('[data-badge]').hidden = avisos.every(function (a) { return a.lido; });
+      var todosLidos = avisos.every(function (a) { return a.lido; });
+      $$('[data-badge]').forEach(function (b) { b.hidden = todosLidos; });
     }
 
     // ===== CLIQUES =====
