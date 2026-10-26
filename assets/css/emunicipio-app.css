@@ -8,8 +8,9 @@
   --app-card: #ffffff;
   --app-border: #edecf1;
   --app-text: #1f2024;
-  --app-muted: #807f84;
-  --app-faint: #a2a3a7;
+  /* Cinzas medidos nas capturas do app; mais claros que isso o texto pequeno parece borrado */
+  --app-muted: #636367;
+  --app-faint: #8a8b8f;
   --app-primary: #0f7c67;
   --app-primary-dark: #095a49;
   --app-primary-soft: #e3efed;
@@ -85,8 +86,6 @@
   letter-spacing: 0.15px;
   text-align: left;
   isolation: isolate;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
