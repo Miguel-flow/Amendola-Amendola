@@ -39,8 +39,8 @@
 
     if (!window.matchMedia('(hover: hover)').matches) return;
 
-    // Pose de repouso = frame 0% da animação phoneFloat, para a volta ser suave
-    var REST_X = 4, REST_Y = -14;
+    // Pose de repouso reta (= frame 0% da animação phoneFloat), para o texto da tela ficar nítido
+    var REST_X = 0, REST_Y = 0;
     var targetRotX = REST_X, targetRotY = REST_Y;
     var curRotX = REST_X, curRotY = REST_Y;
     var raf = null, hovering = false;
@@ -48,10 +48,13 @@
     function loop() {
       curRotX += (targetRotX - curRotX) * 0.12;
       curRotY += (targetRotY - curRotY) * 0.12;
-      phone.style.transform =
-        'rotateX(' + curRotX.toFixed(2) + 'deg)' +
-        ' rotateY(' + curRotY.toFixed(2) + 'deg)' +
-        (hovering ? ' translateY(-10px)' : '');
+      var flat = Math.abs(curRotX) < 0.05 && Math.abs(curRotY) < 0.05;
+      // Sem rotação nenhuma quando reto: até rotate(0deg) com casas decimais borra o texto
+      phone.style.transform = flat
+        ? (hovering ? 'translateY(-10px)' : '')
+        : 'rotateX(' + curRotX.toFixed(2) + 'deg)' +
+          ' rotateY(' + curRotY.toFixed(2) + 'deg)' +
+          (hovering ? ' translateY(-10px)' : '');
 
       var settled = Math.abs(curRotX - targetRotX) < 0.05 && Math.abs(curRotY - targetRotY) < 0.05;
       if (hovering || !settled) {
@@ -67,9 +70,9 @@
       var r = scene.getBoundingClientRect();
       var relX = (e.clientX - r.left) / r.width - 0.5;
       var relY = (e.clientY - r.top) / r.height - 0.5;
-      // Sobre a tela o celular quase não inclina, para os cliques ficarem precisos
+      // Sobre a tela o celular fica reto, para os cliques ficarem precisos e o texto nítido
       var overScreen = screen && screen.contains(e.target);
-      var force = overScreen ? 0.15 : 1;
+      var force = overScreen ? 0 : 1;
       targetRotY = relX * 24 * force;
       targetRotX = -relY * 16 * force;
       phone.classList.toggle('is-over-screen', !!overScreen);

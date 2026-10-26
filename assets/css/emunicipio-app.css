@@ -24,6 +24,7 @@
   --oc-forest: #0a5a4a; --oc-forest-soft: #e6f2ef;
   --oc-teal:   #0ca678; --oc-teal-soft:   #e1f4f0;
   --oc-red:    #e03131; --oc-red-soft:    #fbe6e5;
+  --oc-grape:  #ae3ec9; --oc-grape-soft:  #f8ecfa;
 
   position: relative;
   width: 320px;
@@ -84,6 +85,9 @@
   letter-spacing: 0.15px;
   text-align: left;
   isolation: isolate;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .phone-screen *,
@@ -165,6 +169,12 @@
   color: #000;
   z-index: 35;
   pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+/* Sobre o cabeçalho colorido dos módulos a barra de status fica branca, como no app */
+.phone-screen.is-dark-status .app-statusbar {
+  color: #fff;
 }
 
 .app-status-icons {
@@ -199,6 +209,11 @@
 .app-view.is-tab {
   z-index: 1;
   padding-top: 48px;
+}
+
+/* A aba Avisos começa com o cabeçalho colorido, que já desconta a barra de status */
+.app-view.is-tab[data-view="avisos"] {
+  padding-top: 0;
 }
 
 .app-view.is-current,
@@ -283,7 +298,7 @@
   align-items: center;
   gap: 2px;
   min-width: 0;
-  font-size: 8.5px;
+  font-size: 9px;
   color: var(--app-muted);
   letter-spacing: 0.3px;
   white-space: nowrap;
@@ -365,7 +380,7 @@
 
 .app-card span:last-child {
   margin-top: 2px;
-  font-size: 8.5px;
+  font-size: 9px;
   color: var(--app-muted);
 }
 
@@ -389,6 +404,7 @@
 .tone-cyan   { --tile-bg: var(--oc-cyan-soft);   --tile-fg: var(--oc-cyan); }
 .tone-teal   { --tile-bg: var(--oc-teal-soft);   --tile-fg: var(--oc-teal); }
 .tone-red    { --tile-bg: var(--oc-red-soft);    --tile-fg: var(--oc-red); }
+.tone-grape  { --tile-bg: var(--oc-grape-soft);  --tile-fg: var(--oc-grape); }
 
 /* ===== BARRA DE ABAS ===== */
 .app-tabbar {
@@ -410,7 +426,7 @@
   gap: 3px;
   width: 70px;
   color: var(--app-faint);
-  font-size: 8.5px;
+  font-size: 9px;
   font-weight: 500;
 }
 
@@ -466,6 +482,10 @@
   padding: 58px 12px 16px 12px;
   background: var(--mod);
   color: #fff;
+  /* Como no app, o cabeçalho fica fixo e só a lista rola por baixo */
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 .app-back,
@@ -512,7 +532,7 @@
 }
 
 .app-modhead-text span {
-  font-size: 9.5px;
+  font-size: 10px;
   line-height: 1.4;
   opacity: 0.92;
 }
@@ -537,7 +557,7 @@
 
 .app-modbody h5 {
   margin: 6px 0 0;
-  font-size: 9.5px;
+  font-size: 10px;
   font-weight: 600;
   color: var(--app-muted);
 }
@@ -579,12 +599,12 @@
 }
 
 .app-svc-text strong {
-  font-size: 11px;
+  font-size: 11.5px;
   font-weight: 700;
 }
 
 .app-svc-text small {
-  font-size: 9px;
+  font-size: 9.5px;
   color: var(--app-muted);
   line-height: 1.35;
 }
@@ -693,12 +713,12 @@
 
 .app-avisos span {
   color: var(--app-muted);
-  font-size: 9px;
+  font-size: 9.5px;
 }
 
 .app-avisos small {
   color: var(--app-faint);
-  font-size: 8px;
+  font-size: 8.5px;
 }
 
 .app-avisos .is-unread strong::after {
@@ -729,7 +749,7 @@
 
 .app-profile span:last-child {
   color: var(--app-muted);
-  font-size: 8.5px;
+  font-size: 9px;
   letter-spacing: 0.4px;
 }
 
@@ -758,7 +778,7 @@
 
 .app-rows small {
   color: var(--app-muted);
-  font-size: 8.5px;
+  font-size: 9px;
 }
 
 .app-logout {
